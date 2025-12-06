@@ -93,7 +93,7 @@
                                 tableId = "id-table-7432";
                             break;
                             case "LS86_Data_Sheet":
-                               // console.log("in LS86_Data_Sheet");
+                                console.log("in LS86_Data_Sheet");
                                 JsonTableData = JsonTableData74LS86;
                                 tableId = "id-table-7486";
                             break;
@@ -204,62 +204,6 @@
             //this.contentsEle.style.opacity = 1;   /*eduTransitionHasEnded*/
        // alert("after this.eduContentsEle");
         console.log("end of EduHtmlManager.init()");
-        }
-    }
-
-    /*BEGIN CeoHTML_Manager */
-    let CeoHTML_Manager = {
-        //Properties
-        ceoEle: {},
-        initialized: false,
-
-        //Methods
-       /* load: function(HTMLsourceFile) {
-           //alert("in load HTMLsourceFile =  " + HTMLsourceFile);
-            this.ceoEle.innerHTML = "";
-            this.ceoEle.style.zIndex = 10;
-        // alert("this.ceoEle.style.zIndex =  " + this.ceoEle.style.zIndex);
-            this.ceoEle.style.opacity = 1;
-            this.ceoEle.style.display = "block";
-            fetch(HTMLsourceFile)
-                .then(res => {
-                   // alert("in res =>");
-                    if (res.ok) {
-                        //alert("res.ok");
-                        return res.text();
-                    }
-                })
-                .then(resultHTML => {
-                   // alert("loading resultHTML");
-                    this.ceoEle.innerHTML = resultHTML;
-                })
-        },*/
-
-        close: function() {
-            if(!this.initialized){this.init(); this.initialized = true;} 
-            console.log("In CeoHTML_Manager.close()");
-            //console.log("this.ceoEle.style.opacity =  " + this.ceoEle.style.opacity);
-            /*this.ceoEle.innerHTML = "";*/
-            this.ceoEle.classList.replace("hide-proposal", "show-proposal");
-            //this.ceoEle.classList.add("hide-proposal");
-            console.log("leaving close function");
-        },
-
-        ceoFinishTransition: function() {
-            console.log("in ceoFinishTransition");
-            console.log("this.ceoEle.style.opacity =  " + this.ceoEle.style.opacity);
-            if (this.ceoEle.style.opacity == 0) {
-                this.ceoEle.style.zIndex = -10;
-            }/*else{
-                this.ceoEle.style.zIndex = 10;
-            }*/
-        },
-
-        init: function() {
-            console.log("in CeoHTML_Manager init()");
-            this.ceoEle = document.getElementById("ceo-contents-id");
-            //this.ceoEle.addEventListener("transitionend", this.ceoFinishTransition(), false);
-            console.log("leaving CeoHTML_Manager init()");
         }
     }
 /* END CeoHTML_Manager */	
