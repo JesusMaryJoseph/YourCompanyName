@@ -53,8 +53,16 @@
                         //PracticeTruthTableManager.create("circuit","NotXor");
                     }
                     if(this.requestedFile == "html/Education/Training/GatesIcs.html"){
+                        console.log("in this.requestedFile = html/Education/Training/GatesIcs.html");
                         PracticeTruthTableManager.initialize();
-                        PracticeTruthTableManager.create("circuit","NotXor");
+                       // PracticeTruthTableManager.create("circuit","NotXor");
+                    }
+                    if(contentId == "truth-table-contents-id"){
+                        console.log("in this.contentId == 'truth-table-contents-id'");
+                        TableGenerator.createTable("morse-1-bit-word-id",JsonTableDataMorseCodeOneBit);
+                        TableGenerator.createTable("morse-2-bit-word-id",JsonTableDataMorseCodeTwoBit);
+                        TableGenerator.createTable("morse-3-bit-word-id",JsonTableDataMorseCodeThreeBit);
+                        TableGenerator.createTable("morse-4-bit-word-id",JsonTableDataMorseCodeFourBit);
                     }
                     //console.log("before if(this.requestedFile == 'html////LS00 ");
                    //if(this.requestedFile == "html/Education/Resources/Data_Sheets/LS00_Data_Sheet.html"){

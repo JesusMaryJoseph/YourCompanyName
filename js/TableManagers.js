@@ -10,8 +10,8 @@
 /* BEGIN PracticeTruthTableManager */
 
       //  alert("in this.createData"); 
-      let dataString = `{"Not":{"title": "The NOT Logic Gate","inputs": 1,"outputs": 1,"solutions01":[1,0],"solutionsTF":["T","F"],"img":"media/imgs/basicLogicGates/NOT_wPQ.svg"},
-      "And":{"title": "The AND Logic Gate","inputs": 2,"outputs": 1,"solutions01":[0,0,0,1],"solutionsTF":["F","F","F","T"],"img":"media/imgs/basicLogicGates/AND_wPQ.svg"},
+      let dataString = `{"Not":{"title": "The NOT Logic Gate","inputs": 1,"outputs": 1,"solutions01":[1,0],"solutionsTF":["T","F"],"solutionsHL":["H","L"],"img":"media/imgs/basicLogicGates/NOT_wPQ.svg"},
+      "And":{"title": "The AND Logic Gate","inputs": 2,"outputs": 1,"solutions01":[0,0,0,1],"solutionsTF":["F","F","F","T"],"solutionsHL":["L","L","L","H"],"img":"media/imgs/basicLogicGates/AND_wPQ.svg"},
       "Or":{"title": "The OR Logic Gate","inputs": 2,"outputs": 1,"solutions01":[0,1,1,1],"solutionsTF":["F","T","T","T"],"img":"media/imgs/basicLogicGates/OR_wPQ.svg"},
       "Xor":{"title": "The XOR Logic Gate","inputs": 2,"outputs": 1,"solutions01":[0,1,1,0],"solutionsTF":["F","T","T","F"],"img":"media/imgs/basicLogicGates/XOR_wPQ.svg"},
       "Nand":{"title": "The NAND Logic Gate","inputs": 2,"outputs": 1,"solutions01":[1,1,1,0],"solutionsTF":["T","T","T","F"],"img":"media/imgs/basicLogicGates/NAND_wPQ.svg"},
@@ -52,6 +52,7 @@ let PracticeTruthTableManager = {
     circuitTbodyEle: {},
     dataTypeFtEle: {},
     dataType01Ele: {},
+    dataTypeLhEle: {},
 
     tableSelection: "basic",
     gateLabelEle: {},
@@ -62,13 +63,13 @@ let PracticeTruthTableManager = {
     basicDataEle: {},
     circuitDataEle: {},
     practiceTableEle: {},
-    dataSelector: 0,  // 0: "ft" values     1: "01" values
-    inputOutputValues: [["F","T"],["0","1"]],
+    dataSelector: 0,  // 0: "ft" values     1: "01" values      2: "lh" values
+    inputOutputValues: [["F","T"],["0","1"],["L","H"],["A","B"]],
                         
     //Methods
 
     initialize: function(){
-        //alert("in PracticeTruthTableManager.initialize");
+        console.log("in PracticeTruthTableManager.initialize");
         this.createData();
         this.dataCreated = true;
         this.update("basic", document.getElementById("and-label-id"));
@@ -84,37 +85,29 @@ let PracticeTruthTableManager = {
 
     changeDataType: function(radioValues){
         //alert("radioValues = " + radioValues);
-        if((radioValues == "01") && this.dataSelector == 1){return}
-        if((radioValues == "ft") && this.dataSelector == 0){return}
-        //alert("after auto return");
-        if(radioValues == "01"){
-            this.dataSelector = 1;
-        }else{
-            this.dataSelector = 0;
+        if((radioValues == "01") && (this.dataSelector == 1)){return}
+        if((radioValues == "ft") && (this.dataSelector == 0)){return}
+        //if((radioValues == "lh") && (this.dataSelector == 2)){return}
+        console.log("radioValues = " + radioValues);
+        switch(radioValues){
+            case "01":
+                /*this.dataTypeFtEle.classList.remove("selected-data-type");
+                this.dataTypeLhEle.classList.remove("selected-data-type");
+                this.dataType01Ele.classList.add("selected-data-type");*/
+                this.dataSelector = 1;
+                break;
+            case "ft":
+                /*this.dataType01Ele.classList.remove("selected-data-type");
+                this.dataTypeLhEle.classList.remove("selected-data-type");
+                this.dataTypeFtEle.classList.add("selected-data-type");*/
+                this.dataSelector = 0;
+                break;
+            /*case "lh":
+                this.dataSelector = 2;
+                break;*/
+            default: console.log("No such radio Values");
         }
-        //alert("this.dataSelector = " + this.dataSelector);
-        /*if(newDataSelector != this.dataSelector){
-            const inputTags = document.getElementsByTagName("input");
-            alert("# of inputTags = " + inputTags.length);
-            for(var i = 0; i < inputTags.length; i++){
-                if(newDataSelector == 0){
-                    inputTags[i].type = "text";
-                }else{
-                    inputTags[i].type = "number";
-                }
-                alert("i = " + i);
-            }                     
-        }*/
-        if(this.dataSelector == 1){
-            //alert("in 01");
-            this.dataTypeFtEle.classList.remove("selected-data-type");
-            this.dataType01Ele.classList.add("selected-data-type");
-            //alert("this.dataSelector = " + this.dataSelector);
-        }else{
-            this.dataTypeFtEle.classList.add("selected-data-type");
-            this.dataType01Ele.classList.remove("selected-data-type");
-           //alert("this.dataSelector = " + this.dataSelector);
-        }
+       
         this.update("basic", this.gateLabelEle);
         this.update("circuit", this.circuitImgEle);
     },
@@ -138,21 +131,40 @@ let PracticeTruthTableManager = {
 
     handleKeyUp(event){
        //alert("event.target.value = " + event.target.value);
-        const setTF = new Set(["t","f","T","F"]);
+        const setTF = new Set (["t","f","T","F"]);
         const set01 = new Set (["0","1"]);
-       // alert("setTF has 'g' = " + setTF.has('g'));
-        //alert("setTF has 't' = " + setTF.has('t'));
-        //alert("this.dataSelector = " + this.dataSelector);
-        if(this.dataSelector == 0){
-            //alert("setTF.has(event.target.value = " + setTF.has(event.target.value));
-            if(!(setTF.has(event.target.value))){
-                alert("Please input 't','f','T' or 'F'");
-            }
-        }else{
-            //alert("set01.has(event.target.value = " + set01.has(event.target.value));
-            if(!(set01.has(event.target.value))){
-                alert("Please input '0' or '1'");
-            }
+        /*const setAB = new Set (["A","a","B","b"]);
+        const setHL = new Set (["h","l","H","L"]);*/
+        let selectedChar = event.target.value;
+        console.log("selectedChar = " + selectedChar);
+        switch (this.dataSelector){
+            case 0:
+                //alert("setTF.has(event.target.value = " + setTF.has(event.target.value));
+                console.log("event.target.value = " + event.target.value);
+                if(!(setTF.has(event.target.value))){
+                    alert("Please input 't','f','T' or 'F'");
+                }
+                break;
+            case 1:
+                //alert("set01.has(event.target.value = " + set01.has(event.target.value));
+                console.log("event.target.value = " + event.target.value);
+                if(!(set01.has(event.target.value))){
+                    alert("Please input '0' or '1'");
+                }
+                break;
+           /* case 2:
+                console.log("event.target.value = " + event.target.value);
+                if(!(setHL.has(event.target.value))){
+                    console.log("Please input 'h', 'l', 'H' or 'L'");
+                }
+                break;
+            case 3:
+                console.log("event.target.value = " + event.target.value);
+                if(!(setAB.has(event.target.value))){
+                    console.log("Please input 'a', 'A', 'b' or 'B'");
+                }
+                break;*/
+            default: console.log("No such dataSelector");
         }
     },
 
@@ -162,8 +174,8 @@ let PracticeTruthTableManager = {
        // alert("tableSelection = " + tableSelection);
         //alert("thisElement.id = " + thisElement.id);
         let gateCircuitName = "";
-         this.tableSelection = tableSelection;
-         if(tableSelection == "basic"){
+        this.tableSelection = tableSelection;
+        if(tableSelection == "basic"){
             //alert("thisElement.textContent = " + thisElement.textContent);
            // alert("thisElement.id = " + thisElement.id);
             //remove class: "selected-gate" from this.gateLabelEle 
@@ -175,7 +187,7 @@ let PracticeTruthTableManager = {
              //alert("in BASIC this.practiceTableEle");
              this.practiceTableEle = document.getElementById("basic-table-id");
             // this.solutionTableEle = document.getElementById("basic-solution-table-id");
-         }else{
+        }else{
             //alert("circuitid = " + thisElement.id);
             //remove class: "circuit-selected" from this.circuitLabelEle 
             this.circuitImgEle.classList.remove("circuit-selected");
@@ -187,9 +199,9 @@ let PracticeTruthTableManager = {
             this.practiceTableEle = document.getElementById("circuit-table-id");
             // this.solutionTableEle = document.getElementById("circuit-solution-table-id");
             //this.circuitName = gateCircuitName;
-         }
+        }
          //alert("before switch gateCircuitName = " + gateCircuitName);
-         switch (gateCircuitName){  //gateCircuitName){
+        switch (gateCircuitName){  //gateCircuitName){
             case "NOT":
                 this.basicDataEle = JsonTableDataSet.Not;
                 break;
@@ -246,7 +258,7 @@ let PracticeTruthTableManager = {
                 this.circuitDataEle = JsonTableDataSet.AndAndOrW3Inputs;
                 break;
             default: console.log("no Data Source for this entry");
-         }
+        }
             this.updateTableHeads();
             this.updateTableBodys();
     },
@@ -467,19 +479,35 @@ let PracticeTruthTableManager = {
                 }else{    //alert("col = " + col);
                  //   alert("this.basicDataEle.solutionsTF[row] = " + this.basicDataEle.solutionsTF[row]);
                     if(this.tableSelection == "basic"){
-                        if(this.dataSelector == 0){
-                            tdSolutionText = document.createTextNode(this.basicDataEle.solutionsTF[row]);
-                        }else{
-                            tdSolutionText = document.createTextNode(this.basicDataEle.solutions01[row]);
+                        switch (this.dataSelector){
+                            case 0:
+                                tdSolutionText = document.createTextNode(this.basicDataEle.solutionsTF[row]);
+                                break;
+                            case 1:
+                                tdSolutionText = document.createTextNode(this.basicDataEle.solutions01[row]);
+                                break;
+                            case 2:
+                                tdSolutionText = document.createTextNode(this.basicDataEle.solutionsHL[row]);
+                                break;
+                            default: console.log("No such this.dataSelector for basicDataEle");
+
                         }
                     }else{
-                        //alert("adding solution value for circuit for col = " + col);
-                        if(this.dataSelector == 0){
-                            //alert("this.circuitDataEle.solutionsTF[col][row] = " + this.circuitDataEle.solutionsTF[parseInt(col/2)][row]);
-                            tdSolutionText = document.createTextNode(this.circuitDataEle.solutionsTF[parseInt(col/2)][row]);
-                        }else{
-                            tdSolutionText = document.createTextNode(this.circuitDataEle.solutions01[parseInt(col/2)][row]);
-                            //alert("this.circuitDataEle.solutions01[col][row] = " + this.circuitDataEle.solutions01[parseInt(col/2)][row]);
+                        switch (this.dataSelector){
+                            case 0:
+                                tdSolutionText = document.createTextNode(this.circuitDataEle.solutionsTF[row]);
+                                break;
+                            case 1:
+                                tdSolutionText = document.createTextNode(this.circuitDataEle.solutions01[row]);
+                                break;
+                            case 2:
+                                tdSolutionText = document.createTextNode(this.circuitDataEle.solutionsHL[row]);
+                                break;
+                            case 3:
+                                tdSolutionText = document.createTextNode(this.circuitDataEle.solutionsAB[row]);
+                                break;
+                            default: console.log("No such this.dataSelector for circuitDataEle");
+
                         }
                     }
                     tdOutputCell.appendChild(tdSolutionText);
@@ -514,28 +542,8 @@ let PracticeTruthTableManager = {
     },
 
     createData: function(){
-      //  alert("in this.createData"); 
-       /* let dataString = `{"Not":{"title": "The NOT Logic Gate","inputs": 1,"outputs": 1,"solutions01":[1,0],"solutionsTF":["T","F"],"img":"media/imgs/basicLogicGates/NOT_wPQ.svg"},
-                           "And":{"title": "The AND Logic Gate","inputs": 2,"outputs": 1,"solutions01":[0,0,0,1],"solutionsTF":["F","F","F","T"],"img":"media/imgs/basicLogicGates/AND_wPQ.svg"},
-                           "Or":{"title": "The OR Logic Gate","inputs": 2,"outputs": 1,"solutions01":[0,1,1,1],"solutionsTF":["F","T","T","T"],"img":"media/imgs/basicLogicGates/OR_wPQ.svg"},
-                           "Xor":{"title": "The XOR Logic Gate","inputs": 2,"outputs": 1,"solutions01":[0,1,1,0],"solutionsTF":["F","T","T","F"],"img":"media/imgs/basicLogicGates/XOR_wPQ.svg"},
-                           "Nand":{"title": "The NAND Logic Gate","inputs": 2,"outputs": 1,"solutions01":[1,1,1,0],"solutionsTF":["T","T","T","F"],"img":"media/imgs/basicLogicGates/NAND_wPQ.svg"},
-                           "Nor":{"title": "The NOR Logic Gate","inputs": 2,"outputs": 1,"solutions01":[1,0,0,0],"solutionsTF":["T","F","F","F"],"img":"media/imgs/basicLogicGates/NOR_wPQ.svg"},
-                           "Nxor":{"title": "The NXOR Logic Gate","inputs": 2,"outputs": 1,"solutions01":[1,0,0,1],"solutionsTF":["T","F","F","T"],"img":"media/imgs/basicLogicGates/NXOR_wPQ.svg"},
-                           "NotXor":{"title": "The NotXor Circuit","inputs": 2,"outputs": 2,"solutions01":[[1,1,0,0],[1,0,0,1]],"solutionsTF":[["T","T","F","F"],["T","F","F","T"]],"img":"media/imgs/basicLogicGates/NotXor_wPQ.svg"},
-                           "AndNotOr":{"title": "The AndNotOr Circuit","inputs": 2,"outputs": 3,"solutions01":[[0,0,0,1],[1,0,1,0],[1,0,1,1]],"solutionsTF":[["F","F","F","T"],["T","F","T","F"],["T","F","T","T"]],"img":"media/imgs/basicLogicGates/AndNotOr_wPQ.svg"},
-                           "OrAndXor":{"title": "The OrAndXor Circuit","inputs": 2,"outputs": 3,"solutions01":[[0,1,1,1],[0,0,0,1],[0,1,1,0]],"solutionsTF":[["F","T","T","T"],["F","F","F","T"],["F","T","T","F"]],"img":"media/imgs/basicLogicGates/OrAndXor_wPQ.svg"},
-                           "NotAndXorOr":{"title": "The NotAndXorOr Circuit","inputs": 2,"outputs": 4,"solutions01":[[1,1,0,0],[0,1,0,0],[1,0,0,1],[1,1,0,1]],"solutionsTF":[["T","T","F","F"],["F","T","F","F"],["T","F","F","T"],["T","T","F","T"]],"img":"media/imgs/basicLogicGates/NotAndXorOr_wPQ.svg"},
-                           "NotXorOrNand":{"title": "The NotXorOrNand Circuit","inputs": 2,"outputs": 4,"solutions01":[[1,1,0,0],[1,0,0,1],[1,1,0,1],[0,1,1,0]],"solutionsTF":[["T","T","F","F"],["T","F","F","T"],["T","T","F","T"],["F","T","T","F"]],"img":"media/imgs/basicLogicGates/NotXorOrNand_wPQ.svg"},
-                           "NandNotNand":{"title": "The NandNotNand Circuit","inputs": 2,"outputs": 3,"solutions01":[[1,1,1,0],[1,0,1,0],[0,1,0,1]],"solutionsTF":[["T","T","T","F"],["T","F","T","F"],["F","T","F","T"]],"img":"media/imgs/basicLogicGates/NandNotNand_wPQ.svg"},
-                           "NorNandNxor":{"title": "The NorNandNxor Circuit","inputs": 2,"outputs": 3,"solutions01":[[1,0,0,0],[1,1,1,0],[1,0,0,1]],"solutionsTF":[["T","F","F","F"],["T","T","T","F"],["T","F","F","T"]],"img":"media/imgs/basicLogicGates/NorNandNxor_wPQ.svg"},
-                           "AndOrNandNxorNandNor":{"title": "The AndOrNandNxorNandNor Circuit","inputs": 2,"outputs": 6,"solutions01":[[0,0,0,1],[0,1,1,1],[1,1,1,0],[1,0,0,1],[1,0,0,1],[0,1,1,0]],"solutionsTF":[["F","F","F","T"],["F","T","T","T"],["T","T","T","F"],["T","F","F","T"],["T","F","F","T"],["F","T","T","F"]],"img":"media/imgs/basicLogicGates/AndOrNandNxorNandNor_wPQ.svg"},
-                           "NorNorNor":{"title": "The NorNorNor Circuit","inputs": 2,"outputs": 3,"solutions01":[[1,0,1,0],[1,1,0,0],[0,0,0,1]],"solutionsTF":[["T","F","T","F"],["T","T","F","F"],["F","F","F","T"]],"img":"media/imgs/basicLogicGates/NorNorNor_wPQ.svg"},
-                           "TwoToFourDecoder":{"title": "The TwoToFourDecoder Circuit","inputs": 2,"outputs": 6,"solutions01":[[1,0,1,0],[1,1,0,0],[0,1,1,1],[1,0,1,1],[1,1,0,1],[1,1,1,0]],"solutionsTF":[["T","F","T","F"],["T","T","F","F"],["F","T","T","T"],["T","F","T","T"],["T","T","F","T"],["T","T","T","F"]],"img":"media/imgs/basicLogicGates/TwoToFourDecoder_wPQ.svg"},
-                           "AndAndOrW3Inputs":{"title": "The AndAndOrW3Inputs Circuit","inputs": 3,"outputs": 3,"solutions01":[[0,0,0,1,0,1,0,1],[0,0,0,1,0,1,0,1],[0,0,0,1,0,1,0,1]],"solutionsTF":[["F","F","F","T","F","T","F","T"],["F","F","F","F","F","T","F","T"],["F","F","F","T","F","T","F","T"]],"img":"media/imgs/basicLogicGates/AndAndOr_w3InPQ.svg"}
-                           }`;
-        JsonTableDataSet = JSON.parse(dataString);*/
-        //alert("after JSON.parse");
+        console.log("in this.createData"); 
+     
         this.gateLabelEle = document.getElementById("and-label-id");
         this.circuitImgEle = document.getElementById("not-xor-img-id")
         this.basicTheadEle = document.getElementById("basic-thead-id");
@@ -544,8 +552,9 @@ let PracticeTruthTableManager = {
         //this.basicSolutionTbodyEle = document.getElementById("basic-solution-tbody-id");
 
      /*	this.circuitTitleEle = document.getElementById("circuit-title-id");*/
-        this.dataTypeFtEle = document.getElementById("data-type-ft-id");
-        this.dataType01Ele = document.getElementById("data-type-01-id");
+        //this.dataTypeFtEle = document.getElementById("data-type-ft-id");
+        //this.dataType01Ele = document.getElementById("data-type-01-id");
+        //this.dataTypeLhEle = document.getElementById("data-type-lh-id");
         this.circuitImgEle = document.getElementById("NotXor");
         this.circuitTheadEle = document.getElementById("circuit-thead-id");
         this.circuitTbodyEle = document.getElementById("circuit-tbody-id");
@@ -554,7 +563,7 @@ let PracticeTruthTableManager = {
         
         this.dataCreated = "true";
         //alert("this.dataSelector = " + this.dataSelector);
-        //alert("data created");
+        console.log("leaving this.createData");
     }
 }
 /* END PracticeTruthTableManager */   

@@ -1,6 +1,8 @@
 
 /* BEGIN TableGenerator */ 
-    let  TableGenerator = {
+    
+
+let  TableGenerator = {
         //Properties
         //Methods
 

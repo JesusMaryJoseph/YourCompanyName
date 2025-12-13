@@ -7,6 +7,7 @@
     
     
     <script>
+        
     </script>
     
     <style>
@@ -21,17 +22,54 @@
 			overflow: auto;
 			/*border: 3px solid green;*/ 
         }
+
+        .odometer-container{
+            width: 17rem;
+            display: flex;
+            justify-content: space-around;
+            border: 3px solid black;
+            padding: 0.5rem;
+        }
+        .digit-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            border: 3px solid white;
+            padding: 1.5rem;
+            background-color: black;
+
+        }
+        .digit-container div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        .start-odometer{
+            cursor: pointer;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+            .start-odometer:hover{
+                color: yellow;
+            }
     </style>
 </head>
 <body>
     <div class="truth-table-body-container">
         <!--Start Truth Tables-->
         <div id="truth-table-contents-id" class="contents truth-table-contents">
-            <label class="header-one">Codes: Truth Tables</label>
+            <label class="header-one">Truth Tables</label>
             <label class="header-two">Morse Code Vs Truth Table:</label>
             <p>Consider the following:</p>
             <div class="morse-code-table-container">
-                <table class="morse-code-table morse-code-table-1">
+                <table id="morse-1-bit-word-id">
+                </table>                
+                <!--<table class="morse-code-table morse-code-table-1">
                     <thead class="smk-header">
                         <tr>
                             <th class="table-title" colspan="2">Morse Code Key:<br>1-bit Word</th>
@@ -54,7 +92,7 @@
                             <td><div class="tdth-wrapper">T</div></td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
                 <div class="morse-code-container morse-code-1-bit">
                     <p>Morse Code<br>for 1 bit word<br>(eg 2 values: 2<sup>1</sup>)</p>
                     <img src="media/imgs/SamuelMorseKey_E-T_1-bit.svg">
@@ -77,7 +115,10 @@
             Again the Table and "Key" contain the same information just rearranged. 
             </p><br>
             <div class="morse-code-table-container morse-code-table-2-bit">
-                <table class="morse-code-table morse-code-table-2">
+                <table id="morse-2-bit-word-id">
+
+                </table>
+                <!--<table class="morse-code-table morse-code-table-2">
                     <thead class="smk-header">
                         <tr>
                             <th class="table-title" colspan="3">Morse Code Key:<br>2-bit Words</th>
@@ -111,7 +152,7 @@
                             <td><div class="tdth-wrapper">M</div></td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
                 <div class="morse-code-container morse-code-2-bit">
                     <p>Morse Code<br>for 2 bit Words<br>(ie 4 values: 2<sup>2</sup>)</p>
                     <img src="media/imgs/SamuelMorseKey_A-I-M-N_2-bit.svg">
@@ -123,7 +164,10 @@
             </p><br>
             
             <div class="morse-code-table-container morse-code-table-3-bit">
-                <table class="morse-code-table morse-code-table-3">
+                <table id="morse-3-bit-word-id">
+
+                </table>
+                <!--<table class="morse-code-table morse-code-table-3">
                     <thead class="smk-header">
                         <tr>
                             <th class="table-title" colspan="4">Morse Code Key:<br>(3-bits)</th>
@@ -178,7 +222,7 @@
                             <td><div class="tdth-wrapper">O</div></td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
                 <div class="morse-code-container morse-code-3-bit">
                     <p>Morse Code<br>for 3 bit Words<br>(ie 8 values: 2<sup>3</sup>)</p>
                     <img src="media/imgs/SamuelMorseKey_D-G-K-O-R-S-U-W_3-bit.svg">
@@ -187,6 +231,9 @@
 
             <!--<p>Samuel Morse's code also conta>ins 12 letters of length "4-bits" so let's add a 4th bit!</p>-->
             <div class="morse-code-table-container morse-code-table-4-bit">
+                <table id="morse-4-bit-word-id">
+
+                </table>
                 <table class="morse-code-table morse-code-table-4">
                     <thead class="smk-header">
                         <tr>
@@ -289,17 +336,38 @@
                     <img src="media/imgs/SamuelMorseKey_B-C-F-H-J-L-P-Q-V-X-Y-Z_4-bit.svg">
                 </div>
             </div><br>
+            <p>
 
+            </p>
             <div class="gif-container">
-                <p>Have you got the rythmn? Here's a little gif for you!</p>
-                <video src="media/imgs/Four-bit.mp4" controls></video>
-                <!--<img src="media/imgs/Four-Bit.gif">-->
+                <p>Have you got the rythmn? Creating the Inputs from the 'top row' 0000 to the 'bottom row' 1111 is similar to
+                     an odometer going from 0000 to 1111 (FFFF to TTTT) or (LLLL to HHHH).
+                </p>
+                <div class="odometer-container">
+                    <div class="digit-container fourth-digit">
+                        <div id="digit-4-id">0</div>
+                        <!--<div id="digit-4-high">1</div>-->
+                    </div>
+                    <div class="digit-container third-digit">
+                        <div id="digit-3-id">0</div>
+                        <!--<div id="digit-3-high">1</div>-->
+                    </div>
+                    <div class="digit-container second-digit">
+                        <div id="digit-2-id">0</div>
+                        <!--<div id="digit-2-high">1</div>-->
+                    </div>
+                    <div class="digit-container first-digit">
+                        <label id="digit-1-id">0</label>
+                        <!--<div id="digit-1-high">1</div>-->
+                    </div>
+                </div>
+                <label class="start-odometer" onclick="OdometerSimulator.start()">Start</label>
             </div>
 
             <p>Notice: Samuel Morse chose to use "varying" word lengths(1-bit,2-bits,3-bits,4-bits). It served his purpose well.
             </p>
             <p> In "digital" electronics that will not be the case. No matter how many "Inputs" you have they will all be the same length! One additional change. From now on you will
-                no longer see "dots" and "dashes". "Input" and "Output" Values will almost always be "0" and "1" or "T" and "F". 
+                no longer see "dots" and "dashes". "Input" and "Output" Values will almost always be (0,1) or (F,T) or (L,H), where (F='False' & T='True'), (L='Low' & H='High').
             </p>
             <p>You will get an opportunity to practice with Truth Tables in the next section 
                 where you will be introduced to the fundamental building blocks of your 8-bit computer:
@@ -313,5 +381,7 @@
         </div>                                                                                      <!--,'gates-ics-contents-id'-->
     </div> 
     
+        <script>
+        </script>
 </body>
 </html>

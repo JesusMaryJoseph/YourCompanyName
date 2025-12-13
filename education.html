@@ -36,8 +36,13 @@
 	<script src="js/educationManagers/ModuleBlockManager.js"></script>
 	<script src="js/TableGenerator.js"></script>
     <script src="js/TableData/LS74__TableData.js"></script>
+	<script src="js/TableManagers.js"></script>
+    <script src="js/Odometer.js"></script>
+    <script src="js/TableData/Morse-Code__TableData.js"></script>
  
-
+    <script>
+       
+    </script>
     
 
 	<style>
@@ -243,7 +248,7 @@
                     onclick="EduNavManager.openCloseDropdown('packets-menu-dd-lev-1', 'open')" >
                 Packets</label>
             <ul id="packets-menu-dd-id" class="packets-menu-dd-lev-1 menu-dd-zindex packets-menu-dd-lev-1-hidden">
-                <li><a href="#" onclick="EduHtmlManager.request('html/CEO/CEO_Packet.html', 'ceo-contents-id');
+                <li><a href="#" onclick="EduHtmlManager.request('html/CEO/CEO_Packet.html', 'edu-ceo-contents-id');
                     EduNavManager.openCloseDropdown('packets-menu-dd-lev-1', 'close')">CEO</a></li>
                 <li><a href="#" onclick="EduHtmlManager.request('html/Engineering/Engineering_Packet.html', 'engineering-contents-id'); 
                     EduNavManager.openCloseDropdown('packets-menu-dd-lev-1', 'close')">Engineering</a></li>

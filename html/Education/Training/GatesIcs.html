@@ -170,8 +170,14 @@
                     <div class="select-data-type-container">
                         <label>Data Type:</label>
                         <div class="radio-inputs-container">
-                            <label id="data-type-ft-id" class="selected-data-type"  onclick="PracticeTruthTableManager.changeDataType('ft')">FT</label>
-                            <label id="data-type-01-id" onclick="PracticeTruthTableManager.changeDataType('01')">01</label>
+                            <input type="radio" name="data-type-inputs" value="FT" checked  onclick="PracticeTruthTableManager.changeDataType('ft')">
+                            <label for="FT" class>FT</label>
+                            <input type="radio" name="data-type-inputs" value="01" onclick="PracticeTruthTableManager.changeDataType('01')">
+                            <label for="01">01</label>
+                            <!--<input type="radio" name="data-type-inputs" value="LH" onclick="PracticeTruthTableManager.changeDataType('lh')">
+                            <label for="LH">LH</label>
+                            <input type="radio" name="data-type-inputs" value="AB" onclick="PracticeTruthTableManager.changeDataType('ab')">
+                            <label for="LH">AB</label>-->
                         </div>
                     </div>
                 </div>
