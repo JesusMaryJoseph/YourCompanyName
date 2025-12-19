@@ -4,29 +4,141 @@
 
 let  TableGenerator = {
         //Properties
+        tableId: "",
+        tableData: "",
+        tableEle: {},
+        initialized: false,
+
         //Methods
 
         createTable: function(tableId, tableData){
-            //console.log("in this.createTable");
-            //console.log("tableId = " + tableId);
-           // console.log("tableBodyId = " + tableBodyId);
-            if(document.getElementById(tableId)){
-                console.log("got document.getElementById(" + tableId + ")");
-            }else{
-                console.log("did not get document.getElementById(" + tableId + ")");
-                return;
-            }
-            this.tableEle = document.getElementById(tableId);
-            this.tableHeadEle = document.createElement("thead");
-            //this.tableEle.appendChild(this.tableHeadEle);
-            this.tableBodyEle = document.createElement("tbody");
-            //this.tableEle.appendChild(this.tableBodyEle);
-            //this.tableData = tableData;
-            this.createTableSection(tableData.head.row, "head");
-            this.createTableSection(tableData.body.row, "body");
-            //this.generateTable();
+            console.log("tableId = " + tableId);
+            this.tableId = tableId;
+            this.tableData = tableData;
+            this.tableEle = document.getElementById(this.tableId);
+            this.clearTable();
+            this.createTableHead();
+            this.createTableBody();
         },
 
+        clearTable: function(){
+            this.tableEle.deleteTHead();
+            let tableBody = this.tableEle.querySelector("tbody");
+            if(tableBody){
+                tableBody.remove();
+            }
+           // this.tableEle.removeChild("tbody");
+        },
+
+        createTableHead: function(){
+            const tableHeadEle = document.createElement("thead");
+            //console.log("this.tableData.head.rows.length =  " + this.tableData.head.rows.length);
+            for(var row = 0; row < this.tableData.head.rows.length; row++){
+                //console.log("row =  " + row);
+                //console.log("this.tableData.head.rows[0][0].th.text =  " + this.tableData.head.rows[1][1].th[0][1]);
+                tableHeadEle.appendChild(this.createHeadRow(this.tableData.head.rows[row]));
+            }
+            this.tableEle.appendChild(tableHeadEle);
+        },
+
+        createTableBody: function(){
+            let tableBodyEle = document.createElement("tbody");
+            for(var row = 0; row < this.tableData.body.rows.length; row++){
+                tableBodyEle.appendChild(this.createBodyRow(this.tableData.body.rows[row]));
+            }
+            this.tableEle.appendChild(tableBodyEle);
+        },
+
+        createHeadRow(rowData){
+            //console.log("in createHeadRosw");
+            console.log(" head rowData.length = " + rowData.length);
+            const tableRowEle = document.createElement("tr");
+            for(col = 0; col < rowData.length; col++){
+                const thEle = document.createElement("th");
+                for(attribute = 0; attribute < rowData[col].th.length; attribute++){
+                    console.log("rowData[" + col + "].th[" + attribute + "][0] = " + rowData[col].th[attribute][0]);
+                    console.log("rowData[" + col + "].th[0] = " + rowData[col].th[0])
+                    switch (rowData[col].th[attribute][0]){
+                        case "text":
+                            console.log(" rowData[" + col + "].th[0][1] = " +  rowData[col].th[0][1]);
+                            thEle.textContent = rowData[col].th[0][1];
+                            break;
+                        case "colSpan":
+                            console.log(" rowData[" + col + "].th[1][1] = " +  rowData[col].th[1][1]);
+                            thEle.setAttribute('colSpan', rowData[col].th[1][1]); // colApan
+                            break;
+                        case "rowSpan":
+                            console.log(" rowData[" + col + "].th[2][1] = " +  rowData[col].th[2][1]);
+                            thEle.setAttribute('rowSpan', rowData[col].th[2][1]); // rowSpan
+                            break;
+                        case "image":
+                            break;
+                        default: console.log("No such rowData");
+                    }
+                }
+                tableRowEle.appendChild(thEle);
+            }
+            return tableRowEle;
+        },
+
+        createBodyRow(rowData){
+            console.log("in createBodyRow");
+            console.log("rowData.length = " + rowData.length);
+            const tableRowEle = document.createElement("tr");
+            for(col = 0; col < rowData.length; col++){
+                const tdEle = document.createElement("td");
+                for(attribute = 0; attribute < rowData[col].td.length; attribute++){
+                    console.log("attribute = " + attribute);
+                    console.log("rowData[" + col + "].td[" + attribute + "][0] = " + rowData[col].td[attribute][0]);
+                    switch (rowData[col].td[attribute][0]){
+                        case "text":
+                            console.log(" rowData[" + col + "].td[0][1] = " +  rowData[col].td[0][1]);
+                            tdEle.textContent = rowData[col].td[0][1];
+                            break;
+                        case "image":
+                            console.log(" rowData[" + col + "].td[0][1] = " +  rowData[col].td[0][1]);
+                            //let tdCellImg = tdEle.insertCell();   
+                            //tdCellImg.rowSpan = numberOfRows;  
+                            const tdImg = document.createElement('img');
+                            tdImg.src = rowData[col].td[0][1];
+                            //tdCellImg.appendChild(tdImg);
+                            tdEle.appendChild(tdImg);
+                            //tableRowEle.appendChild(tdEle);
+                            break;
+                        case "input":
+                            console.log(" rowData[" + col + "].td[0][1] = " +  rowData[col].td[0][1]);
+                            const inputEle = document.createElement("input");
+                            if(this.dataSelector == 0){
+                                inputEle.type = "text";
+                            }else{
+                                inputEle.type = "number";
+                            }
+                            //inputEle.addEventListener("keyup", this.handleKeyUp.bind(this));
+                            inputEle.maxLength = 1;
+                            inputEle.max = 1;
+                            inputEle.min = 0;
+                            inputEle.style.color = "black";
+                            tdEle.appendChild(inputEle);
+                            break;
+                        case "colSpan":
+                            console.log(" rowData[" + col + "].td[1][1] = " +  rowData[col].td[1][1]);
+                            tdEle.setAttribute('colSpan', rowData[col].td[1][1]); // colApan
+                            //tableRowEle.appendChild(tdEle);
+                            break;
+                        case "rowSpan":
+                            console.log(" rowData[" + col + "].td[2][1] = " +  rowData[col].td[2][1]);
+                            tdEle.setAttribute('rowSpan', rowData[col].td[2][1]); // rowSpan
+                            //tableRowEle.appendChild(tdEle);
+                            break;
+                        default: console.log("No such rowData");
+                    }
+                    tableRowEle.appendChild(tdEle);
+                }
+            }
+            return tableRowEle;
+        }
+
+        /*
         createTableSection: function(tableDataRow, tableSection){
            // console.log("In createTableSection table section: " + tableSection);
            // console.log("tableDataRow[0].col[0].label = " + tableDataRow[0].col[0].label);
@@ -98,6 +210,6 @@ let  TableGenerator = {
             }else{
                 this.tableEle.appendChild(this.tableBodyEle);
             } 
-        }
+        }*/
     }
 /* END TableGenerator */

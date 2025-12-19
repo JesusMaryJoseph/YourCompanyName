@@ -1,596 +1,754 @@
  
-const TableDataMorseCodeOneBitString = `{    "head": { "row":    [
-                                                            { "col":    [
-                                                                            {   "text": "Morse Code Key: 1-bit Word",
-                                                                                "colSpan": 2,
-                                                                                "rowSpan": 1
-                                                                            }                                                                                        
-                                                                        ]
-                                                            },
-                                                            { "col":
-                                                                        [
-                                                                            {   "text":  "Input",
-                                                                                "colSpan": 1,
-                                                                                "rowSpan": 1
-                                                                            },
-                                                                            {
-                                                                                "text": "Output",
-                                                                                "colSpan": 1,
-                                                                                "rowSpan": 2
-                                                                            }
-                                                                        ]
-                                                            },
-                                                            { "col":
-                                                                        [
-                                                                            {   "text":  "Bit # 1",
-                                                                                "colSpan": 1,
-                                                                                "rowSpan": 1
-                                                                            }
-                                                                        ]
-                                                            }
-                                                        ]                  
-                                            },
-                                    "body": { "row":    [    
-                                                            { "col":   [
-                                                                            {   "text": "dot",
-                                                                                "colSpan": 1,
-                                                                                "rowSpan": 1
-                                                                            },
-                                                                            {   "text": "E",
-                                                                                "colSpan": 1,
-                                                                                "rowSpan": 1
-                                                                            }
-                                                                        ]
-                                                            },
-                                                            { "col":    [
-                                                                            {   "text": "DASH",
-                                                                                "colSpan": 1,
-                                                                                "rowSpan": 1
-                                                                            },
-                                                                            {   "text": "T",
-                                                                                "colSpan": 1,
-                                                                                "rowSpan": 1
-                                                                            }
-                                                                        ]
-                                                            }
-                                                        ]
-                                        
-                                            }
-                                }`;
+const TableDataMorseCodeOneBitString = `{    
+    "head": { "rows":   [
+                            [
+                                { "th":    [
+                                                ["text", "Morse Code Key: 1-bit Word"],
+                                                ["colSpan", 2],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }                                                                                   
+                            ],
+                            [   { "th":    [  
+                                                ["text",  "Input"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":    [
+                                                ["text", "Output"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "th":    [
+                                                ["text", "Bit # 1"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ]
+                        ]                  
+            },
+    "body": { "rows":   [
+                            [
+                                { "td":     [   
+                                                ["text",  "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [
+                                                ["text", "E"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "td":     [   
+                                                ["text",  "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":    [
+                                                ["text", "T"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ]
+                        ]
+        
+            }
+    }`;
 const JsonTableDataMorseCodeOneBit = JSON.parse(TableDataMorseCodeOneBitString);
 
-const TableDataMorseCodeTwoBitString = `{    "head": { "row":    [
-                                                    { "col":    [
-                                                                    {   "text": "Morse Code Key: 2-bit Words",
-                                                                        "colSpan": 3,
-                                                                        "rowSpan": 1
-                                                                    }                                                                                        
-                                                                ]
-                                                    },
-                                                    { "col":
-                                                                [
-                                                                    {   "text":  "Inputs",
-                                                                        "colSpan": 2,
-                                                                        "rowSpan": 1
-                                                                    },
-                                                                    {
-                                                                        "text": "Output",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 2
-                                                                    }
-                                                                ]
-                                                    },
-                                                    { "col":    [                             
-                                                                    {   "text":  "Bit #2",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    },
-                                                                    {
-                                                                        "text": "Bit #1",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    }
-                                                                ]
-                                                    }
-                                                ]                  
-                                    },
-                            "body": { "row":    [    
-                                                    { "col":   [
-                                                                    {   "text": "dot",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 2
-                                                                    },
-                                                                    {   "text": "dot",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    },
-                                                                    {   "text": "I",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    }
-                                                                ]
-                                                    },
-                                                    { "col":    [
-                                                                    {   "text": "dash",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    },
-                                                                    {   "text": "A",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    }
-                                                                ]
-                                                    },
-                                                    { "col":    [
-                                                                    {   "text": "dash",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 2
-                                                                    },
-                                                                    {   "text": "dot",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    },
-                                                                    {   "text": "N",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    }
-                                                                ]
-                                                    },
-                                                    { "col":    [
-                                                                    {   "text": "dash",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    },
-                                                                    {   "text": "M",
-                                                                        "colSpan": 1,
-                                                                        "rowSpan": 1
-                                                                    }
-                                                                ]
-                                                    }
-                                                ]
-                                
-                                    }
-                        }`;
+const TableDataMorseCodeTwoBitString = `{    
+    "head": { "rows":   [
+                            [
+                                { "th":     [
+                                                ["text", "Morse Code Key: 2-bit Word"],
+                                                ["colSpan", 3],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }                                                                                   
+                            ],
+                            [   { "th":     [  
+                                                ["text",  "Input"],
+                                                ["colSpan", 2],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Output"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "th":     [
+                                                ["text", "Bit # 2"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Bit # 1"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ]
+                        ]                  
+            },   
+    "body": { "rows":   [
+                            [
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                },
+                                { "td":     [  
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "I"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "td":     [
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [
+                                                ["text", "A"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ], 
+                            [   
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "N"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [ 
+                                { "td":     [     
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                {  "td":    [  
+                                                ["text", "M"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ]
+                        ]                  
+            }
+    
+    }`;
+
 const JsonTableDataMorseCodeTwoBit = JSON.parse(TableDataMorseCodeTwoBitString);
 
-const TableDataMorseCodeThreeBitString = `{    "head": { "row":    [
-                                                                        { "col":    [
-                                                                                        {   "text": "Morse Code Key: (3-bits)",
-                                                                                            "colSpan": 4,
-                                                                                            "rowSpan": 1
-                                                                                        }                                                                                        
-                                                                                    ]
-                                                                        },
-                                                                        { "col":
-                                                                                    [
-                                                                                        {   "text":  "Inputs",
-                                                                                            "colSpan": 3,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {
-                                                                                            "text": "Output",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [                             
-                                                                                        {   "text":  "Bit #3",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },                             
-                                                                                        {   "text":  "Bit #2",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {
-                                                                                            "text": "Bit #1",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        }
-                                                                    ]                  
-                                                        },
-                                                "body": { "row":    [    
-                                                                        { "col":   [
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 4
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "S",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "U",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "R",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "W",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 4
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "D",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "K",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "G",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "O",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        }
-                                                                    ]
-                                                    
-                                                        }
-                                            }`;
+
+const TableDataMorseCodeThreeBitString = `{    
+    "head": { "rows":   [
+                            [
+                                { "th":     [
+                                                ["text", "Morse Code Key: 3-bit Word"],
+                                                ["colSpan", 4],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }                                                                                   
+                            ],
+                            [   { "th":     [  
+                                                ["text",  "Input"],
+                                                ["colSpan", 3],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Output"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "th":     [
+                                                ["text", "Bit # 3"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Bit # 2"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Bit # 1"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ]
+                        ]                  
+            },   
+    "body": { "rows":   [
+                            [
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 4]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                },
+                                { "td":     [  
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "S"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "td":     [
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [
+                                                ["text", "U"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ], 
+                            [   
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "R"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [  
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                {  "td":    [  
+                                                ["text", "W"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 4]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                },
+                                { "td":     [  
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "D"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "td":     [
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [
+                                                ["text", "K"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ], 
+                            [   
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "G"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [  
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                {  "td":    [  
+                                                ["text", "O"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ]
+                        ]                  
+            }
+    
+    }`;
+
 const JsonTableDataMorseCodeThreeBit = JSON.parse(TableDataMorseCodeThreeBitString);
 
-const TableDataMorseCodeFourBitString = `{    "head": { "row":    [
-                                                                        { "col":    [
-                                                                                        {   "text": "Morse Code Key: (4-bits)",
-                                                                                            "colSpan": 5,
-                                                                                            "rowSpan": 1
-                                                                                        }                                                                                        
-                                                                                    ]
-                                                                        },
-                                                                        { "col":
-                                                                                    [
-                                                                                        {   "text":  "Inputs",
-                                                                                            "colSpan": 4,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {
-                                                                                            "text": "Output",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [                              
-                                                                                        {   "text":  "Bit #4",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },                           
-                                                                                        {   "text":  "Bit #3",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },                             
-                                                                                        {   "text":  "Bit #2",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {
-                                                                                            "text": "Bit #1",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        }
-                                                                    ]                  
-                                                        },
-                                                "body": { "row":    [    
-                                                                        { "col":   [
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 8
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 4
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "H",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "V",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "F",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "-",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 4
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "L",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "-",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "P",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "J",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 8
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 4
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "B",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "X",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "C",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "Y",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 4
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "Z",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "Q",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":   [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 2
-                                                                                        },
-                                                                                        {   "text": "dot",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "-",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        },
-                                                                        { "col":    [
-                                                                                        {   "text": "dash",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        },
-                                                                                        {   "text": "-",
-                                                                                            "colSpan": 1,
-                                                                                            "rowSpan": 1
-                                                                                        }
-                                                                                    ]
-                                                                        }
-                                                                    ]
-                                                    
-                                                        }
-                                            }`;
+
+const TableDataMorseCodeFourBitString = `{
+       "head": { "rows":   [
+                            [
+                                { "th":     [
+                                                ["text", "Morse Code Key: 4-bit Word"],
+                                                ["colSpan", 5],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }                                                                                   
+                            ],
+                            [   { "th":     [  
+                                                ["text",  "Input"],
+                                                ["colSpan", 4],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Output"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "th":     [
+                                                ["text", "Bit # 4"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Bit # 3"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Bit # 2"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "th":     [
+                                                ["text", "Bit # 1"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ]
+                        ]                  
+            },   
+    "body": { "rows":   [
+                            [
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 8]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 4]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                },
+                                { "td":     [  
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "H"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "td":     [
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [
+                                                ["text", "V"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ], 
+                            [   
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "F"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [  
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                {  "td":    [  
+                                                ["text", "-"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 4]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                },
+                                { "td":     [  
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "L"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "td":     [
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [
+                                                ["text", "-"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ], 
+                            [   
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "P"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [  
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                {  "td":    [  
+                                                ["text", "J"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [  
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 8]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 4]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                },
+                                { "td":     [  
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "B"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "td":     [
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [
+                                                ["text", "X"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ], 
+                            [   
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "C"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [  
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                {  "td":    [  
+                                                ["text", "Y"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 4]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ] 
+                                },
+                                { "td":     [  
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [   
+                                                ["text", "Z"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ],
+                            [
+                                { "td":     [
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                },
+                                { "td":     [
+                                                ["text", "Q"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ] 
+                                }
+                            ], 
+                            [   
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "dot"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                },
+                                { "td":     [ 
+                                                ["text", "-"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ],
+                            [  
+                                { "td":     [   
+                                                ["text", "dash"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 2]
+                                            ]
+                                },
+                                {  "td":    [  
+                                                ["text", "-"],
+                                                ["colSpan", 1],
+                                                ["rowSpan", 1]
+                                            ]
+                                }
+                            ]
+                        ]                  
+            }
+    
+    }`;
 
 const JsonTableDataMorseCodeFourBit = JSON.parse(TableDataMorseCodeFourBitString);
 /* 

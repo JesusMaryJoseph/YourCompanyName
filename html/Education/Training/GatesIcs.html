@@ -62,7 +62,10 @@
                     Without looking at the paragraph below the Truth Table, try to come up with a "name" for this Gate on your own.
                 </p><br>
                 <div class="table-container">
-                    <!--<table id="truth-table-4-bit-id" class="truth-table truth-table-4-bit" style="border-collapse: collapse">
+                    <table id="unknown-gate-id">
+                        
+                    </table>
+                    <table id="truth-table-4-bit-id" class="truth-table truth-table-4-bit" style="border-collapse: collapse">
                         <thead>
                             <tr>
                                 <th class="table-title" colspan="3">Truth Table for "?" Gate</th>
@@ -86,7 +89,7 @@
                                 <td><div class="tdth-wrapper">F</div></td>
                             </tr>
                         </tbody>
-                    </table>-->
+                    </table>
                 </div><br>
                 <p>As you can see, this Gate has One Input and One Output. Notice also that the Output has the opposite value of the Input. 
                     In Binary there are only 2 values. So, if it is not "one Value" it must be the "other Value"; therefore, it makes sense for 
@@ -146,12 +149,12 @@
 
                 <div class="basic-selection-show-container">
                     <div class="gate-selection-container" colspan="4">
-                        <label id="and-label-id" class="selected-gate" onclick="PracticeTruthTableManager.update('basic',this)">AND</label>
-                        <label id="or-label-id" onclick="PracticeTruthTableManager.update('basic',this)">OR</label>
-                        <label id="xor-label-id" onclick="PracticeTruthTableManager.update('basic',this)">XOR</label>
-                        <label id="nand-label-id" onclick="PracticeTruthTableManager.update('basic',this)">NAND</label>
-                        <label id="nor-label-id" onclick="PracticeTruthTableManager.update('basic',this)">NOR</label>
-                        <label id="nxor-label-id" onclick="PracticeTruthTableManager.update('basic',this)">NXOR</label>
+                        <label id="and-label-id" class="selected-gate" onclick="TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS08)">AND</label>
+                        <label id="or-label-id" onclick="TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS32)">OR</label>
+                        <label id="xor-label-id" onclick="TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS86)">XOR</label>
+                        <label id="nand-label-id" onclick="TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS00)">NAND</label>
+                        <label id="nor-label-id" onclick="TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS02)">NOR</label>
+                        <label id="nxor-label-id" onclick="TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS266)">NXOR</label>
                     </div>
                     <div class="show-basic-solution-container">
                         <label id="show-basic-solution-id" class="show-solution-label" onclick="PracticeTruthTableManager.showSolution('basic')">Show<br>Solution</label>
@@ -159,12 +162,18 @@
                 </div>
 
                 <div id="basic-table-container-id" class="table-container">
-                    <table id="basic-table-id" class="truth-table basic-table" style="border-collapse: collapse">
+
+                    
+                    <table id="basic-practice-table-id" class="truth-table basic-table" style="border-collapse: collapse">
+
+                    </table>
+
+                    <!--<table id="basic-table-id" class="truth-table basic-table" style="border-collapse: collapse">
                         <thead id="basic-thead-id">
                         </thead>
                         <tbody id="basic-tbody-id">
                         </tbody>
-                    </table>
+                    </table>-->
                 </div><br><br>
                 <div class="select-data-type-outer-container">
                     <div class="select-data-type-container">
@@ -232,6 +241,9 @@
                 <p>All the ICs look pretty much the same, differing in size and the number of pins. The following 6 ICs
                     could easily be called the "basic" ICs as seen by the following list:</p>
                 <div class="table-basic-ics-container">
+                    <table id: = "table-basic-ics-id" class="table-basic-ics">
+
+                    </table>
                     <table class="table-basic-ics">
                         <thead>
                             <tr>
@@ -279,8 +291,9 @@
 
         <script>
             function gatesIcsInit(){
-			    console.log("In onload='gatesIcsInit()' GatesIcs.html");
-                PracticeTruthTableManager.create("basic","AND");
+			    //console.log("In onload='gatesIcsInit()' GatesIcs.html");
+                //TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS08);
+                //PracticeTruthTableManager.create("basic","AND");
                 addListenerToInputs();
             }
         </script>

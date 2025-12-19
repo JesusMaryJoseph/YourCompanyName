@@ -54,7 +54,7 @@
                     }
                     if(this.requestedFile == "html/Education/Training/GatesIcs.html"){
                         console.log("in this.requestedFile = html/Education/Training/GatesIcs.html");
-                        PracticeTruthTableManager.initialize();
+                        TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS08);
                        // PracticeTruthTableManager.create("circuit","NotXor");
                     }
                     if(contentId == "truth-table-contents-id"){
@@ -76,7 +76,7 @@
                         console.log("this.requestedFile.slice(37, this.requestedFile.length -5): " + this.requestedFile.slice(37, this.requestedFile.length -5));
                         switch(this.requestedFile.slice(37, this.requestedFile.length -5)){
                             case "LS00_Data_Sheet":
-                               // console.log("in LS00_Data_Sheet");
+                                console.log("in LS00_Data_Sheet");
                                 JsonTableData = JsonTableData74LS00;
                                 tableId = "id-table-7400";
                             break;
