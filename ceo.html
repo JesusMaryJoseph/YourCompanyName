@@ -11,9 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="css/mediaQuery_global_600px-minus_to_1400px-plus.css">
 
 	<link rel="stylesheet" type="text/css" href="css/ceo/mediaQuery_ceo_base_to_1400px-plus.css">
-	<script src="js/MainNavigation/NavHandler.js"></script>
+	<script src="js/NavHandler.js"></script>
 	<!--<script src="js/HTMLManager.js"></script>-->
-	<script src="js/educationManagers/EduHtmlManager.js"></script>
+	<script src="js/EduHtmlManager.js"></script>
 
 	<style>
 		.selection-container {
@@ -36,15 +36,19 @@
 			;
 		}
 
-		.proposal-label {
+		.labels-container {
 			position: absolute;
-			color: yellow;
-			cursor: pointer;
 			top: 35vh;
-			left: 43vw;
-			font-size: 2.5rem;
-			font-weight: bold;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
 		}
+			.labels-container label{
+				color: yellow;
+				cursor: pointer;
+				font-size: 2.5rem;
+				font-weight: bold;
+			}
 		
         .ceo-contents{
 			position: absolute;
@@ -92,7 +96,11 @@
 
 	<div class="page">
 		<h1 class="welcome-label">Welcome To<br>The CEO Page</h1>
-		<label class="proposal-label" onclick="EduHtmlManager.request('html/Proposal.html','ceo-contents-id')">Proposal</label>
+		<div class="labels-container">
+			<label class="proposal-label" onclick="EduHtmlManager.request('html/CEO/Proposal.html','ceo-contents-id')">Proposal</label>
+			<label class="invitation-label" onclick="EduHtmlManager.request('html/CEO/Invitation.html','ceo-contents-id')">Invitation</label>
+			<label class="application-label" onclick="EduHtmlManager.request('html/CEO/Application.html','ceo-contents-id')">Application</label>
+		</div>
 	</div>
 	<div id="ceo-contents-id" class="ceo-contents hide-ceo-contents">
 	</div>

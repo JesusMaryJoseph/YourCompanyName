@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="520.31543mm"
-   height="225.09793mm"
-   viewBox="0 0 520.31542 225.09793"
+   width="356.53387mm"
+   height="191.30313mm"
+   viewBox="0 0 356.53386 191.30313"
    version="1.1"
    id="svg5"
    sodipodi:docname="NandNotNand_wPQ.svg"
@@ -26,8 +26,8 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="1.4142136"
-     inkscape:cx="1307.0869"
-     inkscape:cy="340.82547"
+     inkscape:cx="980.04997"
+     inkscape:cy="328.80464"
      inkscape:window-width="3840"
      inkscape:window-height="2054"
      inkscape:window-x="1909"
@@ -35,92 +35,92 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer2">
     <sodipodi:guide
-       position="327.42137,182.83552"
+       position="174.90957,152.21568"
        orientation="0,-1"
        id="guide182"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="228.74739,133.04476"
+       position="76.235593,102.42492"
        orientation="0,-1"
        id="guide242"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="220.85921,219.04284"
+       position="68.347413,188.423"
        orientation="1,0"
        id="guide244"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="204.61295,142.86692"
+       position="52.101153,112.24708"
        orientation="1,0"
        id="guide246"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="329.40574,178.3376"
+       position="176.89394,147.71776"
        orientation="0,-1"
        id="guide248"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="301.53511,215.24597"
+       position="149.02331,184.62613"
        orientation="1,0"
        id="guide250"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="279.51046,119.9541"
+       position="126.99866,89.334254"
        orientation="0,-1"
        id="guide1212"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="347.5297,138.12093"
+       position="195.0179,107.50109"
        orientation="0,-1"
        id="guide1214"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="340.65054,207.17719"
+       position="188.13874,176.55735"
        orientation="1,0"
        id="guide1218"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="200.08942,182.00118"
+       position="47.577624,151.38134"
        orientation="1,0"
        id="guide1274"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="288.30595,216.17202"
+       position="135.79415,185.55218"
        orientation="1,0"
        id="guide2226"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="335.88804,224.5074"
+       position="183.37624,193.88756"
        orientation="1,0"
        id="guide2228"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="294.78824,214.31993"
+       position="142.27644,183.70009"
        orientation="1,0"
        id="guide2288"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="286.43275,159.4298"
+       position="133.92095,128.80996"
        orientation="0,-1"
        id="guide4130"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="161.58256,125.28058"
+       position="9.0707645,94.660734"
        orientation="0,-1"
        id="guide4132"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="268.03601,2.0827023"
+       position="115.52421,-28.537141"
        orientation="0,-1"
        id="guide4134"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="252.69474,61.20272"
+       position="100.18294,30.582875"
        orientation="0,-1"
        id="guide4136"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="152.4,119.79376"
+       position="-0.11179536,89.173914"
        orientation="1,0"
        id="guide5112"
        inkscape:locked="false" />
@@ -131,7 +131,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Background"
-     transform="translate(190.56442,-102.68866)">
+     transform="translate(38.052621,-105.86362)">
     <g
        inkscape:groupmode="layer"
        id="layer2"
@@ -171,13 +171,13 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:38.1px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-dasharray:none"
-         x="285.38882"
+         x="274.80533"
          y="216.62637"
          id="text304-2"><tspan
            sodipodi:role="line"
            id="tspan302-9"
            style="font-size:38.1px;fill:#000000;stroke-width:0"
-           x="285.38882"
+           x="274.80533"
            y="216.62637">Q<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan5272">2</tspan></tspan></text>
@@ -311,5 +311,5 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline"
-     transform="translate(190.56442,-102.68866)" />
+     transform="translate(38.052621,-105.86362)" />
 </svg>

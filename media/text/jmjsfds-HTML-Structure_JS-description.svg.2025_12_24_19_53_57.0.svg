@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="306.23547mm"
+   height="300.29404mm"
+   viewBox="0 0 306.23548 300.29404"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="jmjsfds-HTML-Structure_JS-description.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:lockguides="false"
+     inkscape:zoom="1.955297"
+     inkscape:cx="619.34324"
+     inkscape:cy="383.57343"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="1909"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="222.13691,-3.452289"
+       orientation="0,-793.70079"
+       id="guide1073"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(12.136907,6.7463255)">
+    <g
+       id="g1500"
+       inkscape:label="BorderExtenders">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:none;stroke:#000000;stroke-width:0.750001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="-12.141729"
+         y="44.492588"
+         id="text1131"><tspan
+           sodipodi:role="line"
+           id="tspan1129"
+           style="stroke-width:0.75"
+           x="-12.141729"
+           y="44.492588">i</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:none;stroke:#000000;stroke-width:0.750001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="292.59702"
+         y="44.205544"
+         id="text1185"><tspan
+           sodipodi:role="line"
+           id="tspan1183"
+           style="stroke-width:0.75"
+           x="292.59702"
+           y="44.205544">I</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:none;stroke:#000000;stroke-width:0.750001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="96.25708"
+         y="-2.5834408"
+         id="text1189"><tspan
+           sodipodi:role="line"
+           id="tspan1187"
+           style="stroke-width:0.75"
+           x="96.25708"
+           y="-2.5834408">I</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:none;stroke:#000000;stroke-width:0.750001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="106.49517"
+         y="293.1727"
+         id="text1193"><tspan
+           sodipodi:role="line"
+           id="tspan1191"
+           style="stroke-width:0.75"
+           x="106.49517"
+           y="293.1727">I</tspan></text>
+    </g>
+    <g
+       id="g1208"
+       inkscape:label="Education"
+       transform="translate(38.629184,10.054167)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+         x="175.86533"
+         y="47.267399"
+         id="text532"
+         inkscape:label="Education-Text"><tspan
+           sodipodi:role="line"
+           id="tspan530"
+           style="stroke-width:0"
+           x="175.86533"
+           y="47.267399">Education</tspan></text>
+      <rect
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1031"
+         width="29.972778"
+         height="8.3312855"
+         x="173.63235"
+         y="40.948891"
+         inkscape:label="Education-Block" />
+    </g>
+    <g
+       id="g1679"
+       inkscape:label="Pages-Navigation"
+       transform="translate(-1.2916667e-7,10.054167)">
+      <g
+         id="g1198"
+         inkscape:label="Home">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+           x="4.2100515"
+           y="46.693298"
+           id="text458"
+           inkscape:label="Home-Text"><tspan
+             sodipodi:role="line"
+             id="tspan456"
+             style="font-size:5.29167px;stroke-width:0"
+             x="4.2100515"
+             y="46.693298">Home</tspan></text>
+        <rect
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+           id="rect411"
+           width="20.093428"
+           height="8.6114683"
+           x="1.2438788"
+           y="40.760952"
+           inkscape:label="Home-Block" />
+      </g>
+      <g
+         id="g1233"
+         inkscape:label="CEO"
+         transform="translate(5.8208335)">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+           x="27.556702"
+           y="46.884663"
+           id="text462"
+           inkscape:label="CEO-Text"><tspan
+             sodipodi:role="line"
+             id="tspan460"
+             style="stroke-width:0"
+             x="27.556702"
+             y="46.884663">CEO</tspan></text>
+        <rect
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+           id="rect967"
+           width="16.619734"
+           height="8.6780443"
+           x="24.820086"
+           y="40.727661"
+           inkscape:label="CEO-Block" />
+      </g>
+      <g
+         id="g1228"
+         inkscape:label="Engineering"
+         transform="translate(11.641668)">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+           x="47.076031"
+           y="47.267399"
+           id="text466"
+           inkscape:label="Engineering-Text"><tspan
+             sodipodi:role="line"
+             id="tspan464"
+             style="stroke-width:0"
+             x="47.076031"
+             y="47.267399">Engineering</tspan></text>
+        <rect
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+           id="rect969"
+           width="34.130936"
+           height="8.3922119"
+           x="45.262718"
+           y="40.966263"
+           inkscape:label="Engineering-Block" />
+      </g>
+      <g
+         id="g1223"
+         inkscape:label="Drafting"
+         transform="translate(19.050006)">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+           x="84.009666"
+           y="47.458763"
+           id="text470"
+           inkscape:label="Drafting-Text"><tspan
+             sodipodi:role="line"
+             id="tspan468"
+             style="stroke-width:0"
+             x="84.009666"
+             y="47.458763">Drafting</tspan></text>
+        <rect
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1025"
+           width="25.435516"
+           height="8.3868074"
+           x="81.530182"
+           y="40.921127"
+           inkscape:label="Ddrafting-Block" />
+      </g>
+      <g
+         id="g1218"
+         inkscape:label="Technician"
+         transform="translate(25.400008)">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+           x="111.18363"
+           y="47.458763"
+           id="text474"
+           inkscape:label="Technician-Text"><tspan
+             sodipodi:role="line"
+             id="tspan472"
+             style="stroke-width:0"
+             x="111.18363"
+             y="47.458763">Technician</tspan></text>
+        <rect
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1027"
+           width="31.202471"
+           height="8.3170996"
+           x="109.61085"
+           y="40.955982"
+           inkscape:label="Technician-Block" />
+      </g>
+      <g
+         id="g1213"
+         inkscape:label="Computer"
+         transform="translate(31.750012)">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+           x="145.0554"
+           y="47.267399"
+           id="text478"
+           inkscape:label="Computer-Text"><tspan
+             sodipodi:role="line"
+             id="tspan476"
+             style="stroke-width:0"
+             x="145.0554"
+             y="47.267399">Computer</tspan></text>
+        <rect
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1029"
+           width="29.594616"
+           height="8.3358555"
+           x="142.93875"
+           y="40.946606"
+           inkscape:label="Computer-Block" />
+      </g>
+      <g
+         id="g1203"
+         inkscape:label="MediaArts"
+         transform="translate(46.037521,-0.19136598)">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+           x="207.24934"
+           y="47.267399"
+           id="text536"
+           inkscape:label="MediaArts-Text"><tspan
+             sodipodi:role="line"
+             id="tspan534"
+             style="stroke-width:0"
+             x="207.24934"
+             y="47.267399">Media Arts</tspan></text>
+        <rect
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1033"
+           width="31.769583"
+           height="8.3101139"
+           x="204.86346"
+           y="40.959476"
+           inkscape:label="MediaArts-Block" />
+      </g>
+      <g
+         id="g1482"
+         inkscape:label="Page-Navigation">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 10.922694,40.728853 v -6.331492 l 254.708126,0.09568 v 6.315077 h 0.28705"
+           id="path1461"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 227.64466,40.80812 V 34.493043"
+           id="path1463" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 188.79737,40.903804 V 34.397361"
+           id="path1465" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 150.61986,40.903804 V 34.588726"
+           id="path1467" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 112.9629,40.884971 V 34.52511"
+           id="path1469" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 74.533107,40.884971 V 34.322135"
+           id="path1471" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="M 39.01261,40.817312 V 34.52511"
+           id="path1473" />
+      </g>
+      <g
+         id="g1878"
+         inkscape:label="Education"
+         transform="translate(38.629183)">
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.29167px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+           x="175.86533"
+           y="47.267399"
+           id="text1874"
+           inkscape:label="Education-Text"><tspan
+             sodipodi:role="line"
+             id="tspan1872"
+             style="stroke-width:0"
+             x="175.86533"
+             y="47.267399">Education</tspan></text>
+        <rect
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1876"
+           width="29.972778"
+           height="8.3312855"
+           x="173.63235"
+           y="40.948891"
+           inkscape:label="Education-Block" />
+      </g>
+    </g>
+    <g
+       id="g1530"
+       inkscape:label="Navigation-Info"
+       transform="translate(-12.700002,3.7041668)">
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:8.46667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="218.40021"
+         y="27.698812"
+         id="text1544"
+         inkscape:label="NavHandler.js"><tspan
+           sodipodi:role="line"
+           id="tspan1542"
+           style="fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+           x="218.40021"
+           y="27.698812">(NavHandler.js)</tspan></text>
+      <g
+         id="g1521"
+         inkscape:label="Navigation-Symbol">
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 171.48715,27.894617 v -5.142015 h 19.2149"
+           id="path1515" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+           d="m 191.06644,27.894617 v -5.142015 h 19.2149"
+           id="path1517" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:8.46667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="121.84045"
+         y="26.886915"
+         id="text1511"
+         inkscape:label="Navigation-Text"><tspan
+           sodipodi:role="line"
+           id="tspan1509"
+           style="fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+           x="121.84045"
+           y="26.886915">Navigation:</tspan></text>
+    </g>
+    <g
+       id="g1540"
+       inkscape:label="Main Pages-Info"
+       transform="translate(-26.987509,3.7041668)">
+      <rect
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.541037;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1506"
+         width="10.33352"
+         height="7.2632132"
+         x="95.094826"
+         y="21.043995"
+         inkscape:label="Main Pages Symbol" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:8.46667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="43.254639"
+         y="26.742722"
+         id="text1403"
+         inkscape:label="Main Pages Text"><tspan
+           sodipodi:role="line"
+           id="tspan1401"
+           style="font-size:8.46667px;stroke-width:0"
+           x="43.254639"
+           y="26.742722">Main Pages:</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:12.1708px;font-family:Arial;-inkscape-font-specification:'Arial Bold';white-space:pre;inline-size:157.964;display:inline;fill:#000000;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round"
+       x="79.416878"
+       y="14.161082"
+       id="text236"
+       transform="translate(-13.420543,-3.0734967)"
+       inkscape:label="jmjsfds-Text"><tspan
+         x="79.416878"
+         y="14.161082"
+         id="tspan566"
+         style="font-size:12.1708px">jmjsfds.github.io/DBE_Inc</tspan></text>
+  </g>
+</svg>

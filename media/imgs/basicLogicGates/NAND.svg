@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="141.4418mm"
-   height="63.576935mm"
-   viewBox="0 0 141.4418 63.576935"
+   width="127.01399mm"
+   height="64.547043mm"
+   viewBox="0 0 127.01399 64.547043"
    version="1.1"
    id="svg5"
    sodipodi:docname="NAND.svg"
@@ -26,8 +26,8 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="2"
-     inkscape:cx="245.25"
-     inkscape:cy="135"
+     inkscape:cx="332.5"
+     inkscape:cy="137"
      inkscape:window-width="1920"
      inkscape:window-height="974"
      inkscape:window-x="-11"
@@ -35,17 +35,17 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer2">
     <sodipodi:guide
-       position="91.148959,64.370685"
+       position="91.010489,64.855282"
        orientation="0,-1"
        id="guide182"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="97.234375,-0.84910686"
+       position="97.095905,-0.36450938"
        orientation="0,-1"
        id="guide242"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="141.15521,16.613393"
+       position="141.01674,17.09799"
        orientation="1,0"
        id="guide1218"
        inkscape:locked="false" />
@@ -65,7 +65,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Background"
-     transform="translate(-9.238406,-118.09686)"
+     transform="translate(-9.376876,-117.61135)"
      style="display:inline">
     <g
        inkscape:groupmode="layer"
@@ -100,5 +100,5 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline"
-     transform="translate(-9.238406,-118.09686)" />
+     transform="translate(-9.376876,-117.61135)" />
 </svg>
