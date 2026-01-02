@@ -19,7 +19,7 @@
                 //TrainingNavEventHandler.closeDropDown("training"); needs updating
                 //EduNavManager("training");
                 this.requestedFile = HTMLsourceFile;
-               // //console.log("this.requestedFile = " + this.requestedFile);
+                //console.log("this.requestedFile = " + this.requestedFile);
                 this.load(contentId);
             },
 
@@ -71,35 +71,40 @@
                    //if(this.requestedFile == "html/Education/Resources/Data_Sheets/LS00_Data_Sheet.html"){
                     //console.log("this.requestedFile = " + resultHTML);
                     console.log("this.requestedFile.slice(0,25) = " + this.requestedFile.slice(0,25));
-                    if(this.requestedFile.slice(0,25) == "html/Education/IC_Data/LS"){
-                        console.log("in DataSheetTableManager.createTable");
-                       // //console.log("this.requestedFile.slice(37, this.requestedFile.length -5) = " + this.requestedFile.slice(37, this.requestedFile.length -5));
+                    if(this.requestedFile.slice(0,25) == ("html/Education/IC_Data/LS") ){
+                        console.log("in JsonTableData selection switch");
+                        console.log("this.requestedFile.slice(23, this.requestedFile.length - 5) = " + this.requestedFile.slice(23, this.requestedFile.length - 5));
                         let JsonTableData = {};
                         let tableId = "";
-                        console.log("this.requestedFile.slice(23, this.requestedFile.length -5): " + this.requestedFile.slice(23, this.requestedFile.length -5));
-                        switch(this.requestedFile.slice(23, this.requestedFile.length -5)){
+                        // find the 4th occurrence of '/'
+                        //var requestedString = this.nthOccurrence(this.requestedFile, "/", 4);
+                        //console.log("requested String = " + requestedString);
+                        //console.log("this.requestedFile.slice(23, this.requestedFile.length -5): " + this.requestedFile.slice(23, this.requestedFile.length -5));
+                        let requestedDataSheet = this.requestedFile.slice(23, this.requestedFile.length - 5);
+                        //console.log("this.requestedFile.slice(23, this.requestedFile.length - 5) =  " + this.requestedFile.slice(23, this.requestedFile.length - 5));
+                        switch(requestedDataSheet){
                             case "LS00_Data_Sheet":
                                 console.log("in LS00_Data_Sheet");
                                 JsonTableData = JsonTableData74LS00;
                                 tableId = "id-table-7400";
                             break;
                             case "LS02_Data_Sheet":
-                              //  //console.log("in LS02_Data_Sheet");
+                            //  //console.log("in LS02_Data_Sheet");
                                 JsonTableData = JsonTableData74LS02;
                                 tableId = "id-table-7402";
                             break;
                             case "LS04_Data_Sheet":
-                              //  //console.log("in LS04_Data_Sheet");
+                            //  //console.log("in LS04_Data_Sheet");
                                 JsonTableData = JsonTableData74LS04;
                                 tableId = "id-table-7404";
                             break;
                             case "LS08_Data_Sheet":
-                               // //console.log("in LS08_Data_Sheet");
+                            // //console.log("in LS08_Data_Sheet");
                                 JsonTableData = JsonTableData74LS08;
                                 tableId = "id-table-7408";
                             break;
                             case "LS32_Data_Sheet":
-                               // //console.log("in LS32_Data_Sheet");
+                            // //console.log("in LS32_Data_Sheet");
                                 JsonTableData = JsonTableData74LS32;
                                 tableId = "id-table-7432";
                             break;
@@ -131,9 +136,9 @@
                                 tableId = "id-table-74161";
                             break;
                             case "LS173_Data_Sheet":
-                               // //console.log("in LS173_Data_Sheet");
+                            // //console.log("in LS173_Data_Sheet");
                                 JsonTableData = JsonTableData74LS173;
-                               // //console.log("after JsonTableData = JsonTableData74LS173;");
+                            // //console.log("after JsonTableData = JsonTableData74LS173;");
                                 tableId = "id-table-74173";
                             break;
                             case "LS189_Data_Sheet":
@@ -154,14 +159,31 @@
                                 //console.log("after JsonTableData = JsonTableData74LS283;");
                                 tableId = "id-table-74283";
                             break;
-                            default: //console.log("No Such JsonTableData");
+                            default: console.log("No Such JsonTableData");
                         }
-                        TableGenerator.createTable(tableId, JsonTableData);
+                    TableGenerator.createTable(tableId, JsonTableData);
                     }
-                    //console.log("Closing Packets DropDown");
-                    //EduNavManager.openCloseDropdown('packets-menu-dd-lev-1', 'close');
+                //console.log("Closing Packets DropDown");
+                //EduNavManager.openCloseDropdown('packets-menu-dd-lev-1', 'close');
                 })
         },
+
+       /* nthOccurrence: function(string, char, nth){
+            var first_index = string.indexOf(char);
+            var length_up_to_first_index = first_index + 1;
+
+            if(nth == 1) {
+                return first_index;
+            }else{
+                string_after_first_occurrence = string.slice(length_up_to_first_index, char, nth - 1);
+                var next_occurrence = this.nthOccurrence(string_after_first_occurrence, char, nth - 1);
+                if(next_occurrence === -1){
+                    return -1;
+                }else{
+                    return length_up_to_first_index + next_occurrence;
+                }
+            }
+        },*/
 
         show: function() { 
          //alert("in EduHTML_Manager this.show()");

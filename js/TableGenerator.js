@@ -18,7 +18,8 @@ let  TableGenerator = {
             this.tableData = tableData;
             this.tableEle = document.getElementById(this.tableId);
             console.log("tableId.slice(0,3) = " + tableId.slice(0,3));
-            if(tableId.slice(0,3) == "bas" || "cir"){
+            if(tableId.slice(0,3) === "bas" || "cir"){
+                console.log("in this.clearTable()");
                 this.clearTable();
             }
             this.createTableHead();
