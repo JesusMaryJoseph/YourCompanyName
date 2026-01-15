@@ -3,6 +3,43 @@
  */
 
 /* CSS for CEO page and contents */ 
+
+		.labels-container {
+			position: absolute;
+			top: 35vh;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+		}
+			.labels-container label{
+				color: yellow;
+				cursor: pointer;
+				font-size: 2.5rem;
+				font-weight: bold;
+			}
+		
+        .ceo-contents{
+			position: absolute;
+			top: 3rem;
+			left: 0;
+			width: 95vw;
+			height: 95vh;
+			z-index: -10;		
+			/*background-image: url("media/imgs/BckGrnd/low-noise.png");*/
+			background-image: url("media/imgs/BckGrnd/olga-thelavart-unsplash-beige.png");
+			transition: opacity 1s;
+		}
+
+		.hide-ceo-contents{
+			opacity: 0;
+			/*z-index: -10;*/
+		}
+		.show-ceo-contents{
+			opacity: 1;
+			z-index: 10;
+		}
+
+
     .page{
           display: flex;
           flex-direction: column; 
@@ -100,17 +137,20 @@
         width: 100vw;
         overflow-x: hidden;
     }
+
+    .labels-container label,
     .welcome-label{
         font-size: 1.5rem;
         padding-top: 0.4rem;
         /*color: red;*/
-    } 
-    .ceo-proposal-label{
+    }
+	
+    /*.ceo-proposal-label{
         font-size: 2rem;
     }
         .ceo-proposal-label:hover{
             font-size: 2.2em;
-        }
+        }*/
 
     .close-html{
         font-size: 1.7rem;
@@ -242,17 +282,19 @@
         width: 100vw;
         overflow-x: hidden;
     }
+
+    .labels-container label,
     .welcome-label{
         font-size: 1.7rem;
         padding-top: 0.4rem;
         /*color: green;*/
     } 
-    .ceo-proposal-label{
+    /*.ceo-proposal-label{
         font-size: 2.2rem;
     }
         .ceo-proposal-label:hover{
             font-size: 2.4em;
-        }
+        }*/
 
     .close-html{
         font-size: 1.8rem;
@@ -380,17 +422,19 @@
         width: 100vw;
         overflow-x: hidden;
     }
+    
+    .labels-container label,
     .welcome-label{
         font-size: 1.7rem;
         padding-top: 0.4rem;
         /*color: blue;*/
     } 
-    .ceo-proposal-label{
+    /*.ceo-proposal-label{
         font-size: 2.2rem;
     }
         .ceo-proposal-label:hover{
             font-size: 2.4em;
-        }
+        }*/
 
 
     .close-html{
@@ -519,17 +563,19 @@
         width: 100vw;
         overflow-x: hidden;
     }
+    
+    .labels-container label,
     .welcome-label{
         font-size: 1.9rem;
         padding-top: 0.4rem;
         /*color: red;*/
     } 
-    .ceo-proposal-label{
+    /*.ceo-proposal-label{
         font-size: 2.2rem;
     }
         .ceo-proposal-label:hover{
             font-size: 2.4em;
-        }
+        }*/
 
 
     .close-html{
@@ -661,17 +707,19 @@
         width: 100vw;
         overflow-x: hidden;
     }
+    
+    .labels-container label,
     .welcome-label{
         font-size: 2.1rem;
         padding-top: 0.4rem;
         /*color: green;*/
     } 
-    .ceo-proposal-label{
+    /*.ceo-proposal-label{
         font-size: 2.4rem;
     }
         .ceo-proposal-label:hover{
             font-size: 2.6em;
-        }
+        }*/
 
 
     .close-html{
@@ -800,17 +848,19 @@
         width: 100vw;
         overflow-x: hidden;
     }
+    
+    .labels-container label,
     .welcome-label{
         font-size: 2.5rem;
         padding-top: 0.4rem;
         /*color: blue;*/
     } 
-    .ceo-proposal-label{
+    /*.ceo-proposal-label{
         font-size: 2.6rem;
     }
         .ceo-proposal-label:hover{
             font-size: 2.8em;
-        }
+        }*/
 
 
     .close-html{
@@ -939,17 +989,19 @@
         width: 100vw;
         overflow-x: hidden;
     }
+    
+    .labels-container label,
     .welcome-label{
         font-size: 3rem;
         padding-top: 0.4rem;
         /*color: red;*/
     } 
-    .ceo-proposal-label{
+    /*.ceo-proposal-label{
         font-size: 3.4rem;
     }
         .ceo-proposal-label:hover{
             font-size: 3.6em;
-        }
+        }*/
 
 
     .close-html{

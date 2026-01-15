@@ -54,11 +54,10 @@
                         //PracticeTruthTableManager.initialize();
                         //PracticeTruthTableManager.create("circuit","NotXor");
                     }
-                    if(this.requestedFile == "html/Education/Training/GatesIcs.html"){
-                        //console.log("in this.requestedFile = html/Education/Training/GatesIcs.html");
+                    if(this.requestedFile == "html/Education/Training/Introduction/GatesIcs.html"){
+                        console.log("in this.requestedFile = html/Education/Training/Introduction/GatesIcs.html");
                         TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS08);
                         TableGenerator.createTable('circuit-practice-table-id',JsonTableDataPracticeNotXor);
-                       // PracticeTruthTableManager.create("circuit","NotXor");
                     }
                     if(contentId == "truth-table-contents-id"){
                         console.log("in this.contentId == 'truth-table-contents-id'");

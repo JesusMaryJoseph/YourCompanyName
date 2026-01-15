@@ -25,52 +25,56 @@
 <body>
     <div class="design-body-container">
         <div id="design-contents-id" class="contents design-contents">
-            <label>Digital Design Page</label>
+            <h1 class="header-one">Digital Design Page</h1>
             <p>As was mentioned before, this section is not necessary for this project. You will be using the 74LS-- series of ICs which have
-                already been designed by Texas Instruments (TI) back in 1970. If, however, you have any inclinations towards Engineering as 
+                already been designed in 1970 by Engineers from Texas Instruments (TI). If, however, you have any inclinations towards Engineering as 
                 a profession, this section is a must for you!
             </p>
-            <p>Your boss hands you a set of "Inputs" and "Outputs" and asks you if you can design the circuitry for this set of data. 
+            <p>Your boss hands you a set of "Inputs" and "Outputs" and asks you if you can design the digital circuitry for this set of data. 
                 You have at your desposal the "basic" Gates: AND, OR, NOT, XOR, NAND, NOR. If there are only a few Inputs and one Output you 
-                may intuitively play around with the Gates and come up with a Solution. There's are better ways. One is called "Boolean Algebra". 
+                may intuitively play around with the Gates and come up with a Solution. There are better ways. One is called "Boolean Algebra". 
             </p>
             <p>Around the middle of the 19th century, a mathematician, George Boole, wondered whether or not "mathematics could be applied to how people think?". 
                 He created a new field of mathematics called "Boolean Logic" and then, somewhat latter, "Boolean Algebra". It wasn't until 1937 that Claude Shannon in his 1937 master's thesis 
-                made the connection between "Boolean Algebra" and "Electronic Relays"(Electrical Switches which are binary in nature). In 1945 the first "programmable computer", 
-                ENIAC (Electronic Numerical Integrator And Computer) was built utilizing Gates(AND, OR, NOT ie Boolean Algebra).
+                made the connection between "Boolean Logic" and "Electronic Relays"(Electrical Switches which are binary in nature). In 1945 the first "programmable computer", 
+                ENIAC (Electronic Numerical Integrator And Computer) was built utilizing Gates(AND, OR, NOT ie Boolean Logic).
             </p>
-            <p>It is this "Boolean Algebra" that provides us with a systematic tool for coming up with a solution to our problem.
-                We will proceed in the following order:
+            <p>It is this "Boolean Algebra" that provides us with a systematic tool for coming up with a solution to our problem.</p>
+            <p>Keep in mind that Truth Tables and Boolean Algebra are two different entities. First consider Truth Tables. 
                 <ol type="1" class="type-1">
-                    <li>Place Inputs and Outputs into a Truth Table</li>
-                    <li>Use some characteristics of the Truth Table as an aid to make the conversion into Boolean Algebraic expressions and/or equations</li>
-                    <li>Simplify/Solve them for your final "design circuit"</li>
-                </ol>
-            </p>
-            <p>Truth Tables and Boolean Algebra are two different entities. First consider Truth Tables. In general: 
-                <ol type="1" class="type-1">
-                    <li>Table Heads only contain "Labels"(<u>English words</u> and/or symbols ie "Inputs", "P<sub>0</sub>"), "Output" etc.</li>
-                    <li>Table Bodies only contain Binary <u>Values</u> ie ("0","1").</li>
+                    <li>Table Heads only contain "Labels"(<u>English words</u> and/or symbols ie "Inputs", "P<sub>0</sub>"), "Output" etc.
+                        They are <u>NOT</u> variables in the same sense as Mathematical Variables! Although the symbol "P<sub>0</sub>" will occur in both the Table and the Boolean Equation
+                        they are vastly different.
+                    </li>
+                    <li>Table Bodies only contain the "<u>Possible</u>" Binary <u>Values</u> ie ("0","1") but they will be used to formulate the Boolean Equation.</li>
                 </ol> 
+            </p>
+            <p>The process will be:
+                <ol type="1" class="type-1">
+                    <li>First:Place Inputs and Outputs into a Truth Table (ie "labels" in the Table Head and the corresponding "values" in the Table Body</li>
+                    <li>Second: Use some characteristics of the Truth Table to come up with an appropriate Boolean Algebraic equation(s) consisting of:
+                        <ol type="a" class="type-a">
+                            <li>Boolean Variables(Same symbols as the Table Head "Lables" but are now "Variables")</li>
+                            <li>and Boolean Operators: "AND", "OR", "NOT" </li>
+                        </ol> 
+                    </li>
+                    <li>Third: Simplify/Solve those Equations for your final "design circuit". Note Solutions are NOT Unique but some are better than others for various reasons!</li>
+                </ol>
             </p>
             <p>Now consider Boolean Algebra. It consists of:
                 <ol type="1" class="type-1">
                     <li>"Boolean <u>Variables</u>"(eg P<sub>1</sub>, P<sub>0</sub>)</li>
                     <li>"Boolean <u>Operators</u>"(eg AND, OR, NOT).</li>
                 </ol><br>
+            </p>
+            <p>
+                <label>An Illustration of "Mathematical Variable" for those who have not taken Algebra classes.</label>
                 <p>Look at the following image:</p>
                 <img class="container-label-contents-img" src="media/imgs/Container-Label-Contents.png">
                 <p class="label-container-contents">
                     "Boolean Variables" can be viewed as a combination of: A Label, A Container, and
-                    Contents of that Container, which can be "changed" over time.<br><br>
-                    <!--<ul>
-                        <li>A Label</li>
-                        <li>A Container</li>
-                        <li>Contents of that Container, which can be "changed" over time</li>
-                    </ul><br>-->
-                    NOTE: The Label(eg P<sub>0</sub>) in the Truth Table can also be thought of as a container(eg its contents is the Column below it
-                    in the Table Body. This Content, however, is fixed by definition and cannot be changed: thus it's not a variable!)
-                    Important: P<sub>0</sub> in the Truth Table is NOT the same as the Boolean variable P<sub>0</sub>.
+                    Contents of that Container, which can be "changed" over time. It may be "0" or it may be "1" but nothing else. Contrast that with the contents in the Table Body.
+                    This content defines the overall possibilities for the given problem at hand. It does not change over time.  
                 </p>
             </p>
             <p>
@@ -217,7 +221,7 @@
                 </p>
                 <p>For the Truth Table above, only state 4 has an Output with a value of 1; on the other hand, it has 3 states with a corresponding 
                     value of "0": S1, S2, S3. Previously we learned that we could write the following sentence for multiple rows(states) = 0:<br>S1 "or" S2 "or" S3 equals 0.<br>
-                    Re-write this English statement by replacing the S1, S2 and S3 with the approximate expressions for P<sub>1</sub> and P<sub>0</sub> 
+                    Re-write this English statement by replacing the S1, S2 and S3 with the appropriate expressions for P<sub>1</sub> and P<sub>0</sub> 
                 </p>
                 <div>
                     <label class="question" onclick="QuestionAnswerManager.revealAnswer('s1-s2-s3-0-id')">Answer : </label>
@@ -284,8 +288,8 @@
                 </p>
                 <label class="question" onclick="QuestionAnswerManager.revealAnswer('s1-s3-s3-boolean-eqs-id')">Answer : </label>
                 <div id="s1-s3-s3-boolean-eqs-id" class="answer answer-hidden">
-                    For Q<sub>0</sub> = "0":  [(NOT P<sub>1</sub>)  AND  (NOT P<sub>0</sub>)] OR [(P<sub>1</sub>) AND (NOT P<sub>0</sub>)] OR [(P<sub>1</sub>)  AND  (NOT P<sub>0</sub>)] = 0<br>
-                    For Q<sub>0</sub> = "0":  (P<sub>1</sub>)  AND  (P<sub>0</sub>) = 1
+                    For Q<sub>0</sub> = "0":  [(NOT P<sub>1</sub>)  AND  (NOT P<sub>0</sub>)] OR [(P<sub>1</sub>) AND (NOT P<sub>0</sub>)] OR [(NOT P<sub>1</sub>)  AND  (P<sub>0</sub>)] = 0<br>
+                    For Q<sub>0</sub> = "1":  (P<sub>1</sub>)  AND  (P<sub>0</sub>) = 1
                 </div>
                 <p>Two observations:
                     <0l type = "1">
@@ -297,7 +301,7 @@
             </p>
         </div>
         <div class="link-container">
-            <button class="link-general link-previous" onclick="EduHtmlManager.request('html/Education/Training/GatesIcs.html','gates-ics-contents-id')">Gates and ICs</button>
+            <button class="link-general link-previous" onclick="EduHtmlManager.request('html/Education/Introduction/Training/GatesIcs.html','gates-ics-contents-id')">Gates and ICs</button>
         </div>
     </div>
 </body>

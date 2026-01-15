@@ -1,49 +1,63 @@
  
 const TableDataMorseCodeOneBitString = `{    
     "head": { "rows":   [
-                            [
-                                { "th":    [
+                            [ 
+                                { "th":     [
                                                 ["text", "Morse Code Key: 1-bit Word"],
                                                 ["colSpan", 2],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class", "morse-code-table-1"],
+                                                ["class", "table-title"],
+                                                ["class", "table-padding-margin"]  
                                             ] 
                                 }                                                                                   
                             ],
-                            [   { "th":    [  
+                            [   
+                                { "th":     [  
                                                 ["text",  "Input"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","inputs-output-tr"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
-                                { "th":    [
+                                { "th":     [
                                                 ["text", "Output"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","inputs-output-tr"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
-                                }
+                                }     
                             ],
-                            [
-                                { "th":    [
+                            [ 
+                                { "th":     [
                                                 ["text", "Bit # 1"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ]
-                        ]                  
+                        ]                 
             },
     "body": { "rows":   [
                             [
                                 { "td":     [   
                                                 ["text",  "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [
                                                 ["text", "E"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -51,13 +65,17 @@ const TableDataMorseCodeOneBitString = `{
                                 { "td":     [   
                                                 ["text",  "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":    [
                                                 ["text", "T"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ]
@@ -73,20 +91,27 @@ const TableDataMorseCodeTwoBitString = `{
                                 { "th":     [
                                                 ["text", "Morse Code Key: 2-bit Word"],
                                                 ["colSpan", 3],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class", "morse-code-table-2"],
+                                                ["class", "table-title"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }                                                                                   
                             ],
                             [   { "th":     [  
                                                 ["text",  "Input"],
                                                 ["colSpan", 2],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","inputs-output-tr"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Output"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","inputs-output-tr"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -94,13 +119,17 @@ const TableDataMorseCodeTwoBitString = `{
                                 { "th":     [
                                                 ["text", "Bit # 2"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Bit # 1"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ]
@@ -111,19 +140,25 @@ const TableDataMorseCodeTwoBitString = `{
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [  
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "I"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -131,13 +166,17 @@ const TableDataMorseCodeTwoBitString = `{
                                 { "td":     [
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [
                                                 ["text", "A"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ], 
@@ -145,19 +184,25 @@ const TableDataMorseCodeTwoBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "N"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -165,13 +210,17 @@ const TableDataMorseCodeTwoBitString = `{
                                 { "td":     [     
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 {  "td":    [  
                                                 ["text", "M"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ]
@@ -189,20 +238,27 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "th":     [
                                                 ["text", "Morse Code Key: 3-bit Word"],
                                                 ["colSpan", 4],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class", "morse-code-table-3"],
+                                                ["class", "table-title"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }                                                                                   
                             ],
                             [   { "th":     [  
                                                 ["text",  "Input"],
                                                 ["colSpan", 3],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","inputs-output-tr"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Output"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","inputs-output-tr"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -210,19 +266,25 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "th":     [
                                                 ["text", "Bit # 3"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Bit # 2"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Bit # 1"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ]
@@ -233,25 +295,33 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 4]
+                                                ["rowSpan", 4],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [  
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "S"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -259,13 +329,17 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "td":     [
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [
                                                 ["text", "U"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ], 
@@ -273,19 +347,25 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "R"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -293,13 +373,17 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 {  "td":    [  
                                                 ["text", "W"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -307,25 +391,33 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 4]
+                                                ["rowSpan", 4],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [  
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "D"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -333,13 +425,17 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "td":     [
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [
                                                 ["text", "K"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ], 
@@ -347,19 +443,25 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "G"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -367,13 +469,17 @@ const TableDataMorseCodeThreeBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 {  "td":    [  
                                                 ["text", "O"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ]
@@ -391,20 +497,27 @@ const TableDataMorseCodeFourBitString = `{
                                 { "th":     [
                                                 ["text", "Morse Code Key: 4-bit Word"],
                                                 ["colSpan", 5],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class", "morse-code-table-4"],
+                                                ["class", "table-title"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }                                                                                   
                             ],
                             [   { "th":     [  
                                                 ["text",  "Input"],
                                                 ["colSpan", 4],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","inputs-output-tr"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Output"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","inputs-output-tr"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -412,25 +525,33 @@ const TableDataMorseCodeFourBitString = `{
                                 { "th":     [
                                                 ["text", "Bit # 4"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Bit # 3"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Bit # 2"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "th":     [
                                                 ["text", "Bit # 1"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ]
@@ -441,31 +562,41 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 8]
+                                                ["rowSpan", 8],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 4]
+                                                ["rowSpan", 4],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [  
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "H"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -473,13 +604,17 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [
                                                 ["text", "V"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ], 
@@ -487,19 +622,25 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "F"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -507,13 +648,17 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 {  "td":    [  
                                                 ["text", "-"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -521,25 +666,33 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 4]
+                                                ["rowSpan", 4],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [  
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "L"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -547,13 +700,17 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [
                                                 ["text", "-"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ], 
@@ -561,19 +718,25 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "P"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -581,13 +744,17 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 {  "td":    [  
                                                 ["text", "J"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -595,31 +762,41 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 8]
+                                                ["rowSpan", 8],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 4]
+                                                ["rowSpan", 4],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [  
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "B"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -627,13 +804,17 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [
                                                 ["text", "X"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ], 
@@ -641,19 +822,25 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "C"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -661,13 +848,17 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 {  "td":    [  
                                                 ["text", "Y"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -675,25 +866,33 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 4]
+                                                ["rowSpan", 4],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [  
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [   
                                                 ["text", "Z"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ],
@@ -701,13 +900,17 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 },
                                 { "td":     [
                                                 ["text", "Q"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ] 
                                 }
                             ], 
@@ -715,19 +918,25 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "dot"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 { "td":     [ 
                                                 ["text", "-"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ],
@@ -735,13 +944,17 @@ const TableDataMorseCodeFourBitString = `{
                                 { "td":     [   
                                                 ["text", "dash"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 2]
+                                                ["rowSpan", 2],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 },
                                 {  "td":    [  
                                                 ["text", "-"],
                                                 ["colSpan", 1],
-                                                ["rowSpan", 1]
+                                                ["rowSpan", 1],
+                                                ["class","bits"],
+                                                ["class", "table-padding-margin"] 
                                             ]
                                 }
                             ]

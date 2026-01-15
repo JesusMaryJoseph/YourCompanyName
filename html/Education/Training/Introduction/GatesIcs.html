@@ -55,10 +55,10 @@
                     of the "Design Circuitry" column located between the "Inputs" and "Outputs". They are related!
                 </p>
                 <p>A typical Engineering problem is: given the Inputs and Outputs, 
-                    the Engineer must use their knowledge and skills, in a creative way, to come up with the "Digital Circuitry" that satisfies that criteria!
-                    In the next section, "Design", you will be learn two tools, "Boolean Algebra" and "Karnaugh Maps", that will help in this process.
+                    the Engineer must use their knowledge and skills, in a creative way, to come up with a "Digital Circuitry" that satisfies that criteria!
+                    In the next section, "Design", you will learn two tools, "Boolean Algebra" and "Karnaugh Maps", that will help in this endeavor.
                 </p>
-                <p>The focus right now is the "Logic Gates" themselves. The following Truth Table is for the "Simplist" Logic Gate.
+                <p>The focus right now, however, is on the "Logic Gates" themselves. The following Truth Table is for the "Simplest" Logic Gate.
                     Without looking at the paragraph below the Truth Table, try to come up with a "name" for this Gate on your own.
                 </p><br>
                 <div class="table-container">
@@ -92,8 +92,8 @@
                     </table>
                 </div><br>
                 <p>As you can see, this Gate has One Input and One Output. Notice also that the Output has the opposite value of the Input. 
-                    In Binary there are only 2 values. So, if it is not "one Value" it must be the "other Value"; therefore, it makes sense for 
-                        this Logic Gate to be called the "NOT" Gate. Its symbol is:
+                    In Binary there are only 2 values. So, if it is <u>not</u> "one Value" it must be the "other Value"; therefore, it makes sense for 
+                        this Logic Gate to be called the <u>NOT</u> Gate. Its symbol is:
                     <img class="not-gate" src="media/imgs/basicLogicGates/NOT_Gate.svg">, where the Input is on its left and the Output on its right.<br>
                     <label>( "F" <img class="not-gate" src="media/imgs/basicLogicGates/NOT_Gate.svg"> "T")</label>
                 </p>
@@ -101,7 +101,7 @@
                     where you find Operands (eg "T"/"F") and Operators, one of which is the NOT Gate.
                 </p>
                 <p>The NOT Gate is similar to Square Root in that it only operates on "One" Value (Operand).
-                    Forgetting +/- one would write the (Square Root of 4) = 2 as: <img class="square-root" src="media/imgs/squareRoot_4.svg">. The same expression could have been written with 
+                    Forgetting +/- one would write the "Square Root of 4" = 2 as: <img class="square-root" src="media/imgs/squareRoot_4.svg">. The same expression could have been written with 
                         the argument (Input) first, followed by the Square Root (Operator) and then immediately followed by the Result, 
                         <img class="square-root" src="media/imgs/4_SquareRoot_2.svg"> , with which you, undoubtedly, feel uncomfortable but which you will be doing from now on.
                     The Inputs come first then the Logic Gate followed immediately by its Output<br> eg (Input <img class="not-gate" src="media/imgs/basicLogicGates/NOT_Gate.svg"> Output)<br>
@@ -113,7 +113,7 @@
                                 <th class="table-title" colspan="3">Truth Table: NOT Gate</th>
                             </tr>
                             <tr>
-                                <th colspan="1">Inputs</th>
+                                <th colspan="1">Input</th>
                                 <th rowspan="2">Design<br>Circuitry</th>
                                 <th rowspan="2">Output</th>
                             </tr>
@@ -134,11 +134,11 @@
                     </table>
                 </div><br>
                 <p>One Note before covering the remaining "Basic Logic Gates": In Binary the two "values" can be represented many different ways: "up"/"down", "High"/"Low", "5volts"/"0volts", "cake"/"ice cream" but the 
-                    most common pairs that you will see are: "0"/"1", "F"/"T" and "H"/"L". You will be given the opportunity to switch back and forth between "0"/"1" and "F"/"T"
-                    but practice with both options. 
+                    most common pairs that you will see are: "0"/"1", "F"/"T" and "H"/"L". You will be given the opportunity to switch back and forth between "0"/"1", "F"/"T" and "H"/"L"
+                    but practice all three options. 
                 </p>
-                <p>There are three more Basic Logic Gates: AND, OR and XOR. XOR is pronounced as Exclusive OR and means:
-                    One or the other but "NOT BOTH".
+                <p>There are three more Basic Logic Gates: AND, OR and XOR. XOR is pronounced as "Exclusive OR" and means:
+                    One or the other but "NOT BOTH" (eg Inputs: T,T XOR Output = F while Inputs: T,F XOR Output = T).
                 </p> 
                 <p>The Negative of these Gates are:NAND, NOR, NXOR where:<br>
                     NAND == NOT(AND), NOR == NOT(OR), NXOR == NOT(XOR).
@@ -209,7 +209,7 @@
             <section class="intro-ics">
                 <p>One of the circuits in the "Circuit Practice Table" above was different than all the others.
                     Did you notice it? It also had a unique label separating it from all the others, which
-                    were composed of "basic" Logic Gates throwing together without much thought.
+                    were composed of "basic" Logic Gates thrown together without much thought.
                 </p>
                 <p>The circuit diagram for "TwoToFourDecoder", however, has a very different look to it. Go back and run it again but 
                     this time consentrate on the 4 output columns. Do you see a pattern? It not only has a very organized output it also
@@ -224,13 +224,13 @@
                 <p>The 74LS139 Integrated Circuit is only one of 18 ICs you will be using to build the 8-bit computer. Six of the 18 will
                     be introduced to you right now. The remaining 12 will be covered after you have finished the "Hardware Architecture" material.
                 </p>
-                <p>All the ICs look pretty much the same, differing in size and the number of pins. The following 6 ICs
+                <p>All the ICs look pretty much the same, differing only in size and the number of pins. The following 6 ICs
                     could easily be called the "basic" ICs as seen by the following list:</p>
                 <div class="table-basic-ics-container">
                     <table id: = "table-basic-ics-id" class="table-basic-ics">
 
                     </table>
-                    <table class="table-basic-ics">
+                    <!--<table class="table-basic-ics">
                         <thead>
                             <tr>
                                 <th>IC</th><th>Name</th><th>Image</th>
@@ -256,22 +256,22 @@
                                 <td>74LS86</td><td>Quad 2-Input<br>XOR Gate</td><td><img src="media/imgs/LS_imgs/Pin_Layouts/74LS86.png"></td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>-->
                 </div>
                 <p>NOTE: When working as an Engineer you will have access to both the single "AND Gate" as well as the "74LS08 IC"; however,
                     when working as a Draftsman or Technician you will ONLY have access to the "74LS08 IC". So if the Engineer chooses
                     to use a single "AND Gate" in their "Design", the Draftsman's Schematic will have to convert that single "AND Gate"
                     into a 74LS08 IC!
                 </p>
-                <p>Take some time to memorize each particular Gate with its corresponding IC name (eg OR Gate -- 74LS32 IC etc.). Your'e ready
+                <p>Take some time to memorize each particular Gate with its corresponding IC name (eg OR Gate -- 74LS32 IC etc.). You are ready
                     for the "Design" section.
                 </p>
                 
             </section>
         </div>
         <div class="link-container">
-            <button class="link-general link-previous" onclick="EduHtmlManager.request('html/Education/Training/TruthTables.html','truth-table-contents-id')">Truth Tables</button>
-            <button class="link-general link-next" onclick="EduHtmlManager.request('html/Education/Training/Design.html','design-contents-id')">Design</button>
+            <button class="link-general link-previous" onclick="EduHtmlManager.request('html/Education/Training/Introduction/TruthTables.html','truth-table-contents-id')">Truth Tables</button>
+            <button class="link-general link-next" onclick="EduHtmlManager.request('html/Education/Training/Introduction/Design.html','design-contents-id')">Design</button>
         </div>
     </div>
 

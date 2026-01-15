@@ -1,68 +1,93 @@
  /* CSS for Codes (BASE) */
-    .contents{
+    .answer{
+
+    }
+    .answer-hidden{
+        opacity: 0;
+    }
+    .audio-secret-message{
+        
+    }
+    .audacity-sos{
+        float: right;
+    }
+    .bits-vs-letters-morse-code{
+        display: flex;
+        justify-content: center;
+    }
+        .bits-vs-letters-morse-code table{
+            border-collapse: collapse;
+        }
+    .codes-contents{
+
+    }
+    /*.contents{
         overflow: visible;
         font-weight: bold;
-        /*border: 3px solid blue;*/
+        border: 3px solid blue;
+    }*/
+    .example-contents{
+
+    }
+    /*.first-table-row{
+
     }
     .header-one,
     .header-two{
         display: block;
         text-align: center;
+    }*/
+    .img-wrapper{
+        display: flex;
+        justify-content: center;
     }
-    p{
-        text-indent: 1.5rem;
-    }
-    .audacity-sos,
+    /*.link-container{
+
+    }*/
+    
     .navajo-talkers{
         float: right;
     }
+    p{
+        text-indent: 2rem;
+    }
+    .additional-material,
     .question{
         cursor: pointer;
     }
         .question:hover{
             color: yellow;
         }
+    .question-answer{
+        text-align: center;
+    }
+    .answer{
+        opacity: 1;
+        transition: opacity 1s, display 1s;
+        transition-behavior: allow-discrete;
+        @starting-style{
+            opacity: 0;
+        }
+    }
+    /* .code-examples-hidden{*/
     .answer-hidden{
         opacity: 0;
+        display: none;
     }
-    .tdth-wrapper{
-        width: 100%;
-        height: 100%;
+    .additional-material{
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-content: center;
-    }
-    .span-dots{
-        opacity: 0;
-    }
-    .bits-vs-letters-morse-code{
-        display: flex;
-        justify-content: center;
-    }
-    .bits-vs-letters-morse-code table{
-        border-collapse: collapse;
-    }
-    .img-wrapper{
-        display: flex;
-        justify-content: center;
-    }
-    p{
-        text-indent: 2rem;
     }
 /*End CSS for Codes (BASE) */
 @media only screen and (max-width: 599px){
-    .contents{
-        padding: 0 1rem;
+    .additional-material{
+        width: 95%;
+        margin-left: 2rem;
     }
-    .header-one{
-        font-size: 2rem;
-    }
-    .header-two{
-        font-size: 1.4rem;
-    }
-    p{
-        font-size: 1.2rem;
-        text-indent: 1.5rem;
+    .additional-material label{
+        margin-bottom: 1rem;
+        
     }
     .answer,
     .question{
@@ -80,9 +105,6 @@
     .bits-vs-letters-morse-code td:nth-child(2){
         width: 70%;
     }
-}
-        
-@media only screen and (min-width: 600px) and (max-width: 749px){
     .contents{
         padding: 0 1rem;
     }
@@ -90,12 +112,15 @@
         font-size: 2rem;
     }
     .header-two{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
     p{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         text-indent: 1.5rem;
     }
+}
+        
+@media only screen and (min-width: 600px) and (max-width: 749px){
     .answer,
     .question{
         font-size: 1.7rem;
@@ -112,22 +137,22 @@
     .bits-vs-letters-morse-code td:nth-child(2){
         width: 75%;
     }
-}
-
-@media only screen and (min-width: 750px) and (max-width: 899px){
     .contents{
         padding: 0 1rem;
     }
     .header-one{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .header-two{
-        font-size: 1.9rem;
+        font-size: 1.7rem;
     }
     p{
-        font-size: 1.5rem;
-        text-indent: 1.7rem;
+        font-size: 1.4rem;
+        text-indent: 1.5rem;
     }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 899px){
     .answer,
     .question{
         font-size: 1.8rem;
@@ -144,22 +169,22 @@
     .bits-vs-letters-morse-code td:nth-child(2){
         width: 80%;
     }
-}
-
-@media only screen and (min-width: 900px) and (max-width: 1049px){
     .contents{
         padding: 0 1rem;
     }
     .header-one{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     .header-two{
-        font-size: 2.1rem;
+        font-size: 1.9rem;
     }
     p{
-        font-size: 1.7rem;
-        text-indent: 2rem;
+        font-size: 1.5rem;
+        text-indent: 1.7rem;
     }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1049px){
     .answer,
     .question{
         font-size: 1.9rem;
@@ -176,11 +201,8 @@
     .bits-vs-letters-morse-code td:nth-child(2){
         width: 80%;
     }
-}
-
-@media only screen and (min-width: 1050px) and (max-width: 1199px){
     .contents{
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
     .header-one{
         font-size: 2.4rem;
@@ -192,6 +214,9 @@
         font-size: 1.7rem;
         text-indent: 2rem;
     }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1199px){
     .answer,
     .question{
         font-size: 2rem;
@@ -208,22 +233,22 @@
     .bits-vs-letters-morse-code td:nth-child(2){
         width: 85%;
     }
+    .contents{
+        padding: 0 1.5rem;
+    }
+    .header-one{
+        font-size: 2.4rem;
+    }
+    .header-two{
+        font-size: 2.1rem;
+    }
+    p{
+        font-size: 1.7rem;
+        text-indent: 2rem;
+    }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px){
-    .contents{
-        padding: 0 1rem;
-    }
-    .header-one{
-        font-size: 2.6rem;
-    }
-    .header-two{
-        font-size: 2.4rem;
-    }
-    p{
-        font-size: 2.2rem;
-        text-indent: 2.8rem;
-    }
     .answer,
     .question{
         font-size: 2.3rem;
@@ -240,22 +265,22 @@
     .bits-vs-letters-morse-code td:nth-child(2){
         width: 85%;
     }
-}
-
-@media only screen and (min-width: 1400px){
     .contents{
         padding: 0 1rem;
     }
     .header-one{
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
     .header-two{
-        font-size: 2.8rem;
+        font-size: 2.4rem;
     }
     p{
-        font-size: 2.5rem;
-        text-indent: 3rem;
+        font-size: 2.2rem;
+        text-indent: 2.8rem;
     }
+}
+
+@media only screen and (min-width: 1400px){
     .answer,
     .question{
         font-size: 2.7rem;
@@ -271,6 +296,19 @@
     }
     .bits-vs-letters-morse-code td:nth-child(2){
         width: 85%;
+    }
+    .contents{
+        padding: 0 1rem;
+    }
+    .header-one{
+        font-size: 3rem;
+    }
+    .header-two{
+        font-size: 2.8rem;
+    }
+    p{
+        font-size: 2.5rem;
+        text-indent: 3rem;
     }
 }
     

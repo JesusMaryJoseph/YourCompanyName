@@ -16,60 +16,6 @@
 	<script src="js/EduHtmlManager.js"></script>
 
 	<style>
-		.selection-container {
-			width: 100%;
-			display: flex;
-			justify-content: space-around;
-		}
-
-		.welcome-label {
-			color: yellow;
-		}
-
-		.dbe-hide-dropdown {
-			margin-top: -13rem;
-		}
-
-		.nav-dropdown {
-			position: relative;
-			z-index: 20;
-			;
-		}
-
-		.labels-container {
-			position: absolute;
-			top: 35vh;
-			width: 100%;
-			display: flex;
-			justify-content: space-around;
-		}
-			.labels-container label{
-				color: yellow;
-				cursor: pointer;
-				font-size: 2.5rem;
-				font-weight: bold;
-			}
-		
-        .ceo-contents{
-			position: absolute;
-			top: 3rem;
-			left: 0;
-			width: 95vw;
-			height: 95vh;
-			z-index: -10;		
-			/*background-image: url("media/imgs/BckGrnd/low-noise.png");*/
-			background-image: url("media/imgs/BckGrnd/olga-thelavart-unsplash-beige.png");
-			transition: opacity 1s;
-		}
-
-		.hide-ceo-contents{
-			opacity: 0;
-			/*z-index: -10;*/
-		}
-		.show-ceo-contents{
-			opacity: 1;
-			z-index: 10;
-		}
 	</style>
 </head>
 
@@ -97,9 +43,9 @@
 	<div class="page">
 		<h1 class="welcome-label">Welcome To<br>The CEO Page</h1>
 		<div class="labels-container">
-			<label class="proposal-label" onclick="EduHtmlManager.request('html/CEO/Proposal.html','ceo-contents-id')">Proposal</label>
-			<label class="invitation-label" onclick="EduHtmlManager.request('html/CEO/Invitation.html','ceo-contents-id')">Invitation</label>
-			<label class="application-label" onclick="EduHtmlManager.request('html/CEO/Application.html','ceo-contents-id')">Application</label>
+			<label onclick="EduHtmlManager.request('html/CEO/Proposal.html','ceo-contents-id')">Proposal</label>
+			<label onclick="EduHtmlManager.request('html/CEO/Invitation.html','ceo-contents-id')">Invitation</label>
+			<label onclick="EduHtmlManager.request('html/CEO/Application.html','ceo-contents-id')">Application</label>
 		</div>
 	</div>
 	<div id="ceo-contents-id" class="ceo-contents hide-ceo-contents">

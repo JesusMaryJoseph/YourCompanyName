@@ -5,7 +5,9 @@ const TableData74LS00String = `{
                             { "th":     [
                                             ["text", "74LS00 Quad 2-Input NAND Gate"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                            
                                         ]
                             }
                         ],
@@ -14,14 +16,18 @@ const TableData74LS00String = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Output"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -156,7 +162,9 @@ const TableDataPractice74LS00String = `{
                             { "th":     [
                                             ["text", "74LS00 NAND Logic Gate"],
                                             ["colSpan", 5],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                           
                                         ]
                             }
                         ],
@@ -165,21 +173,27 @@ const TableDataPractice74LS00String = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Output"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -188,28 +202,36 @@ const TableDataPractice74LS00String = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -221,28 +243,36 @@ const TableDataPractice74LS00String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["image", "media/imgs/basicLogicGates/NAND.svg"],
+                                            ["image", "media/imgs/basicLogicGates/NAND_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-0-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
@@ -251,7 +281,9 @@ const TableDataPractice74LS00String = `{
                                             ["id", "answer-0-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -260,21 +292,27 @@ const TableDataPractice74LS00String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-1-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
@@ -283,7 +321,9 @@ const TableDataPractice74LS00String = `{
                                             ["id", "answer-1-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -292,21 +332,27 @@ const TableDataPractice74LS00String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-2-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
@@ -315,7 +361,9 @@ const TableDataPractice74LS00String = `{
                                             ["id", "answer-2-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -324,21 +372,27 @@ const TableDataPractice74LS00String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-3-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
@@ -347,7 +401,9 @@ const TableDataPractice74LS00String = `{
                                             ["id", "answer-3-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             } 
                         ]
@@ -363,7 +419,9 @@ const TableData74LS02String = `{
                                         [
                                             ["text", "74LS02 Quad 2-Input NOR Gate"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                            
                                         ]
                             }
                         ],
@@ -511,7 +569,9 @@ const TableDataPractice74LS02String = `{
                             { "th":     [
                                             ["text", "74LS02 NOR Logic Gate"],
                                             ["colSpan", 5],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                        
                                         ]
                             }
                         ],
@@ -520,21 +580,27 @@ const TableDataPractice74LS02String = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Output"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -543,28 +609,36 @@ const TableDataPractice74LS02String = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -576,28 +650,36 @@ const TableDataPractice74LS02String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["image", "media/imgs/basicLogicGates/NOR.svg"],
+                                            ["image", "media/imgs/basicLogicGates/NOR_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-0-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
@@ -606,7 +688,9 @@ const TableDataPractice74LS02String = `{
                                             ["id", "answer-0-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -615,21 +699,27 @@ const TableDataPractice74LS02String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-1-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
@@ -638,7 +728,9 @@ const TableDataPractice74LS02String = `{
                                             ["id", "answer-1-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -647,21 +739,27 @@ const TableDataPractice74LS02String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-2-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
@@ -670,7 +768,9 @@ const TableDataPractice74LS02String = `{
                                             ["id", "answer-2-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -679,21 +779,27 @@ const TableDataPractice74LS02String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-3-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
@@ -702,7 +808,9 @@ const TableDataPractice74LS02String = `{
                                             ["id", "answer-3-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             } 
                         ]
@@ -719,7 +827,9 @@ const TableData74LS04String = `{
                                         [
                                             ["text", "74LS04 Hex Inverting Gate"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                           
                                         ]
                             }
                         ],
@@ -801,7 +911,9 @@ const TableData74LS08String = `{
                                         [
                                             ["text", "74LS08 Quad 2-Input AND Gate"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                           
                                         ]
                             }
                         ],
@@ -949,7 +1061,9 @@ const TableDataPractice74LS08String = `{
                             { "th":     [
                                             ["text", "74LS08 AND Logic Gate"],
                                             ["colSpan", 5],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                        
                                         ]
                             }
                         ],
@@ -958,21 +1072,27 @@ const TableDataPractice74LS08String = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Output"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -981,28 +1101,36 @@ const TableDataPractice74LS08String = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -1014,28 +1142,36 @@ const TableDataPractice74LS08String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["image", "media/imgs/basicLogicGates/AND.svg"],
+                                            ["image", "media/imgs/basicLogicGates/AND_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-0-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
@@ -1044,7 +1180,9 @@ const TableDataPractice74LS08String = `{
                                             ["id", "answer-0-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -1053,21 +1191,27 @@ const TableDataPractice74LS08String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-1-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
@@ -1076,7 +1220,9 @@ const TableDataPractice74LS08String = `{
                                             ["id", "answer-1-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -1085,21 +1231,27 @@ const TableDataPractice74LS08String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-2-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
@@ -1108,7 +1260,9 @@ const TableDataPractice74LS08String = `{
                                             ["id", "answer-2-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -1117,21 +1271,27 @@ const TableDataPractice74LS08String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-3-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
@@ -1140,7 +1300,9 @@ const TableDataPractice74LS08String = `{
                                             ["id", "answer-3-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             } 
                         ]
@@ -1156,7 +1318,9 @@ const TableData74LS32String = `{
                                         [
                                             ["text", "74LS32 Quad 2-Input OR Gate"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                           
                                         ]
                             }
                         ],
@@ -1304,7 +1468,9 @@ const TableDataPractice74LS32String = `{
                             { "th":     [
                                             ["text", "74LS32 OR Logic Gate"],
                                             ["colSpan", 5],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                        
                                         ]
                             }
                         ],
@@ -1313,21 +1479,27 @@ const TableDataPractice74LS32String = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Output"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -1336,28 +1508,36 @@ const TableDataPractice74LS32String = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -1369,28 +1549,36 @@ const TableDataPractice74LS32String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["image", "media/imgs/basicLogicGates/OR.svg"],
+                                            ["image", "media/imgs/basicLogicGates/OR_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-0-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
@@ -1399,7 +1587,9 @@ const TableDataPractice74LS32String = `{
                                             ["id", "answer-0-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -1408,21 +1598,27 @@ const TableDataPractice74LS32String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-1-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
@@ -1431,7 +1627,9 @@ const TableDataPractice74LS32String = `{
                                             ["id", "answer-1-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -1440,21 +1638,27 @@ const TableDataPractice74LS32String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-2-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
@@ -1463,7 +1667,9 @@ const TableDataPractice74LS32String = `{
                                             ["id", "answer-2-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -1472,21 +1678,27 @@ const TableDataPractice74LS32String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-3-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
@@ -1495,7 +1707,9 @@ const TableDataPractice74LS32String = `{
                                             ["id", "answer-3-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             } 
                         ]
@@ -2602,7 +2816,9 @@ const TableData74LS86String = `{
                                         [
                                             ["text", "74LS86 Quad 2-Input XOR Gate"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                           
                                         ]
                             }
                         ],
@@ -2749,7 +2965,9 @@ const TableDataPractice74LS86String = `{
                             { "th":     [
                                             ["text", "74LS86 OR Logic Gate"],
                                             ["colSpan", 5],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -2758,21 +2976,27 @@ const TableDataPractice74LS86String = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Output"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -2781,28 +3005,36 @@ const TableDataPractice74LS86String = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -2814,28 +3046,36 @@ const TableDataPractice74LS86String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["image", "media/imgs/basicLogicGates/XOR.svg"],
+                                            ["image", "media/imgs/basicLogicGates/XOR_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-0-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
@@ -2844,7 +3084,9 @@ const TableDataPractice74LS86String = `{
                                             ["id", "answer-0-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -2853,21 +3095,27 @@ const TableDataPractice74LS86String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-1-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
@@ -2876,7 +3124,9 @@ const TableDataPractice74LS86String = `{
                                             ["id", "answer-1-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -2885,21 +3135,27 @@ const TableDataPractice74LS86String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-2-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
@@ -2908,7 +3164,9 @@ const TableDataPractice74LS86String = `{
                                             ["id", "answer-2-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -2917,21 +3175,27 @@ const TableDataPractice74LS86String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-3-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
@@ -2940,7 +3204,9 @@ const TableDataPractice74LS86String = `{
                                             ["id", "answer-3-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             } 
                         ]
@@ -5805,7 +6071,9 @@ const TableDataPractice74LS266String = `{
                             { "th":     [
                                             ["text", "74LS266 NXOR Logic Gate"],
                                             ["colSpan", 5],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -5814,21 +6082,27 @@ const TableDataPractice74LS266String = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Output"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -5837,28 +6111,36 @@ const TableDataPractice74LS266String = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -5870,28 +6152,36 @@ const TableDataPractice74LS266String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["image", "media/imgs/basicLogicGates/NXOR.svg"],
+                                            ["image", "media/imgs/basicLogicGates/NXOR_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["input", ""],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
@@ -5900,7 +6190,9 @@ const TableDataPractice74LS266String = `{
                                             ["id", "answer-0-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -5909,21 +6201,27 @@ const TableDataPractice74LS266String = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["input", ""],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
@@ -5932,7 +6230,9 @@ const TableDataPractice74LS266String = `{
                                             ["id", "answer-1-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -5941,21 +6241,27 @@ const TableDataPractice74LS266String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["input", ""],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
@@ -5964,7 +6270,9 @@ const TableDataPractice74LS266String = `{
                                             ["id", "answer-2-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -5973,21 +6281,27 @@ const TableDataPractice74LS266String = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["input", ""],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
@@ -5996,7 +6310,9 @@ const TableDataPractice74LS266String = `{
                                             ["id", "answer-3-id"],
                                             ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             } 
                         ]
@@ -7320,7 +7636,9 @@ const TableDataPracticeNotXorString = `{
                             { "th":     [
                                             ["text", "NOT-XOR Circuit"],
                                             ["colSpan", 7],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -7329,21 +7647,27 @@ const TableDataPracticeNotXorString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 4],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -7352,35 +7676,44 @@ const TableDataPracticeNotXorString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -7392,53 +7725,66 @@ const TableDataPracticeNotXorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/NotXor_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -7447,46 +7793,58 @@ const TableDataPracticeNotXorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -7495,46 +7853,58 @@ const TableDataPracticeNotXorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -7543,46 +7913,58 @@ const TableDataPracticeNotXorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -7598,7 +7980,9 @@ const TableDataPracticeAndNotOrString = `{
                             { "th":     [
                                             ["text", "And-Not-Or Circuit"],
                                             ["colSpan", 9],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -7607,21 +7991,27 @@ const TableDataPracticeAndNotOrString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 6],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -7630,42 +8020,54 @@ const TableDataPracticeAndNotOrString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -7677,69 +8079,86 @@ const TableDataPracticeAndNotOrString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/AndNotOr_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -7748,62 +8167,78 @@ const TableDataPracticeAndNotOrString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -7812,62 +8247,78 @@ const TableDataPracticeAndNotOrString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -7876,62 +8327,78 @@ const TableDataPracticeAndNotOrString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -7947,7 +8414,9 @@ const TableDataPracticeOrAndXorString = `{
                             { "th":     [
                                             ["text", "Or-And-Xor Circuit"],
                                             ["colSpan", 9],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -7956,21 +8425,27 @@ const TableDataPracticeOrAndXorString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 6],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -7979,42 +8454,54 @@ const TableDataPracticeOrAndXorString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -8026,69 +8513,87 @@ const TableDataPracticeOrAndXorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/OrAndXor_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -8097,62 +8602,78 @@ const TableDataPracticeOrAndXorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -8161,62 +8682,78 @@ const TableDataPracticeOrAndXorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -8225,62 +8762,78 @@ const TableDataPracticeOrAndXorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -8296,7 +8849,9 @@ const TableDataPracticeNandNotNandString = `{
                             { "th":     [
                                             ["text", "Nand-Not-Nand Circuit"],
                                             ["colSpan", 9],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -8305,21 +8860,27 @@ const TableDataPracticeNandNotNandString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 6],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -8328,42 +8889,54 @@ const TableDataPracticeNandNotNandString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -8375,69 +8948,87 @@ const TableDataPracticeNandNotNandString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/NandNotNand_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -8446,62 +9037,78 @@ const TableDataPracticeNandNotNandString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -8510,62 +9117,78 @@ const TableDataPracticeNandNotNandString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -8574,62 +9197,78 @@ const TableDataPracticeNandNotNandString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -8645,7 +9284,9 @@ const TableDataPracticeNorNandNxorString = `{
                             { "th":     [
                                             ["text", "Nor-Nand-Nxor"],
                                             ["colSpan", 9],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -8654,21 +9295,27 @@ const TableDataPracticeNorNandNxorString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 6],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -8677,42 +9324,54 @@ const TableDataPracticeNorNandNxorString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -8724,69 +9383,87 @@ const TableDataPracticeNorNandNxorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/NorNandNxor_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -8795,62 +9472,78 @@ const TableDataPracticeNorNandNxorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -8859,62 +9552,78 @@ const TableDataPracticeNorNandNxorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -8923,62 +9632,78 @@ const TableDataPracticeNorNandNxorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -8994,7 +9719,9 @@ const TableDataPracticeNorNorNorString = `{
                             { "th":     [
                                             ["text", "Nor-Nor-Nor"],
                                             ["colSpan", 9],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                        
                                         ]
                             }
                         ],
@@ -9003,21 +9730,27 @@ const TableDataPracticeNorNorNorString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 6],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -9026,42 +9759,54 @@ const TableDataPracticeNorNorNorString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -9073,69 +9818,87 @@ const TableDataPracticeNorNorNorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/NorNorNor_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -9144,62 +9907,78 @@ const TableDataPracticeNorNorNorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -9208,62 +9987,78 @@ const TableDataPracticeNorNorNorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -9272,62 +10067,78 @@ const TableDataPracticeNorNorNorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -9343,7 +10154,9 @@ const TableDataPracticeAndAndOrString = `{
                             { "th":     [
                                             ["text", "And-And-Or"],
                                             ["colSpan", 10],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -9352,21 +10165,27 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 6],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -9375,49 +10194,63 @@ const TableDataPracticeAndAndOrString = `{
                                         [       
                                             ["text",  "P2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },    
                             { "th":                            
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 3],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -9429,76 +10262,96 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/AndAndOr_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 8]
+                                            ["rowSpan", 8],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "O", "L"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "O", "L"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -9507,69 +10360,87 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -9578,69 +10449,87 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -9649,69 +10538,87 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },   
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -9720,69 +10627,87 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-40-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-41-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-42-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "O", "L"]],
-                                            ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-40-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "O", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-41-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-42-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -9791,69 +10716,87 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-50-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-51-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-52-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-50-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-51-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-52-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -9862,69 +10805,87 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-60-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-61-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-62-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },     
-                            { "td":     
-                                        [
-                                            ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },     
-                            { "td":     
-                                        [
-                                            ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-60-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },     
+                            { "td":     
+                                        [
+                                            ["data", [ "F", "0", "L"]],
+                                            ["id", "answer-61-id"],
+                                            ["class", "hide-answer"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },     
+                            { "td":     
+                                        [
+                                            ["data", [ "F", "0", "L"]],
+                                            ["id", "answer-62-id"],
+                                            ["class", "hide-answer"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -9933,69 +10894,87 @@ const TableDataPracticeAndAndOrString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },   
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-70-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-71-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-72-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },     
-                            { "td":     
-                                        [
-                                            ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },     
-                            { "td":     
-                                        [
-                                            ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-70-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },     
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["id", "answer-71-id"],
+                                            ["class", "hide-answer"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },     
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["id", "answer-72-id"],
+                                            ["class", "hide-answer"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -10011,7 +10990,9 @@ const TableDataPracticeNotAndXorOrString = `{
                             { "th":     [
                                             ["text", "Not-And-Xor-Or"],
                                             ["colSpan", 11],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -10020,21 +11001,27 @@ const TableDataPracticeNotAndXorOrString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 8],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -10043,49 +11030,63 @@ const TableDataPracticeNotAndXorOrString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q3"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 4],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -10097,85 +11098,107 @@ const TableDataPracticeNotAndXorOrString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/NotAndXorOr_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-03-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-03-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -10184,78 +11207,98 @@ const TableDataPracticeNotAndXorOrString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan",1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-13-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-13-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -10264,78 +11307,98 @@ const TableDataPracticeNotAndXorOrString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-23-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-21-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-23-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -10344,78 +11407,98 @@ const TableDataPracticeNotAndXorOrString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-33-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-31-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-33-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -10431,7 +11514,9 @@ const TableDataPracticeNotXorOrNandString = `{
                             { "th":     [
                                             ["text", "Not-Xor-Or-Nand"],
                                             ["colSpan", 11],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -10440,21 +11525,27 @@ const TableDataPracticeNotXorOrNandString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 8],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -10463,49 +11554,63 @@ const TableDataPracticeNotXorOrNandString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q3"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 4],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -10517,85 +11622,107 @@ const TableDataPracticeNotXorOrNandString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/NotXorOrNand_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-03-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-03-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -10604,78 +11731,98 @@ const TableDataPracticeNotXorOrNandString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-13-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-13-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -10684,78 +11831,98 @@ const TableDataPracticeNotXorOrNandString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-23-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-21-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-23-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -10764,78 +11931,98 @@ const TableDataPracticeNotXorOrNandString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-33-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-31-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-33-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -10851,7 +12038,9 @@ const TableDataPracticeTwoToFourDecoderString = `{
                             { "th":     [
                                             ["text", "Two To Four Decoder"],
                                             ["colSpan", 15],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -10860,21 +12049,27 @@ const TableDataPracticeTwoToFourDecoderString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 12],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -10883,63 +12078,81 @@ const TableDataPracticeTwoToFourDecoderString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q3"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q4"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q5"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 6],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -10951,117 +12164,147 @@ const TableDataPracticeTwoToFourDecoderString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/TwoToFourDecoder_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-03-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-04-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-05-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-03-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-04-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-05-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -11070,110 +12313,138 @@ const TableDataPracticeTwoToFourDecoderString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-13-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-14-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-15-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-13-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-14-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-15-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -11182,110 +12453,138 @@ const TableDataPracticeTwoToFourDecoderString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-23-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-24-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-25-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-21-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-23-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-24-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-25-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -11294,110 +12593,138 @@ const TableDataPracticeTwoToFourDecoderString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-33-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-34-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-35-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },     
-                            { "td":     
-                                        [
-                                            ["data", [ "T", "1", "H"]],
                                             ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-33-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },     
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["id", "answer-34-id"],
+                                            ["class", "hide-answer"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-35-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]
@@ -11413,7 +12740,9 @@ const TableDataPracticeAndOrNandNxorNandNorString = `{
                             { "th":     [
                                             ["text", "And-Or-Nand-Nxor-Nand-Nor"],
                                             ["colSpan", 15],
-                                            ["rowSpan", 1]                                                                         
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                         
                                         ]
                             }
                         ],
@@ -11422,21 +12751,27 @@ const TableDataPracticeAndOrNandNxorNandNorString = `{
                                         [
                                             ["text",  "Inputs"],
                                             ["colSpan", 2],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Design Circuitry"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [
                                             ["text", "Outputs"],
                                             ["colSpan", 12],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -11445,63 +12780,81 @@ const TableDataPracticeAndOrNandNxorNandNorString = `{
                                         [       
                                             ["text",  "P1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "P0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q0"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q1"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q2"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q3"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q4"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["text", "Q5"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "th":
                                         [  
                                             ["button", "Show Answer"],
                                             ["colSpan", 6],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]   
@@ -11513,117 +12866,147 @@ const TableDataPracticeAndOrNandNxorNandNorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["image", "media/imgs/basicLogicGates/AndOrNandNxorNandNor_wPQ.svg"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 4]
+                                            ["rowSpan", 4],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-00-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-01-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-02-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-03-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-04-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-05-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-00-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-02-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-03-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-04-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-05-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ], 
@@ -11632,110 +13015,138 @@ const TableDataPracticeAndOrNandNxorNandNorString = `{
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }, 
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-10-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-11-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-12-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-13-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-14-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-15-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-10-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-12-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-11-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-13-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-14-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-01-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-15-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -11744,110 +13155,138 @@ const TableDataPracticeAndOrNandNxorNandNorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-20-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-21-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-22-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-23-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-24-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-25-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
                                             ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },      
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-20-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-21-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-22-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-23-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-24-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-25-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ],
@@ -11856,110 +13295,138 @@ const TableDataPracticeAndOrNandNxorNandNorString = `{
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },  
                             { "td":     
                                         [                
                                             ["data", [ "T", "1", "H"]],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-30-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-31-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-32-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-33-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-34-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
-                                            ["input", ""],
+                                            ["input", "user-answer-35-id"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
                                             ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },       
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-30-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-31-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-32-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-31-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-33-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "T", "1", "H"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-34-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             },     
                             { "td":     
                                         [
                                             ["data", [ "F", "0", "L"]],
-                                            ["id", "answer-21-id"],
-                                            ["class", "show-answer"],
+                                            ["id", "answer-35-id"],
+                                            ["class", "hide-answer"],
                                             ["colSpan", 1],
-                                            ["rowSpan", 1]
+                                            ["rowSpan", 1],
+                                            ["class", "td-font-size"],
+                                            ["class", "table-padding-margin"]
                                         ]
                             }
                         ]

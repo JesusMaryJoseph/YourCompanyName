@@ -1,0 +1,217 @@
+// Script for viewing IC dies and schematics
+// Copyright Ken Shirriff 2014
+// http://righto.com
+function View(data, divName, imageName, controller, width, height) {
+  this.data = data;
+  this.controller = controller;
+  this.can1 = "#" + divName + "can1";
+  this.can2 = "#" + divName + "can2";
+  this.canvasholder = "#" + divName + "canvasholder";
+  this.ctx1 = $(this.can1)[0].getContext("2d");
+  this.ctx2 = $(this.can2)[0].getContext("2d");
+  this.img = new Image();
+  this.img.src = imageName;
+  this.WIDTH = 0;
+  this.HEIGHT = 0;
+  this.ANIMATE_SPEED = 200;
+  this.pinColor = 'white';
+  this.componentColor = 'black';
+  var that = this;
+  $(this.img).load(function() {
+    that.WIDTH = width
+    that.HEIGHT = that.img.height * (that.WIDTH / that.img.width)
+    $(that.can1)[0].width = that.WIDTH;
+    $(that.can1)[0].height = that.HEIGHT;
+    $(that.can2)[0].width = that.WIDTH;
+    $(that.can2)[0].height = that.HEIGHT;
+    $(that.canvasholder)[0].style.position = "relative";
+    $(that.canvasholder)[0].style.width = that.WIDTH;
+    $(that.canvasholder)[0].style.height = that.HEIGHT;
+    $(that.can2)[0].style.zIndex = "1";
+    that.ctx1.drawImage(that.img, 0, 0, that.img.width, that.img.height, 0, 0, that.WIDTH, that.HEIGHT);
+    if (height) {
+      that.HEIGHT = height;
+    }
+    that.controller.loaded(that);
+  });
+
+  $(that.canvasholder).mousemove(function(e) {
+    var offset = $(this).offset(); 
+    var click_x = e.pageX - offset.left;
+    var click_y = e.pageY - offset.top;
+    var record = that.findRecordContainingPoint(click_x, click_y);
+    if (record != null) {
+      $(this).css( 'cursor', 'pointer' );
+    } else {
+      $(this).css( 'cursor', 'default' );
+    }
+  });
+
+  $(that.canvasholder).click(function(e) {
+    var offset = $(this).offset(); 
+    var click_x = e.pageX - offset.left;
+    var click_y = e.pageY - offset.top;
+    var record = that.findRecordContainingPoint(click_x, click_y);
+    if (record != null) {
+        that.controller.hilite(record.id);
+	return;
+    } else {
+      that.controller.unhilite(that.currentHilite);
+    }
+  });
+
+}
+
+
+// Return record containing the point, or null
+View.prototype.findRecordContainingPoint = function(click_x, click_y) {
+  // Check the boxes
+  for (var id in this.data) {
+    var record = this.data[id];
+    if (record.shape.length == 4) {
+      // Rectangle
+      var x = record.shape[0]*this.WIDTH;
+      var y = record.shape[1]*this.HEIGHT;
+      var w = record.shape[2]*this.WIDTH;
+      var h = record.shape[3]*this.HEIGHT;
+      if (x <= click_x && click_x <= x+w && y < click_y && click_y <= y+h) {
+	return record;
+      }
+    } else {
+      // Polygon
+      if (this.isPointInPolygon(record.shape, click_x / this.WIDTH, click_y / this.HEIGHT)) {
+	return record;
+      }
+    }
+  }
+  // Check the labels
+  for (var id in this.data) {
+    var record = this.data[id];
+    if (record && record.features.length > 0 && record.features[0][2] == record.id) {
+      var x = record.features[0][0]*this.WIDTH;
+      var y = record.features[0][1]*this.HEIGHT - 14;
+      var w = record.features[0][2].length * 12;
+      var h = 14;
+      if (x <= click_x && click_x <= x+w && y < click_y && click_y <= y+h) {
+	return record;
+      }
+    }
+  }
+  return null;
+};
+
+
+// verts is [x0, y0, x1, y1, ...]
+// Point in polygon code from http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
+View.prototype.isPointInPolygon = function(verts, testx, testy) {
+  var nvert2 = verts.length; // number of vertices * 2
+  var j = nvert2 - 2; // index of last vertex's x coord
+  var c = false;
+  for (var i = 0; i < nvert2; i += 2) { // Step through vertices
+    if (( (verts[i+1] > testy) != (verts[j+1] > testy) ) &&
+	  (testx < (verts[j]-verts[i]) * (testy-verts[i+1]) / (verts[j+1]-verts[i+1]) + verts[i]) ) {
+      c = !c;
+    }
+    j = i;
+  }
+  return c;
+};
+
+
+View.prototype.unhilite = function() {
+    this.ctx2.clearRect(0, 0, this.WIDTH, this.HEIGHT);
+    $(this.can2).css('opacity', 0);
+};
+
+View.prototype.hilite = function(id) {
+    $(this.can2).stop(true /* clearQueue */, false /* jumpToEnd */);
+    $(this.can2).animate({opacity: 1}, this.ANIMATE_SPEED);
+};
+
+// drawLabels = true for labels, false for features
+View.prototype.drawDataFeatures = function(ctx, drawLabels) {
+  for (var id in this.data) {
+    this.drawDataFeature(id, ctx, drawLabels);
+  }
+};
+
+View.prototype.drawDataFeature = function(id, ctx, drawLabels) {
+  var record = this.data[id];
+  if (record == null) {
+    console.log("No record for " + id);
+    return;
+  }
+  // Debug
+  if (record.id.indexOf('unknown') == 0) {
+      var x = record.shape[0]*this.WIDTH;
+      var y = record.shape[1]*this.HEIGHT;
+      ctx.save();
+      ctx.fillStyle = 'blue';
+      ctx.fillText(record.id, x, y);
+      ctx.restore();
+  }
+  for (var j = 0; j < record.features.length; j++) {
+    var isLabel = record.features[j][2] == id;
+    if (drawLabels == isLabel) {
+      var x = record.features[j][0]*this.WIDTH;
+      var y = record.features[j][1]*this.HEIGHT;
+      var text = record.features[j][2];
+      ctx.save();
+      if (text == 'E') {
+	ctx.fillStyle='green';
+      } else if (text == 'C') {
+	ctx.fillStyle='cyan';
+      } else if (text == 'B') {
+	ctx.fillStyle='#0000c0';
+      } else if (record.type == 'pin') {
+	ctx.fillStyle=this.pinColor;
+      } else {
+	ctx.fillStyle=this.componentColor;
+      }
+      ctx.strokeStyle = 'gray';
+      ctx.lineWidth = 5;
+      ctx.strokeText(text, x, y);
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 2;
+      ctx.strokeText(text, x, y);
+      ctx.fillText(text, x, y);
+      ctx.restore();
+    }
+  }
+};
+
+View.prototype.drawDataBoxes = function(ctx) {
+  for (var id in this.data) {
+    this.drawDataBox(id, ctx);
+  }
+};
+
+View.prototype.drawDataBox = function(id, ctx) {
+  var record = this.data[id];
+  if (!record) {
+    console.log("No record for " + id);
+    return;
+  }
+  if (record.shape.length == 4) {
+    // Rectangle
+    var x = record.shape[0]*this.WIDTH;
+    var y = record.shape[1]*this.HEIGHT;
+    var w = record.shape[2]*this.WIDTH;
+    var h = record.shape[3]*this.HEIGHT;
+    ctx.lineWidth = 2;
+    ctx.fillRect(x, y, w, h);
+    ctx.beginPath();
+    ctx.rect(x, y, w, h);
+    ctx.stroke();
+  } else {
+    // Polygon
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(record.shape[record.shape.length-2]*this.WIDTH, record.shape[record.shape.length-1]*this.HEIGHT);
+    for (var j = 0; j < record.shape.length; j += 2) {
+      ctx.lineTo(record.shape[j]*this.WIDTH, record.shape[j+1]*this.HEIGHT);
+    }
+    ctx.stroke();
+    ctx.fill();
+  }
+};

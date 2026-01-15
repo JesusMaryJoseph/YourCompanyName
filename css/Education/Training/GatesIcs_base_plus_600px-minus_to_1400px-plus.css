@@ -5,16 +5,16 @@
 /* CSS for "Introduction/GatesIcs" Base */
     /* CSS Base (CONTENTS) */
         /*CSS Global & Text */
-            .contents{
+           /* .contents{
                 overflow: visible;
                 font-weight: bold;
-               /* border: 3px solid blue; */
+                border: 3px solid blue; 
             }
             .header-one,
             .header-two{
                 display: block;
                 text-align: center;
-            }
+            }*/
             .square-root{
                 height: 1.6rem;
             }
@@ -233,7 +233,6 @@
             }
             .header-two{
                 font-size: 1.4rem;
-                /* text-indent: 1.5rem; */
             }
             p{
             font-size: 1.2rem;

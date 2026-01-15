@@ -3,6 +3,11 @@
 *   
 */
 /* CSS for "Introduction/Design" Base */
+    .header-one{
+        display: block;
+        text-align: center;
+    }
+
     .design-contents label{
         display: block;
         text-align: center;
