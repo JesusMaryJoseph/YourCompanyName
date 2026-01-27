@@ -42,7 +42,81 @@
 	<!--<script src="js/TableManagers.js"></script>-->
  
     <script>
+        let AsideMaterialHandler = {
+            //Properties
+
+            //Methods
+            showHide: function(id){
+                console.log("inside AsideMaterialHandler.showHide");
+                document.getElementById(id).classList.toggle("aside-hidden");
+            },
+            blurBackground: function(id){
+                console.log("bluring background");
+                document.getElementById(id).classList.toggle('blur-background');
+            }
+
+        }
        
+        const TransistorGateHandler = {
+            //Properties
+            stateAndA: '0',
+            stateAndB: '0',
+            activeAndState: '00',
+            stateOrA: '0',
+            stateOrB: '0',
+            activeOrState: '00',
+
+            //Methods
+            switch: function(gateType, gateInput){
+                //console.log("gateType = " + gateType + "   and gateInput = " + gateInput);
+                switch (gateType){
+                    case "not":
+                        document.getElementById("transistor-5v-input-id").classList.toggle("gate-hidden");
+                        document.getElementById("transistor-0v-input-id").classList.toggle("gate-hidden");
+                        break;
+                    case "or":
+                        document.getElementById("transistor-or-" + this.activeOrState + "-inputs-id").classList.toggle("gate-hidden"); 
+                        if(gateInput == 'a'){
+                            if(this.stateOrA == '0'){
+                                this.stateOrA = '1';
+                            }else{
+                                this.stateOrA = '0';
+                            }
+                        }else{
+                            if(this.stateOrB == '0'){
+                                this.stateOrB = '1';
+                            }else{
+                                this.stateOrB = '0';
+                            }
+                        }
+                        this.activeOrState = this.stateOrA + this.stateOrB;
+                        document.getElementById("transistor-or-" + this.activeOrState + "-inputs-id").classList.toggle("gate-hidden");
+                        break;
+                    case "and":
+                        //console.log("transistor-and- + this.activeState + -inputs-id = " + "transistor-and-" + this.activeState + "-inputs-id");
+                        document.getElementById("transistor-and-" + this.activeAndState + "-inputs-id").classList.toggle("gate-hidden"); 
+                        if(gateInput == 'a'){
+                            if(this.stateAndA == '0'){
+                                this.stateAndA = '1';
+                            }else{
+                                this.stateAndA = '0';
+                            }
+                        }else{
+                            if(this.stateAndB == '0'){
+                                this.stateAndB = '1';
+                            }else{
+                                this.stateAndB = '0';
+                            }
+                        }
+                        this.activeAndState = this.stateAndA + this.stateAndB;
+                        //console.log("this.activeState = " + this.activeState);
+                        document.getElementById("transistor-and-" + this.activeAndState + "-inputs-id").classList.toggle("gate-hidden");
+                        break;
+                    default: console.log("No such gateType for " + gateType);
+                        
+                }
+            }
+        }
     </script>
     
 
@@ -70,6 +144,154 @@
     .show-answer{
         opacity: 1;
     }
+
+        /*.binary-code,*/
+        .boolean-algebra-history,
+        .boolean-algebra,
+        .logic-gate-hardware{
+            position: absolute;
+            top: 0.1rem;
+            left: 0.1rem;
+            width: 88vw;
+            height: 300vh;
+            margin: 0.5rem;
+            border: 2px solid red;
+            background-image: url("media/imgs/low-noise-darker.png");
+            z-index: 50;
+        }
+            .close-aside{
+                position: absolute;
+                top: 0.1rem;
+                right: 0.1rem;
+                border: 3px solid black;
+                color: red;
+                cursor: pointer;
+                padding: 0 0.3rem;
+                font-size: 3rem;
+                z-index: 60;
+            }
+                .close-aside:hover{
+                    background-color: yellow;
+                    }
+            /*.gate-hardware-container{
+                display: flex;
+                flex-direction: column;
+            }*/
+                .or-main-container,
+                .and-main-container,
+                .not-main-container{
+                    position: relative;
+                    width: 100%;
+                    height: 90vh;
+                    display: flex;
+                    flex-direction: row;
+                    justify-items: flex-start;
+                    margin: 0.2rem;
+                    border: 2px solid blue;
+                }
+                    .not-table-container{
+                        width: 25vw;
+                        border: 1px solid red;
+                    }
+                    .not-circuit-container{
+                        width: 100%;
+                        height: 90vh;
+                        display: flex;
+                        flex-direction: row;
+                        justify-items: flex-start;
+                        margin: 0.2rem;
+                        border: 1px solid orange;
+                    }
+                        /*.not-input-container{
+                            width: 10vw;
+                            height: 85vh;
+                            margin: 0.2rem;
+                            border: 1px solid greenyellow;
+                        }
+                            .not-input-container img{
+                                width: 7vw;
+                            }
+                            .not-output-container img{
+                                width: 7vw;
+                            }*/
+                        .or-transistor-container,
+                        .and-transistor-container,
+                        .not-transistor-container{
+                            position: relative;
+                            width: 40vw;
+                            height: 85vh;
+                            margin: 0.2rem;
+                            border: 1px solid green;
+                        }
+                            .or-transistor-container img,
+                            .and-transistor-container img,
+                            .not-transistor-container img{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                            }
+                        /*.not-output-container{
+                            position: relative;
+                            width: 10vw;
+                            height: 85vh;
+                            margin: 0.2rem;
+                            border: 1px solid yellow;
+                        }
+                        .not-output-container img{
+                            position: absolute;
+                        }*/
+        .gate-hidden{
+            z-index: -10;
+            opacity: 0;
+        }
+        .aside-hidden{
+            z-index: -10;
+            opacity: 0;
+        }
+        .blur-background{
+            filter: blur(25px);
+        }
+        .not-clickable-area{
+            position: absolute;
+            top: 13vw;
+            left: 5.7vw;
+            width: 4vw;
+            height: 4vw;
+            opacity: 0.5;
+            z-index: 60;
+            border: 1px solid red;
+        }
+        
+            .or-b-clickable-area,
+            .or-a-clickable-area,
+            .and-b-clickable-area,
+            .and-a-clickable-area,
+            .not-clickable-area:hover{
+                cursor: pointer;
+            }
+        .or-a-clickable-area,
+        .and-a-clickable-area{
+            position: absolute;
+            top: 5.2vw;
+            left: 7.9vw;
+            width: 4vw;
+            height: 4vw;
+            opacity: 0.5;
+            z-index: 60;
+            border: 1px solid red;
+        }
+        .or-b-clickable-area,
+        .and-b-clickable-area{
+            position: absolute;
+            top: 15.5vw;
+            left: 7.9vw;
+            width: 4vw;
+            height: 4vw;
+            opacity: 0.5;
+            z-index: 60;
+            border: 1px solid red;
+        }
 	
 	</style>
 	
@@ -117,34 +339,59 @@
             <ul id="training-menu-dd-id" class="menu-dd-lev-1 menu-dd-zindex menu-dd-lev-1-hidden" 
                     onmouseover="EduNavManager.openCloseDropdown('menu-dd-lev-1', 'open')"
                     onmouseleave="EduNavManager.openCloseDropdown('menu-dd-lev-1', 'close')"> 
-                <li id="training-menu-intro-container-id" class="menu-container-lev-2"
-                    onmouseover="EduNavManager.openCloseDropdown('introduction-dropdown', 'open')"
-                    onmouseleave="EduNavManager.openCloseDropdown('introduction-dropdown', 'close')">
-                    <label id="training-menu-intro-label-id" class="menu-label-lev-2">Introduction</label>
-                    <ul id="training-menu-intro-dd-id" class="menu-dd-lev-2 menu-dd-lev-2-hidden" 
-                        onmouseleave="EduNavManager.openCloseDropdown('introduction-dropdown', 'close')"> 
-                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Introduction/Codes.html','codes-contents-id'); 
-                            EduNavManager.openCloseDropdown('introduction-dropdown')">Codes</a></li>
-                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Introduction/TruthTables.html','truth-table-contents-id'); 
-                            EduNavManager.openCloseDropdown('introduction-dropdown')">Truth<span class="span-1-sp">1</span>Tables</a></li> 
-                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Introduction/GatesIcs.html','gates-ics-contents-id'); 
-                            EduNavManager.openCloseDropdown('introduction-dropdown')">Gates/ICs</a></li>
-                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Introduction/Design.html','design-contents-id'); 
-                            EduNavManager.openCloseDropdown('introduction-dropdown')">Design</a></li>; 
+                <li id="training-menu-codes-container-id" class="menu-container-lev-2"
+                    onmouseover="EduNavManager.openCloseDropdown('codes-dropdown', 'open')"
+                    onmouseleave="EduNavManager.openCloseDropdown('codes-dropdown', 'close')">
+                    <label id="training-menu-codes-label-id" class="menu-label-lev-2">Codes</label>
+                    <ul id="training-menu-codes-dd-id" class="menu-dd-lev-2 menu-dd-lev-2-hidden" 
+                        onmouseleave="EduNavManager.openCloseDropdown('codes-dropdown', 'close')"> 
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Codes/General.html','general-contents-id'); 
+                            EduNavManager.openCloseDropdown('codes-dropdown', 'close')">General</a></li>
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Codes/Binary.html','binary-contents-id'); 
+                            EduNavManager.openCloseDropdown('codes-dropdown', 'close')">Binary</a></li> 
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Codes/ASCII.html','ascii-contents-id'); 
+                            EduNavManager.openCloseDropdown('codes-dropdown', 'close')">ASCII</a></li>
                     </ul>																									
+                </li>
+                <li id="training-menu-logic-gates-container-id" class="menu-container-lev-2"
+                    onmouseover="EduNavManager.openCloseDropdown('logic-gates-dropdown', 'open')"
+                    onmouseleave="EduNavManager.openCloseDropdown('logic-gates-dropdown', 'close')">
+                    <label id="training-menu-logic-gates-label-id" class="menu-label-lev-2" onmouseover="EduNavManager.openCloseDropdown('logic-gates-dropdown')">Logic Gates</label>
+                    <ul id="training-menu-logic-gates-dd-id" class="menu-dd-lev-2 logic-gates-menu-dd-lev-2 menu-dd-lev-2-hidden" onmouseleave="EduNavManager.openCloseDropdown('logic-gates-dropdown')">
+                        
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Codes/Basic.html','intro-architecture-contents-id'); 
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">Basic</a></li>
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Architecture/HardwareArchitecture.html','hardware-nav-id'); 
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">Boolean Algebra</a></li>
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Architecture/SoftwareArchitecture.html','hardware-nav-id'); 
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">Transistors</a></li>
+                    </ul>
                 </li>
                 <li id="training-menu-arch-container-id" class="menu-container-lev-2"
                     onmouseover="EduNavManager.openCloseDropdown('architecture-dropdown', 'open')"
                     onmouseleave="EduNavManager.openCloseDropdown('architecture-dropdown', 'close')">
-                    <label id="training-menu-arch-label-id" class="menu-label-lev-2" onmouseover="EduNavManager.openCloseDropdown('architecture-dropdown')">Architecture</label>
+                    <label id="training-menu-arch-label-id" class="menu-label-lev-2" onmouseover="EduNavManager.openCloseDropdown('architecture-dropdown')">Integrated Circuits</label>
+                    <ul id="training-menu-arch-dd-id" class="menu-dd-lev-2 arch-menu-dd-lev-2 menu-dd-lev-2-hidden" onmouseleave="EduNavManager.openCloseDropdown('architecture-dropdown')">
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Architecture/IntroductionArchitecture.html','intro-architecture-contents-id'); 
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">ICs For Basic Gates</a></li>
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Architecture/HardwareArchitecture.html','hardware-nav-id'); 
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">Other 74LS-- ICs</a></li>
+                    </ul>
+                </li>
+                <li id="training-menu-arch-container-id" class="menu-container-lev-2"
+                    onmouseover="EduNavManager.openCloseDropdown('architecture-dropdown', 'open')"
+                    onmouseleave="EduNavManager.openCloseDropdown('architecture-dropdown', 'close')">
+                    <label id="training-menu-arch-label-id" class="menu-label-lev-2" onmouseover="EduNavManager.openCloseDropdown('architecture-dropdown')">Truth Tables</label>
                     <ul id="training-menu-arch-dd-id" class="menu-dd-lev-2 arch-menu-dd-lev-2 menu-dd-lev-2-hidden" onmouseleave="EduNavManager.openCloseDropdown('architecture-dropdown')">
                         
                         <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Architecture/IntroductionArchitecture.html','intro-architecture-contents-id'); 
-                            EduNavManager.openCloseDropdown('architecture-dropdown')">Introduction</a></li>
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">General</a></li>
                         <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Architecture/HardwareArchitecture.html','hardware-nav-id'); 
-                            EduNavManager.openCloseDropdown('architecture-dropdown')">Hardware</a></li>
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">Basic Logic Gates</a></li>
                         <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Architecture/SoftwareArchitecture.html','hardware-nav-id'); 
-                            EduNavManager.openCloseDropdown('architecture-dropdown')">Software</a></li>
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">Circuits</a></li>
+                        <li><a href="#" onclick="EduHtmlManager.request('html/Education/Training/Architecture/SoftwareArchitecture.html','hardware-nav-id'); 
+                            EduNavManager.openCloseDropdown('architecture-dropdown')">Designing Circuits</a></li>
                     </ul>
                 </li>
                 <li id="training-menu-tech-container-id" class="menu-container-lev-2"

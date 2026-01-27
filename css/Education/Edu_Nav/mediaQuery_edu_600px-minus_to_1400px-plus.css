@@ -80,7 +80,7 @@
                 margin-top: -16rem;
             }
             .menu-dd-lev-1-hidden{
-                margin-top: -8rem;
+                margin-top: -15rem; /* margin-top: -8rem; */
             }
 
             .packets-menu-dd-lev-1{
@@ -102,7 +102,7 @@
             .menu-dd-lev-2{
                 padding: 0.5rem 0.6rem;
                 top: -0.5rem;
-                left: 6.8rem;
+                left: 9rem;  /*left: 6.8rem;*/
                 /* width: 7.1rem;*/
             }
                 .menu-dd-lev-2 li a{

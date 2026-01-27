@@ -50,7 +50,7 @@
                     //console.log("this.requestedFile.slice(0,24) = " + this.requestedFile.slice(0,24));
                     if(this.requestedFile.slice(0,24) == "html/Education/Training/"){
                     // //console.log("reset page to top of page");
-                        document.getElementById(contentId).scrollIntoView({block: 'start'});
+    // Temperly disabled                    document.getElementById(contentId).scrollIntoView({block: 'start'});
                         //PracticeTruthTableManager.initialize();
                         //PracticeTruthTableManager.create("circuit","NotXor");
                     }

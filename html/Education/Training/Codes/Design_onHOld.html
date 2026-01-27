@@ -6,6 +6,14 @@
     <title>Document</title>
     
     <script>
+       /* let AdditionalMaterialHandler = {
+            //Properties
+
+            //Methods
+            show: function(id){
+                console.log("in AdditionalMaterialHandler.show()");
+            }
+        }*/
     </script>
     
     <style>
@@ -26,20 +34,27 @@
     <div class="design-body-container">
         <div id="design-contents-id" class="contents design-contents">
             <h1 class="header-one">Digital Design Page</h1>
-            <p>As was mentioned before, this section is not necessary for this project. You will be using the 74LS-- series of ICs which have
+            <p>As was mentioned before, this section is not necessary for this project as you will be using the 74LS-- series of ICs which have
                 already been designed in 1970 by Engineers from Texas Instruments (TI). If, however, you have any inclinations towards Engineering as 
                 a profession, this section is a must for you!
             </p>
-            <p>Your boss hands you a set of "Inputs" and "Outputs" and asks you if you can design the digital circuitry for this set of data. 
+            <label>Preparation:</label>
+            <ol type="1">
+                <li><button onclick="AsideMaterialHandler.showHide('boolean-algebra-history-id'), 
+                    AsideMaterialHandler.blurBackground('design-contents-id')">History</button></li>
+                <li><button onclick="AsideMaterialHandler.showHide('boolean-algebra-id'), AsideMaterialHandler.blurBackground('design-contents-id')">Boolean Algebra</button></li>
+                <li><button onclick="AsideMaterialHandler.showHide('logic-gate-hardware-id'), AsideMaterialHandler.blurBackground('design-contents-id'),
+                    TableGenerator.createTable('not-table-transistor-id',JsonTableData74LS04),
+                    TableGenerator.createTable('and-table-transistor-id',JsonTableData74LS08),
+                    TableGenerator.createTable('or-table-transistor-id',JsonTableData74LS32)">Logic Gate Hardware</button></li>
+            </ol><br><br>
+            <label></label>
+            <p>Your boss hands you, "the Engineer", a set of "Inputs" and "Outputs" and tells you to design a digital circuitry for this set of data. 
                 You have at your desposal the "basic" Gates: AND, OR, NOT, XOR, NAND, NOR. If there are only a few Inputs and one Output you 
-                may intuitively play around with the Gates and come up with a Solution. There are better ways. One is called "Boolean Algebra". 
+                may intuitively play around with the Gates and come up with a Solution. There are better ways, two of which are "Boolean Algebra" and "Karnaugh Maps".
+                While both have their own particular advantages, only Boolean Algebra will be used here as everyone working on this project either has or will have taken an Algebra class. 
             </p>
-            <p>Around the middle of the 19th century, a mathematician, George Boole, wondered whether or not "mathematics could be applied to how people think?". 
-                He created a new field of mathematics called "Boolean Logic" and then, somewhat latter, "Boolean Algebra". It wasn't until 1937 that Claude Shannon in his 1937 master's thesis 
-                made the connection between "Boolean Logic" and "Electronic Relays"(Electrical Switches which are binary in nature). In 1945 the first "programmable computer", 
-                ENIAC (Electronic Numerical Integrator And Computer) was built utilizing Gates(AND, OR, NOT ie Boolean Logic).
-            </p>
-            <p>It is this "Boolean Algebra" that provides us with a systematic tool for coming up with a solution to our problem.</p>
+            <label>
             <p>Keep in mind that Truth Tables and Boolean Algebra are two different entities. First consider Truth Tables. 
                 <ol type="1" class="type-1">
                     <li>Table Heads only contain "Labels"(<u>English words</u> and/or symbols ie "Inputs", "P<sub>0</sub>"), "Output" etc.
@@ -66,16 +81,6 @@
                     <li>"Boolean <u>Variables</u>"(eg P<sub>1</sub>, P<sub>0</sub>)</li>
                     <li>"Boolean <u>Operators</u>"(eg AND, OR, NOT).</li>
                 </ol><br>
-            </p>
-            <p>
-                <label>An Illustration of "Mathematical Variable" for those who have not taken Algebra classes.</label>
-                <p>Look at the following image:</p>
-                <img class="container-label-contents-img" src="media/imgs/Container-Label-Contents.png">
-                <p class="label-container-contents">
-                    "Boolean Variables" can be viewed as a combination of: A Label, A Container, and
-                    Contents of that Container, which can be "changed" over time. It may be "0" or it may be "1" but nothing else. Contrast that with the contents in the Table Body.
-                    This content defines the overall possibilities for the given problem at hand. It does not change over time.  
-                </p>
             </p>
             <p>
                 We will now make begin the translation. Keep in mind the fundamentals of Boolean Logic and Boolean Algebra: "AND", "OR", "NOT" 
@@ -303,6 +308,92 @@
         <div class="link-container">
             <button class="link-general link-previous" onclick="EduHtmlManager.request('html/Education/Introduction/Training/GatesIcs.html','gates-ics-contents-id')">Gates and ICs</button>
         </div>
-    </div>
+
+        <aside id="boolean-algebra-history-id" class="boolean-algebra-history aside-hidden">
+            <div class="close-aside" onclick="AsideMaterialHandler.showHide('boolean-algebra-history-id'), AsideMaterialHandler.blurBackground('design-contents-id')">X</div>
+            <Label>Brief History of Boolean Algebra</Label>
+            <p>Around the middle of the 19th century, a mathematician, George Boole, wondered whether or not "mathematics could be applied to how people think?". 
+                He created a new field of mathematics called "Boolean Logic" and then, somewhat latter, "Boolean Algebra". It wasn't until 1937 that Claude Shannon in his 1937 master's thesis 
+                made the connection between "Boolean Logic" and "Electronic Relays"(Electrical Switches which are binary in nature). In 1945 the first "programmable computer", 
+                ENIAC (Electronic Numerical Integrator And Computer) was built utilizing Gates(AND, OR, NOT ie Boolean Logic).
+            </p>
+        </aside>
+        <aside id="boolean-algebra-id" class="boolean-algebra aside-hidden">
+            <div class="close-aside" onclick="AsideMaterialHandler.showHide('boolean-algebra-id'), AsideMaterialHandler.blurBackground('design-contents-id')">X</div>
+            <Label>Boolean Algebra</Label>
+            <p>
+                <label>An Illustration of "Mathematical Variable" for those who have not taken Algebra classes.</label>
+                <p>Look at the following image:</p>
+                <img class="container-label-contents-img" src="media/imgs/Container-Label-Contents.png">
+                <p class="label-container-contents">
+                    "Boolean Variables" can be viewed as a combination of:
+                    <ol type="1">
+                        <li>A Label</li>
+                        <li>A Container</li>
+                        <li>Contents which can be "changed" over time. It may be "0" or it may be "1" but nothing else.</li>
+                    </ol>
+                     
+                </p>
+                <p>Contrast that with the contents in the Table Body.
+                    This content defines the <u>"all"</u> the possibilities for the given problem at hand. It does not change over time.  
+                </p>
+            </p>
+        </aside>
+        <aside id="logic-gate-hardware-id" class="logic-gate-hardware aside-hidden">
+            <div class="close-aside" onclick="AsideMaterialHandler.showHide('logic-gate-hardware-id'), AsideMaterialHandler.blurBackground('design-contents-id')">X</div>
+            <h1>Logic Gates And Transistors</h1>
+            <div class="gate-hardware-container">
+                <div class="not-main-container">
+                    <div class="not-table-container">
+                        <table id="not-table-transistor-id">
+                            <label>Table Contents goes here</label>
+                        </table>
+                    </div>
+                    <!--<div class="not-circuit-container">-->
+                    <div class="not-transistor-container">
+                        <div onclick="TransistorGateHandler.switch('not','')" class="not-clickable-area"></div> 
+                        <img id="transistor-0v-input-id" src="media/imgs/LogicGatesTransistors/TransistorNot-0V-Input.svg" class="not-gate-transistor"> 
+                        <img id="transistor-5v-input-id" src="media/imgs/LogicGatesTransistors/TransistorNot-5V-Input.svg" class="not-gate-transistor gate-hidden">
+                        <!--</div>-->
+                    </div>  
+                </div><br><br>
+                <div class="and-main-container">
+                    <div class="and-table-container">
+                        <table id="and-table-transistor-id">
+                            <!--<label>Table Contents goes here</label>-->
+                        </table>
+                    </div>
+                    <div class="and-transistor-container">
+                        <div onclick="TransistorGateHandler.switch('and','a')" class="and-a-clickable-area"></div>
+                        <div onclick="TransistorGateHandler.switch('and','b')" class="and-b-clickable-area"></div>
+                        <img id="transistor-and-00-inputs-id" src="media/imgs/LogicGatesTransistors/TransistorAnd-00-Inputs.svg" class="and-gate-transistor"> 
+                        <img id="transistor-and-01-inputs-id" src="media/imgs/LogicGatesTransistors/TransistorAnd-01-Inputs.svg" class="and-gate-transistor gate-hidden">
+                        <img id="transistor-and-10-inputs-id" src="media/imgs/LogicGatesTransistors/TransistorAnd-10-Inputs.svg" class="and-gate-transistor gate-hidden"> 
+                        <img id="transistor-and-11-inputs-id" src="media/imgs/LogicGatesTransistors/TransistorAnd-11-Inputs.svg" class="and-gate-transistor gate-hidden"> 
+                    </div>
+                </div><br><br>
+                <div class="or-main-container">
+                    <div class="or-table-container">
+                        <table id="or-table-transistor-id">
+                            <!--<label>Table Contents goes here</label>-->
+                        </table>
+                    </div>
+                    <div class="or-transistor-container">
+                        <div onclick="TransistorGateHandler.switch('or','a')" class="or-a-clickable-area"></div>
+                        <div onclick="TransistorGateHandler.switch('or','b')" class="or-b-clickable-area"></div>
+                        <img id="transistor-or-00-inputs-id" src="media/imgs/LogicGatesTransistors/TransistorOr-00-Inputs.svg" class="or-gate-transistor"> 
+                        <img id="transistor-or-01-inputs-id" src="media/imgs/LogicGatesTransistors/TransistorOr-01-Inputs.svg" class="or-gate-transistor gate-hidden">
+                        <img id="transistor-or-10-inputs-id" src="media/imgs/LogicGatesTransistors/TransistorOr-10-Inputs.svg" class="or-gate-transistor gate-hidden"> 
+                        <img id="transistor-or-11-inputs-id" src="media/imgs/LogicGatesTransistors/TransistorOr-11-Inputs.svg" class="or-gate-transistor gate-hidden"> 
+                    </div> 
+                </div>
+            </div>      
+        </aside>
+    </div> 
+                      
+
+    
+    <script>
+    </script>
 </body>
 </html>

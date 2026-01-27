@@ -3,51 +3,54 @@
         //properties
             initialized: false,
             
-            eduNavlabelEle: {},
+            eduNavLabelEle: {},
             eduNavDropdownEle: {},
             eduNavDropdownHidden: true,
 
-            traininglabelEle: {},
+            trainingLabelEle: {},
             trainingDropdownEle: {},
             trainingDropdownHidden: true,
 
-            testinglabelEle: {},
+            testingLabelEle: {},
             testingDropdownEle: {},
             testingDropdownHidden: true,
             
-            packetslabelEle: {},
+            packetsLabelEle: {},
 		    packetsDropdownEle: {},
             packetsDropdownHidden: true,
 
-            introductionlabelEle: {},
+           /* introductionlabelEle: {},
             introductionDropdownEle: {},
-            introductionDropdownHidden: true,
+            introductionDropdownHidden: true,*/
+            codesLabelEle: {},
+            codesDropdownEle: {},
+            codesDropdownHidden: true,
 
-            testingIntroductionlabelEle: {},
-            testingIntroductionDropdownEle: {},
-            testingIntroductionDropdownHidden: true,
+            testingCodesLabelEle: {},
+            testingCodesDropdownEle: {},
+            testingCodesDropdownHidden: true,
 
-            architecturelabelEle: {},
-            architectureDropdownEle: {},
-            architectureDropdownHidden: true,
+            logicGatesLabelEle: {},
+            logicGatesDropdownEle: {},
+            logicGatesDropdownHidden: true,
 
-            testingArchitecturelabelEle: {},
-            testingArchitectureDropdownEle: {},
-            testingArchitectureDropdownHidden: true,
+            testingLogicGatesLabelEle: {},
+            testingLogicGatesDropdownEle: {},
+            testingLogicGatesDropdownHidden: true,
 
-            techlabelEle: {},
+            techLabelEle: {},
             techDropdownEle: {},
             techDropdownHidden: true,
 
-            testingTechlabelEle: {},
+            testingTechLabelEle: {},
             testingTechDropdownEle: {},
             testingTechDropdownHidden: true,
 
-            mediaArtslabelEle: {},
+            mediaArtsLabelEle: {},
             mediaArtsDropdownEle: {},
             mediaArtsDropdownHidden: true,
 
-            testingMediaArtslabelEle: {},
+            testingMediaArtsLabelEle: {},
             testingMediaArtsDropdownEle: {},
             testingMediaArtsDropdownHidden: true,
 
@@ -86,23 +89,28 @@
                         this.toggleDropdown(this.testingDropdownEle, "menu-dd-lev-1-hidden", openOrClose);
                         this.testingDropdownHidden = !this.testingDropdownHidden;
                         break;
-                    case ("introduction-dropdown"):
+                    case ("codes-dropdown"):
+				        //console.log("in training 'introduction-dropdown'");
+                        this.toggleDropdown(this.codesDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
+                        this.codesDropdownHidden = !this.codesDropdownHidden;
+                        break;
+                    /*case ("introduction-dropdown"):
 				        //console.log("in training 'introduction-dropdown'");
                         this.toggleDropdown(this.introductionDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
                         this.introductionDropdownHidden = !this.introductionDropdownHidden;
-                        break;
-                    case ("test-introduction-dropdown"):
+                        break;*/
+                    case ("test-codes-dropdown"):
 				        //console.log("in testing 'introduction-dropdown'");
-                        this.toggleDropdown(this.testingIntroductionDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
-                        this.testingIntroductionDropdownHidden = !this.testingIntroductionDropdownHidden;
+                        this.toggleDropdown(this.testingCodesDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
+                        this.testingCodesDropdownHidden = !this.testingCodesDropdownHidden;
                         break;
-                    case ("architecture-dropdown"):
-                        this.toggleDropdown(this.architectureDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
-                        this.architectureDropdownHidden = !this.architectureDropdownHidden;
+                    case ("logic-gates-dropdown"):
+                        this.toggleDropdown(this.logicGatesDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
+                        this.logicGatesDropdownHidden = !this.logicGatesDropdownHidden;
                         break;
-                    case ("test-architecture-dropdown"):
-                        this.toggleDropdown(this.testingArchitectureDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
-                        this.testingArchitectureDropdownHidden = !this.testingArchitectureDropdownHidden;
+                    case ("test-logic-gates-dropdown"):
+                        this.toggleDropdown(this.testinglogicGatesDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
+                        this.testinglogicGatesDropdownHidden = !this.testinglogicGatesDropdownHidden;
                         break;
                     case ("tech-dropdown"):
                         this.toggleDropdown(this.techDropdownEle, "menu-dd-lev-2-hidden", openOrClose);
@@ -138,33 +146,33 @@
 
             init: function(){
             //console.log(" in EduNavManager.init()");
-                this.eduNavlabelEle = document.getElementById('edu-nav-label-id');
+                this.eduNavLabelEle = document.getElementById('edu-nav-label-id');
                 this.eduNavDropdownEle = document.getElementById("edu-nav-dropdown-id");
-                this.traininglabelEle = document.getElementById('training-menu-label-id');
+                this.trainingLabelEle = document.getElementById('training-menu-label-id');
                 this.trainingDropdownEle = document.getElementById('training-menu-dd-id');
-                this.testinglabelEle = document.getElementById('testing-menu-label-id');
+                this.testingLabelEle = document.getElementById('testing-menu-label-id');
                 this.testingDropdownEle = document.getElementById('testing-menu-dd-id');
-                this.packetslabelEle = document.getElementById('packets-menu-label-id');
+                this.packetsLabelEle = document.getElementById('packets-menu-label-id');
                 this.packetsDropdownEle = document.getElementById("packets-menu-dd-id");
 
-                this.introductionlabelEle = document.getElementById('training-menu-intro-label-id');
-                this.introductionDropdownEle = document.getElementById('training-menu-intro-dd-id');
-                this.testingIntroductionlabelEle = document.getElementById('testing-menu-intro-label-id');
-                this.testingIntroductionDropdownEle = document.getElementById('testing-menu-intro-dd-id');
+                this.codesLabelEle = document.getElementById('training-menu-codes-label-id');
+                this.codesDropdownEle = document.getElementById('training-menu-codes-dd-id');
+                this.testingCodesLabelEle = document.getElementById('testing-menu-codes-label-id');
+                this.testingCodesDropdownEle = document.getElementById('testing-menu-codes-dd-id');
 
-                this.architecturelabelEle = document.getElementById('training-menu-arch-label-id');
-                this.architectureDropdownEle = document.getElementById('training-menu-arch-dd-id');
-                this.testingArchitecturelabelEle = document.getElementById('testing-menu-arch-label-id');
-                this.testingArchitectureDropdownEle = document.getElementById('testing-menu-arch-dd-id');
+                this.logicGatesLabelEle = document.getElementById('training-menu-logic-gates-label-id');
+                this.logicGatesDropdownEle = document.getElementById('training-menu-logic-gates-dd-id');
+                this.testingLogicGatesLabelEle = document.getElementById('testing-menu-logic-gates-label-id');
+                this.testingLogicGatesDropdownEle = document.getElementById('testing-menu-logic-gates-dd-id');
 
-                this.techlabelEle = document.getElementById('training-menu-tech-label-id');
+                this.techLabelEle = document.getElementById('training-menu-tech-label-id');
                 this.techDropdownEle = document.getElementById('training-menu-tech-dd-id');
-                this.testingTechlabelEle = document.getElementById('testing-menu-tech-label-id');
+                this.testingTechLabelEle = document.getElementById('testing-menu-tech-label-id');
                 this.testingTechDropdownEle = document.getElementById('testing-menu-tech-dd-id');
 
-                this.mediaArtslabelEle = document.getElementById('training-menu-media-arts-label-id');
+                this.mediaArtsLabelEle = document.getElementById('training-menu-media-arts-label-id');
                 this.mediaArtsDropdownEle = document.getElementById('training-menu-media-arts-dd-id');
-                this.testingMediaArtslabelEle = document.getElementById('testing-menu-media-arts-label-id');
+                this.testingMediaArtsLabelEle = document.getElementById('testing-menu-media-arts-label-id');
                 this.testingMediaArtsDropdownEle = document.getElementById('testing-menu-media-arts-dd-id');
                // console.log("this.equipmentlabelEle.id = " + this.equipmentlabelEle.id);
                 //console.log("this.equipmentDropdownEle.id = " + this.equipmentDropdownEle.id);

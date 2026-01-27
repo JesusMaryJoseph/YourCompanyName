@@ -18,7 +18,8 @@ let  TableGenerator = {
         //Methods
 
         createTable: function(tableId, tableData){
-            //console.log("tableId = " + tableId);
+            console.log("tableId = " + tableId);
+            console.log("tableData = " + tableData);
             this.tableId = tableId;
             this.tableData = tableData;
             this.tableEle = document.getElementById(this.tableId);
@@ -253,7 +254,7 @@ let  TableGenerator = {
                 //console.log("adding class 'smk-header' to tableHeadEle");
                 tableHeadEle.classList.add("smk-header");
             }
-            //console.log("this.tableData.head.rows.length =  " + this.tableData.head.rows.length);
+            console.log("this.tableData.head.rows.length =  " + this.tableData.head.rows.length);
             for(var row = 0; row < this.tableData.head.rows.length; row++){
                 //console.log("row =  " + row);
                 //console.log("this.tableData.head.rows[0][0].th.text =  " + this.tableData.head.rows[1][1].th[0][1]);

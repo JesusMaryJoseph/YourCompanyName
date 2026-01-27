@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="220.76434mm"
+   height="49.235348mm"
+   viewBox="0 0 220.76434 49.235348"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="Training Drop Down.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="11.313708"
+     inkscape:cx="299.28295"
+     inkscape:cy="67.528698"
+     inkscape:window-width="1898"
+     inkscape:window-height="952"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true">
+    <sodipodi:guide
+       position="49.484953,20.189832"
+       orientation="0,-1"
+       id="guide136"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-33.082719,52.939089"
+       orientation="1,0"
+       id="guide188"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-28.107204,52.891249"
+       orientation="1,0"
+       id="guide190"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="61.879577,41.260693"
+       orientation="0,-1"
+       id="guide192"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-18.06049,53.465339"
+       orientation="1,0"
+       id="guide932"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-10.549376,43.514309"
+       orientation="1,0"
+       id="guide938"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-3.0382612,47.915729"
+       orientation="1,0"
+       id="guide941"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="4.4728529,46.767529"
+       orientation="1,0"
+       id="guide951"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="11.936126,46.719689"
+       orientation="1,0"
+       id="guide962"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="19.495082,39.017209"
+       orientation="1,0"
+       id="guide964"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="34.551585,85.451229"
+       orientation="1,0"
+       id="guide966"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="52.66546,28.749138"
+       orientation="0,-1"
+       id="guide1164"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="62.908564,37.074584"
+       orientation="1,0"
+       id="guide1382"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="64.647935,47.285089"
+       orientation="1,0"
+       id="guide1384"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="79.464606,46.623629"
+       orientation="1,0"
+       id="guide1386"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="94.413562,30.81477"
+       orientation="1,0"
+       id="guide1388"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="109.56095,49.864769"
+       orientation="1,0"
+       id="guide1390"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="53.437201,35.811735"
+       orientation="0,-1"
+       id="guide3659"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="-50"
+       y="-77"
+       width="923"
+       height="308"
+       id="rect2005" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-38.010394,-7.244003)">
+    <g
+       id="g2181"
+       inkscape:label="Training">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 132.20206,15.110656 -43.246315,0.07085"
+         id="path2077"
+         sodipodi:nodetypes="cc"
+         inkscape:label="Training Path (Horz)" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 94.020063,44.147242 0,-28.71811"
+         id="path3655"
+         sodipodi:nodetypes="cc"
+         inkscape:label="Training Path (Veri)" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:8.46667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         x="89.339554"
+         y="12.535669"
+         id="text2021"
+         inkscape:label="Training Label"><tspan
+           sodipodi:role="line"
+           id="tspan2019"
+           style="stroke-width:0"
+           x="89.339554"
+           y="12.535669">Training</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 94.230538,36.261992 h 5.144939"
+       id="path3668"
+       sodipodi:nodetypes="cc"
+       inkscape:label="Software Index" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="100.63833"
+       y="38.472683"
+       id="text3649"
+       inkscape:label="Software Label"><tspan
+         sodipodi:role="line"
+         id="tspan3647"
+         style="stroke-width:0"
+         x="100.63833"
+         y="38.472683">Software</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0"
+         x="100.63833"
+         y="46.410183"
+         id="tspan3651" /></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 94.230538,27.79532 h 5.144939"
+       id="path3662"
+       sodipodi:nodetypes="cc"
+       inkscape:label="Architecture Index" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="100.94555"
+       y="30.169231"
+       id="text2189"
+       inkscape:label="Architecture Label"><tspan
+         sodipodi:role="line"
+         id="tspan2187"
+         style="font-size:6.35px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+         x="100.94555"
+         y="30.169231">Architecture</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 94.230538,20.691001 h 5.144939"
+       id="path2175"
+       sodipodi:nodetypes="cc"
+       inkscape:label="Intro Index" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="100.52139"
+       y="22.91543"
+       id="text3645"
+       inkscape:label="Introduction Label"><tspan
+         sodipodi:role="line"
+         id="tspan3643"
+         style="stroke-width:0"
+         x="100.52139"
+         y="22.91543">Introduction</tspan></text>
+  </g>
+</svg>

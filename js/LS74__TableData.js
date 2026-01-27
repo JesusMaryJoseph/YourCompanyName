@@ -1,161 +1,10 @@
- 
-const TableData74LS00String = `{    
-"head": { "rows":   [
-                        [  
-                            { "th":     [
-                                            ["text", "74LS00 Quad 2-Input NAND Gate"],
-                                            ["colSpan", 3],
-                                            ["rowSpan", 1],
-                                            ["class", "table-title"],
-                                            ["class", "table-padding-margin"]                                                                            
-                                        ]
-                            }
-                        ],
-                        [   
-                            { "th":
-                                        [
-                                            ["text",  "Inputs"],
-                                            ["colSpan", 2],
-                                            ["rowSpan", 1],
-                                            ["class", "inputs-output-tr"],
-                                            ["class", "table-padding-margin"]
-                                        ]
-                            },
-                            { "th":
-                                        [
-                                            ["text", "Output"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1],
-                                            ["class", "inputs-output-tr"],
-                                            ["class", "table-padding-margin"]
-                                        ]
-                            }
-                        ],
-                        [    
-                            { "th":                            
-                                        [       
-                                            ["text",  "A"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },
-                            { "th":
-                                        [  
-                                            ["text", "B"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },
-                            { "th":
-                                        [  
-                                            ["text", "Y"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            }
-                        ]   
-                    ]                  
-        },
-"body": { "rows":   [ 
-                        [     
-                            { "td":     
-                                        [
-                                            ["text", "L"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },     
-                            { "td":     
-                                        [
-                                            ["text", "L"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },     
-                            { "td":     
-                                        [
-                                            ["text", "H"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            }
-                        ], 
-                        [ 
-                            { "td":     
-                                        [
-                                            ["text", "L"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            }, 
-                            { "td":     
-                                        [
-                                            ["text", "H"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            }, 
-                            { "td":     
-                                        [
-                                            ["text", "H"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            }
-                        ],
-                        [ 
-                            { "td":     
-                                        [
-                                            ["text", "H"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },
-                            { "td":     
-                                        [
-                                            ["text", "L"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },
-                            { "td":     
-                                        [
-                                            ["text", "H"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            }
-                        ],
-                        [  
-                            { "td":     
-                                        [
-                                            ["text", "H"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },  
-                            { "td":     
-                                        [                
-                                            ["text", "H"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            },  
-                            { "td":     
-                                        [ 
-                                            ["text", "L"],
-                                            ["colSpan", 1],
-                                            ["rowSpan", 1]
-                                        ]
-                            } 
-                        ]
-                    ]
-        }
-}`;
-
-const JsonTableData74LS00 = JSON.parse(TableData74LS00String);
-
-
+/*
+*TableData74LS00String (8), TableDataPractice74LS00String (165), TableData74LS02String (421)
+*
+*
+*
+*
+*/  
 const TableDataPractice74LS00String = `{   
 "head": { "rows":   [
                         [  
@@ -1342,21 +1191,21 @@ const TableData74LS32String = `{
                         [    
                             { "th":                            
                                         [       
-                                            ["text",  "P1"],
+                                            ["text",  "A"],
                                             ["colSpan", 1],
                                             ["rowSpan", 1]
                                         ]
                             },
                             { "th":
                                         [  
-                                            ["text", "P0"],
+                                            ["text", "B"],
                                             ["colSpan", 1],
                                             ["rowSpan", 1]
                                         ]
                             },
                             { "th":
                                         [  
-                                            ["text", "Q0"],
+                                            ["text", "Y"],
                                             ["colSpan", 1],
                                             ["rowSpan", 1]
                                         ]
