@@ -20,6 +20,7 @@
 		
         .ceo-contents{
 			position: absolute;
+            z-index: 200;
 			top: 3rem;
 			left: 0;
 			width: 95vw;
