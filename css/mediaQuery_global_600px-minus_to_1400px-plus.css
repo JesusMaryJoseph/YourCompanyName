@@ -3,12 +3,17 @@
  *    2) Home page
  *    3) All pages that uses class="page";
  */
- @media only screen and (max-width: 599px) {
-    /* For Global Nav [. . . ,600px)*/
-     *{
+
+    body{
+        overflow: hidden;
+    }*{
         margin: 0;
+        padding: 0;
         box-sizing: border-box;
      }
+
+ @media only screen and (max-width: 599px) {
+    /* For Global Nav [. . . ,600px)*/
         .nav-container{
             position: relative;
             left: 1.5rem;
@@ -26,13 +31,16 @@
                 .dept-label{
                     font-size: 1rem;
                 }
-            .nav-dropdown{
-                /*width: 100%;*/
+            .dbe-hide-dropdown{
+                margin-top: -13rem;
+            }
+            .nav-dropdown{               
+                /*margin-top: -13rem;*/
             }
                 .nav-dropdown li{
                     margin: 0.2rem 0;
                 }
-                    .nav-dropdown li a{
+                    .nav-dropdown a{
                         font-size: 1rem;
                         /*padding-top: 0.1rem;new*/
                     }
@@ -42,28 +50,35 @@
 
 
 @media only screen and (min-width: 600px) and (max-width: 749px) {
-    /* For Global Nav [. . . ,600px)*/
+    /* For Global Nav [600px,749px*/
         .nav-container{
-            position: absolute;
+            position: relative;
             left: 2rem;
-            width: 8.2rem;
-            /*border: 2px solid yellow;*/
+            width: 9.4rem;
+           /* border: 2px solid green;
+            z-index: 100;*/
         }
             .nav-label{
                 display:flex;
                 justify-content: space-around;
                 align-items: center;
-                font-size: 1.6rem;
+                font-size: 1.5rem;
                 border: 1px solid green;
             }
                 .dept-label{
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                 }
+            .dbe-hide-dropdown{
+                margin-top: -15rem;
+            }
+            .nav-dropdown{               
+                /*margin-top: -15rem;*/
+            }
                 .nav-dropdown li{
                     margin: 0.2rem 0;
                 }
-                    .nav-dropdown li a{
-                        font-size: 1rem;
+                    .nav-dropdown a{
+                        font-size: 1.2rem;
                         /*padding-top: 0.1rem;new*/
                     }
 
@@ -71,12 +86,47 @@
 }
 
 @media only screen and (min-width: 750px) and (max-width: 899px) {
+    /* For Global Nav [600px,749px*/
+        .nav-container{
+            position: relative;
+            left: 2rem;
+            width: 9.4rem;
+           /* border: 2px solid green;
+            z-index: 100;*/
+        }
+            .nav-label{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1.7rem;
+                border: 1px solid green;
+            }
+                .dept-label{
+                    font-size: 1.4rem;
+                }
+            .dbe-hide-dropdown{
+                margin-top: -15rem;
+            }
+            .nav-dropdown{               
+                /*margin-top: -15rem;*/
+            }
+                .nav-dropdown li{
+                    margin: 0.2rem 0;
+                }
+                    .nav-dropdown a{
+                        font-size: 1.3rem;
+                        /*padding-top: 0.1rem;new*/
+                    }
+
+    /* End Global (Nav) [600px,749px) */
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1049px) {
     /* For Global Nav [750px,899px) */
         .nav-container{
             position: relative;
-            top: 0;
             left: 2.5rem;
-            width: 10.2rem;
+            width: 12rem;
             /*border: 4px solid green;*/
         }
             .nav-label{
@@ -87,51 +137,20 @@
                 border: 1px solid blueviolet;
             }
                 .dept-label{
-                    font-size: 1.3rem;
+                    font-size: 1.5rem;
                 }
 
                 .nav-dropdown li{
                     margin: 0.2rem 0;
                 }
-                    .nav-dropdown li a{
-                        font-size: 1.2rem;
+                    .nav-dropdown a{
+                        font-size: 1.4rem;
                         /*padding-top: 0.1rem;new*/
                     }
                     .dbe-hide-dropdown{
-                        margin-top: -15rem;
+                        margin-top: -16rem;
                     }
     /* End Global (Nav) [750px,899px) */
-}
-
-@media only screen and (min-width: 900px) and (max-width: 1049px) {
-    /* For Global Nav [900px,1049px) */
-        .nav-container{
-            position: absolute;
-            left: 3rem;
-            width: 10.2rem;
-            /*border: 2px solid yellow;*/
-        }
-            .nav-label{
-                display:flex;
-                justify-content: space-around;
-                align-items: center;
-                font-size: 1.8rem;
-                border: 1px solid orange;
-            }
-                .dept-label{
-                    font-size: 1.4rem;
-                }
-                .nav-dropdown li{
-                    margin: 0.2rem 0;
-                }
-                    .nav-dropdown li a{
-                        font-size: 1.3rem;
-                        /*padding-top: 0.1rem;new*/
-                    }
-                    .dbe-hide-dropdown{
-                        margin-top: -16.5rem;
-                    }
-    /* End Global (Nav) [900px,1049px) */
 }
 
 @media only screen and (min-width: 1050px) and (max-width: 1199px) {
@@ -139,7 +158,7 @@
         .nav-container{
             position: absolute;
             left: 3.5rem;
-            width: 11.4rem;
+            width: 12.4rem;
             /*border: 2px solid yellow;*/
         }
             .nav-label{
@@ -155,8 +174,8 @@
                 .nav-dropdown li{
                     margin: 0.2rem 0;
                 }
-                    .nav-dropdown li a{
-                        font-size: 1.4rem;
+                    .nav-dropdown a{
+                        font-size: 1.5rem;
                         /*padding-top: 0.1rem;new*/
                     }
                     .dbe-hide-dropdown{
@@ -169,29 +188,29 @@
     /* For Global Nav [1200px,1399px) */
         .nav-container{
             position: absolute;
-            left: 3rem;
-            width: 11.8rem;
+            left: 3.5rem;
+            width: 13rem;
             /*border: 2px solid yellow;*/
         }
             .nav-label{
                 display:flex;
                 justify-content: space-around;
                 align-items: center;
-                font-size: 2rem;
+                font-size: 2.2rem;
                 border: 1px solid pink;
             }
                 .dept-label{
-                    font-size: 1.6rem;
+                    font-size: 1.9rem;
                 }
                 .nav-dropdown li{
                     margin: 0.2rem 0;
                 }
-                    .nav-dropdown li a{
-                        font-size: 1.5rem;
+                    .nav-dropdown a{
+                        font-size: 1.8rem;
                         /*padding-top: 0.1rem;new*/
                     }
                     .dbe-hide-dropdown{
-                        margin-top: -18.5rem;
+                        margin-top: -20rem;
                     }
     /* End Global (Nav) [1200px,1399px) */
 }
@@ -200,32 +219,29 @@
     /* For Global Nav [1400px =>) */
         .nav-container{
             position: absolute;
-            left: 4rem;
-            width: 12.2rem;
+            left: 3.5rem;
+            width: 15rem;
             /*border: 2px solid yellow;*/
         }
             .nav-label{
                 display:flex;
                 justify-content: space-around;
                 align-items: center;
-                font-size: 2.2rem;
-                border: 1px solid khaki;
+                font-size: 2.4rem;
+                border: 1px solid greenyellow;
             }
                 .dept-label{
-                    font-size: 1.7rem;
+                    font-size: 2.1rem;
                 }
-            .nav-dropdown{
-                width: 100%;
-            }
                 .nav-dropdown li{
                     margin: 0.2rem 0;
                 }
-                    .nav-dropdown li a{
-                        font-size: 1.6rem;
+                    .nav-dropdown a{
+                        font-size: 2rem;
                         /*padding-top: 0.1rem;new*/
                     }
                     .dbe-hide-dropdown{
-                        margin-top: -20rem;
+                        margin-top: -23rem;
                     }
     /* End Global (Nav) [1400px =>) */
 }

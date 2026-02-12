@@ -4,7 +4,193 @@
 *
 *
 *
-*/  
+*/ 
+const TableData74LS00String = `{   
+"head": { "rows":   [
+                        [  
+                            { "th":     [
+                                            ["text", "74LS00 NAND Logic Gate"],
+                                            ["colSpan", 3],
+                                            ["rowSpan", 1],
+                                            ["class", "table-title"],
+                                            ["class", "table-padding-margin"]                                                                           
+                                        ]
+                            }
+                        ],
+                        [   
+                            { "th":
+                                        [
+                                            ["text",  "Inputs"],
+                                            ["colSpan", 2],
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },
+                            { "th":
+                                        [
+                                            ["text", "Output"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "inputs-output-tr"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            }
+                        ],
+                        [    
+                            { "th":                            
+                                        [       
+                                            ["text",  "P1"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },
+                            { "th":
+                                        [  
+                                            ["text", "P0"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },
+                            { "th":
+                                        [  
+                                            ["text", "Q0"],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            }
+                        ]   
+                    ]                  
+        },
+"body": { "rows":   [ 
+                        [     
+                            { "td":     
+                                        [
+                                            ["data", [ "F", "0", "L"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },     
+                            { "td":     
+                                        [
+                                            ["data", [ "F", "0", "L"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },  
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            }
+                        ], 
+                        [ 
+                            { "td":     
+                                        [
+                                            ["data", [ "F", "0", "L"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            }, 
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            }
+                        ],
+                        [ 
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },
+                            { "td":     
+                                        [
+                                            ["data", [ "F", "0", "L"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            }
+                        ],
+                        [  
+                            { "td":     
+                                        [
+                                            ["data", [ "T", "1", "H"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },  
+                            { "td":     
+                                        [                
+                                            ["data", [ "T", "1", "H"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            },
+                            { "td":     
+                                        [ 
+                                            ["data", [ "F", "0", "L"]],
+                                            ["colSpan", 1],
+                                            ["rowSpan", 1],
+                                            ["class", "bits"],
+                                            ["class", "table-padding-margin"]
+                                        ]
+                            } 
+                        ]
+                    ]
+        }
+}`;
+const JsonTableData74LS00 = JSON.parse(TableData74LS00String);
+
+
 const TableDataPractice74LS00String = `{   
 "head": { "rows":   [
                         [  

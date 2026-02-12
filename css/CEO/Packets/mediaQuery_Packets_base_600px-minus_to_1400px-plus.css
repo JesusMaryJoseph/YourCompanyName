@@ -21,8 +21,9 @@
     
     /* CSS Base (CONTENTS) */
     .packet-container{
+        position: relative;
         height: 98vh;
-        overflow-y: scroll;
+        overflow-y: hidden; /*scroll;*/
     }
         .packet-header{
             display: block;

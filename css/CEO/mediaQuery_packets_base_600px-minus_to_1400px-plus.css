@@ -1,0 +1,194 @@
+/* CSS Base, 600px-to1400px+: 
+*   for All Packets:   
+*   
+*/
+/* CSS Bass + all mediaQuery */
+    
+    /* CSS Base (CONTENTS) */
+    .packets-menu-container{
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        opacity: 1;
+       /* height: 98vh;
+        overflow-y: scroll;*/
+    }
+        .packet-header{
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            color: black; 
+        }
+
+    /*End CSS Base (CONTENTS) */
+
+@media only screen and (max-width: 599px){
+    .packets-menu-container{
+        /*width: 8rem;*/
+        margin-right: 1rem;
+        border: 1px solid white;
+        min-height: 2.5rem;
+    }
+    .packets-label-lev-1{
+        font-size: 1.5rem;
+        width: 8rem;
+    }
+        .packets-menu-dd-lev-1{
+            padding: 0.5rem 0.6rem;
+            opacity: 1;
+        }
+            .packets-menu-dd-lev-1-hidden{
+                margin-top: -13rem;
+            }
+            .packets-menu-dd-lev-1 li{
+                margin: 0.2rem 0;
+            }
+                .packets-menu-dd-lev-1 a{
+                    font-size: 0.9rem;
+                }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 749px){
+    .packets-menu-container{
+        margin-right: 1rem;
+        border: 1px solid white;
+        min-height: 2.5rem;
+    }
+    .packets-label-lev-1{
+        font-size: 1.5rem;
+        border: 1px solid red;
+    }
+        .packets-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets-menu-dd-lev-1-hidden{
+                margin-top: -15rem;
+            }
+            .packets-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets-menu-dd-lev-1 a{
+                    font-size: 1.1rem;
+                }
+    
+}
+
+@media only screen and (min-width: 750px) and (max-width: 899px){
+    .packets-menu-container{
+        margin-right: 1rem;
+        border: 1px solid white;
+        min-height: 2.5rem;
+    }
+    .packets-label-lev-1{
+        font-size: 1.6rem;
+        border: 1px solid red;
+    }
+        .packets-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets-menu-dd-lev-1-hidden{
+                margin-top: -15rem;
+            }
+            .packets-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets-menu-dd-lev-1 a{
+                    font-size: 1.2rem;
+                }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1049px){
+    .packets-menu-container{
+        margin-right: 1rem;
+        /*border: 1px solid white;*/
+        min-height: 3rem;
+    }
+    .packets-label-lev-1{
+            font-size: 1.7rem;
+            border: 1px solid yellow;
+    }
+        .packets-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets-menu-dd-lev-1-hidden{
+                margin-top: -15rem;
+            }
+            .packets-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets-menu-dd-lev-1 a{
+                    font-size: 1.3rem;
+                }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1199px){
+    .packets-menu-container{
+        margin-right: 1rem;
+        /*border: 1px solid white;*/
+        min-height: 3.1rem;
+    }
+    .packets-label-lev-1{
+            font-size: 1.8rem;
+            border: 1px solid yellow;
+    }
+        .packets-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets-menu-dd-lev-1-hidden{
+                margin-top: -16rem;
+            }
+            .packets-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets-menu-dd-lev-1 a{
+                    font-size: 1.4rem;
+                }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+    .packets-menu-container{
+        margin-right: 2rem;
+        /*border: 1px solid white;*/
+        min-height: 3.4rem;
+    }
+    .packets-label-lev-1{
+            font-size: 2rem;
+            border: 1px solid red;
+    }
+        .packets-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets-menu-dd-lev-1-hidden{
+                margin-top: -18rem;
+            }
+            .packets-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets-menu-dd-lev-1 a{
+                    font-size: 1.7rem;
+                }
+}
+
+@media only screen and (min-width: 1400px){
+    .packets-menu-container{
+        margin-right: 2rem;
+        /*border: 1px solid white;*/
+        min-height: 3.6rem;
+    }
+    .packets-label-lev-1{
+            font-size: 2.2rem;
+            border: 1px solid khaki;
+    }
+        .packets-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets-menu-dd-lev-1-hidden{
+                margin-top: -20rem;
+            }
+            .packets-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets-menu-dd-lev-1 a{
+                    font-size: 1.9rem;
+                }
+}

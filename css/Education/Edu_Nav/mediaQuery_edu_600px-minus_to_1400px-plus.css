@@ -68,8 +68,7 @@
 
 	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
             .edu-nav-dropdown li a, 
-            .menu-label-lev-2,
-            .packets-menu-dd-lev-1 li a{
+            .menu-label-lev-2{
                 font-size: 0.9rem;
             }
                 .dept-label{
@@ -83,13 +82,6 @@
                 margin-top: -15rem; /* margin-top: -8rem; */
             }
 
-            .packets-menu-dd-lev-1{
-                padding: 0.5rem 0.6rem;
-            }
-            .packets-menu-dd-lev-1-hidden{
-                margin-top: -14rem;
-            }
-            .packets-menu-dd-lev-1 li,
             .menu-dd-lev-1 li,
             .edu-nav-dropdown li{
                 margin: 0.2rem 0;
@@ -102,7 +94,7 @@
             .menu-dd-lev-2{
                 padding: 0.5rem 0.6rem;
                 top: -0.5rem;
-                left: 9rem;  /*left: 6.8rem;*/
+                left: 6.8rem;  /*left: 9rem;*/
                 /* width: 7.1rem;*/
             }
                 .menu-dd-lev-2 li a{
@@ -204,8 +196,7 @@
 
 	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
             .edu-nav-dropdown li a, 
-            .menu-label-lev-2,
-            .packets-menu-dd-lev-1 li a{
+            .menu-label-lev-2{
                 font-size: 1rem;
             }
                 .dept-label{
@@ -218,14 +209,6 @@
             .menu-dd-lev-1-hidden{
                 margin-top: -8rem;
             }
-
-            .packets-menu-dd-lev-1{
-                padding: 0.5rem 0.6rem;
-            }
-            .packets-menu-dd-lev-1-hidden{
-                margin-top: -14rem;
-            }
-            .packets-menu-dd-lev-1 li,
             .menu-dd-lev-1 li,
             .edu-nav-dropdown li{
                 margin: 0.2rem 0;
@@ -340,8 +323,7 @@
 
 	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
             .edu-nav-dropdown li a, 
-            .menu-label-lev-2,
-            .packets-menu-dd-lev-1 li a{
+            .menu-label-lev-2{
                 font-size: 1.2rem;
             }
                 .dept-label{
@@ -354,14 +336,6 @@
             .menu-dd-lev-1-hidden{
                 margin-top: -8rem;
             }
-
-            .packets-menu-dd-lev-1{
-                padding: 0.5rem 0.6rem;
-            }
-            .packets-menu-dd-lev-1-hidden{
-                margin-top: -14rem;
-            }
-            .packets-menu-dd-lev-1 li,
             .menu-dd-lev-1 li,
             .edu-nav-dropdown li{
                 margin: 0.2rem 0;
@@ -495,8 +469,7 @@
 
 	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
             .edu-nav-dropdown li a, 
-            .menu-label-lev-2,
-            .packets-menu-dd-lev-1 li a{
+            .menu-label-lev-2{
                 font-size: 1.2rem;
             }
                 .dept-label{
@@ -509,14 +482,6 @@
             .menu-dd-lev-1-hidden{
                 margin-top: -8rem;
             }
-
-            .packets-menu-dd-lev-1{
-                padding: 0.5rem 0.6rem;
-            }
-            .packets-menu-dd-lev-1-hidden{
-                margin-top: -14rem;
-            }
-            .packets-menu-dd-lev-1 li,
             .menu-dd-lev-1 li,
             .edu-nav-dropdown li{
                 margin: 0.2rem 0;
@@ -627,8 +592,7 @@
 
 	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
             .edu-nav-dropdown li a, 
-            .menu-label-lev-2,
-            .packets-menu-dd-lev-1 li a{
+            .menu-label-lev-2{
                 font-size: 1.2rem;
             }
                 .dept-label{
@@ -641,14 +605,6 @@
             .menu-dd-lev-1-hidden{
                 margin-top: -8rem;
             }
-
-            .packets-menu-dd-lev-1{
-                padding: 0.5rem 0.6rem;
-            }
-            .packets-menu-dd-lev-1-hidden{
-                margin-top: -14rem;
-            }
-            .packets-menu-dd-lev-1 li,
             .menu-dd-lev-1 li,
             .edu-nav-dropdown li{
                 margin: 0.2rem 0;
@@ -760,8 +716,7 @@
 
 	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
             .edu-nav-dropdown li a, 
-            .menu-label-lev-2,
-            .packets-menu-dd-lev-1 li a{
+            .menu-label-lev-2{
                 font-size: 1.2rem;
             }
                 .dept-label{
@@ -774,14 +729,6 @@
             .menu-dd-lev-1-hidden{
                 margin-top: -8rem;
             }
-
-            .packets-menu-dd-lev-1{
-                padding: 0.5rem 0.6rem;
-            }
-            .packets-menu-dd-lev-1-hidden{
-                margin-top: -14rem;
-            }
-            .packets-menu-dd-lev-1 li,
             .menu-dd-lev-1 li,
             .edu-nav-dropdown li{
                 margin: 0.2rem 0;
@@ -892,8 +839,7 @@
 
 	    /*BEGIN CSS for NAV, Training, Testing & Packets (1st DropDown) */
             .edu-nav-dropdown li a, 
-            .menu-label-lev-2,
-            .packets-menu-dd-lev-1 li a{
+            .menu-label-lev-2{
                 font-size: 1.2rem;
             }
                 .dept-label{
@@ -906,14 +852,6 @@
             .menu-dd-lev-1-hidden{
                 margin-top: -8rem;
             }
-
-            .packets-menu-dd-lev-1{
-                padding: 0.5rem 0.6rem;
-            }
-            .packets-menu-dd-lev-1-hidden{
-                margin-top: -14rem;
-            }
-            .packets-menu-dd-lev-1 li,
             .menu-dd-lev-1 li,
             .edu-nav-dropdown li{
                 margin: 0.2rem 0;
