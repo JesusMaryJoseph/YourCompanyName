@@ -73,7 +73,7 @@
         overflow-x: hidden; 
         overflow-y: scroll; 
     }
-    /*.ceo-contents{
+    .ceo-contents{
         position: relative;
         font-weight: bold;
         color: black;
@@ -81,7 +81,7 @@
         background-size: cover;
         overflow-x: hidden; 
         overflow-y: scroll; 
-    }*/ 
+    }/* the above was blocked out for some reason*/ 
         .ceo-proposal-label{
             width: 100%;
             display: block;
