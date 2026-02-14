@@ -97,11 +97,11 @@
 /* End CSS for CEO page and contents */
 
 /* CSS for Packets Nav */
-    .packets-menu-dd-lev-1{
+    /*.packets-menu-dd-lev-1{
         list-style-type: none;
         margin: 0;
         padding: 0;
-    }
+    }  this deleted from this mediaquery */
 /*END CSS for Packets Nav */
 
 /* CSS for Proposal */
