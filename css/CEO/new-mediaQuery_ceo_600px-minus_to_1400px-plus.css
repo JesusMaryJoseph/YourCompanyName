@@ -4,44 +4,9 @@
 
 /* CSS for CEO page and contents */ 
 
-		.pia-labels-container {
-			position: absolute;
-			top: 35vh;
-			width: 100%;
-			display: flex;
-			justify-content: space-around;
-            background-color: greenyellow;
-		}
-			.pia-labels-container label{
-				color: yellow;
-				cursor: pointer;
-				font-size: 2.5rem;
-				font-weight: bold;
-			}
-		
-        .ceo-contents{
-			position: absolute;
-            z-index: 200;
-			top: 3rem;
-			left: 0;
-			width: 95vw;
-			height: 95vh;
-			z-index: -10;		
-			/*background-image: url("media/imgs/BckGrnd/low-noise.png");*/
-			background-image: url("media/imgs/BckGrnd/olga-thelavart-unsplash-beige.png");
-			transition: opacity 1s;
-		}
-
-		.hide-ceo-contents{
-			opacity: 0;
-			/*z-index: -10;*/
-		}
-		.show-ceo-contents{
-			opacity: 1;
-			z-index: 10;
-		}
-
-
+    body{
+        overflow: hidden;
+    }
     .page{
           display: flex;
           flex-direction: column; 
@@ -61,28 +26,37 @@
         text-align: center;
         color: yellow;
     }
+
+
     .ceo-contents{
-        position: relative;/*fixed;*/
+        position: fixed;/*absolute;*/
+        z-index: 200;
+        left: 0;
+        width: 95vw;
+        height: 95vh;
+        z-index: -10;
         background-image: url("media/imgs/low-noise-darker.png");
         background-size: cover;
         font-weight: bold;
         color:  black;
-        overflow: auto;
+        /*overflow: auto;*/
         padding: 1rem;
         transition: opacity 1s;
         background-size: cover;
-        overflow-x: hidden; 
+        /*overflow-x: hidden;*/ 
         overflow-y: scroll; 
-    }
-    .ceo-contents{
-        position: relative;
-        font-weight: bold;
-        color: black;
-        transition: opacity 1s;
-        background-size: cover;
-        overflow-x: hidden; 
-        overflow-y: scroll; 
-    }/* the above was blocked out for some reason*/ 
+    } 
+
+
+		.hide-ceo-contents{
+			opacity: 0;
+			/*z-index: -10;*/
+		}
+		.show-ceo-contents{
+			opacity: 1;
+			z-index: 10;
+		}
+
         .ceo-proposal-label{
             width: 100%;
             display: block;
@@ -97,12 +71,27 @@
             }
 /* End CSS for CEO page and contents */
 
+		.pia-labels-container {
+			position: absolute;
+			top: 35vh;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+            /*background-color: greenyellow;*/
+		}
+			.pia-labels-container label{
+				color: yellow;
+				cursor: pointer;
+				font-size: 2.5rem;
+				font-weight: bold;
+			}
+
 /* CSS for Packets Nav */
-    /*.packets-menu-dd-lev-1{
+    .packets2-menu-dd-lev-1{
         list-style-type: none;
         margin: 0;
         padding: 0;
-    }  this deleted from this mediaquery */
+    }  
 /*END CSS for Packets Nav */
 
 /* CSS for Proposal */
@@ -193,7 +182,21 @@
     .page,
     body{
         width: 100vw;
-        overflow-x: hidden;
+    }
+
+    .close-html{
+        top: 0.1rem;
+        right: 0.1rem;
+        font-size: 1.8rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+        font-size: 2.5rem;
+        /*margin-top: -1.5rem;*/
     }
 
     .pia-labels-container label,
@@ -211,7 +214,7 @@
         }*/
     
     .ceo-contents{
-        top: 2rem;
+        top: 4rem;
         height: 87vh;
         width:97vw;
        /* position: relative;
@@ -373,10 +376,6 @@
         }
 /*End CSS for Application */
 
-   .close-html{
-      
-    }
-
 }
     
 @media only screen and (min-width: 600px) and (max-width: 749px){
@@ -400,12 +399,16 @@
         }*/
 
     .close-html{
+        top: 0.1rem;
+        right: 0.1rem;
         font-size: 1.8rem;
-        right: 0.5vw;
         width: 2.2rem;
         height: 2.2rem;
     }
     .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
         font-size: 2.5rem;
         /*margin-top: -1.5rem;*/
     }
@@ -567,13 +570,6 @@
             padding-left: 5rem;
         }
 /* End CSS for Application */
-
-   .close-html{
-        font-size: 1.8rem;
-        right: 0.5vw;
-        width: 2.2rem;
-        height: 2.2rem;
-    }
 /* End CSS for CEO page and contents */
 
 
@@ -599,8 +595,23 @@
             font-size: 2.4em;
         }*/
 
-
     .close-html{
+        top: 0.1rem;
+        right: 0.1rem;
+        font-size: 1.8rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+        font-size: 2.5rem;
+        /*margin-top: -1.5rem;*/
+    }
+
+
+    /*.close-html{
         font-size: 1.8rem;
         right: 0.5vw;
         width: 2.2rem;
@@ -608,7 +619,7 @@
     }
     .ceo-contents{
         font-size: 2.5rem;
-    }
+    }*/
 /* End CSS for CEO page and contents */
 
 /* CSS for Proposal */
@@ -790,14 +801,29 @@
             font-size: 2.4em;
         }*/
 
-
     .close-html{
+        top: 0.1rem;
+        right: 0.1rem;
+        font-size: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+        font-size: 2.5rem;
+        /*margin-top: -1.5rem;*/
+    }
+
+
+    /*.close-html{
         font-size: 1.8rem;
         right: 0.5vw;
         width: 2.2rem;
         height: 2.2rem;
     }
-    /*.close-html:hover{
+    .close-html:hover{
         font-size: 1.6rem ;
     }*/
     .ceo-contents{
@@ -981,14 +1007,29 @@
             font-size: 2.6em;
         }*/
 
-
     .close-html{
+        top: 0.1rem;
+        right: 0.1rem;
+        font-size: 2.2rem;
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+        font-size: 2.5rem;
+        /*margin-top: -1.5rem;*/
+    }
+
+
+    /*.close-html{
         font-size: 2.2rem;
         right: 0.5vw;
         width: 2.7rem;
         height: 2.7rem;
     }
-        /*.close-html:hover{
+        .close-html:hover{
             font-size: 2rem ;
         }*/
     .ceo-contents{
@@ -1166,20 +1207,35 @@
             font-size: 2.8em;
         }*/
 
-
     .close-html{
+        top: 0.1rem;
+        right: 0.1rem;
+        font-size: 2.5rem;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+        font-size: 2.5rem;
+        /*margin-top: -1.5rem;*/
+    }
+    /*.ceo-contents{
+        top: 6rem;
+        font-size: 2.5rem;
+    }*/
+
+
+   /* .close-html{
         font-size: 2.5rem;
         right: 0.5vw;
         width: 3rem;
         height: 3rem;
     }
-        /*.close-html:hover{
+        .close-html:hover{
             font-size: 2.3rem ;
         }*/
-    .ceo-contents{
-        top: 6rem;
-        font-size: 2.5rem;
-    }
 /* End CSS for CEO page and contents */
 
 /* CSS for Proposal */
@@ -1338,6 +1394,21 @@
         width: 100vw;
         overflow-x: hidden;
     }
+
+    .close-html{
+        top: 0.1rem;
+        right: 0.1rem;
+        font-size: 2.8rem;
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+    .ceo-contents{
+        top: 6rem;
+        height: 87vh;
+        width:97vw;
+        font-size: 2.5rem;
+        /*margin-top: -1.5rem;*/
+    }
     
     .pia-labels-container label,
     .welcome-label{
@@ -1353,19 +1424,15 @@
         }*/
 
 
-    .close-html{
+    /*.close-html{
         font-size: 2.8rem;
         right: 0.5vw;
         width: 3.3rem;
         height: 3.3rem;
     }
-        /*.close-html:hover{
+        .close-html:hover{
             font-size: 2.6rem ;
         }*/
-    .ceo-contents{
-        top: 7rem;
-        font-size: 2.5rem;
-    }
 /* End CSS for CEO page and contents */
 
 /* CSS for Proposal */

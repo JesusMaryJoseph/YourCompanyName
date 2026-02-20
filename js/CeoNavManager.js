@@ -12,10 +12,10 @@
                 if(!this.initialized){this.init(); this.initialized = true;}
                 //console.log("after init(). dropdown = " + dropdown);
                 switch(dropdown){
-                    case ("packets-menu-dd-lev-1"):
+                    case ("packets2-menu-dd-lev-1"):
                         console.log("this.packetsDropdownHidden = " + this.packetsDropdownHidden);
                         console.log("openOrClose = " + openOrClose);
-                        this.toggleDropdown(this.packetsDropdownEle, "packets-menu-dd-lev-1-hidden", openOrClose);
+                        this.toggleDropdown(this.packetsDropdownEle, "packets2-menu-dd-lev-1-hidden", openOrClose);
                         this.packetsDropdownHidden = !this.packetsDropdownHidden;
                         break;
                     /*case ("menu-dd-lev-1"):
@@ -85,8 +85,8 @@
 
             init: function(){
             //console.log(" in EduNavManager.init()");
-                this.packetsLabelEle = document.getElementById('packets-menu-label-id');
-                this.packetsDropdownEle = document.getElementById("packets-menu-dd-id");
+                this.packetsLabelEle = document.getElementById('packets2-menu-label-id');
+                this.packetsDropdownEle = document.getElementById("packets2-menu-dd-id");
                // console.log("this.equipmentlabelEle.id = " + this.equipmentlabelEle.id);
                 //console.log("this.equipmentDropdownEle.id = " + this.equipmentDropdownEle.id);
                 //console.log("Ending EduNavManager.init()");

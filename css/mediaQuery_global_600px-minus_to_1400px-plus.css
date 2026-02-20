@@ -105,7 +105,7 @@
                     font-size: 1.4rem;
                 }
             .dbe-hide-dropdown{
-                margin-top: -15rem;
+                margin-top: -17rem;
             }
             .nav-dropdown{               
                 /*margin-top: -15rem;*/
@@ -148,7 +148,7 @@
                         /*padding-top: 0.1rem;new*/
                     }
                     .dbe-hide-dropdown{
-                        margin-top: -16rem;
+                        margin-top: -18rem;
                     }
     /* End Global (Nav) [750px,899px) */
 }
@@ -179,7 +179,7 @@
                         /*padding-top: 0.1rem;new*/
                     }
                     .dbe-hide-dropdown{
-                        margin-top: -17rem;
+                        margin-top: -19rem;
                     }
     /* End Global (Nav) [1050px,1199px) */
 }
@@ -210,7 +210,7 @@
                         /*padding-top: 0.1rem;new*/
                     }
                     .dbe-hide-dropdown{
-                        margin-top: -20rem;
+                        margin-top: -22rem;
                     }
     /* End Global (Nav) [1200px,1399px) */
 }

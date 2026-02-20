@@ -1,0 +1,317 @@
+/* CSS Base, 600px-to1400px+: 
+*   for All packets2:   
+*   
+*/
+/* CSS Bass + all mediaQuery */
+    
+    /* CSS Base (CONTENTS) */
+    .packets2-menu-container{
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        opacity: 1;
+       /* height: 98vh;
+        overflow-y: scroll;*/
+    }
+        .packet-header{
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            color: black; 
+        }
+
+    .packets2-close-html{
+        position: absolute;
+        text-align: center;
+        background-color: red;
+        cursor: pointer;
+        z-index: 10;
+    }
+        .packets2-close-html:hover{
+            border: 2px solid black;
+        }
+
+    .packets2-close-html{
+            position: absolute;
+            text-align: center;
+            z-index: 10;
+        }
+            .packets2-close-html:hover{
+                border: 2px solid black;
+            }
+
+    /*End CSS Base (CONTENTS) */
+
+@media only screen and (max-width: 599px){
+    .packets2-close-html{
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 1.8rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+        font-size: 2.5rem;
+        /*margin-top: -1.5rem;*/
+    }
+    .packets2-menu-container{
+        margin-right: 1rem;
+        border: 1px solid white;
+        min-height: 2.5rem;
+    }
+
+    .packets2-label-lev-1{
+        font-size: 1.5rem;
+        width: 8rem;
+    }
+        .packets2-menu-dd-lev-1{
+            padding: 0.5rem 0.6rem;
+            opacity: 1;
+        }
+            .packets2-menu-dd-lev-1-hidden{
+                margin-top: -13rem;
+            }
+            .packets2-menu-dd-lev-1 li{
+                margin: 0.2rem 0;
+            }
+                .packets2-menu-dd-lev-1 a{
+                    font-size: 0.9rem;
+                }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 749px){
+    .packets2-close-html{
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 1.8rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+        font-size: 2.5rem;
+        /*margin-top: -1.5rem;*/
+    }
+
+    .packets2-menu-container{
+        margin-right: 1rem;
+        border: 1px solid white;
+        min-height: 2.5rem;
+    }
+    .packets2-label-lev-1{
+        font-size: 1.5rem;
+        border: 1px solid red;
+    }
+        .packets2-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets2-menu-dd-lev-1-hidden{
+                margin-top: -15rem;
+            }
+            .packets2-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets2-menu-dd-lev-1 a{
+                    font-size: 1.1rem;
+                }
+    
+}
+
+@media only screen and (min-width: 750px) and (max-width: 899px){
+    .packets2-close-html{
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 1.8rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+         /*font-size: 2.5rem;
+       margin-top: -1.5rem;*/
+    }
+    
+    .packets2-menu-container{
+        margin-right: 1rem;
+        border: 1px solid white;
+        min-height: 2.5rem;
+    }
+    .packets2-label-lev-1{
+        font-size: 1.6rem;
+        border: 1px solid red;
+    }
+        .packets2-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets2-menu-dd-lev-1-hidden{
+                margin-top: -15rem;
+            }
+            .packets2-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets2-menu-dd-lev-1 a{
+                    font-size: 1.2rem;
+                }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1049px){
+    .packets2-close-html{
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    .ceo-contents{
+        top: 4rem;
+        height: 87vh;
+        width:97vw;
+         /*font-size: 2.5rem;
+       margin-top: -1.5rem;*/
+    }
+    
+    .packets2-menu-container{
+        margin-right: 1rem;
+        /*border: 1px solid white;*/
+        min-height: 3rem;
+    }
+    .packets2-label-lev-1{
+            font-size: 1.7rem;
+            border: 1px solid yellow;
+    }
+        .packets2-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets2-menu-dd-lev-1-hidden{
+                margin-top: -15rem;
+            }
+            .packets2-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets2-menu-dd-lev-1 a{
+                    font-size: 1.3rem;
+                }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1199px){
+    .packets2-close-html{
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 2.2rem;
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+    .ceo-contents{
+        top: 5rem;
+        height: 87vh;
+        width:97vw;
+         /*font-size: 2.5rem;
+       margin-top: -1.5rem;*/
+    }
+    
+    .packets2-menu-container{
+        margin-right: 1rem;
+        /*border: 1px solid white;*/
+        min-height: 3.1rem;
+    }
+    .packets2-label-lev-1{
+            font-size: 1.8rem;
+            border: 1px solid yellow;
+    }
+        .packets2-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets2-menu-dd-lev-1-hidden{
+                margin-top: -16rem;
+            }
+            .packets2-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets2-menu-dd-lev-1 a{
+                    font-size: 1.4rem;
+                }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+    .packets2-close-html{
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 2.5rem;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .ceo-contents{
+        top: 5rem;
+        height: 87vh;
+        width:97vw;
+         /*font-size: 2.5rem;
+       margin-top: -1.5rem;*/
+    }
+
+    .packets2-menu-container{
+        margin-right: 2rem;
+        /*border: 1px solid white;*/
+        min-height: 3.4rem;
+    }
+    .packets2-label-lev-1{
+            font-size: 2rem;
+            border: 1px solid red;
+    }
+        .packets2-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets2-menu-dd-lev-1-hidden{
+                margin-top: -18rem;
+            }
+            .packets2-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets2-menu-dd-lev-1 a{
+                    font-size: 1.7rem;
+                }
+}
+
+@media only screen and (min-width: 1400px){
+    .packets2-close-html{
+        top: 1.1rem;
+        right: 1.1rem;
+        font-size: 3rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .ceo-contents{
+        top: 7rem;
+        height: 87vh;
+        width:97vw;
+         /*font-size: 2.5rem;
+       margin-top: -1.5rem;*/
+    }
+    .packets2-menu-container{
+        margin-right: 2rem;
+        /*border: 1px solid white;*/
+        min-height: 3.6rem;
+    }
+    .packets2-label-lev-1{
+            font-size: 2.2rem;
+            border: 1px solid khaki;
+    }
+        .packets2-menu-dd-lev-1{
+            padding: 0.1rem 1.6rem;
+        }
+            .packets2-menu-dd-lev-1-hidden{
+                margin-top: -20rem;
+            }
+            .packets2-menu-dd-lev-1 li{
+                margin: 0.2rem 1.1rem;
+            }
+                .packets2-menu-dd-lev-1 a{
+                    font-size: 1.9rem;
+                }
+}
