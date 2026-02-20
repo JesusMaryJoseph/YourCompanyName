@@ -2,7 +2,7 @@
 *  
 *
 */
-/* CSS for packets22 NAV   */ 
+/* CSS for packets2 NAV   */ 
 
     ul {
         margin:0;
@@ -27,7 +27,7 @@
         /*width: 8rem;*/
         /*border: 3px solid pink;*/
     }
-	    /*BEGIN CSS for packets22 (Main Labels) */
+	    /*BEGIN CSS for packets2 (Main Labels) */
             .packets2-label-lev-1{
                 position: relative;
                 display: flex;
