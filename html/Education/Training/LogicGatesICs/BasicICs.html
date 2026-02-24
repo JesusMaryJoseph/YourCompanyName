@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <script>
+		function addListenerToInputs(){
+			const inputTags = querySelectorAll("input");
+            //alert("# of Inputs = " + inputTags.length);
+            console.log("# of Inputs = " + inputTags.length);
+			inputTags.forEach( item => {
+				item.addEventListener("keydown", PracticeTruthTableManager.checkInput());
+			})
+		}
+	</script>
+    
+    <style>
+        .edu-contents{
+			height: 85vh;
+			width:93vw;
+			position: relative;
+			/*left: 2rem;*/
+            background-image: url("media/imgs/low-noise-darker.png");
+            background-size: cover;
+            color:  black;
+			overflow: auto;
+			/*border: 3px solid green;*/ 
+        }
+        
+        
+    </style>
+</head>
+<body onload="gatesIcsInit()">
+    <div class="gates-ics-body-container">
+        <div id="gates-ics-contents-id" class="contents gates-ics-contents">
+            <h2 class="header-two">Integrated Circuits (IC):</h2>
+            <section class="intro-ics">
+                <p>If you have already practiced using the "Circuit Practice Table" in "Exercises/Logic Gates/Basic Logic Gates", you encountered many complex circuits
+                    that were created in a somewhat random manner. One, however, had a unique label ("Two To Four Decoder") and image.
+                </p>
+                <img class="ic-139" src="media/imgs/basicLogicGates/TwoToFourDecoder_wPQ.svg">
+                </p>
+                <p>Go back and run it again but this time consentrate on the 4 output columns. Do you see a pattern? It not only has a very organized output it also
+                    performs a very useful function, which is why TI manufactored it as 74LS139 with the label: "dual 2-Line To 4-Line Decoder/Demultiplexer".
+                </p>
+                <div class="ic-container ic-139-container">
+                    <img class="ic-139" src="media/imgs/LS_imgs/Pin_Layouts/74LS139.png">
+                </div>
+                <p>As you can see from the image above, it actually contains two "2-Line To 4-Line Decoder/Demultiplexers". 
+                    When designing the Output Module, you will use the 74LS139 to control which of the Four 7-Segment-Display will be lit at any one time.
+                </p>
+                <p>The 74LS139 Integrated Circuit is only one of 18 ICs you will be using to build the 8-bit computer. Six of the 18 will
+                    be introduced to you right now. The remaining 12 will be covered after you have finished the "Hardware Architecture" material.
+                </p>
+                <p>All the ICs look pretty much the same, differing in size and the number of pins. The following 6 ICs
+                    could easily be called the "basic" ICs as seen by the following list:</p>
+                <div class="table-basic-ics-container">
+                    <table id: = "table-basic-ics-id" class="table-basic-ics">
+
+                    </table>
+                    <table class="table-basic-ics">
+                        <thead>
+                            <tr>
+                                <th>IC</th><th>Name</th><th>Image</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>74LS00</td><td>Quad 2-Input<br>NAND Gate</td><td><img src="media/imgs/LS_imgs/Pin_Layouts/74LS00.png"></td>
+                            </tr>
+                            <tr>
+                                <td>74LS02</td><td>Quad 2-Input<br>NOR Gate</td><td><img src="media/imgs/LS_imgs/Pin_Layouts/74LS02.png"></td>
+                            </tr>
+                            <tr>
+                                <td>74LS04</td><td>Hex<br>NOTGate</td><td><img src="media/imgs/LS_imgs/Pin_Layouts/74LS04.svg"></td>
+                            </tr>
+                            <tr>
+                                <td>74LS08</td><td>Quad 2-Input<br>AND Gate</td><td><img src="media/imgs/LS_imgs/Pin_Layouts/74LS08.png"></td>
+                            </tr>
+                            <tr>
+                                <td>74LS32</td><td>Quad 2-Input<br>OR Gate</td><td><img src="media/imgs/LS_imgs/Pin_Layouts/74LS32.png"></td>
+                            </tr>
+                            <tr>
+                                <td>74LS86</td><td>Quad 2-Input<br>XOR Gate</td><td><img src="media/imgs/LS_imgs/Pin_Layouts/74LS86.png"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>NOTE: When working as an Engineer you will have access to both the single "AND Gate" as well as the "74LS08 IC"; however,
+                    when working as a Draftsman or Technician you will ONLY have access to the "74LS08 IC". So if the Engineer chooses
+                    to use a single "AND Gate" in their "Design", the Draftsman's Schematic will have to convert that single "AND Gate"
+                    into a 74LS08 IC!
+                </p>
+                <p>Take some time to memorize each particular Gate with its corresponding IC name (eg OR Gate -- 74LS32 IC etc.). Your'e ready
+                    for the "Design" section.
+                </p>
+                
+            </section>
+        </div>
+    </div>
+
+        <script>
+            function gatesIcsInit(){
+			    //console.log("In onload='gatesIcsInit()' GatesIcs.html");
+                //TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS08);
+                //PracticeTruthTableManager.create("basic","AND");
+                addListenerToInputs();
+            }
+        </script>
+</body>
+</html>

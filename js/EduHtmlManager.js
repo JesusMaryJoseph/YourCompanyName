@@ -54,13 +54,13 @@
                         //PracticeTruthTableManager.initialize();
                         //PracticeTruthTableManager.create("circuit","NotXor");
                     }
-                    if(this.requestedFile == "html/Education/Training/Introduction/GatesIcs.html"){
+                    if(this.requestedFile == "html/Education/Exercises/LogicGatesICs/GatesPractice.html"){
                         console.log("in this.requestedFile = html/Education/Training/Introduction/GatesIcs.html");
                         TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS08);
                         TableGenerator.createTable('circuit-practice-table-id',JsonTableDataPracticeNotXor);
                     }
-                    if(contentId == "truth-table-contents-id"){
-                        console.log("in this.contentId == 'truth-table-contents-id'");
+                    if(this.requestedFile == "html/Education/Training/TruthTables/TruthTables.html"){ // contentId == "truth-table-contents-id"
+                        console.log("in html/Education/Training/TruthTables/TruthTables.html");
                         TableGenerator.createTable("morse-1-bit-word-id",JsonTableDataMorseCodeOneBit);
                         TableGenerator.createTable("morse-2-bit-word-id",JsonTableDataMorseCodeTwoBit);
                         TableGenerator.createTable("morse-3-bit-word-id",JsonTableDataMorseCodeThreeBit);
