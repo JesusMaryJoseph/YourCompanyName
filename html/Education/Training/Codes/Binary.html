@@ -19,13 +19,25 @@
 			overflow: auto;
 			/*border: 3px solid green;*/ 
         }
-        
+        .binary-code{
+            display: flex;
+            justify-content: center;
+        }
             
     </style>
 </head>
 <body>
-    <div class="body-container">
+    <!--<div class="body-container">
         <label>Binary Code for Integers (2's Complement)</label>
-    </div>
+    </div>-->
+    <aside id="binary-code-id" class="binary-code aside-hidden">
+        <!--<div class="close-aside" onclick="AsideMaterialHandler.showHide('binary-code-id')">X</div> , AsideMaterialHandler.blurBackground('codes-contents-id')
+        <label>Binary Code for Whole Numbers</label>-->
+        <img src="media/imgs/Binary-Codes/Binary-Code-Whole-Numbers.svg">
+    </aside>
+
+    <aside id="signed-binary-code-id" class="binary-code aside-hidden">
+        <img src="media/imgs/Binary-Codes/Binary-Code-Signed-Numbers.svg">
+    </aside>
 </body>
 </html>  

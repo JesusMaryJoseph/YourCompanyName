@@ -54,6 +54,10 @@
                         //PracticeTruthTableManager.initialize();
                         //PracticeTruthTableManager.create("circuit","NotXor");
                     }
+                    if (this.requestedFile ==  "html/Education/Training/Codes/ASCII.html") {
+                        console.log("in this.requestedFile = html/Education/Training/Codes/ASCII.html");
+                        TableGenerator.createTable('ascii-table-id',JsonTableDataASCII);
+                    }
                     if(this.requestedFile == "html/Education/Exercises/LogicGatesICs/GatesPractice.html"){
                         console.log("in this.requestedFile = html/Education/Training/Introduction/GatesIcs.html");
                         TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS08);

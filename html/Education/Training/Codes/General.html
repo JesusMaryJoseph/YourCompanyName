@@ -167,8 +167,8 @@
         <br><br>
         <div class="additional-material">
             <label class="question"><u>Some examples of Computer Codes</u><br></label> <!-- onclick="QuestionAnswerManager.revealAnswer('code-examples-id')" title="Click to: Open And/Or Close"-->
-            <div id="code-examples-id" class="answer">
-                <ol type="1">
+            <div id="code-examples-id" class="tr-common-container tr-truth-tables-container">
+                <ol class="tr-ol-type-1" type="1">
                     <li>Text: ASCII, Unicode(eg UTF-8)</li>
                     <li>Numbers: Binary, Decimal, Hexadecimal, Binary-Coded-Decimal (BCD)</li>
                     <li>Images: jpeg, png, mp3, GIF, svg</li>
@@ -187,30 +187,11 @@
             </div>
         </div><br>
         
-            <label>For Specific Information:</label>
-            <ol type="1">
-                <li><button onclick="AsideMaterialHandler.showHide('binary-code-id')">Binary Code</button>      <!--AsideMaterialHandler.blurBackground('codes-contents-id')"-->
-                </li>
-                <!--<li><button onclick="AsideMaterialHandler.showHide('boolean-algebra-id'), AsideMaterialHandler.blurBackground('design-contents-id')">Boolean Algebra</button></li>
-                <li><button onclick="AsideMaterialHandler.showHide('logic-gate-hardware-id'), AsideMaterialHandler.blurBackground('design-contents-id'),
-                    TableGenerator.createTable('not-table-transistor-id',JsonTableData74LS04),
-                    TableGenerator.createTable('and-table-transistor-id',JsonTableData74LS08),
-                    TableGenerator.createTable('or-table-transistor-id',JsonTableData74LS32)">Logic Gate Hardware</button></li>-->
-            </ol><br><br>
-        
         <div class="link-container">
-            <button class="link-general link-next" onclick="EduHtmlManager.request('html/Education/Training/Introduction/TruthTables.html','truth-table-contents-id')">Truth Tables</button><!--,'truth-table-contents-id'-->
+            <button class="link-general link-next" onclick="EduHtmlManager.request('html/Education/Training/Codes/Binary.html','truth-table-contents-id')">Binary Code</button><!--,'truth-table-contents-id'-->
         </div>
         
-        <aside id="binary-code-id" class="binary-code aside-hidden">
-            <div class="close-aside" onclick="AsideMaterialHandler.showHide('binary-code-id')">X</div> <!--, AsideMaterialHandler.blurBackground('codes-contents-id')-->
-            <label>Binary Code for Whole Numbers</label>
-            <img src="media/imgs/Binary-Codes/Binary-Code.svg">
-        </aside>
-
-        <aside id="boolean-algebra-history-id" class="boolean-algebra-history aside-hidden">
-            <label>Binary Code for Integers (2's Complement)</label>
-        </aside>
+       
     </div>
 </body>
 </html>  
