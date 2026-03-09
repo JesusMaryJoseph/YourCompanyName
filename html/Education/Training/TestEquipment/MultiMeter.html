@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
+    <script src="Js/MultiMeterManager.js"></script>
+
     <script>
     </script>
     
@@ -20,11 +22,21 @@
 			overflow: auto;
 			/*border: 3px solid green;*/ 
         }
+        .multi-meter{
+            width: 40vw;
+        }
     </style>
 </head>
-<body>
+<body onload="inti()"> <!-- onload="MultimMeterManager.init()"-->
     <div class="multi-meter-container">
         <label>Multi Meter</label>
+        <embed class="multi-meter" type="image/svg+xml" src="media/imgs/Test-Equipment/Klein_MM400-vs2.svg"/>
     </div>
+
+    <script>
+        function init(){
+            console.log("in MultiMeter-vs2.html init()");
+        }
+    </script>
 </body>
 </html>

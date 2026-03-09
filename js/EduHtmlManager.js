@@ -54,6 +54,10 @@
                         //PracticeTruthTableManager.initialize();
                         //PracticeTruthTableManager.create("circuit","NotXor");
                     }
+                    if(this.requestedFile == "html/Education/Training/TestEquipment/MultiMeter.html"){
+                        console.log("in this.requestedFile == ----- MultiMeter.html");
+                        MultiMeterManager.init();
+                    }
                     if (this.requestedFile ==  "html/Education/Training/Codes/ASCII.html") {
                         console.log("in this.requestedFile = html/Education/Training/Codes/ASCII.html");
                         TableGenerator.createTable('ascii-table-id',JsonTableDataASCII);
