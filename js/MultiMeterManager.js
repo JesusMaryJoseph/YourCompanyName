@@ -2,94 +2,134 @@
     let MultiMeterManager = {
         //Properties
         initiated: false,
-        selectorKnob: {},
+        offSelectorKnob: {},
+        tempSelectorKnob: {},
+        microAmpSelectorKnob: {},
+        milliAmpSelectorKnob: {},
+        tenAmpSelectorKnob: {},
+        voltSelectorKnob: {},
+        hertzSelectorKnob: {},
+        ohmsSelectorKnob: {},
+        capDiodeSelectorKnob: {},
+
         offSelector: {},
-        degSelector: {},
+        tempSelector: {},
         microAmpSelector: {},
         milliAmpSelector: {},
         tenAmpSelector: {},
         voltSelector: {},
-        hertsSelector: {},
+        hertzSelector: {},
         ohmsSelector: {},
         capDiodeSelector: {},
-        presentSetting: "off",
+        presentSelectorLabel: "off",
+
+        selRedButton: {},
+        selWhiteButton: {},
+        selButtonBckgrnd: {},
 
         //Methods
-        changeSetting: function(newSetting){
-            console.log("new setting = " + newSetting);
-            const oldDegrees = this.getDegrees(presentSetting);
-            console.log("oldDegrees = " + oldDegrees);
-            const newDegrees = this.getDegrees(newSetting);
-            console.log("newDegrees = " + newDegrees);
-            const netRotation = newDegrees - oldDegrees;
+        changeSetting: function(newSelectorLabel){
+            console.log("old Selector = " + this.presentSelectorLabel);
+            console.log("new Selector = " + newSelectorLabel);
+            this.showHideSelectors(this.presentSelectorLabel);
+            this.showHideSelectors(newSelectorLabel);
+            /*console.log("newDegrees = " + newDegrees);
+            let netRotation = (newDegrees - oldDegrees) + "deg";
             console.log("new rotation = " + netRotation);
-            this.knob.style.transformOrigin = "50% 50%";
-            this.know.style.transform = rotate(netRotation);
-            this.presentSetting = newSetting;
+            this.selectorKnob.style.transform = 'rotate(' + netRotation + ')';*/
+            this.presentSelectorLabel = newSelectorLabel;
         },
 
-        getDegrees: function(setting){
-            const degrees = 0;
-            switch (setting){
-                case "off":
-                    degrees = 0;
-                    break;
-                case "deg":
-                    degrees = -90;
+        changeSelect: function(){
+            this.selRedButton.classList.toggle("hidden-selector");
+            console.log("toggling 'hidden-selector' on Red Label");
+            this.selWhiteButton.classList.toggle("hidden-selector");
+            console.log("toggling 'hidden-selector' on White Label");
+        },
+
+        showHideSelectors: function(selectorLabel){
+            console.log("in showHideSelectors");
+            console.log("selectorLabel = " + selectorLabel);
+            switch (selectorLabel){
+                case "temp":
+                    this.tempSelectorKnob.classList.toggle("hidden-selector");
                     break;
                 case "microAmp":
-                    degrees = -67.5;
+                    this.microAmpSelectorKnob.classList.toggle("hidden-selector");
                     break;
                 case "milliAmp":
-                    degrees = -45;
+                    this.milliAmpSelectorKnob.classList.toggle("hidden-selector");
                     break;
                 case "tenAmp":
-                    degrees = -22.5;
+                    this.tenAmpSelectorKnob.classList.toggle("hidden-selector");
                     break;
-                case "0ff":
-                    degrees = 0;
+                case "off":
+                    this.offSelectorKnob.classList.toggle("hidden-selector");
                     break;
-                case "volt":
-                    degrees = 22.5;
+                case "Volts":
+                    this.voltSelectorKnob.classList.toggle("hidden-selector");
                     break;
-                case "herts":
-                    degrees = 45;
+                case "Hertz":
+                    this.hertzSelectorKnob.classList.toggle("hidden-selector");
                     break;
-                case "ohms":
-                    degrees = 67.5;
+                case "Ohms":
+                    this.ohmsSelectorKnob.classList.toggle("hidden-selector");
                     break;
-                case "capDiode":
-                    degrees = 90;
+                case "CapDiode":
+                    this.capDiodeSelectorKnob.classList.toggle("hidden-selector");
                     break;
                 default: console.log("Not an allowable Setting");
 
             }
-            return degrees;
         },
+
+        /*clicked: function(selector){
+            console.log(selector + " was clicked in upload MultiMeterManager");
+        },*/
 
         init: function(){
             console.log("beginning MultiMeterManager.init()");
-            this.selectorKnob = document.getElementById("mm-selector-knob-id");
+           /* this.selectorKnob = document.getElementById("mm-selector-id");
+           this.selectorKnob.style.transformOrigin = '50% -20%';*/
+            this.offSelectorKnob = document.getElementById("selector-knob-off-id")
+            this.capDiodeSelectorKnob = document.getElementById("selector-knob-cap-diode-id");
+            this.tempSelectorKnob = document.getElementById("selector-knob-temp-id");
+            this.microAmpSelectorKnob = document.getElementById("selector-knob-micro-amp-id");
+            this.milliAmpSelectorKnob = document.getElementById("selector-knob-milli-amp-id");
+            this.tenAmpSelectorKnob = document.getElementById("selector-knob-ten-amp-id");
+            this.voltSelectorKnob = document.getElementById("selector-knob-volts-id");
+            this.hertzSelectorKnob = document.getElementById("selector-knob-hertz-id");
+            this.ohmsSelectorKnob = document.getElementById("selector-knob-ohms-id");
+
             this.offSelector = document.getElementById("mm-off-id");
-            this.degSelector = document.getElementById("mm-deg-id");
-            this.microAmpSelector = document.getElementById("mm-microAmp-id");
-            this.milliAmpSelector = document.getElementById("mm-milliAmp-id");
-            this.tenAmpSelector = document.getElementById("mm-tenAmp-id");
-            this.voltSelector = document.getElementById("mm-volt-id");
-            this.hertsSelector = document.getElementById("mm-herts-id");
+            this.tempSelector = document.getElementById("mm-temp-id");
+            this.microAmpSelector = document.getElementById("mm-micro-amp-id");
+            this.milliAmpSelector = document.getElementById("mm-milli-amp-id");
+            this.tenAmpSelector = document.getElementById("mm-ten-amp-id");
+            this.voltSelector = document.getElementById("mm-volts-id");
+            this.hertzSelector = document.getElementById("mm-hertz-id");
             this.ohmsSelector = document.getElementById("mm-ohms-id");
-            this.capDiodeSelector = document.getElementById("mm-capDiode-id");
+            this.capDiodeSelector = document.getElementById("mm-cap-diode-id");
+
+            this.selRedButton = document.getElementById("mm-sel-label-red-id");
+            this.selWhiteButton = document.getElementById("mm-sel-label-white-id");
+            this.selButtonBckgrnd = document.getElementById("mm-sel-push-button-id");
          
-            this.offSelector.addEventListener("click",alert("off"));
-            this.degSelector.addEventListener("click",alert("deg evt"));
-            this.microAmpSelector.addEventListener("click",alert("microAmp evt"));
-            this.milliAmpSelector.addEventListener("click",alert("milliAmp evt"));
-            this.tenAmpSelector.addEventListener("click",alert("tenAmp evt"));
-            this.voltSelector.addEventListener("click",alert("volt evt"));
-            this.hertsSelector.addEventListener("click",alert("herts evt"));
-            this.ohmsSelector.addEventListener("click",alert("ohms evt"));
-            this.capDiodeSelector.addEventListener("click",alert("capDiode evt"));
+            this.offSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("off")});
+            this.tempSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("temp")});
+            this.microAmpSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("microAmp")});
+            this.milliAmpSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("milliAmp")});
+            this.tenAmpSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("tenAmp")});
+            this.voltSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("Volts")});
+            this.hertzSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("Hertz")});
+            this.ohmsSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("Ohms")});
+            this.capDiodeSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("CapDiode")});
+
+            this.selRedButton.addEventListener("click",function(){MultiMeterManager.changeSelect()});
+            this.selWhiteButton.addEventListener("click",function(){MultiMeterManager.changeSelect()});
+            this.selButtonBckgrnd.addEventListener("click",function(){MultiMeterManager.changeSelect()})
+
             this.initiated = true;
-            console.log("finished MultiMeterManager.init()");
+            console.log("finished MultiMeterManager.init()"); 
         }
     }

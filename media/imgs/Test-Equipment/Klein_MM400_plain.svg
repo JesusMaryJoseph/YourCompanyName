@@ -1,124 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <!--<script src="Js/MultiMeterManager.js"></script>-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-    <script>
-
-    </script>
-    
-    <style>
-        .edu-contents{
-			height: 85vh;
-			width:93vw;
-			position: relative;
-			/*left: 2rem;*/
-            background-image: url("media/imgs/low-noise-darker.png");
-            background-size: cover;
-            color:  black;
-			overflow: auto;
-			/*border: 3px solid green;*/ 
-        }
-        .multi-meter-container{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #mm-svg-id{
-            /*position: relative;
-            top: 5vh;
-            margin: 2vh;
-            left: 30vw;*/
-            width: 20vw;
-            height: calc(20vw*(1025.7461/527.41102));
-            max-height: 90vh;
-           /* background-color: red;*/
-        }
-        #mm-light-push-button-id,
-        #mm-sel-label-red-id,
-        #mm-sel-label-white-id,
-        #mm-sel-push-button-id,
-        #mm-off-id:hover,
-        #mm-micro-amp-id:hover,
-        #mm-milli-amp-id:hover,
-        #mm-ten-amp-id:hover,
-        #mm-volts-id:hover,
-        #mm-hertz-id:hover,
-        #mm-ohms-id:hover,
-        #mm-cap-diode-id:hover,
-        #mm-temp-id:hover{
-            cursor: pointer;
-        }
-        .hidden-selector{
-            display: none;
-            visibility: hidden;
-        }
-        .selector-label{
-            border: 2px solid red;
-            background-color: gray;
-            font-size: 5rem;
-        }
-    </style>
-</head>
-<body>
-    <h1>Multimeter</h1>
-    <!--<section class="about-multimeter">
-        <p>
-            This tool will allow for testing, diagnosing and troubleshooting electrical circuits, components and devices. It has the capability to measure Voltage(V), 'current' Amps(A), 
-            'resistance' (Ohms), 'capacitance' (Farads) as well as 'Continuity', 'Frequency' and 'Temperature (both AC and DC).
-        </p>
-        <p>
-            It has 6 Buttons:
-            <ul>
-                <li>OFF</li>
-                    <ul>
-                        <li>To Power ON the meter rotate the Function Selector Switch to any measurement setting.</li>
-                        <li>To Power OFF the meter rotate to the OFF setting.</li>
-                        <li>By default the meter will automatically Power OFF after 30 minutes of inactivity.</li>
-                    </ul>
-                <li>Select: Toggles between
-                    <ul>
-                        <li>AC & DC: for Voltage and Current</li>
-                        <li>Deg F & Deg C</li>
-                        <li>HZ(Frequency) & %(Duty Cydle)</li>
-                        <li>Continuity & resistance</li>
-                        <li>Capacitance & Diode-test</li>
-                        <li>NOTE: The default Function is printed in White</li>
-                        <li>and the Secondary Function is printed in Orange</li>
-                    </ul>
-                </li>
-                <li>Backlighting: Press for more than 1 second to turn 'ON'/'OFF'</li>
-                <li>Range:
-                    <ul>
-                        <li>Default Value: AUTO - "Most appropriage Range is automatically selected."</li>
-                        <li>Repeatedly press "Range" Button to cycle through available ranges.</li>
-                        <li>Press "Range" Button for more than 1 second to return to "Auto ranging mode".</li>
-                    </ul>
-                </li>
-                <li>Max/Min:
-                    <ul>
-                        <li>When "Pressed", meter keeps track of "MAX" and "MIN" values as long as the meter continues to take samples.</li>
-                        <li>The 'first' press of "MAX/MIN" button displays the Max Value.</li>
-                        <li>The 'second' press of "MAX/MIN" button displays the Min Value.</li>
-                    </ul>
-                </li>
-                <li>Hold
-                    <ul>
-                        <li>Press "HOLD" Button to 'hold' the measurement on the display.</li>
-                        <li>Press 'again' to release the display and return to live measuring.</li>
-                    </ul>
-                </li>
-            </ul>
-        </p>
-    </section>-->
-    <div class="multi-meter-container">
-        
 <svg
    width="527.41101mm"
    height="1025.7461mm"
@@ -126,25 +8,58 @@
    id="mm-svg-id"
    viewBox="0 0 527.41102 1025.7461"
    xml:space="preserve"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
+   sodipodi:docname="Klein_MM400_plain.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview1"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:document-units="mm"
+   showgrid="false"
+   showguides="true"
+   inkscape:zoom="1.146875"
+   inkscape:cx="1230.7357"
+   inkscape:cy="2529.0463"
+   inkscape:window-width="3840"
+   inkscape:window-height="2054"
+   inkscape:window-x="1909"
+   inkscape:window-y="-11"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="mm-volts-id"><sodipodi:guide
+     position="334.45775,479.76397"
+     orientation="1,0"
+     id="guide3"
+     inkscape:locked="false" /><sodipodi:guide
+     position="328.33856,479.46425"
+     orientation="1,0"
+     id="guide4"
+     inkscape:locked="false" /><sodipodi:guide
+     position="345.14761,478.41525"
+     orientation="1,0"
+     id="guide5"
+     inkscape:locked="false" /><sodipodi:guide
+     position="339.06588,478.40276"
+     orientation="1,0"
+     id="guide6"
+     inkscape:locked="false" /><sodipodi:guide
+     position="340.46717,479.49391"
+     orientation="1,0"
+     id="guide15"
+     inkscape:locked="false" /><sodipodi:guide
+     position="316.28883,498.36734"
+     orientation="0,-1"
+     id="guide29"
+     inkscape:locked="false" /></sodipodi:namedview>
             <defs
-   id="defs1"><linearGradient
-   id="linearGradient32"><stop
-     style="stop-color:#ffffff;stop-opacity:0;"
-     offset="0.2090909"
-     id="stop33" /><stop
-     style="stop-color:#787878;stop-opacity:1;"
-     offset="1"
-     id="stop32" /></linearGradient><linearGradient
-   id="linearGradient29"><stop
-     style="stop-color:#ff6400;stop-opacity:1;"
-     offset="0.56623375"
-     id="stop29" /><stop
-     style="stop-color:#ffffff;stop-opacity:1;"
-     offset="1"
-     id="stop30" /></linearGradient>
+   id="defs1">
                 <filter
    style="color-interpolation-filters:sRGB"
    id="filter4639"
@@ -1674,53 +1589,7 @@
    in2="result91"
    id="feBlend96" />
                 </filter>
-            <linearGradient
-   xlink:href="#linearGradient29"
-   id="linearGradient30"
-   x1="1376.0452"
-   y1="736.34277"
-   x2="1376.0452"
-   y2="896.69116"
-   gradientUnits="userSpaceOnUse" /><linearGradient
-   xlink:href="#linearGradient32"
-   id="linearGradient33"
-   x1="1085.8899"
-   y1="419.47388"
-   x2="1085.8899"
-   y2="1214.2922"
-   gradientUnits="userSpaceOnUse" /><filter
-   style="color-interpolation-filters:sRGB;"
-   id="filter112"
-   x="-0.0009752654"
-   y="-0.0019241578"
-   width="1.0019505"
-   height="1.0038481"><feMorphology
-     radius="4.3"
-     in="SourceAlpha"
-     result="result91"
-     id="feMorphology111" /><feComposite
-     operator="out"
-     in="SourceGraphic"
-     in2="result91"
-     id="feComposite111" /><feGaussianBlur
-     result="result0"
-     stdDeviation="1"
-     id="feGaussianBlur111" /><feDiffuseLighting
-     diffuseConstant="1"
-     id="feDiffuseLighting111"><feDistantLight
-       elevation="50"
-       azimuth="225"
-       id="feDistantLight111" /></feDiffuseLighting><feBlend
-     mode="multiply"
-     in2="SourceGraphic"
-     id="feBlend111" /><feGaussianBlur
-     result="result10"
-     stdDeviation="0.5"
-     id="feGaussianBlur112" /><feComposite
-     operator="in"
-     in="result10"
-     in2="SourceAlpha"
-     id="feComposite112" /></filter></defs>
+            </defs>
             <g
    id="layer1"
    transform="rotate(-90,648.61605,387.68417)">
@@ -1740,7 +1609,7 @@
    transform="matrix(0.33751372,0,0,0.33751372,-0.24042688,-272.467)" />
                     <path
    id="path10"
-   style="display:inline;fill:#c86400;fill-opacity:1;stroke:#d15400;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;filter:url(#filter112)"
+   style="display:inline;fill:#e16400;fill-opacity:1;stroke:#d15400;stroke-width:2;stroke-linecap:square;stroke-linejoin:round"
    d="m 1036.2863,3.0969652 c 0,0 0.2356,-17.8790722 -0.1173,-28.1124962 -0.3529,-10.233424 -4.4697,-87.395859 -5.1754,-93.982889 -0.7058,-6.58703 -1.6471,-16.82065 -4.4701,-25.76019 -2.823,-8.93954 -13.5725,-43.7119 -23.0544,-60.45936 -18.71586,-33.05711 -20.20937,-47.5918 -74.45692,-49.75562 -21.64219,-0.86326 -75.63322,-3.41131 -88.68967,-4.11706 -13.05644,-0.70575 -154.56042,-0.94095 -165.26433,-0.58808 -10.70393,0.35288 -38.81621,7.0577 -46.22664,9.05733 -7.41039,1.99964 -40.46341,9.88039 -48.34434,11.64477 -7.8809,1.76439 -42.81519,7.05753 -47.28496,7.4104 -4.46979,0.35288 -45.40395,2.23501 -45.40395,2.23501 0,0 -0.35278,-1.29383 -1.17616,-3.05822 -0.82339,-1.76438 -3.99903,-3.05821 -6.35155,-3.05821 -2.35251,0 -12.82146,0.82309 -16.2326,1.05834 -3.41114,0.23525 -3.05814,1.8819 -4.23437,3.64628 -1.17626,1.76438 -0.8232,2.47014 -0.8232,2.47014 l -65.1645,2.35283 c 0,0 -1.76464,-3.05812 -2.9409,-4.23437 -1.17626,-1.17626 -3.88148,-1.88206 -5.76348,-1.88206 -1.88201,0 -15.87944,0.9409 -18.23196,1.17616 -2.35251,0.23525 -3.05855,1.52923 -3.88193,3.76411 -0.82339,2.23489 -0.94103,2.47013 -0.94103,2.47013 l -61.16526,1.76424 c 0,0 -1.05867,-1.52901 -1.88205,-2.70526 -0.82338,-1.17626 -3.05789,-2.58816 -5.64565,-2.70578 -2.58776,-0.11763 -19.17316,0.8236 -21.76095,1.05885 -2.58775,0.23525 -3.17586,1.52927 -3.99924,3.17603 -0.82339,1.64676 -1.99988,3.29334 -1.99988,3.29334 l -56.10717,2.70526 c 0,0 -2.70548,-2.70516 -3.76411,-3.88141 -1.05863,-1.17626 -4.46974,-1.64674 -6.46937,-1.52911 -1.99964,0.11762 -19.99636,0.9407 -21.64312,1.05833 -1.64675,0.11762 -4.58754,1.64722 -5.64617,3.05873 -1.05863,1.41151 -1.76423,3.7636 -1.76423,3.7636 0,0 -108.568563,6.35182 -113.508839,6.82232 -4.940273,0.4705 -13.761972,1.88225 -17.173112,4.47001 -3.411141,2.58777 -20.46679,16.11466 -23.760306,18.82004 -3.293516,2.70539 -5.29302,9.17478 -5.175395,12.35067 0.117626,3.17589 -0.353273,1.9996 2.234489,3.99924 2.587762,1.99963 3.764111,1.64692 3.764111,1.64692 0,0 160.206362,-10.35125 169.851652,-10.93938 9.6453,-0.58813 13.99706,1.17604 18.93734,4.82244 4.94027,3.64639 8.82195,5.99914 14.23272,9.41028 5.41078,3.41114 12.35106,3.88153 19.99672,3.64629 7.64566,-0.23526 70.69254,-2.94055 102.3338,-4.58731 31.64128,-1.64676 201.61036,-4.94022 219.48945,-5.52835 17.87908,-0.58812 37.64003,-5.64579 46.57958,-8.82168 8.93953,-3.17589 43.28662,-15.05637 55.87256,-19.64377 12.58593,-4.5874 38.58083,-3.76379 47.99087,-3.88141 9.41004,-0.11763 182.20205,2.23476 192.55311,2.70526 10.35103,0.4705 16.93837,9.64547 19.64376,14.93862 2.70539,5.29315 23.17216,56.22499 25.28941,61.16526 2.11728,4.94028 6.94002,8.23384 10.58643,10.23348 3.64638,1.99963 23.99524,14.585108 28.81788,17.643372 4.82264,3.058265 3.76438,7.881166 4.23489,12.82144 0.47048,4.940273 2.35252,45.873896 2.47013,54.342936 0.10867,7.823894 0.21713,28.9991815 0.23306,32.1799478 -0.0163,3.2302956 -0.12464,24.1673922 -0.23306,31.9143312 -0.11761,8.404847 -1.99965,49.028749 -2.47013,53.931592 -0.47051,4.902844 0.58775,9.688671 -4.23489,12.723771 -4.82264,3.03511 -25.1715,15.52608 -28.81788,17.51056 -3.64642,1.98449 -8.46915,5.2526 -10.58643,10.15545 -2.11725,4.90283 -22.58402,55.44919 -25.28941,60.70224 -2.70539,5.25304 -9.29273,14.358 -19.64376,14.82493 -10.35106,0.46694 -183.14307,2.80185 -192.55311,2.68511 -9.41005,-0.11673 -35.40493,0.70016 -47.99087,-3.85248 -12.58594,-4.55265 -46.93303,-16.34259 -55.87256,-19.49441 -8.93955,-3.15183 -28.7005,-8.17136 -46.57958,-8.75502 -17.8791,-0.58368 -187.84817,-3.8522 -219.48945,-5.48649 -31.64127,-1.63428 -94.68866,-4.31922 -102.33432,-4.5527 -7.64566,-0.23346 -14.58542,0.23362 -19.9962,3.61891 -5.41077,3.3853 -9.29245,5.71967 -14.23272,9.33844 -4.94028,3.61877 -9.29256,5.36994 -18.93786,4.78627 -9.64529,-0.58368 -169.851132,-10.85618 -169.851132,-10.85618 0,0 -1.176348,-0.35047 -3.764111,1.63401 -2.587763,1.98449 -2.11738,0.81744 -2.235006,3.96927 -0.117625,3.15183 1.882395,9.57224 5.175912,12.25713 3.293516,2.68489 20.349165,16.10925 23.760306,18.67741 3.411141,2.56816 12.232838,3.96897 17.173112,4.43591 4.940278,0.46693 113.508839,6.77064 113.508839,6.77064 0,0 0.7056,2.33435 1.76423,3.73517 1.05863,1.40082 3.99942,2.91875 5.64617,3.03548 1.64676,0.11674 19.64348,0.93385 21.64312,1.05058 1.99963,0.11674 5.41074,-0.35038 6.46937,-1.51774 1.05863,-1.16733 3.76411,-3.85196 3.76411,-3.85196 l 56.10717,2.68459 c 0,0 1.17649,1.63425 1.99988,3.26854 0.82338,1.6343 1.41149,2.91827 3.99924,3.15174 2.58779,0.23347 19.17267,1.16733 21.76043,1.05058 2.58777,-0.11673 4.82279,-1.51725 5.64617,-2.68459 0.82338,-1.16735 1.88205,-2.6851 1.88205,-2.6851 l 61.16526,1.75131 c 0,0 0.11764,0.23304 0.94103,2.45101 0.82338,2.21796 1.52942,3.50222 3.88193,3.73569 2.35252,0.23348 16.34995,1.16737 18.23196,1.16737 1.882,0 4.58722,-0.70023 5.76348,-1.86758 1.17626,-1.16735 2.94038,-4.20233 2.94038,-4.20233 l 65.16502,2.33422 c 0,0 -0.35306,0.70051 0.8232,2.45153 1.17623,1.75103 0.82322,3.38544 4.23437,3.61891 3.41114,0.23346 13.88009,1.05058 16.2326,1.05058 2.35252,0 5.52816,-1.28394 6.35155,-3.03496 0.82338,-1.75104 1.17616,-3.03496 1.17616,-3.03496 0,0 40.93416,1.86775 45.40395,2.21796 4.46977,0.35019 39.40406,5.60305 47.28496,7.35407 7.88094,1.75101 40.93394,9.57243 48.34434,11.55692 7.41043,1.98448 35.52321,8.63787 46.22715,8.98808 10.70391,0.3502 152.20737,0.11697 165.26382,-0.58343 13.05645,-0.70041 67.04747,-3.22882 88.68967,-4.08554 54.24756,-2.14743 55.74107,-16.57217 74.45692,-49.3789 9.4819,-16.62057 17.3401,-39.35148 23.0544,-60.0015 2.3072,-8.33754 3.4838,-16.97038 4.4701,-25.56485 3.5502,-30.935027 4.8225,-83.114947 5.1754,-93.270792 0.3359,-9.667381 0.1122,-26.2101941 0.09,-27.7791828 z" />
                 </g>
                 <g
@@ -1760,7 +1629,7 @@
    id="tspan2"
    style="font-size:50.1708px;fill:#ffffff;fill-opacity:1;stroke-width:0.192585"
    x="733.36005"
-   y="-2805.012">MM400</tspan>  </text>
+   y="-2805.012">MM400</tspan>                        </text>
                         <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -1771,19 +1640,19 @@
    id="tspan5081"
    x="635.23425"
    y="-2879.4963"
-   style="font-size:64px">Multimeter</tspan>  </text>
+   style="font-size:64px">Multimeter</tspan>                        </text>
                     </g>
                     <g
-   id="g9"
-   style="display:inline">
+   id="g9">
                             <path
    style="display:inline;fill:#a0a0a0;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    d="M 2717.1981,272.34016 V 1350.1629 H 2090.721 V 272.34016 Z"
    id="mm-screen-id"
-   transform="translate(1.1753949,16.161463)" />
+   transform="translate(1.1753949,16.161463)"
+   inkscape:label="Display" />
                         <g
    id="mm-value-display-id"
-   style="display:inline"
+   style="display:none"
    transform="translate(-1.2893302e-5)">
                             <text
    xml:space="preserve"
@@ -1791,202 +1660,246 @@
    x="588.07404"
    y="-2323.8091"
    id="mm-output-display-id"
-   transform="matrix(0,1.0110009,-0.99998363,0,0.0391801,-132.01688)"><tspan
+   transform="matrix(0,1.0110009,-0.99998363,0,0.0391801,-132.01688)"
+   inkscape:label="Meter Reading"><tspan
      x="588.07404"
      y="-2323.8091"
-     id="tspan4"><tspan
+     id="tspan5"><tspan
    style="font-weight:bold;font-size:195.98px;-inkscape-font-specification:'Arial Bold';display:inline"
-   id="tspan1">123.45</tspan> </tspan></text>
+   id="tspan1">123.45</tspan>
+</tspan><tspan
+     x="588.07404"
+     y="-2155.345"
+     id="tspan11">                            </tspan></text>
                         </g>
                         <g
    id="g27"
-   style="display:inline">
+   inkscape:label="Indicators">
                             <text
    xml:space="preserve"
-   style="font-weight:900;font-size:50.1708px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
+   style="font-weight:900;font-size:50.1708px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="331.26736"
    y="-2671.0525"
    id="mm-on-indicator-id"
-   transform="rotate(90)"><tspan
-     id="tspan3"
-     style="stroke-width:0.192585"
-     x="331.26736"
-     y="-2671.0525">o</tspan></text>
+   transform="rotate(90)"
+   inkscape:label="ON Indicator"><tspan
+   sodipodi:role="line"
+   id="tspan3"
+   style="stroke-width:0.192585"
+   x="0"
+   y="0">o</tspan>                            </text>
                             <text
    xml:space="preserve"
-   style="font-weight:900;font-size:50.1708px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
+   style="font-weight:900;font-size:50.1708px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="333.31793"
    y="-2612.9529"
    id="mm-auto-indicator-id"
-   transform="rotate(90)">Auto  <!--display:inline;--></text>
+   transform="rotate(90)"
+   inkscape:label="Auto Indicator"><tspan
+   sodipodi:role="line"
+   id="tspan4"
+   style="stroke-width:0.192585"
+   x="0"
+   y="0">Auto</tspan><!--display:inline;-->                            </text>
                             <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:195.98px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:195.98px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="331.9509"
    y="-2456.3831"
    id="mm-dc-indicator-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="DC Indicator"><tspan
+   sodipodi:role="line"
    id="tspan6"
    style="stroke-width:0.192585"
-   x="331.9509"
-   y="-2456.3831">⎓</tspan> </text>
+   x="0"
+   y="0">⎓</tspan>                            </text>
                             <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:130.978px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;stroke:#000000;stroke-width:0.214515;stroke-linecap:square;stroke-linejoin:round"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:130.978px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.214515;stroke-linecap:square;stroke-linejoin:round"
    x="301.3602"
    y="-2485.7202"
    id="mm-ac-indicator-id"
-   transform="matrix(0,1.1142568,-0.89745919,0,0,0)"><tspan
+   transform="matrix(0,1.1142568,-0.89745919,0,0,0)"
+   inkscape:label="AC Indicator"><tspan
+   sodipodi:role="line"
    id="tspan7"
    style="font-size:130.978px;stroke-width:0.214515"
-   x="301.3602"
-   y="-2485.7202">∿</tspan> </text>
+   x="0"
+   y="0">∿</tspan>                            </text>
                             <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:94.0703px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:94.0703px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="797.84961"
    y="-2607.4844"
    id="mm-hold-indicator-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="HOLD Indicator"><tspan
+   sodipodi:role="line"
    id="tspan8"
    style="font-size:94.0703px;stroke-width:0.192585"
-   x="797.84961"
-   y="-2607.4844">H</tspan> </text>
+   x="0"
+   y="0">H</tspan>                            </text>
                         </g>
                         <g
    id="g26"
+   inkscape:label="Prefixes"
    style="display:inline"
    transform="translate(-20.058021,-55.600293)">
                             <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1193.1587"
    y="-2368.3706"
    id="mm-micro-si-prefix-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Micro SI prefix"><tspan
+   sodipodi:role="line"
    id="tspan13"
    style="stroke-width:0.192585"
-   x="1193.1587"
-   y="-2368.3706">μ</tspan> </text>
+   x="0"
+   y="0">μ</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1159.9148"
    y="-2345.1746"
    id="mm-milli-si-prefix-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Milli SI prefix"><tspan
+   sodipodi:role="line"
    id="tspan14"
    style="stroke-width:0.192585"
-   x="1159.9148"
-   y="-2345.1746">m</tspan> </text>
+   x="0"
+   y="0">m</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1192.5846"
    y="-2345.1746"
    id="mm-kilo-si-prefix-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Kilo SI prefix"><tspan
+   sodipodi:role="line"
    id="tspan15"
    style="stroke-width:0.192585"
-   x="1192.5846"
-   y="-2345.1746">k</tspan> </text>
+   x="0"
+   y="0">k</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1167.2067"
    y="-2345.1746"
    id="mm-mega-si-prefix-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Mega SI prefix"><tspan
+   sodipodi:role="line"
    id="tspan16"
    style="stroke-width:0.192585"
-   x="1167.2067"
-   y="-2345.1746">M</tspan> </text>
+   x="0"
+   y="0">M</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1192.9291"
    y="-2345.1746"
    id="mm-nano-si-prefix-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Nano SI prefix"><tspan
+   sodipodi:role="line"
    id="tspan17"
    style="stroke-width:0.192585"
-   x="1192.9291"
-   y="-2345.1746">n</tspan> </text>
+   x="0"
+   y="0">n</tspan>                            </text>
                         </g>
                         <g
    id="g25"
+   inkscape:label="Unit Symbols"
    style="display:inline">
                             <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1215.1812"
    y="-2324.4319"
    id="mm-omega-symbol-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Omega symbol"><tspan
+   sodipodi:role="line"
    id="tspan18"
    style="stroke-width:0.192585"
-   x="1215.1812"
-   y="-2324.4319">Ω</tspan> </text>
+   x="0"
+   y="0">Ω</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1216.4333"
    y="-2324.5049"
    id="mm-farad-symbol-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Farad symbol"><tspan
+   sodipodi:role="line"
    id="tspan19"
    style="stroke-width:0.192585"
-   x="1216.4333"
-   y="-2324.5049">F</tspan> </text>
+   x="0"
+   y="0">F</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1227.3699"
    y="-2325.8718"
    id="mm-volt-symbol-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Volt symbol"><tspan
+   sodipodi:role="line"
    id="tspan20"
    style="stroke-width:0.192585"
-   x="1227.3699"
-   y="-2325.8718">V</tspan> </text>
+   x="0"
+   y="0">V</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1224.6357"
    y="-2323.1377"
    id="mm-amp-symbol-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Amp symbol"><tspan
+   sodipodi:role="line"
    style="stroke-width:0.192585"
    x="0"
    y="0"
-   id="tspan22">A</tspan> </text>
+   id="tspan22">A</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1219.1675"
    y="-2324.5049"
    id="mm-deg-fahrenheit-symbol-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Degree Fahrenheit symbol"><tspan
+   sodipodi:role="line"
    style="stroke-width:0.192585"
-   x="1219.1675"
-   y="-2324.5049"
-   id="tspan24">°F</tspan> </text>
+   x="0"
+   y="0"
+   id="tspan24">°F</tspan>                            </text>
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:none;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1215.0664"
    y="-2329.9731"
    id="mm-deg-celsius-symbol-id"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="Degree Celsius symbol"><tspan
+   sodipodi:role="line"
    id="tspan25"
    style="stroke-width:0.192585"
-   x="1215.0664"
-   y="-2329.9731">°C</tspan> </text>
+   x="0"
+   y="0">°C</tspan>                            </text>
                         </g>
                         <g
    id="mm-diode-id"
    transform="translate(1442.9466,-6.1362896)"
-   style="display:inline">
+   style="display:none"
+   inkscape:label="Diode Symbol">
                             <path
    style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:5.26246;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    d="m 1209.4712,1253.4609 -44.0983,0.5365"
@@ -2026,10 +1939,10 @@
    id="tspan3197"
    x="401.00549"
    y="-1621.104"
-   style="font-size:52px;fill:#ff0000;fill-opacity:1;stroke:#2950ff;stroke-width:1.51697;stroke-dasharray:none;stroke-opacity:1">SEL</tspan>  </text>
+   style="font-size:52px;fill:#ff0000;fill-opacity:1;stroke:#2950ff;stroke-width:1.51697;stroke-dasharray:none;stroke-opacity:1">SEL</tspan>                            </text>
                             <text
    xml:space="preserve"
-   style="font-weight:bold;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Bold';display:none;fill:#ffffff;fill-opacity:1;stroke:#2950ff;stroke-width:1.51697;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+   style="font-weight:bold;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Bold';display:inline;fill:#ffffff;fill-opacity:1;stroke:#2950ff;stroke-width:1.51697;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    x="401.00549"
    y="-1621.104"
    id="mm-sel-label-white-id"
@@ -2037,7 +1950,7 @@
    id="tspan1847"
    x="401.00549"
    y="-1621.104"
-   style="font-size:52px;stroke:#2950ff;stroke-width:1.51697;stroke-dasharray:none;stroke-opacity:1">SEL</tspan> </text>
+   style="font-size:52px;stroke:#2950ff;stroke-width:1.51697;stroke-dasharray:none;stroke-opacity:1">SEL</tspan>                            </text>
                         </g>
                         <g
    id="g7">
@@ -2055,7 +1968,7 @@
    x="1152.332"
    y="-1865.9678"
    style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';stroke:#2950ff;stroke-width:1.51697;stroke-dasharray:none;stroke-opacity:1"
-   id="tspan3190">HOLD</tspan>  </text>
+   id="tspan3190">HOLD</tspan>                            </text>
                         </g>
                         <g
    id="g6">
@@ -2065,28 +1978,20 @@
    id="mm-max-min-push-button-id" />
                             <text
    xml:space="preserve"
-   style="font-weight:bold;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Bold';white-space:pre;inline-size:123.695;display:inline;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.755906;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+   style="font-weight:bold;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Bold';display:inline;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.755906;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    x="897.42316"
    y="-1892.2542"
    id="text3075"
-   transform="rotate(90,-31.356757,-23.517567)"><tspan
-     x="897.42316"
-     y="-1892.2542"
-     id="tspan9"><tspan
-   style="font-weight:900;-inkscape-font-specification:'Arial Heavy'"
-   id="tspan5">MIN</tspan> </tspan></text>
-                        <text
-   xml:space="preserve"
-   style="font-weight:bold;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Bold';white-space:pre;inline-size:133.759;display:inline;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.755906;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+   transform="rotate(90)"><tspan
+   id="tspan3073"
    x="897.42316"
    y="-1892.2542"
-   id="text38"
-   transform="rotate(90)"><tspan
-     x="897.42316"
-     y="-1892.2542"
-     id="tspan11"><tspan
-   style="font-weight:900;-inkscape-font-specification:'Arial Heavy'"
-   id="tspan10">MAX</tspan> </tspan></text></g>
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Heavy'">MAX </tspan><tspan
+   x="897.42316"
+   y="-1827.037"
+   id="tspan3182"
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Heavy'">MIN</tspan>                            </text>
+                        </g>
                         <g
    id="g1">
                             <path
@@ -2103,7 +2008,7 @@
    id="tspan2755"
    x="576.38074"
    y="-1865.9678"
-   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';stroke:#2950ff;stroke-width:1.51697;stroke-dasharray:none;stroke-opacity:1">RANGE</tspan> </text>
+   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:52px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';stroke:#2950ff;stroke-width:1.51697;stroke-dasharray:none;stroke-opacity:1">RANGE</tspan>                            </text>
                         </g>
                         <g
    id="g4129"
@@ -2114,22 +2019,21 @@
    d="m 1915.7618,298.02815 c 28.8236,0.80053 39.0813,10.28457 39.3752,35.26137 0.2938,24.9768 -1.1144,108.12904 -1.4693,126.94087 -0.5877,31.1476 -8.2277,41.13834 -37.6121,41.43214 -22.3311,0.2233 -50.2474,0.88151 -73.1673,0.88151 -29.6784,0 -40.2568,-8.81529 -40.8445,-39.96289 -0.7651,-40.54761 0.5877,-66.70274 0.5877,-95.49954 0,-22.62606 13.1488,-29.82171 39.6691,-42.01982 38.4583,-17.07658 54.4383,-26.28625 73.4612,-27.03364 z"
    id="mm-light-push-button-id"
    transform="translate(-1.2893302e-5,3.9999996)" />
-                            
+                            <path
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+   id="path4124"
+   transform="rotate(90)"
+   d="m 397.73405,-1858.0429 a 25.868328,25.868328 0 0 1 -7.49352,-35.7425 25.868328,25.868328 0 0 1 35.71619,-7.6179 25.868328,25.868328 0 0 1 7.74231,35.6894 25.868328,25.868328 0 0 1 -35.66226,7.8666" /><rect
+   style="fill:#c8c8c8;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.971411;stroke-dasharray:none;stroke-opacity:1"
+   id="rect4185"
+   width="25.587059"
+   height="25.791639"
+   x="399.15335"
+   y="-1857.5591"
+   transform="rotate(90)" />
                             <g
-   id="g33"><path
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.13386;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     id="path4124"
-     transform="rotate(90)"
-     d="m 397.73405,-1858.0429 a 25.868328,25.868328 0 0 1 -7.49352,-35.7425 25.868328,25.868328 0 0 1 35.71619,-7.6179 25.868328,25.868328 0 0 1 7.74231,35.6894 25.868328,25.868328 0 0 1 -35.66226,7.8666" /><rect
-     style="fill:#c8c8c8;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.971411;stroke-dasharray:none;stroke-opacity:1"
-     id="rect4185"
-     width="25.587059"
-     height="25.791639"
-     x="399.15335"
-     y="-1857.5591"
-     transform="rotate(90)" /><g
-     id="g4287"
-     style="display:inline">
+   id="g4287"
+   style="display:inline">
                                 <path
    style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.17313;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    id="path4299"
@@ -2174,7 +2078,7 @@
    id="path4307"
    transform="rotate(120)"
    d="m -548.28186,-1829.8435 a 12.221049,4.1346855 0 0 1 -3.54019,-5.7129 12.221049,4.1346855 0 0 1 16.87351,-1.2176 12.221049,4.1346855 0 0 1 3.65772,5.7044 12.221049,4.1346855 0 0 1 -16.84803,1.2574" />
-                            </g></g>
+                            </g>
                         </g>
                     </g>
                     <g
@@ -2199,7 +2103,7 @@
    id="tspan7330"
    x="950.06927"
    y="-107.85635"
-   style="font-size:72px">!</tspan> </text>
+   style="font-size:72px">!</tspan>                        </text>
                         <path
    style="fill:#ececec;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    d="m 165.74396,684.84131 -0.25038,15.27992 -28.04361,-17.33684 v 17.92453 l -42.816489,-34.08599 29.045159,6.75843 v -14.98608 z"
@@ -2220,7 +2124,7 @@
    x="1039.0671"
    y="-138.95779"
    id="tspan7825"
-   style="font-size:40px">600V MAX  </tspan> </text>
+   style="font-size:40px">600V MAX                                </tspan>                            </text>
                             <path
    style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:5.66929;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    d="m 200.4688,1198.8483 v 115.1099 h -26.59586"
@@ -2482,144 +2386,180 @@
                         <g
    id="mm-selector-id"
    transform="rotate(22.825418,1085.3436,805.44233)"
-   style="display:inline">
+   style="display:inline"
+   inkscape:label="Selector-knobs">
                             <g
    id="selector-knob-temp-id"
+   inkscape:label="Selector-knob-temp"
    style="display:inline"
    class="hidden-selector"
    transform="rotate(-112.01095,1080.4217,816.88303)">
                                 <path
-   style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   style="display:inline;fill:url(#linearGradient28);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
    d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
    id="path25"
+   inkscape:label="Selector Knob"
    transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
                                 <path
-   style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
    d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-   id="path26" />
+   id="path26"
+   inkscape:label="Selector Pointer" />
                             </g>
                             <g
    id="selector-knob-micro-amp-id"
+   inkscape:label="Selector-knob-microAmp"
    style="display:inline"
    class="hidden-selector"
    transform="rotate(-89.322089,1080.4217,816.88303)">
                                 <path
-   style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   style="display:inline;fill:url(#linearGradient15);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
    d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
    id="path14"
+   inkscape:label="Selector Knob"
    transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
                                 <path
-   style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
    d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-   id="path15" />
+   id="path15"
+   inkscape:label="Selector Pointer" />
                             </g>
                             <g
    id="selector-knob-milli-amp-id"
+   inkscape:label="Selector-knob-milliAmp"
    style="display:inline"
    class="hidden-selector"
    transform="rotate(-66.943538,1080.4217,816.88303)">
                                 <path
-   style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   style="display:inline;fill:url(#linearGradient13);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
    d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
    id="path12"
+   inkscape:label="Selector Knob"
    transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
                                 <path
-   style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
    d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-   id="path13" />
+   id="path13"
+   inkscape:label="Selector Pointer" />
                             </g>
                             <g
    id="selector-knob-ten-amp-id"
+   inkscape:label="Selector-knob-10Amp"
    style="display:inline"
    class="hidden-selector"
    transform="rotate(-48.791962,1080.4217,816.88307)">
                                 <path
-   style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   style="display:inline;fill:url(#linearGradient5);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
    d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
    id="path35"
+   inkscape:label="Selector Knob"
    transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
                                 <path
-   style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
    d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-   id="path36" />
+   id="path36"
+   inkscape:label="Selector Pointer" />
                             </g>
-<g id="selector-knob-off-id" style="display:inline" transform="rotate(-22.736714,1080.4217,816.88307)">
-    <path
-        style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
-        d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
-        id="path3"
-        transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
-    <path
-        style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
-        d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-        id="path4" />
-</g>
-<g id="selector-knob-volts-id" style="display:inline" class="hidden-selector">
-    <path
-        style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
-        d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
-        id="path17"
-        transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
-    <path
-        style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
-        d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-        id="path18" />
-</g><!--2563: class="hidden-selector"  line 2564: fill:#ff6400-->
-<g
+                            <g
+   id="selector-knob-off-id"
+   inkscape:label="Selector-knob-off"
+   style="display:inline"
+   transform="rotate(-22.736714,1080.4217,816.88307)">
+                                <path
+   style="display:inline;fill:url(#linearGradient18);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
+   id="path3"
+   inkscape:label="Selector Knob"
+   transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
+                                <path
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
+   id="path4"
+   inkscape:label="Selector Pointer" />
+                            </g>
+                            <g
+   id="selector-knob-volts-id"
+   inkscape:label="Selector-knob-volts"
+   style="display:inline"
+   class="hidden-selector">
+                                <path
+   style="display:inline;fill:url(#linearGradient36);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
+   id="path17"
+   inkscape:label="Selector Knob"
+   transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
+                                <path
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
+   id="path18"
+   inkscape:label="Selector Pointer" />
+                            </g>
+                            <g
    id="selector-knob-hertz-id"
+   inkscape:label="Selector-knob-hertz"
    style="display:inline"
    class="hidden-selector"
    transform="rotate(20.022602,1080.4217,816.88307)">
                                 <path
-   style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   style="display:inline;fill:url(#linearGradient20);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
    d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
    id="path19"
+   inkscape:label="Selector Knob"
    transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
                                 <path
-   style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
    d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-   id="path20" />
+   id="path20"
+   inkscape:label="Selector Pointer" />
                             </g>
                             <g
    id="selector-knob-ohms-id"
+   inkscape:label="Selector-knob-ohms"
    style="display:inline"
    class="hidden-selector"
    transform="rotate(42.132596,1080.4217,816.88307)">
                                 <path
-   style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   style="display:inline;fill:url(#linearGradient22);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
    d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
    id="path21"
+   inkscape:label="Selector Knob"
    transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
                                 <path
-   style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
    d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-   id="path22" />
+   id="path22"
+   inkscape:label="Selector Pointer" />
                             </g>
                             <g
    id="selector-knob-cap-diode-id"
+   inkscape:label="Selector-knob-cap-diode"
    style="display:inline"
    class="hidden-selector"
    transform="rotate(66.979975,1080.4217,816.88306)">
                                 <path
-   style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+   style="display:inline;fill:url(#linearGradient24);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
    d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
    id="path23"
+   inkscape:label="Selector Knob"
    transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
                                 <path
-   style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+   style="display:inline;fill:#ff6400;fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
    d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-   id="path24" />
+   id="path24"
+   inkscape:label="Selector Pointer" />
                             </g>
                         </g>
                         <path
    style="display:inline;fill:none;fill-opacity:1;stroke:#ff6400;stroke-width:40.9872;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    id="mm-off-label-id-onhold"
-   d="M 873.61731,1126.5737 A 369.66971,371.40329 0 0 1 766.53164,613.40241 369.66971,371.40329 0 0 1 1276.9316,504.02792 a 369.66971,371.40329 0 0 1 110.641,512.40948 369.66971,371.40329 0 0 1 -509.62932,112.9438" />
+   d="M 873.61731,1126.5737 A 369.66971,371.40329 0 0 1 766.53164,613.40241 369.66971,371.40329 0 0 1 1276.9316,504.02792 a 369.66971,371.40329 0 0 1 110.641,512.40948 369.66971,371.40329 0 0 1 -509.62932,112.9438"
+   inkscape:label="Selector Ring" />
                         <g
    id="mm-off-id"
    style="display:inline"
    class="selector-label"
-   transform="translate(1.1753949,-1.8385373)">
+   transform="translate(1.1753949,-1.8385373)"
+   inkscape:label="OFF">
                             <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -2656,6 +2596,7 @@
    id="path1690" />
                             <g
    id="g18"
+   inkscape:label="DC Symbol"
    style="display:inline"
    transform="translate(-180.26135,-665.86157)"><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
@@ -2664,28 +2605,32 @@
      height="3.9789777"
      x="1058.943"
      y="-1480.9613"
-     transform="rotate(90)" /><rect
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-bottom-right" /><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect16"
      width="13.769431"
      height="3.9789777"
      x="1041.0161"
      y="-1480.9613"
-     transform="rotate(90)" /><rect
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-bottom-center" /><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
      id="rect17"
      width="13.769431"
      height="3.9789777"
      x="1012.882"
      y="-1458.9613"
-     transform="rotate(90,5.9999934,15.999993)" /><rect
+     transform="rotate(90,5.9999934,15.999993)"
+     inkscape:label="DC Symbol-bottom-left" /><rect
      style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
      id="rect18"
      width="49.842007"
      height="4.3978243"
      x="1023.039"
      y="-1489.4952"
-     transform="rotate(90)" /></g></g>
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-top bar" /></g></g>
                         </g>
                         <g
    id="mm-milli-amp-id"
@@ -2713,6 +2658,7 @@
    id="path1674" />
                             <g
    id="g22"
+   inkscape:label="DC Symbol"
    style="display:inline"
    transform="translate(-179.03519,-664.96509)"><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
@@ -2721,28 +2667,32 @@
      height="3.9789777"
      x="1058.943"
      y="-1480.9613"
-     transform="rotate(90)" /><rect
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-bottom-right" /><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect20"
      width="13.769431"
      height="3.9789777"
      x="1041.0161"
      y="-1480.9613"
-     transform="rotate(90)" /><rect
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-bottom-center" /><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
      id="rect21"
      width="13.769431"
      height="3.9789777"
      x="1012.882"
      y="-1458.9613"
-     transform="rotate(90,5.9999934,15.999993)" /><rect
+     transform="rotate(90,5.9999934,15.999993)"
+     inkscape:label="DC Symbol-bottom-left" /><rect
      style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
      id="rect22"
      width="49.842007"
      height="4.3978243"
      x="1023.039"
      y="-1489.4952"
-     transform="rotate(90)" /></g></g>
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-top bar" /></g></g>
                         </g>
                         <g
    id="mm-micro-amp-id"
@@ -2770,6 +2720,7 @@
    id="g29"
    transform="translate(9.407025)"><g
      id="g28"
+     inkscape:label="DC Symbol"
      style="display:inline"
      transform="translate(-185.0049,-664.7673)"><rect
        style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
@@ -2778,28 +2729,32 @@
        height="3.9789777"
        x="1058.943"
        y="-1480.9613"
-       transform="rotate(90)" /><rect
+       transform="rotate(90)"
+       inkscape:label="DC Symbol-bottom-right" /><rect
        style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
        id="rect24"
        width="13.769431"
        height="3.9789777"
        x="1041.0161"
        y="-1480.9613"
-       transform="rotate(90)" /><rect
+       transform="rotate(90)"
+       inkscape:label="DC Symbol-bottom-center" /><rect
        style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
        id="rect25"
        width="13.769431"
        height="3.9789777"
        x="1012.882"
        y="-1458.9613"
-       transform="rotate(90,5.9999934,15.999993)" /><rect
+       transform="rotate(90,5.9999934,15.999993)"
+       inkscape:label="DC Symbol-bottom-left" /><rect
        style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
        id="rect26"
        width="49.842007"
        height="4.3978243"
        x="1023.039"
        y="-1489.4952"
-       transform="rotate(90)" /></g><g
+       transform="rotate(90)"
+       inkscape:label="DC Symbol-top bar" /></g><g
      id="g1264"
      transform="translate(-6)"
      style="display:inline">        
@@ -2861,14 +2816,16 @@
    transform="translate(-52,-2.864325)">
                             <g
    id="g4"
-   style="display:inline">
+   style="display:inline"
+   inkscape:label="Deg Fahrenheit">
                                 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    x="380.66113"
    y="-1141.8373"
    id="text5361"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="F"><tspan
    id="tspan5359"
    x="380.66113"
    y="-1141.8373"
@@ -2879,7 +2836,8 @@
    x="357.36646"
    y="-1183.7755"
    id="text474-8-1"
-   transform="rotate(90,1.2245602e-6,1.2689278e-6)"><tspan
+   transform="rotate(90,1.2245602e-6,1.2689278e-6)"
+   inkscape:label="deg symbol"><tspan
    id="tspan472-8-7"
    x="357.36646"
    y="-1183.7755"
@@ -2888,14 +2846,16 @@
                             <g
    id="g8"
    style="display:inline"
-   transform="translate(2.493488e-6)">
+   transform="translate(2.493488e-6)"
+   inkscape:label="Deg Celsius">
                                 <text
    xml:space="preserve"
    style="font-weight:900;font-size:32px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';display:inline;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round"
    x="331.94437"
    y="-1123.1051"
    id="text474-8"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="deg symbol"><tspan
    id="tspan472-8"
    x="331.94437"
    y="-1123.1051"
@@ -2906,7 +2866,8 @@
    x="346.66113"
    y="-1083.8373"
    id="text5365"
-   transform="rotate(90)"><tspan
+   transform="rotate(90)"
+   inkscape:label="C"><tspan
    id="tspan5363"
    x="346.66113"
    y="-1083.8373"
@@ -2938,6 +2899,7 @@
    id="path1706" />
                             <g
    id="g12"
+   inkscape:label="DC Symbol"
    style="display:inline"
    transform="translate(-181.99999,-663.99999)"><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
@@ -2946,28 +2908,32 @@
      height="3.9789777"
      x="1058.943"
      y="-1480.9613"
-     transform="rotate(90)" /><rect
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-bottom-right" /><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect3"
      width="13.769431"
      height="3.9789777"
      x="1041.0161"
      y="-1480.9613"
-     transform="rotate(90)" /><rect
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-bottom-center" /><rect
      style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
      id="rect2"
      width="13.769431"
      height="3.9789777"
      x="1012.882"
      y="-1458.9613"
-     transform="rotate(90,5.9999934,15.999993)" /><rect
+     transform="rotate(90,5.9999934,15.999993)"
+     inkscape:label="DC Symbol-bottom-left" /><rect
      style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
      id="rect1"
      width="49.842007"
      height="4.3978243"
      x="1023.039"
      y="-1489.4952"
-     transform="rotate(90)" /></g></g>
+     transform="rotate(90)"
+     inkscape:label="DC Symbol-top bar" /></g></g>
                         </g>
                         <text
    xml:space="preserve"
@@ -3029,14 +2995,3 @@
                 </g>
             </g>
         </svg>
-
-
-    </div>
-
-    <script>
-        /*function init(){
-            console.log("in MultiMeter-vs2.html init()");
-        }*/
-    </script>
-</body>
-</html>
