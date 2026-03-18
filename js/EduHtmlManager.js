@@ -55,7 +55,8 @@
                         //PracticeTruthTableManager.create("circuit","NotXor");
                     }
                     if(this.requestedFile == "html/Education/Training/TestEquipment/MultiMeter.html"){
-                        console.log("in this.requestedFile == ----- MultiMeter.html");
+                        //console.log("in this.requestedFile == ----- MultiMeter.html");
+                        console.log("Going to MultiMeterManager.init()");
                         MultiMeterManager.init();
                     }
                     if (this.requestedFile ==  "html/Education/Training/Codes/ASCII.html") {

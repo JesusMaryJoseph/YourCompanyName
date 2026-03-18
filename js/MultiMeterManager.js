@@ -42,9 +42,9 @@
 
         changeSelect: function(){
             this.selRedButton.classList.toggle("hidden-selector");
-            console.log("toggling 'hidden-selector' on Red Label");
+            //console.log("toggling 'hidden-selector' on Red Label");
             this.selWhiteButton.classList.toggle("hidden-selector");
-            console.log("toggling 'hidden-selector' on White Label");
+            //console.log("toggling 'hidden-selector' on White Label");
         },
 
         showHideSelectors: function(selectorLabel){
