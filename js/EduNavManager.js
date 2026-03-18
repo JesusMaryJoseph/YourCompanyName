@@ -156,7 +156,7 @@
 
             init: function(){
             console.log(" in EduNavManager.init()");
-                this.eduNavLabelEle = document.getElementById('edu-nav-label-id');
+                /*this.eduNavLabelEle = document.getElementById('edu-nav-label-id');
                 this.eduNavDropdownEle = document.getElementById("edu-nav-dropdown-id");
                 this.trainingLabelEle = document.getElementById('training-menu-label-id');
                 this.trainingDropdownEle = document.getElementById('training-menu-dd-id'); 
@@ -172,7 +172,7 @@
                 this.techDropdownEle = document.getElementById('training-menu-tech-dd-id');
                 this.mediaArtsLabelEle = document.getElementById('training-menu-media-arts-label-id');
                 this.mediaArtsDropdownEle = document.getElementById('training-menu-media-arts-dd-id');
-                /*this.testingLabelEle = document.getElementById('testing-menu-label-id');
+                this.testingLabelEle = document.getElementById('testing-menu-label-id');
                 this.testingDropdownEle = document.getElementById('testing-menu-dd-id');
                 this.packetsLabelEle = document.getElementById('packets-menu-label-id');
                 this.packetsDropdownEle = document.getElementById("packets-menu-dd-id");
