@@ -1,12 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
+    <script src="js/MultiMeterManager.js"></script>
+    
     <script>
+		
+      /* let MultiMeterManager = {
+        //Properties
+        initiated: false,
+        offSelectorKnob: {},
+        tempSelectorKnob: {},
+        microAmpSelectorKnob: {},
+        milliAmpSelectorKnob: {},
+        tenAmpSelectorKnob: {},
+        voltSelectorKnob: {},
+        hertzSelectorKnob: {},
+        ohmsSelectorKnob: {},
+        capDiodeSelectorKnob: {},
 
+        tempClick:{},
+        tenAmpClick:{},
+        microAmpClick:{},
+        milliAmpClick:{},
+        offClick:{},
+        voltsClick:{},
+        hertzClick:{},
+        ohmsClick:{},
+        capDiodeClick:{},
+
+        comPluginClick: {},
+        lowAmpPluginClick: {},
+        highAmpPluginClick:{},
+        selClick:{},
+        lightClick:{},
+        rangeClick:{},
+        maxMinClick:{},
+        maxMinSelected: "max",
+        holdClick:{},
+
+        offSelector: {},
+        tempSelector: {},
+        microAmpSelector: {},
+        milliAmpSelector: {},
+        tenAmpSelector: {},
+        voltSelector: {},
+        hertzSelector: {},
+        ohmsSelector: {},
+        capDiodeSelector: {},
+        presentSelectorLabel: "off",
+        presentSEL: "orange",
+
+        valueLabel: {},
+        onSymbol: {},
+        autoSymbol: {},
+        holdSymbol: {},
+        maxSymbol: {},
+        minSymbol: {},
+        tenAmpSymbol: {},
+        voltSymbol: {},
+        milliSymbol: {},
+        microSymbol: {},
+
+        displayScreen: {},
+        screenColor: "gray",
+
+        selButtonBckgrnd: {},
+        maxMinClicked: false,
+        maxMinClockStarted: false,
+        twoSecTimer: {},
+        maxMinStartMilliSeconds: {},
+        maxMinEndMilliSeconds: {},
+        rangeStartMilliSeconds: {},
+        rangeEndMilliSeconds: {},
+
+        //Methods
+        changeSetting: function(newSelectorLabel){
+            console.log("old Selector = " + this.presentSelectorLabel);
+            console.log("new Selector = " + newSelectorLabel);
+            this.showHideSelectors(this.presentSelectorLabel);
+            this.showHideSelectors(newSelectorLabel);
+            this.presentSelectorLabel = newSelectorLabel;
+        },
+
+        changeButton: function(buttonLabel){
+            console.log("in changeButton");
+            console.log("buttonLabel = " + buttonLabel);
+            switch (buttonLabel){
+                case "sel":
+                    this.selButtonBckgrnd.classList.toggle("red-bckgrnd");
+                    this.selButtonBckgrnd.classList.toggle("orange-bckgrnd");
+                    console.log("toggling 'red-bckgrnd' and 'orange-bckgrnd' on SEL Label");
+                    break;
+                case "hold":
+                        this.holdSymbol.classList.toggle("hidden-element");
+                    break;
+                case "maxMin":
+                        this.autoSymbol.classList.add("hidden-element");
+                        this.maxMinEndMilliSeconds = Date.now();
+                        const maxMinDownTime = (this.maxMinEndMilliSeconds - this.maxMinStartMilliSeconds);
+                        console.log("maxMinDownTime = " + maxMinDownTime);
+                        if(maxMinDownTime > 1000){
+                            this.minSymbol.classList.add("hidden-element");
+                            this.maxSymbol.classList.add("hidden-element");
+                            this.autoSymbol.classList.remove("hidden-element");
+                            this.maxMinSelected = "max";
+                        }else{
+                            console.log("switching between 'MAX and 'MIN'");
+                            if(this.maxMinSelected == "max"){
+                                console.log("showing Max & hiding Min");
+                                this.maxSymbol.classList.remove("hidden-element");
+                                this.minSymbol.classList.add("hidden-element");
+                                this.maxMinSelected = "min";
+                            }else{
+                                console.log("showing Min & hiding Max");
+                                this.minSymbol.classList.remove("hidden-element");
+                                this.maxSymbol.classList.add("hidden-element");
+                                this.maxMinSelected = "max";
+                            }
+                        }
+                    console.log("this.maxMinSelected = " + this.maxMinSelected);
+                    break;
+                case "light":
+                    console.log("in changeButton('light')");
+                    if(this.screenColor == "gray"){
+                        this.displayScreen.classList.remove("gray-bckgrnd");
+                        this.displayScreen.classList.add("white-bckgrnd");
+                        this.screenColor = "white";
+                    }else{
+                        this.displayScreen.classList.remove("white-bckgrnd");
+                        this.displayScreen.classList.add("gray-bckgrnd");
+                        this.screenColor = "gray";
+                    }
+                    break;
+                case "range":
+                        this.autoSymbol.classList.add("hidden-element");
+                        this.rangeEndMilliSeconds = Date.now();
+                        const rangeDownTime = (this.rangeEndMilliSeconds - this.rangeStartMilliSeconds);
+                        if(rangeDownTime > 1000){
+                            console.log("downTime = " + rangeDownTime);
+                            this.autoSymbol.classList.remove("hidden-element");
+                            this.rangeSelected = "ten";
+                        }else{
+                            console.log("switching between 'ten', 'milli', 'micro'");
+                        }
+                    break;
+                default: console.log("Not an allowable Setting");
+            }
+        },
+
+        startTime: function(){
+            console.log("setting start time in milliSeconds");
+            this.maxMinStartMilliSeconds = Date.now();
+        },
+
+        showHideSelectors: function(selectorLabel){
+            console.log("in showHideSelectors");
+            console.log("selectorLabel = " + selectorLabel);
+            this.autoSymbol.classList.remove("hidden-element");
+            this.onSymbol.classList.remove("hidden-selector");
+            this.valueLabel.classList.remove("hidden-element");
+            switch (selectorLabel){
+                case "temp":
+                    this.tempSelectorKnob.classList.toggle("hidden-selector");
+                    break;
+                case "microAmp":
+                    this.microAmpSelectorKnob.classList.toggle("hidden-selector");
+                    this.microSymbol.classList.toggle("hidden-element");
+                    this.ampSymbol.classList.toggle("hidden-element");
+                    break;
+                case "milliAmp":
+                    this.milliAmpSelectorKnob.classList.toggle("hidden-selector");
+                    this.milliSymbol.classList.toggle("hidden-element");
+                    this.ampSymbol.classList.toggle("hidden-element");
+                    break;
+                case "tenAmp":
+                    console.log("in case: 'tenAmp'");
+                    this.tenAmpSelectorKnob.classList.toggle("hidden-selector");
+                    this.ampSymbol.classList.toggle("hidden-element");
+                    break;
+                case "off":
+                    this.offSelectorKnob.classList.toggle("hidden-selector");
+                    this.onSymbol.classList.add("hidden-selector");
+                   // if(this.presentSelectorLabel == "on"){
+                        this.autoSymbol.classList.add("hidden-element");
+                        this.valueLabel.classList.add("hidden-element");
+                   // }
+                    break;
+                case "volts":
+                    this.voltSelectorKnob.classList.toggle("hidden-selector");
+                    this.voltSymbol.classList.toggle("hidden-element");
+                    break;
+                case "hertz":
+                    this.hertzSelectorKnob.classList.toggle("hidden-selector");
+                    break;
+                case "ohms":
+                    this.ohmsSelectorKnob.classList.toggle("hidden-selector");
+                    break;
+                case "capDiode":
+                    this.capDiodeSelectorKnob.classList.toggle("hidden-selector");
+                    break;
+                default: console.log("Not an allowable Setting");
+            }
+        },
+
+        init: function(){
+            console.log("beginning MultiMeterManager.init()");
+            this.offSelectorKnob = document.getElementById("selector-knob-off-id")
+            this.capDiodeSelectorKnob = document.getElementById("selector-knob-cap-diode-id");
+            this.tempSelectorKnob = document.getElementById("selector-knob-temp-id");
+            this.microAmpSelectorKnob = document.getElementById("selector-knob-micro-amp-id");
+            this.milliAmpSelectorKnob = document.getElementById("selector-knob-milli-amp-id");
+            this.tenAmpSelectorKnob = document.getElementById("selector-knob-ten-amp-id");
+            this.voltSelectorKnob = document.getElementById("selector-knob-volts-id");
+            this.hertzSelectorKnob = document.getElementById("selector-knob-hertz-id");
+            this.ohmsSelectorKnob = document.getElementById("selector-knob-ohms-id");
+
+            console.log("beginning 'click' elements");
+            this.offClick = document.getElementById("mm-off-click-area-id");
+            this.offClick.addEventListener("click",function(){MultiMeterManager.changeSetting("off")});
+            this.tenAmpClick = document.getElementById("mm-ten-amp-click-area-id");
+            this.tenAmpClick.addEventListener("click",function(){MultiMeterManager.changeSetting("tenAmp")});
+            this.milliAmpClick = document.getElementById("mm-milli-amp-click-area-id");
+            this.milliAmpClick.addEventListener("click",function(){MultiMeterManager.changeSetting("milliAmp")});
+            this.microAmpClick = document.getElementById("mm-micro-amp-click-area-id");
+            this.microAmpClick.addEventListener("click",function(){MultiMeterManager.changeSetting("microAmp")});
+            this.tempClick = document.getElementById("mm-temp-click-area-id");
+            this.tempClick.addEventListener("click",function(){MultiMeterManager.changeSetting("temp")});
+            this.voltsClick = document.getElementById("mm-volts-click-area-id");
+            this.voltsClick.addEventListener("click",function(){MultiMeterManager.changeSetting("volts")});
+            this.hertzClick = document.getElementById("mm-hz-click-area-id");
+            this.hertzClick.addEventListener("click",function(){MultiMeterManager.changeSetting("hertz")});
+            this.ohmsClick = document.getElementById("mm-ohms-click-area-id");
+            this.ohmsClick.addEventListener("click",function(){MultiMeterManager.changeSetting("ohms")});
+            this.capDiodeClick = document.getElementById("mm-cap-diode-click-area-id");
+            this.capDiodeClick.addEventListener("click",function(){MultiMeterManager.changeSetting("capDiode")});
+            console.log("ending 'selector click' elements");
+
+            //this.comPluginClick = document.getElementById("rect82");/* mm-com-plugin-click-area-id 
+            this.comPluginClick.addEventListener("click",function(){MultiMeterManager.changeButton("comPlugin")});
+            //this.lowAmpPluginClick= document.getElementById("mm-500-mamp-plugin-click-area-id");
+            //this.lowAmpPluginClick.addEventListener("click",function(){MultiMeterManager.changeButton("lowAmpPlugin")});
+           // this.highAmpPluginClick = document.getElementById("mm-ten-amp-plugin-click-area-id");
+            //this.highAmpPluginClick.addEventListener("click",function(){MultiMeterManager.changeButton("highAmpPlugin")});
+            this.selClick = document.getElementById("mm-select-button-click-area-id");
+            this.selClick.addEventListener("click",function(){MultiMeterManager.changeButton("sel")});
+            this.lightClick = document.getElementById("mm-light-button-click-area-id");
+            this.lightClick.addEventListener("click",function(){MultiMeterManager.changeButton("light")});
+            this.rangeClick = document.getElementById("mm-range-button-click-area-id");
+            this.rangeClick.addEventListener("click",function(){MultiMeterManager.changeButton("range")});
+            this.maxMinClick = document.getElementById("mm-max-min-button-click-area-id");
+            this.maxMinClick.addEventListener("mouseup",function(){MultiMeterManager.changeButton("maxMin")});
+            this.maxMinClick.addEventListener("mousedown",function(){MultiMeterManager.startTime()});
+            this.holdClick = document.getElementById("mm-hold-button-click-area-id");
+            this.holdClick.addEventListener("click",function(){MultiMeterManager.changeButton("hold")});
+            console.log("ending 'button click' elements");
+
+            this.offSelector = document.getElementById("mm-off-id");
+            this.tempSelector = document.getElementById("mm-temp-id");
+            this.microAmpSelector = document.getElementById("mm-micro-amp-id");
+            this.milliAmpSelector = document.getElementById("mm-milli-amp-id");
+            this.tenAmpSelector = document.getElementById("mm-ten-amp-id");
+            this.voltSelector = document.getElementById("mm-volts-id");
+            this.hertzSelector = document.getElementById("mm-hertz-symbol-id");
+            this.ohmsSelector = document.getElementById("mm-ohms-id");
+            this.capDiodeSelector = document.getElementById("mm-cap-diode-id");
+
+            this.displayScreen = document.getElementById("mm-display-screen-id");
+
+            this.onSymbol = document.getElementById("mm-on-indicator-id");
+            this.holdSymbol = document.getElementById("mm-hold-indicator-id");
+            this.maxSymbol = document.getElementById("mm-max-indicator-id");
+            this.minSymbol = document.getElementById("mm-min-indicator-id");
+            this.autoSymbol = document.getElementById("mm-auto-indicator-id");
+            this.ampSymbol = document.getElementById("mm-amp-symbol-id");
+            this.milliSymbol = document.getElementById("mm-milli-si-prefix-id");
+            this.microSymbol = document.getElementById("mm-micro-si-prefix-id");
+            this.voltSymbol = document.getElementById("mm-volt-symbol-id");
+            this.valueLabel = document.getElementById("mm-value-label-id");
+
+            this.selButtonBckgrnd = document.getElementById("mm-sel-button-bckgrnd-id");
+         
+            //this.offSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("off")});
+            //this.tempSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("temp")});
+            //this.microAmpSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("microAmp")});
+            //this.milliAmpSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("milliAmp")});
+            //this.tenAmpSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("tenAmp")});
+            //this.voltSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("Volts")});
+            //this.hertzSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("Hertz")});
+            //this.ohmsSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("Ohms")});
+            //this.capDiodeSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("CapDiode")});
+
+           // this.selRedButton.addEventListener("click",function(){MultiMeterManager.changeSelect()});
+           // this.selWhiteButton.addEventListener("click",function(){MultiMeterManager.changeSelect()});
+           // this.selButtonBckgrnd.addEventListener("click",function(){MultiMeterManager.changeSelect()});
+
+            this.initiated = true;
+            console.log("finished MultiMeterManager.init()"); 
+        }
+    }*/
     </script>
     
     <style>
@@ -90,11 +385,19 @@
         .white-bckgrnd{
             fill: #ffffff;
         }
+
+		body{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			background-color: #0000f0;
+			opacity: 1;
+		}
     </style>
 </head>
-<body>
+<body onload="MultiMeterManager.init()">
     <h1>Multimeter</h1>
-    <!--<section class="about-multimeter">
+   <!--<section class="about-multimeter">
         <p>
             This tool will allow for testing, diagnosing and troubleshooting electrical circuits, components and devices. It has the capability to measure Voltage(V), 'current' Amps(A), 
             'resistance' (Ohms), 'capacitance' (Farads) as well as 'Continuity', 'Frequency' and 'Temperature (both AC and DC).
@@ -143,7 +446,7 @@
             </ul>
         </p>
     </section>-->
-    <div class="multi-meter-container">
+<div class="multi-meter-container">
  <svg
     width="527.41101mm"
     height="1025.7461mm"
@@ -156,7 +459,7 @@
     xmlns:svg="http://www.w3.org/2000/svg">
     <style id="style34">
     </style>
-    <defs id="defs1">
+ <defs id="defs1">
         <linearGradient id="linearGradient32">
             <stop
                 style="stop-color:#ffffff;stop-opacity:0;"
@@ -1750,8 +2053,9 @@
      operator="in"
      in="result10"
      in2="SourceAlpha"
-     id="feComposite112" /></filter></defs>
-            <g
+     id="feComposite112" /></filter>
+	</defs>
+<g
    id="layer1"
    transform="rotate(-90,648.61605,387.68417)">
                 <g
@@ -1842,7 +2146,11 @@
    d="m 143.5371,1306.0625 v 14.5446"
    id="path8399" />
                         </g>
-                    </g><g
+    </g>
+
+
+
+<g
    id="mm-connections-component-id"
    transform="matrix(0.33751372,0,0,0.33751372,0.71293063,-275.27589)"
    style="display:inline">
@@ -1964,8 +2272,11 @@
    id="path2222" />
                             </g>
                         </g>
-                    </g>
-                    <g
+</g>
+
+
+
+<g
    id="mm-connector-labels-id"
    transform="translate(0,-16)"
    style="display:inline">
@@ -2234,92 +2545,77 @@
    style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
    d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
    id="path24" />
-                            </g>
-                        <text
-   xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   x="744.66113"
-   y="-1489.8373"
-   id="mm-off-label-id"
-   transform="rotate(67.174582,-476.41857,69.996817)"><tspan
-   id="tspan5339"
-   x="744.66113"
-   y="-1489.8373"
-   style="font-size:64px">OFF</tspan> </text></g>
-                        <path
-   style="display:inline;fill:none;fill-opacity:1;stroke:#ff6400;stroke-width:40.9872;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   id="mm-orange-selection-ring-id"
-   d="M 873.61731,1126.5737 A 369.66971,371.40329 0 0 1 766.53164,613.40241 369.66971,371.40329 0 0 1 1276.9316,504.02792 a 369.66971,371.40329 0 0 1 110.641,512.40948 369.66971,371.40329 0 0 1 -509.62932,112.9438" />
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <g
-   id="g56"
-   style="display:inline"><g
-     id="mm-off-id"
-     style="display:inline"
-     class="selector-label"
-     transform="translate(1.1753949,-1.8385373)">
-                            
-                        </g><g
-     id="mm-ten-amp-id"
-     class="selector-label"
-     transform="translate(0,2)">
-                            <text
-   xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';white-space:pre;inline-size:138.917;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   x="552.66113"
-   y="-1455.8373"
-   id="text5349"
-   transform="rotate(90)"><tspan
-     x="552.66113"
-     y="-1455.8373"
-     id="tspan21">10A </tspan></text>
-                            <g
-   id="g1692"
-   transform="translate(214.70352,218)">
-                                
-                                <path
-   style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4.44426378;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1325.4654,361.91204 c -3.4488,0.91403 -10.7217,1.73184 -10.7789,6.87649 -0.159,5.10248 4.1351,5.51067 6.8389,6.93936 2.4597,1.29982 6.4227,3.40305 6.2556,7.10946 -0.1809,4.01388 -3.1403,4.93354 -6.3617,6.66723 -3.2868,1.76886 -6.7859,2.00697 -6.8918,6.93936 0.2168,5.6371 5.6897,5.87764 11.1629,7.0803"
-   id="path1690" />
-                            <g
-   id="g18"
-   style="display:inline"
-   transform="translate(-180.26135,-665.86157)"><rect
-     style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
-     id="rect15"
-     width="13.769431"
-     height="3.9789777"
-     x="1058.943"
-     y="-1480.9613"
-     transform="rotate(90)" /><rect
-     style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-     id="rect16"
-     width="13.769431"
-     height="3.9789777"
-     x="1041.0161"
-     y="-1480.9613"
-     transform="rotate(90)" /><rect
-     style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
-     id="rect17"
-     width="13.769431"
-     height="3.9789777"
-     x="1012.882"
-     y="-1458.9613"
-     transform="rotate(90,5.9999934,15.999993)" /><rect
-     style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
-     id="rect18"
-     width="49.842007"
-     height="4.3978243"
-     x="1023.039"
-     y="-1489.4952"
-     transform="rotate(90)" /></g></g>
+</g>
+<text xml:space="preserve"
+    style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+    x="744.66113"
+    y="-1489.8373"
+    id="mm-off-label-id"
+    transform="rotate(67.174582,-476.41857,69.996817)"><tspan
+    id="tspan5339"
+    x="744.66113"
+    y="-1489.8373"
+    style="font-size:64px">OFF</tspan> 
+</text>
+</g>
+<path
+    style="display:inline;fill:none;fill-opacity:1;stroke:#ff6400;stroke-width:40.9872;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+    id="mm-orange-selection-ring-id"
+    d="M 873.61731,1126.5737 A 369.66971,371.40329 0 0 1 766.53164,613.40241 369.66971,371.40329 0 0 1 1276.9316,504.02792 a 369.66971,371.40329 0 0 1 110.641,512.40948 369.66971,371.40329 0 0 1 -509.62932,112.9438" />
+<g id="g56" style="display:inline">
+    <g id="mm-off-id-on-hold"
+        style="display:inline"
+        class="selector-label"
+        transform="translate(1.1753949,-1.8385373)"><!--id="mm-off-id"-->
+    </g>
+    <g id="mm-ten-amp-id" class="selector-label" transform="translate(0,2)">
+        <text xml:space="preserve"
+            style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';white-space:pre;inline-size:138.917;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+            x="552.66113"
+            y="-1455.8373"
+            id="text5349"
+            transform="rotate(90)"><tspan
+                x="552.66113"
+                y="-1455.8373"
+            id="tspan21">10A </tspan>
+        </text>
+        <g id="g1692" transform="translate(214.70352,218)">
+            <path
+                style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4.44426378;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                d="m 1325.4654,361.91204 c -3.4488,0.91403 -10.7217,1.73184 -10.7789,6.87649 -0.159,5.10248 4.1351,5.51067 6.8389,6.93936 2.4597,1.29982 6.4227,3.40305 6.2556,7.10946 -0.1809,4.01388 -3.1403,4.93354 -6.3617,6.66723 -3.2868,1.76886 -6.7859,2.00697 -6.8918,6.93936 0.2168,5.6371 5.6897,5.87764 11.1629,7.0803"
+                id="path1690" />
+            <g id="g18" style="display:inline" transform="translate(-180.26135,-665.86157)">
+                <rect
+                    style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
+                    id="rect15"
+                    width="13.769431"
+                    height="3.9789777"
+                    x="1058.943"
+                    y="-1480.9613"
+                    transform="rotate(90)" /><rect
+                    style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+                    id="rect16"
+                    width="13.769431"
+                    height="3.9789777"
+                    x="1041.0161"
+                    y="-1480.9613"
+                    transform="rotate(90)" /><rect
+                    style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
+                    id="rect17"
+                    width="13.769431"
+                    height="3.9789777"
+                    x="1012.882"
+                    y="-1458.9613"
+                    transform="rotate(90,5.9999934,15.999993)" /><rect
+                    style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
+                    id="rect18"
+                    width="49.842007"
+                    height="4.3978243"
+                    x="1023.039"
+                    y="-1489.4952"
+                    transform="rotate(90)" />
+            </g>
+        </g>
     </g>
     <g id="mm-milli-amp-symbol-id" class="selector-label" transform="translate(2.4321625,10)">
         <text xml:space="preserve"
@@ -2546,92 +2842,87 @@
      id="mm-volts-id"
      class="selector-label"
      transform="translate(-12,16)">
-                            <text
-   xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';white-space:pre;inline-size:56.767;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   x="946.66113"
-   y="-1461.8373"
-   id="mm-v-label-id"
-   transform="rotate(90)"><tspan
-     x="946.66113"
-     y="-1461.8373"
-     id="tspan26">V </tspan></text>
-                            <g
-   id="g1708"
-   transform="translate(224.76824,615.13602)"
-   style="display:inline">
-                                
-                                <path
-   style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4.44426378;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1325.4654,361.91204 c -3.4488,0.91403 -10.7217,1.73184 -10.7789,6.87649 -0.159,5.10248 4.1351,5.51067 6.8389,6.93936 2.4597,1.29982 6.4227,3.40305 6.2556,7.10946 -0.1809,4.01388 -3.1403,4.93354 -6.3617,6.66723 -3.2868,1.76886 -6.7859,2.00697 -6.8918,6.93936 0.2168,5.6371 5.6897,5.87764 11.1629,7.0803"
-   id="path1706" />
-                            <g
-   id="g12"
-   style="display:inline"
-   transform="translate(-181.99999,-663.99999)"><rect
-     style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
-     id="rect6"
-     width="13.769431"
-     height="3.9789777"
-     x="1058.943"
-     y="-1480.9613"
-     transform="rotate(90)" /><rect
-     style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-     id="rect3"
-     width="13.769431"
-     height="3.9789777"
-     x="1041.0161"
-     y="-1480.9613"
-     transform="rotate(90)" /><rect
-     style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
-     id="rect2"
-     width="13.769431"
-     height="3.9789777"
-     x="1012.882"
-     y="-1458.9613"
-     transform="rotate(90,5.9999934,15.999993)" /><rect
-     style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
-     id="rect1"
-     width="49.842007"
-     height="4.3978243"
-     x="1023.039"
-     y="-1489.4952"
-     transform="rotate(90)" /></g></g>
-                        </g><text
-     xml:space="preserve"
-     class="selector-label"
-     style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     x="1092.6611"
-     y="-1367.8373"
-     id="mm-hertz-id"
-     transform="rotate(90)">Hz <tspan
-   style="fill:#ff0000;fill-opacity:1"
-   id="tspan28">%</tspan> </text><g
-     id="mm-cap-diode-id"
-     class="selector-label"
-     transform="translate(-70.000011)"
-     style="display:inline">
-                            <g
-   id="g1342"
-   transform="translate(-55.728648,31.025134)">
-                                <path
-   style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:5.26246;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1209.4712,1253.4609 -44.0983,0.5365"
-   id="path571" />
-                                <path
-   style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:5.66929;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1187.5371,1228.1723 -0.2301,-28.264"
-   id="path1373" />
-                                <path
-   style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:5.66929;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1187.39,1280.1727 0.064,-28.2648"
-   id="path1375" />
-                                <path
-   style="fill:#ff0000;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1209.1118,1226.2211 -44.0493,-0.2078 22.2096,25.356 z"
-   id="path1571" />
-                            </g>
-                            <g
+    <text xml:space="preserve"
+		style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';white-space:pre;inline-size:56.767;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+		x="946.66113"
+		y="-1461.8373"
+		id="mm-v-label-id"
+		transform="rotate(90)"><tspan
+			x="946.66113"
+			y="-1461.8373"
+			id="tspan26">V </tspan>
+	</text>
+    <g id="g1708" transform="translate(224.76824,615.13602)" style="display:inline">
+        <path
+			style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:4.44426378;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+			d="m 1325.4654,361.91204 c -3.4488,0.91403 -10.7217,1.73184 -10.7789,6.87649 -0.159,5.10248 4.1351,5.51067 6.8389,6.93936 2.4597,1.29982 6.4227,3.40305 6.2556,7.10946 -0.1809,4.01388 -3.1403,4.93354 -6.3617,6.66723 -3.2868,1.76886 -6.7859,2.00697 -6.8918,6.93936 0.2168,5.6371 5.6897,5.87764 11.1629,7.0803"
+			id="path1706" />
+        <g id="g12" style="display:inline" transform="translate(-181.99999,-663.99999)">
+			<rect
+				style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
+				id="rect6"
+				width="13.769431"
+				height="3.9789777"
+				x="1058.943"
+				y="-1480.9613"
+				transform="rotate(90)" />
+			<rect
+				style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+				id="rect3"
+				width="13.769431"
+				height="3.9789777"
+				x="1041.0161"
+				y="-1480.9613"
+				transform="rotate(90)" />
+			<rect
+				style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
+				id="rect2"
+				width="13.769431"
+				height="3.9789777"
+				x="1012.882"
+				y="-1458.9613"
+				transform="rotate(90,5.9999934,15.999993)" />
+			<rect
+				style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke-dasharray:none"
+				id="rect1"
+				width="49.842007"
+				height="4.3978243"
+				x="1023.039"
+				y="-1489.4952"
+				transform="rotate(90)" />
+		</g>
+	</g>
+</g>
+	<text xml:space="preserve"
+		class="selector-label"
+		style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:64px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+		x="1092.6611"
+		y="-1367.8373"
+		id="mm-hertz-id"
+		transform="rotate(90)">Hz <tspan
+			style="fill:#ff0000;fill-opacity:1"
+			id="tspan28">%</tspan> 
+	</text>
+	<g id="mm-cap-diode-id" class="selector-label" transform="translate(-70.000011)" style="display:inline">
+        <g id="g1342" transform="translate(-55.728648,31.025134)">
+            <path
+				style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:5.26246;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+				d="m 1209.4712,1253.4609 -44.0983,0.5365"
+				id="path571" />
+			<path
+				style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:5.66929;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+				d="m 1187.5371,1228.1723 -0.2301,-28.264"
+				id="path1373" />
+			<path
+				style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:5.66929;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+				d="m 1187.39,1280.1727 0.064,-28.2648"
+				id="path1375" />
+			<path
+				style="fill:#ff0000;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+				d="m 1209.1118,1226.2211 -44.0493,-0.2078 22.2096,25.356 z"
+				id="path1571" />
+		</g>
+		<g
    id="g1569"
    transform="translate(-6,12)">
                                 <path
@@ -2727,7 +3018,7 @@
                         
                         
 <g id="g90" style="display:inline">
-    <g id="mm-select-button-id" transform="translate(0.58769101)" style="display:inline"><!--style="display:inline;fill:#ff6400;-->
+    <g id="mm-select-button-id" transform="translate(0.58769101)" style="display:inline">
         <path
             style="display:inline;fill-opacity:1;stroke:#ff0000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
             id="mm-sel-button-bckgrnd-id"
@@ -2929,14 +3220,15 @@
      height="51.879421"
      x="106.18059"
      y="-659.17737"
-     transform="rotate(90)" /></g></g>
+     transform="rotate(90)" /></g></g> 
+
 <g id="mm-output-component-id" style="display:inline" transform="matrix(0.33751372,0,0,0.33751372,-0.63713229,-277.92172)">
     <path
         style="display:inline;fill-opacity:1;stroke:#000000;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
         d="M 2717.1981,272.34016 V 1350.1629 H 2090.721 V 272.34016 Z"
         id="mm-display-screen-id"
         transform="translate(1.1753949,16.161463)" 
-        class = "gray-bckgrnd"/><!--fill:#a0a0a0;-->
+        class = "gray-bckgrnd"/>
     <g id="mm-measured-value-id" style="display:inline"  transform="translate(-43.899452,-64.28132)">
         <text xml:space="preserve"
             style="font-weight:900;font-size:111.556px;font-family:Arial;-inkscape-font-specification:'Arial Heavy';writing-mode:lr-tb;direction:ltr;white-space:pre;inline-size:697.667;display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.428216;stroke-linecap:square;stroke-linejoin:round"
@@ -2962,7 +3254,7 @@
         id="tspan13"
         style="font-size:156.784px;stroke-width:0.192585"
         x="1202.5659"
-        y="-2350">μ</tspan><!--x="1202.5659"   y="-2304.0879"--> 
+        y="-2350">μ</tspan> 
     </text>
     <text xml:space="preserve"
         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;white-space:pre;inline-size:155.751;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
@@ -2975,7 +3267,7 @@
             y="-2390"
             id="tspan37"><tspan
         style="font-size:156.784px"
-        id="tspan35">m</tspan> </tspan><!--x="1159.9148"    y="-2345.1746"-->
+        id="tspan35">m</tspan> </tspan>
     </text>
     <text xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
@@ -3060,7 +3352,7 @@
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:117.588px;font-family:Arial;-inkscape-font-specification:'Arial Bold';writing-mode:lr-tb;direction:ltr;white-space:pre;inline-size:181.397;display:inline;fill:#000000;stroke:#000000;stroke-width:0.192585;stroke-linecap:square;stroke-linejoin:round"
    x="1224.6357"
    y="-2323.1377"
-   id="mm-amp-symbol-id"
+   id="mm-ten-amp-symbol-id"
    transform="rotate(90,-7.0552684,8.6231058)"
    class="hidden-element "><tspan
      x="1224.6357"
@@ -3094,16 +3386,13 @@
      id="tspan50"><tspan
    style="font-size:172.462px"
    id="tspan49">°C</tspan> </tspan></text>
-                        <g
-   id="mm-capacitor-display-id"
-   transform="matrix(1.8438081,0,0,1.8205052,176.60638,-1011.235)"
-   style="display:inline"
+<g id="mm-capacitor-display-id" transform="matrix(1.8438081,0,0,1.8205052,176.60638,-1011.235)" style="display:inline"
    class="hidden-element ">
-                                <path
-   style="display:inline;fill:#ffffff;stroke:#ffffff;stroke-width:7.85098;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1232.7136,1234.7284 -67.3433,0.782"
-   id="path27" />
-                                <path
+        <path
+			style="display:inline;fill:#ffffff;stroke:#ffffff;stroke-width:7.85098;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+			d="m 1232.7136,1234.7284 -67.3433,0.782"
+			id="path27" />
+        <path
    style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:7.55836;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    d="m 1231.2946,1258.0175 c -10.7087,-5.4282 -16.0628,-7.3441 -31.4275,-7.0249 -15.3642,0.3194 -23.0464,2.5549 -33.2895,6.0671"
    id="path28" />
@@ -3115,28 +3404,26 @@
    style="display:inline;fill:#ffffff;stroke:#ffffff;stroke-width:7.90225;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
    d="m 1200.9169,1297.0511 0.076,-45.9636"
    id="path30" />
-                            </g><g
-   id="mm-diode-display-id"
-   transform="matrix(1.8719021,0,0,1.8719021,141.64474,-1063.8575)"
-   style="display:inline"
-   class="hidden-element ">
-                            <path
-   style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:7.75895;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1233.3907,1254.832 -66.3209,0.7754"
-   id="path571-8" />
-                            <path
-   style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:7.69524;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1202.0866,1215.7865 -0.3858,-31.037"
-   id="path1373-2" />
-                            <path
-   style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:8.22801;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1201.8899,1292.5929 0.095,-39.8755"
-   id="path1375-4" />
-                            <path
-   style="fill:#ff0000;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-   d="m 1233.9792,1213.6623 -66.9475,-0.3114 33.7549,38.0012 z"
-   id="path1571-5" />
-                        </g></g></g>
+</g>
+<g id="mm-diode-display-id" transform="matrix(1.8719021,0,0,1.8719021,280,-1063.8575)" style="display:inline"
+   class="hidden-element "><!-- transform="matrix(1.8719021,0,0,1.8719021,141.64474,-1063.8575)" -->
+    <path
+		style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:7.75895;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+		d="m 1233.3907,1254.832 -66.3209,0.7754"
+		id="path571-8" />
+	<path
+		style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:7.69524;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+		d="m 1202.0866,1215.7865 -0.3858,-31.037"
+		id="path1373-2" />
+	<path
+		style="display:inline;fill:#ffffff;stroke:#ff0000;stroke-width:8.22801;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+		d="m 1201.8899,1292.5929 0.095,-39.8755"
+		id="path1375-4" />
+	<path
+		style="fill:#ff0000;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+		d="m 1233.9792,1213.6623 -66.9475,-0.3114 33.7549,38.0012 z"
+		id="path1571-5" />
+</g></g></g>
                         <g
    id="mm-auxillary-screen-symbols-id"
    style="display:inline">
@@ -3180,7 +3467,7 @@
             x="333.31793"
             y="-2543.9666"
             id="tspan51">Auto</tspan>
-    </text><!--class="hidden-element "-->
+    </text>
 <g
      id="mm-battery-symbol-id"
      class="hidden-element "
@@ -3299,9 +3586,7 @@
 </div>
 
     <script>
-        /*function init(){
-            console.log("in MultiMeter-vs2.html init()");
-        }*/
+
     </script>
 </body>
 </html>
