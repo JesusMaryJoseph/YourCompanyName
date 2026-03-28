@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <script>
+        let MultiMeter = {
+            //Properties
+            arrayOfActiveObjects: [],
+            objectOne: {title: "obj one"},
+            objectTwo: {title: "obj two"},
+            objectThree: {title: "obj three"},
+            objectFour: {title: "obj four"},
+            //Methods
+            addObjs: function(){
+                this.arrayOfActiveObjects.push(this.objectFour);
+                this.arrayOfActiveObjects.push(this.objectOne);
+                this.arrayOfActiveObjects.push(this.objectThree);
+            },
+            deleteObj: function(objToDelete){
+                let indexOf = this.arrayOfActiveObjects.indexOf(this.objectOne);
+                console.log("indexOf = " + indexOf);
+                this.arrayOfActiveObjects.splice(indexOf,1);
+            },
+            listContents: function(){
+                let textArea = document.getElementById("textArea-id");
+                for (let obj of this.arrayOfActiveObjects) {
+                    textArea.innerHTML += "  " + obj.title;
+                }
+            }
+        }
+        
+
+    </script>
+    
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Array of Objects: Practice</h1>
+    <button onclick="MultiMeter.addObjs()">ADD Objects to Array</button>
+    <button onclick="MultiMeter.deleteObj()">Delete objOne</button>
+    <button onclick="MultiMeter.listContents()">List Contents</button>
+    <textarea id=textArea-id></textarea>
+
+</body>
+</html>
