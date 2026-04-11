@@ -1,4 +1,18 @@
-
+   function showBattery(){
+        //console.log("showing battery using outside fct");
+        MultiMeterManager.batterySymbol.classList.remove("hidden-element");
+        MultiMeterManager.clearBatteryTimer();
+        /*MultiMeterManager.batteryTimerStarted = false;*/
+   }
+   function shutOffLight(){
+       // console.log("shutting off backlight");
+        //console.log("shutting off time = " + Date.now());
+        MultiMeterManager.displayScreen.classList.remove("white-bckgrnd");
+        MultiMeterManager.displayScreen.classList.add("gray-bckgrnd");
+        MultiMeterManager.screenColor = "gray";
+   }
+    
+    
     let MultiMeterManager = {
         //Properties
         initiated: false,
@@ -10,22 +24,32 @@
 // END Plug ins
 
 //BEGIN Buttons
-        //Button 'Click' Areas
+        //PlugIn 'Click' Areas
         selClick:{},
         lightClick:{},
         rangeClick:{},
         maxMinClick:{},
         holdClick:{},
+        //Plug In's
+        blackPlugin:{},
+        redPlugin:{},
+        blackPluginConnected:{},
+        redPluginConnected:{},
+        redTenAmpPluginConnected:{},
 
         //Button Backgrounds
         selButtonBckgrnd: {},
 
-        //Button Timers
+        //Light, Range & MaxMin Button Timers
        /* twoSecTimer: {},*/
+        lightStartMilliSeconds: {},
+        lightEndMilliSeconds: {},
         maxMinStartMilliSeconds: {},
         maxMinEndMilliSeconds: {},
         rangeStartMilliSeconds: {},
         rangeEndMilliSeconds: {},
+        batteryTimer: {},
+        lightThreeMinTimer: {},
 
 //END Buttons
 
@@ -37,7 +61,7 @@
         milliAmpSelectorKnob: {},
         tenAmpSelectorKnob: {},
         voltSelectorKnob: {},
-      //  hertzSelectorKnob: {},
+        hertzSelectorKnob: {},
         ohmsSelectorKnob: {},
         capDiodeSelectorKnob: {},
 
@@ -48,7 +72,7 @@
         milliAmpSelector: {},
         tenAmpSelector: {},
         voltSelector: {},
-      //  hertzSelector: {},
+        hertzSelector: {},
         ohmsSelector: {},
         capDiodeSelector: {},
 
@@ -59,7 +83,7 @@
         milliAmpClick:{},
         offClick:{},
         voltsClick:{},
-      //  hertzClick:{},
+        hertzClick:{},
         ohmsClick:{},
         capDiodeClick:{},
 //END Selectors
@@ -72,12 +96,19 @@
         holdSymbol: {},
         maxSymbol: {},
         minSymbol: {},
+        acSymbol: {},
+        dcSymbol: {},
+        batterySymbol: {},
+       
         // Unit Symbols
         degFahrenheitSymbol: {},
         degCelsiusSymbol: {},
-        tenAmpSymbol: {},
+        ampSymbol: {},
         voltSymbol: {},
-      //  hertzSymbol: {},
+        ohmsSymbol:{},
+        soundSymbol:{},
+        hertzSymbol: {},
+        dutyCycleSymbol: {},
         faradSymbol: {},
         diodeSymbol: {},
         // Prefix Symbols
@@ -86,253 +117,393 @@
         nanoSymbol: {},
         
         //Status of particular elements
-        presentSelectorLabel: "off",
+        lastKnobSelectorLabel: "",
+        presentKnobSelectorLabel: "off",
         presentSELcolor: "orange",
         maxMinSelected: "max",
         screenColor: "gray",
+        presentPrefix: "",
+        presentUnit: "",
+        redPluginConnection: false,
+        redTenAmpPluginConnection: false,
+        blackPluginConnection: false,
         maxMinClicked: false,
         maxMinClockStarted: false,
-
+        rangeClockStarted: false,
+        lightClockStarted: false,
+        batteryTimerStarted: false,
 
         //Methods
-        changeSetting: function(newSelectorLabel){
-            console.log("old Selector = " + this.presentSelectorLabel);
-            console.log("new Selector = " + newSelectorLabel);
-            this.showHideSelectors(this.presentSelectorLabel);
-            this.showHideSelectors(newSelectorLabel);
-            /*console.log("newDegrees = " + newDegrees);
-            let netRotation = (newDegrees - oldDegrees) + "deg";
-            console.log("new rotation = " + netRotation);
-            this.selectorKnob.style.transform = 'rotate(' + netRotation + ')';*/
-            this.presentSelectorLabel = newSelectorLabel;
-        },
-
-        changeButton: function(buttonLabel){
-            console.log("in changeButton: buttonLabel = " + buttonLabel);
-            switch (buttonLabel){
-                case "sel":
-                        if(this.presentSelectorLabel == "off"){return;}
-                        this.selButtonBckgrnd.classList.toggle("red-bckgrnd");
-                        this.selButtonBckgrnd.classList.toggle("orange-bckgrnd");
-                        //console.log("toggling 'red-bckgrnd' and 'orange-bckgrnd' on SEL Label");
-                        //console.log("this.presentSELcolor =  " + this.presentSELcolor);
-                        if(this.presentSELcolor == "orange"){
-                            //console.log("setting this.presentSELcolor to 'red'");
-                            this.presentSELcolor = "red";
-                        }else{
-                            //console.log("setting this.presentSELcolor to 'orange'");
-                            this.presentSELcolor = "orange";
-                        }
-                        this.showHidePrefixesUnits(this.presentSelectorLabel); 
-                        /*this.selWhiteBckgrnd.classList.toggle("hidden-element");
-                        console.log("toggling 'hidden-element' on White Label");*/
-                    break;
-                case "hold":
-                        if(this.presentSelectorLabel == "off"){return; }
-                        this.holdSymbol.classList.toggle("hidden-element");
-                       
-                    break;
-                case "maxMin":
-                        if(this.presentSelectorLabel == "off"){return; }
-                        this.autoSymbol.classList.add("hidden-element");
-                        this.maxMinEndMilliSeconds = Date.now();
-                        const maxMinDownTime = (this.maxMinEndMilliSeconds - this.maxMinStartMilliSeconds);
-                        console.log("maxMinDownTime = " + maxMinDownTime);
-                        if(maxMinDownTime > 1000){
-                            this.minSymbol.classList.add("hidden-element");
-                            this.maxSymbol.classList.add("hidden-element");
-                            this.autoSymbol.classList.remove("hidden-element");
-                            this.maxMinSelected = "max";
-                        }else{
-                            console.log("switching between 'MAX and 'MIN'");
-                            if(this.maxMinSelected == "max"){
-                                console.log("showing Max & hiding Min");
-                                this.maxSymbol.classList.remove("hidden-element");
-                                this.minSymbol.classList.add("hidden-element");
-                                this.maxMinSelected = "min";
-                            }else{
-                                console.log("showing Min & hiding Max");
-                                this.minSymbol.classList.remove("hidden-element");
-                                this.maxSymbol.classList.add("hidden-element");
-                                this.maxMinSelected = "max";
-                            }
-                        }
-                        console.log("this.maxMinSelected = " + this.maxMinSelected);
-                    break;
-                case "light":
-                        if(this.presentSelectorLabel == "off"){return; }
-                        console.log("in changeButton('light')");
-                        if(this.screenColor == "gray"){
-                            this.displayScreen.classList.remove("gray-bckgrnd");
-                            this.displayScreen.classList.add("white-bckgrnd");
-                            this.screenColor = "white";
-                        }else{
-                            this.displayScreen.classList.remove("white-bckgrnd");
-                            this.displayScreen.classList.add("gray-bckgrnd");
-                            this.screenColor = "gray";
-                        }
-                    break;
-                case "range":
-                        if(this.presentSelectorLabel == "off"){return; }
-                        this.autoSymbol.classList.add("hidden-element");
-                        this.rangeEndMilliSeconds = Date.now();
-                        const rangeDownTime = (this.rangeEndMilliSeconds - this.rangeStartMilliSeconds);
-                        if(rangeDownTime > 1000){
-                            console.log("downTime = " + rangeDownTime);
-                            this.autoSymbol.classList.remove("hidden-element");
-                            this.rangeSelected = "ten";
-                        }else{
-                            console.log("switching between 'ten', 'milli', 'micro'");
-                        }
-                    break;
-                default: console.log("Not an allowable Setting");
+        changeSetting: function(newKnobSelectorLabel){
+            if(!this.initiated){
+                this.init();
+                this.initiated = true;
+            }
+           // console.log("old Selector = " + this.presentKnobSelectorLabel);
+           // console.log("new Selector = " + newKnobSelectorLabel);
+           /* if(this.presentKnobSelectorLabel == "off"){
+                    this.onSymbol.classList.toggle('hidden-element');
+            }*/
+            this.KnobSelectorHandler(this.presentKnobSelectorLabel);
+            this.PrefixUnitHandler(this.presentKnobSelectorLabel, "hide");
+            this.lastKnobSelectorLabel = this.presentKnobSelectorLabel;
+            this.KnobSelectorHandler(newKnobSelectorLabel);
+            this.PrefixUnitHandler(newKnobSelectorLabel, "show");
+            this.presentKnobSelectorLabel = newKnobSelectorLabel;
+            //console.log("this.batteryTimerStarted = " + this.batteryTimerStarted);
+            if(!this.batteryTimerStarted){
+               // console.log("starting Battery Timer");
+                this.startBatteryTimer();
+                this.batteryTimerStarted = true;
             }
         },
 
-        startTime: function(){
-            console.log("setting start time in milliSeconds");
-            this.maxMinStartMilliSeconds = Date.now();
-        },
+        KnobSelectorHandler: function(clickedSelectorLabel){
+            //console.log("in KnobSelectorHandler");
+           // console.log("clickedSelectorLabel = " + clickedSelectorLabel);
+            this.lastKnobSelectorLabel = this.presentKnobSelectorLabel;
+            this.presentKnobSelectorLabel = clickedSelectorLabel;
+           // console.log("this.lastKnobSelectorLabel = " + this.lastKnobSelectorLabel + "   and this.presentKnobSelectorLabel = " +this.presentKnobSelectorLabel);          
+            this.onSymbol.classList.remove('hidden-element');
+            this.autoSymbol.classList.remove('hidden-element');
+            if(clickedSelectorLabel != "off"){
 
-       // stopTime: function(){
-           // const currentDate = new Date();
-           // this.endSeconds = currentDate.getSeconds();
-            //clearTimeout(this.twoSecTimer);
-            /*this.autoSymbol.classList.remove("hidden-element");
-            this.minSymbol.classList.add("hidden-element");
-            this.maxSymbol.classList.add("hidden-element");
-            this.maxMinClockStarted = false;*/
-       // },
-        showHidePrefixesUnits: function(selectorLabel){
-            console.log("in showHidePrefixesUnits");
-            this.faradSymbol.classList.add("hidden-element");
-            this.nanoSymbol.classList.add("hidden-element");
-            this.voltSymbol.classList.add("hidden-element");
-            this.diodeSymbol.classList.add("hidden-element");
-            switch (selectorLabel){
+            }
+            /*this.startBatteryTimer();*/
+            switch (clickedSelectorLabel){
                 case "temp":
-                    console.log("hidding degF & degC");
-                    this.degFahrenheitSymbol.classList.toggle("hidden-element");
-                    this.degCelsiusSymbol.classList.toggle("hidden-element");
-                    break;
-                case "microAmp":
-                   // this.microSymbol.classList.toggle("hidden-element");
-                   // this.tenAmpSymbol.classList.toggle("hidden-element");
-                    break;
-                case "milliAmp":
-                   // this.milliSymbol.classList.toggle("hidden-element");
-                   // this.tenAmpSymbol.classList.toggle("hidden-element");
-                    break;
-                case "tenAmp":
-                    //console.log("in case: 'tenAmp'");
-                  //  this.tenAmpSymbol.classList.toggle("hidden-element");
-                    break;
-                case "off":
-                    //this.onSymbol.classList.add("hidden-selector");
-                    this.reset();
-                    break;
-                case "volts":
-                   // this.voltSymbol.classList.toggle("hidden-element");
-                    break;
-                case "hertz":
-              //      this.hertzSymbol.classList.toggle("hidden-element");
-                    //this.dutyCycleSymbol.classList.toggle("hidden-element");
-                    break;
-                case "ohms":
-                    break;
-                case "capDiode":
-                    //console.log("entering 'capDiode'");
-                            /*this.faradSymbol.classList.toggle("hidden-element");
-                            this.nanoSymbol.classList.add("hidden-element");
-                            this.voltSymbol.classList.add("hidden-element");
-                            this.diodeSymbol.classList.add("hidden-element");*/
-                        if(this.presentSELcolor == "orange"){
-                            console.log("hiding nF");
-                            this.faradSymbol.classList.toggle("hidden-element");
-                            this.nanoSymbol.classList.toggle("hidden-element");
-                            this.voltSymbol.classList.add("hidden-element");
-                            this.diodeSymbol.classList.add("hidden-element");
-                        }else{
-                            console.log("hiding V & diode");
-                            this.faradSymbol.classList.add("hidden-element");
-                            this.nanoSymbol.classList.add("hidden-element");
-                            this.voltSymbol.classList.toggle("hidden-element");
-                            this.diodeSymbol.classList.toggle("hidden-element");
-                    }
-                    break;
-                default: console.log(selector + " is not an allowable label");
-            } 
-        },
-
-        showHideSelectors: function(selectorLabel){
-            console.log("in showHideSelectors");
-            console.log("selectorLabel = " + selectorLabel);
-            this.faradSymbol.classList.add("hidden-element");
-            this.nanoSymbol.classList.add("hidden-element");
-            this.voltSymbol.classList.add("hidden-element");
-            this.diodeSymbol.classList.add("hidden-element");
-            this.autoSymbol.classList.remove("hidden-element");
-            this.onSymbol.classList.remove("hidden-selector");
-            this.valueLabel.classList.remove("hidden-element");
-            switch (selectorLabel){
-                case "temp":
-                    console.log("In showHideSelectors & this.present SEL = " + this.presentSELcolor);
+                    //console.log("toggling temp-knobSelector");
                     this.tempSelectorKnob.classList.toggle("hidden-selector");
-                    if(this.presentSELcolor == "orange"){
-                        this.degFahrenheitSymbol.classList.toggle("hidden-element");
-                    }else{
-                        this.degCelsiusSymbol.classList.toggle("hidden-element");
-                    }
                     break;
                 case "microAmp":
                     this.microAmpSelectorKnob.classList.toggle("hidden-selector");
-                    this.microSymbol.classList.toggle("hidden-element");
-                    this.tenAmpSymbol.classList.toggle("hidden-element");
                     break;
                 case "milliAmp":
                     this.milliAmpSelectorKnob.classList.toggle("hidden-selector");
-                    this.milliSymbol.classList.toggle("hidden-element");
-                    this.tenAmpSymbol.classList.toggle("hidden-element");
                     break;
                 case "tenAmp":
-                    console.log("in case: 'tenAmp'");
                     this.tenAmpSelectorKnob.classList.toggle("hidden-selector");
-                    this.tenAmpSymbol.classList.toggle("hidden-element");
                     break;
                 case "off":
+                    //console.log("toggling off-knobSelector");
                     this.offSelectorKnob.classList.toggle("hidden-selector");
-                    this.onSymbol.classList.add("hidden-selector");
-                    this.reset();
+                    this.onSymbol.classList.add('hidden-element');
                     break;
                 case "volts":
                     this.voltSelectorKnob.classList.toggle("hidden-selector");
-                    this.voltSymbol.classList.toggle("hidden-element");
                     break;
                 case "hertz":
-             //       this.hertzSelectorKnob.classList.toggle("hidden-selector");
+                    this.hertzSelectorKnob.classList.toggle("hidden-selector");
                     break;
                 case "ohms":
                     this.ohmsSelectorKnob.classList.toggle("hidden-selector");
                     break;
                 case "capDiode":
                     this.capDiodeSelectorKnob.classList.toggle("hidden-selector");
-                    console.log("capDiode Knob selected: now setting appropriate Prefixes & Units");
-                    if(this.presentSELcolor == "orange"){
-                        this.faradSymbol.classList.remove("hidden-element");
-                        this.nanoSymbol.classList.remove("hidden-element");
-                    }else{
-                        this.voltSymbol.classList.remove("hidden-element");
-                        this.diodeSymbol.classList.remove("hidden-element");
-                    }
-                   // this.showHidePrefixesUnits("capDiode");
+                    break;
+                default: console.log("Not an allowable KnobSelector");
+            }
+        },
+
+        ButtonHandler: function(buttonLabel){
+            //console.log("in ButtonHandler: buttonLabel = " + buttonLabel);
+            switch (buttonLabel){
+                case "sel":
+                        if(this.presentKnobSelectorLabel == "off"){return;}
+                        this.selButtonBckgrnd.classList.toggle("red-bckgrnd");
+                        this.selButtonBckgrnd.classList.toggle("orange-bckgrnd");
+                       // this.soundSymbol.classList.toggle("hidden-element");
+                        //console.log("toggling 'red-bckgrnd' and 'orange-bckgrnd' on SEL Label");
+                        //console.log("this.presentSELcolor =  " + this.presentSELcolor);
+                        if(this.presentSELcolor == "orange"){
+                            //console.log("setting this.presentSELcolor to 'red'");
+                            /*this.acSymbol.classList.remove("hidden-element");
+                            this.dcSymbol.classList.add("hidden-element");*/
+                            this.presentSELcolor = "red";
+                        }else{
+                            //console.log("setting this.presentSELcolor to 'orange'");
+                            /*this.acSymbol.classList.add("hidden-element");
+                            this.dcSymbol.classList.remove("hidden-element");*/
+                            this.presentSELcolor = "orange";
+                        }
+                        //console.log("SEL to PrefixUnitHandler w/this.presentKnobSelectorLabel");
+                        this.PrefixUnitHandler(this.presentKnobSelectorLabel, "hide"); 
+                        this.PrefixUnitHandler(this.presentKnobSelectorLabel, "show"); 
+                        /*this.selWhiteBckgrnd.classList.toggle("hidden-element");
+                        console.log("toggling 'hidden-element' on White Label");*/
+                    break;
+                case "hold":
+                        if(this.presentKnobSelectorLabel == "off"){return;}
+                        this.holdSymbol.classList.toggle("hidden-element");
+                    
+                    break;
+                case "maxMin":
+                        if(this.presentKnobSelectorLabel == "off"){return;}
+                        this.autoSymbol.classList.add("hidden-element");
+                        this.maxMinEndMilliSeconds = Date.now();
+                        const maxMinDownTime = (this.maxMinEndMilliSeconds - this.maxMinStartMilliSeconds);
+                        //console.log("maxMinDownTime = " + maxMinDownTime);
+                        if(maxMinDownTime > 1000){
+                            this.minSymbol.classList.add("hidden-element");
+                            this.maxSymbol.classList.add("hidden-element");
+                            this.autoSymbol.classList.remove("hidden-element");
+                            this.maxMinSelected = "max";
+                        }else{
+                            //console.log("switching between 'MAX and 'MIN'");
+                            if(this.maxMinSelected == "max"){
+                                //console.log("showing Max & hiding Min");
+                                this.maxSymbol.classList.remove("hidden-element");
+                                this.minSymbol.classList.add("hidden-element");
+                                this.maxMinSelected = "min";
+                            }else{
+                                //console.log("showing Min & hiding Max");
+                                this.minSymbol.classList.remove("hidden-element");
+                                this.maxSymbol.classList.add("hidden-element");
+                                this.maxMinSelected = "max";
+                            }
+                        }
+                        //console.log("this.maxMinSelected = " + this.maxMinSelected);
+                    break;
+                case "light":
+                        if(this.presentKnobSelectorLabel == "off"){return;}
+                        //console.log("in ButtonHandler('light')");
+                        //console.log("lightStartMilliSeconds = " + this.lightStartMilliSeconds);
+                        this.lightEndMilliSeconds = Date.now();
+                       // console.log("lightEndMilliSeconds = " + this.lightEndMilliSeconds);
+                        const lightDownTime = (this.lightEndMilliSeconds - this.lightStartMilliSeconds);
+                        //console.log("lightDownTime = " + lightDownTime);
+                        if(lightDownTime > 1000){
+                            //console.log("downTime = " + lightDownTime);
+                            if(this.screenColor == "gray"){
+                                this.displayScreen.classList.remove("gray-bckgrnd");
+                                this.displayScreen.classList.add("white-bckgrnd");
+                                this.screenColor = "white";
+                            }else{
+                                this.displayScreen.classList.remove("white-bckgrnd");
+                                this.displayScreen.classList.add("gray-bckgrnd");
+                                this.screenColor = "gray";
+                            }
+                        }
+                    break;
+                case "range":
+                        if(this.presentKnobSelectorLabel == "off"){return;}
+                        this.autoSymbol.classList.add("hidden-element");
+                        //console.log("rangeStartMilliSeconds = " + this.rangeStartMilliSeconds);
+                        this.rangeEndMilliSeconds = Date.now();
+                        //console.log("rangeEndMilliSeconds = " + this.rangeEndMilliSeconds);
+                        const rangeDownTime = (this.rangeEndMilliSeconds - this.rangeStartMilliSeconds);
+                        //console.log("rangeDownTime = " + rangeDownTime);
+                        if(rangeDownTime > 1000){
+                            //console.log("downTime = " + rangeDownTime);
+                            this.autoSymbol.classList.remove("hidden-element");
+                        }else{
+                            this.rangeSelected = "ten";
+                            //console.log("switching between 'ten', 'milli', 'micro'");
+                        }
+                    break;
+                case "comPlugin":
+                    console.log("in case: 'comPlugin'");
+                    this.blackPlugin.classList.add("hidden-element");
+                    this.blackPluginConnected.classList.remove("hidden-element");
+                    this.blackPluginConnection = true;
+                    break;
+                case "lowAmpPlugin":
+                    if(this.redTenAmpPluginConnection){return}
+                    console.log("in case: 'lowAmpPlugin'");
+                    this.redPlugin.classList.add("hidden-element");
+                    this.redPluginConnected.classList.remove("hidden-element");
+                    this.redPluginConnection = true;
+                    break;
+                case "highAmpPlugin":
+                    if(this.redPluginConnection){return}
+                    console.log("in case: 'highAmpPlugin'");
+                    this.redPlugin.classList.add("hidden-element");
+                    this.redTenAmpPluginConnected.classList.remove("hidden-element");
+                    this.redTenAmpPluginConnection = true;
                     break;
                 default: console.log("Not an allowable Setting");
+            }
+        },
+
+        UpdateScreenHandler: function(callHandler, hideShow) {
+                switch (callHandler){
+                    case "off":
+                        this.onSymbol.classList.toggle("hidden-element");
+                        break;
+                default: console.log("Not an allowable Setting");
+            /*let changeKnobSelector = function(callHandler, hideShow){
+                console.log("in UpdateScreenHandler called by " + callHandler + "   & hideShow = " + hideShow);
+                if(callHandler == "off"){
+                    console.log("removing class='hidden-element'");
+                    this.onSymbol.classList.remove("hidden-element");
+                    this.acSymbol.classList.remove("hidden-element");
+                }*/
+            }
+        },
+
+        startMaxMinTime: function(){
+            //console.log("setting Range start time in milliSeconds");
+            this.maxMinStartMilliSeconds = Date.now();
+        },
+        startRangeTime: function(){
+            this.rangeStartMilliSeconds = Date.now();
+            this.rangeClockStarted = true;
+        },
+        startLightTime: function(){
+           // console.log("in startLightTime");
+            this.lightStartMilliSeconds = Date.now();
+            //console.log("lightStartMilliSeconds = " + this.lightStartMilliSeconds);
+            this.lightClockStarted = true;
+            this.startThreeMinLightTime();
+           // console.log("leaving startLightTime");
+        },
+        startThreeMinLightTime: function(){
+            //console.log("in startThreeMinLightTime");
+           // this.threeMinLightStartMilliSeconds = Date.now();
+           // console.log("lightStartMilliSeconds = " + this.lightStartMilliSeconds);
+           // this.lightClockStarted = true;
+            clearTimeout(this.lightThreeMinTimer);
+            this.lightThreeMinTimer = setTimeout(shutOffLight, 180000);
+            //console.log("leaving startLightTime");
+        },
+
+        startBatteryTimer: function(){
+            //console.log("batteryTimer started");
+            this.batteryTimer = setTimeout(showBattery, 600000);/* 300000 milli secs = 5 mins  */
+            //console.log("batteryTimer running");
+        },
+    
+        clearBatteryTimer: function(){
+            clearTimeout(this.batteryTimer);
+            //console.log("batteryTimer has been cleared");
+        },
+
+
+
+        PrefixUnitHandler:function(selectedKnob, showHide) {
+            //console.log("in PrefixUnitHandler");
+            //console.log("selectedKnob = " + selectedKnob);
+           // console.log("this.lastKnobSelectorLabel ="+this.lastKnobSelectorLabel+"  and this.presentKnobSelectorLabel = "+this.presentKnobSelectorLabel);
+            //if(this.lastKnobSelectorLabel == this.presentKnobSelectorLabel){return}
+            if((selectedKnob=="microAmp") || (selectedKnob=="milliAmp")||(selectedKnob=="tenAmp") || (selectedKnob=="volts")){
+                //console.log("showing either acSymbol or dcSymbol");
+                if((selectedKnob != "off") && (this.presentSELcolor == "orange")){
+                    this.acSymbol.classList.remove("hidden-element");
+                    this.dcSymbol.classList.add("hidden-element");
+                }else{
+                    this.acSymbol.classList.add("hidden-element");
+                    this.dcSymbol.classList.remove("hidden-element");
+                }
+            }
+            if((selectedKnob=="temp") || (selectedKnob=="hertz")||(selectedKnob=="ohms") || (selectedKnob=="capDiode")){
+                this.acSymbol.classList.add("hidden-element");
+                this.dcSymbol.classList.add("hidden-element");
+            }
+
+            switch (selectedKnob){
+                case "temp":
+                    if(showHide == "show"){
+                        this.autoSymbol.classList.add("hidden-element");
+                        if(this.presentSELcolor == "orange"){
+                        //console.log("showing degF & hiding degC");
+                            this.degFahrenheitSymbol.classList.remove("hidden-element");
+                            this.degCelsiusSymbol.classList.add("hidden-element");
+                        }else{
+                        //console.log("showing degC & hiding degF");
+                            this.degFahrenheitSymbol.classList.add("hidden-element");
+                            this.degCelsiusSymbol.classList.remove("hidden-element");
+                        }
+                    }else{
+                        //console.log("hiding degC & degF");
+                        this.degFahrenheitSymbol.classList.add("hidden-element");
+                        this.degCelsiusSymbol.classList.add("hidden-element");
+                    }
+                    break;
+                case "microAmp":
+                    this.microSymbol.classList.toggle("hidden-element");
+                    this.ampSymbol.classList.toggle("hidden-element");
+                    break;
+                case "milliAmp":
+                    this.milliSymbol.classList.toggle("hidden-element");
+                    this.ampSymbol.classList.toggle("hidden-element");
+                    break;
+                case "tenAmp":
+                    //console.log("in case: 'tenAmp'");
+                    this.ampSymbol.classList.toggle("hidden-element");
+                    break;
+                case "off":
+                    //console.log("reseting all screen elements");
+                    this.reset();
+                    break;
+                case "volts":
+                    this.voltSymbol.classList.toggle("hidden-element");
+                    break;
+                case "hertz":
+                    if(showHide == "show"){
+                        if(this.presentSELcolor == "orange"){
+                            this.hertzSymbol.classList.remove("hidden-element");
+                            this.dutyCycleSymbol.classList.add("hidden-element");
+                        }else{
+                            //console.log("toggling dutyCycleSymbol");
+                            this.hertzSymbol.classList.add("hidden-element");
+                            this.dutyCycleSymbol.classList.remove("hidden-element");
+                        }
+                    }else{
+                        this.hertzSymbol.classList.add("hidden-element");
+                        this.dutyCycleSymbol.classList.add("hidden-element");
+                    }
+                    break;
+                case "ohms":
+                    if(showHide == "show"){
+                        this.ohmsSymbol.classList.remove("hidden-element");
+                        if(this.presentSELcolor == "orange"){
+                            //console.log("showing ohms and souund");
+                            this.soundSymbol.classList.remove("hidden-element");
+                            this.autoSymbol.classList.remove("hidden-element");
+                        }else{
+                            //console.log("hiding sound and showing ohms");
+                            this.soundSymbol.classList.add("hidden-element");
+                            this.autoSymbol.classList.add("hidden-element");
+                        }
+                    }else{
+                        this.ohmsSymbol.classList.add("hidden-element");
+                        this.soundSymbol.classList.add("hidden-element");
+                    }
+                    break;
+                case "capDiode":
+                    if(showHide == "show"){
+                        if(this.presentSELcolor == "orange"){
+                            //console.log("hiding V & diode");
+                            this.faradSymbol.classList.remove("hidden-element");
+                            this.nanoSymbol.classList.remove("hidden-element");
+                            this.voltSymbol.classList.add("hidden-element");
+                            this.diodeSymbol.classList.add("hidden-element");
+                            this.autoSymbol.classList.remove("hidden-element");
+                        }else{
+                            //console.log("hiding nF");
+                            this.faradSymbol.classList.add("hidden-element");
+                            this.nanoSymbol.classList.add("hidden-element");
+                            this.voltSymbol.classList.remove("hidden-element");
+                            this.diodeSymbol.classList.remove("hidden-element");
+                            this.autoSymbol.classList.add("hidden-element");
+                        }
+                    }else{
+                        //console.log("hiding nf, V, and diode");
+                        this.faradSymbol.classList.add("hidden-element");
+                        this.nanoSymbol.classList.add("hidden-element");
+                        this.voltSymbol.classList.add("hidden-element");
+                        this.diodeSymbol.classList.add("hidden-element");
+                    }
+                    break;
+                default: console.log(selectedKnob + " is not an allowable selector Knob");
             }
         },
 
         reset: function(){
             this.valueLabel.classList.add("hidden-element");
             this.onSymbol.classList.add("hidden-element");
+            this.displayScreen.classList.add("gray-bckgrnd");
+            this.displayScreen.classList.remove("white-bckgrnd");
             // Button Symbols
             this.selButtonBckgrnd.classList.add("orange-bckgrnd");
             this.autoSymbol.classList.add("hidden-element");
@@ -346,14 +517,34 @@
             // Unit Symbols
             this.degFahrenheitSymbol.classList.add("hidden-element");
             this.degCelsiusSymbol.classList.add("hidden-element");
-            this.tenAmpSymbol.classList.add("hidden-element");
+            this.ampSymbol.classList.add("hidden-element");
             this.voltSymbol.classList.add("hidden-element");
+            this.soundSymbol.classList.add("hidden-element");
+            this.ohmsSymbol.classList.add("hidden-element");
+            this.hertzSymbol.classList.add("hidden-element");
+            this.dutyCycleSymbol.classList.add("hidden-element");
           //  this.hertzSymbol.classList.add("hidden-element");
             this.faradSymbol.classList.add("hidden-element");
             this.diodeSymbol.classList.add("hidden-element");
+            // Output Symbols
+            this.acSymbol.classList.add("hidden-element");
+            this.dcSymbol.classList.add("hidden-element");
+            this.batterySymbol.classList.add("hidden-element");
+            this.clearBatteryTimer();
+            // PlugIns
+            if(this.lastKnobSelectorLabel != "off"){
+                this.blackPlugin.classList.remove("hidden-element");
+                this.redPlugin.classList.remove("hidden-element");
+                this.redPluginConnected.classList.add("hidden-element");
+                this.redTenAmpPluginConnected.classList.add("hidden-element");
+                this.blackPluginConnected.classList.add("hidden-element");
+                this.redPluginConnection = false;
+                this.redTenAmpPluginConnection = false;
+                this.blackPluginConnection = false;
+            }   
 
             this.presentSELcolor = "orange";
-            this.presentSelectorLabel = "off";
+            this.presentKnobSelectorLabel = "off";
             this.maxMinSelected = "max";
             this.screenColor = "gray";
             this.maxMinClicked = false;
@@ -362,7 +553,7 @@
         },
 
         init: function(){
-            console.log("beginning MultiMeterManager.init()");
+           // console.log("beginning MultiMeterManager.init()");
            /* this.selectorKnob = document.getElementById("mm-selector-id");
            this.selectorKnob.style.transformOrigin = '50% -20%';*/
 
@@ -374,10 +565,10 @@
             this.milliAmpSelectorKnob = document.getElementById("selector-knob-milli-amp-id");
             this.tenAmpSelectorKnob = document.getElementById("selector-knob-ten-amp-id");
             this.voltSelectorKnob = document.getElementById("selector-knob-volts-id");
-           // this.hertzSelectorKnob = document.getElementById("selector-knob-hertz-id");
+            this.hertzSelectorKnob = document.getElementById("selector-knob-hertz-id");
             this.ohmsSelectorKnob = document.getElementById("selector-knob-ohms-id");
             // Selector Click Areas
-            console.log("beginning 'click' elements");
+           // console.log("beginning 'click' elements");
             this.offClick = document.getElementById("mm-off-click-area-id");
             this.offClick.addEventListener("click",function(){MultiMeterManager.changeSetting("off")});
             this.tenAmpClick = document.getElementById("mm-ten-amp-click-area-id");
@@ -390,66 +581,85 @@
             this.tempClick.addEventListener("click",function(){MultiMeterManager.changeSetting("temp")});
             this.voltsClick = document.getElementById("mm-volts-click-area-id");
             this.voltsClick.addEventListener("click",function(){MultiMeterManager.changeSetting("volts")});
-          //  this.hertzClick = document.getElementById("mm-hz-click-area-id");
-           // this.hertzClick.addEventListener("click",function(){MultiMeterManager.changeSetting("hertz")});
+            this.hertzClick = document.getElementById("mm-hertz-click-area-id");
+            this.hertzClick.addEventListener("click",function(){MultiMeterManager.changeSetting("hertz")});
             this.ohmsClick = document.getElementById("mm-ohms-click-area-id");
             this.ohmsClick.addEventListener("click",function(){MultiMeterManager.changeSetting("ohms")});
             this.capDiodeClick = document.getElementById("mm-cap-diode-click-area-id");
             this.capDiodeClick.addEventListener("click",function(){MultiMeterManager.changeSetting("capDiode")});
-            console.log("ending 'selector click' elements");
+           // console.log("ending 'selector click' elements");
 
             // Plugin Click Areas
-            this.comPluginClick = document.getElementById("rect82");/* mm-com-plugin-click-area-id */
-            this.comPluginClick.addEventListener("click",function(){MultiMeterManager.changeButton("comPlugin")});
-                /*this.lowAmpPluginClick= document.getElementById("mm-500-mamp-plugin-click-area-id");
-                this.lowAmpPluginClick.addEventListener("click",function(){MultiMeterManager.changeButton("lowAmpPlugin")});
-                this.highAmpPluginClick = document.getElementById("mm-ten-amp-plugin-click-area-id");
-                this.highAmpPluginClick.addEventListener("click",function(){MultiMeterManager.changeButton("highAmpPlugin")});*/
+            this.comPluginClick = document.getElementById("mm-com-plugin-click-area-id");/* mm-com-plugin-click-area-id */
+            this.comPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("comPlugin")});
+            this.lowAmpPluginClick= document.getElementById("mm-mamp-plugin-click-area-id");
+            this.lowAmpPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("lowAmpPlugin")});
+            this.highAmpPluginClick = document.getElementById("mm-ten-amp-plugin-click-area-id");
+            this.highAmpPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("highAmpPlugin")});
+            this.blackPlugin = document.getElementById("black-plugin-id");
+            this.redPlugin = document.getElementById("red-plugin-id");
+            this.blackPluginConnected = document.getElementById("black-plugin-connected-id");
+            this.redPluginConnected = document.getElementById("red-plugin-connected-id");
+            this.redTenAmpPluginConnected = document.getElementById("red-ten-amp-plugin-connected-id");
 
             // Button Click Areas
             this.selClick = document.getElementById("mm-select-button-click-area-id");
-            this.selClick.addEventListener("click",function(){MultiMeterManager.changeButton("sel")});
+            this.selClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("sel")});
             this.lightClick = document.getElementById("mm-light-button-click-area-id");
-            this.lightClick.addEventListener("click",function(){MultiMeterManager.changeButton("light")});
+            this.lightClick.addEventListener("mouseup",function(){MultiMeterManager.ButtonHandler("light")});
+            this.lightClick.addEventListener("mousedown",function(){MultiMeterManager.startLightTime("light")});
             this.rangeClick = document.getElementById("mm-range-button-click-area-id");
-            this.rangeClick.addEventListener("click",function(){MultiMeterManager.changeButton("range")});
+            this.rangeClick.addEventListener("mouseup",function(){MultiMeterManager.ButtonHandler("range")});
+            this.rangeClick.addEventListener("mousedown",function(){MultiMeterManager.startRangeTime("range")});
             this.maxMinClick = document.getElementById("mm-max-min-button-click-area-id");
-            this.maxMinClick.addEventListener("mouseup",function(){MultiMeterManager.changeButton("maxMin")});
-            this.maxMinClick.addEventListener("mousedown",function(){MultiMeterManager.startTime()});
+            this.maxMinClick.addEventListener("mouseup",function(){MultiMeterManager.ButtonHandler("maxMin")});
+            this.maxMinClick.addEventListener("mousedown",function(){MultiMeterManager.startMaxMinTime()});
             this.holdClick = document.getElementById("mm-hold-button-click-area-id");
-            this.holdClick.addEventListener("click",function(){MultiMeterManager.changeButton("hold")});
-            console.log("ending 'button click' elements");
+            this.holdClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("hold")});
+           // console.log("ending 'button click' elements");
 
             // Selector Labels
             this.offSelector = document.getElementById("mm-off-id");
             this.tempSelector = document.getElementById("mm-temp-id");
             this.microAmpSelector = document.getElementById("mm-micro-amp-id");
             this.milliAmpSelector = document.getElementById("mm-milli-amp-id");
-            this.tenAmpSelector = document.getElementById("mm-ten-amp-id");
+            this.tenAmpSelector = document.getElementById("mm-ten-amp-label-id");
             this.voltSelector = document.getElementById("mm-volts-id");
            // this.hertzSelector = document.getElementById("mm-hertz-id");
             this.ohmsSelector = document.getElementById("mm-ohms-id");
             this.capDiodeSelector = document.getElementById("mm-cap-diode-id");
 
+            //Output elements
             this.displayScreen = document.getElementById("mm-display-screen-id");
-
+            this.valueLabel = document.getElementById("mm-measured-value-id");
+            //Prefix symbols
+            this.kiloSymbol = document.getElementById("mm-kilo-si-prefix-id");
+            this.megaSymbol = document.getElementById("mm-mega-si-prefix-id");
+            this.milliSymbol = document.getElementById("mm-milli-si-prefix-id");
+            this.microSymbol = document.getElementById("mm-micro-si-prefix-id");
+            this.nanoSymbol = document.getElementById("mm-nano-si-prefix-id");
+            //Unit symbols
+            this.ampSymbol = document.getElementById("mm-amp-unit-id");
+            this.voltSymbol = document.getElementById("mm-volt-unit-id");
+            this.degFahrenheitSymbol = document.getElementById("mm-deg-fahrenheit-unit-id");
+            this.degCelsiusSymbol = document.getElementById("mm-deg-celsius-unit-id");
+            this.faradSymbol = document.getElementById("mm-farad-unit-id");
+            this.ohmsSymbol = document.getElementById("mm-omega-unit-id");
+            this.soundSymbol = document.getElementById("mm-sound-unit-id");
+            this.hertzSymbol = document.getElementById("mm-hertz-unit-id");
+            this.dutyCycleSymbol = document.getElementById("mm-duty-cycle-unit-id");
+            //Auxillary Screen Symbols
             this.onSymbol = document.getElementById("mm-on-indicator-id");
+           // this.onSymbol.classList.remove("hidden-element");
             this.holdSymbol = document.getElementById("mm-hold-indicator-id");
             this.maxSymbol = document.getElementById("mm-max-indicator-id");
             this.minSymbol = document.getElementById("mm-min-indicator-id");
             this.autoSymbol = document.getElementById("mm-auto-indicator-id");
-            this.tenAmpSymbol = document.getElementById("mm-ten-amp-symbol-id");
-            this.milliSymbol = document.getElementById("mm-milli-si-prefix-id");
-            this.microSymbol = document.getElementById("mm-micro-si-prefix-id");
-            this.nanoSymbol = document.getElementById("mm-nano-si-prefix-id");
-            this.voltSymbol = document.getElementById("mm-volt-symbol-id");
-            this.valueLabel = document.getElementById("mm-value-label-id");
-            this.degFahrenheitSymbol = document.getElementById("mm-deg-fahrenheit-symbol-id");
-            this.degCelsiusSymbol = document.getElementById("mm-deg-celsius-symbol-id");
-            //this.hertzSymbol = document.getElementById("mm-hertz-symbol-id");
-            this.dutyCycleSymbol = document.getElementById("mm-duty-cydle-symbol-id");
-            this.faradSymbol = document.getElementById("mm-farad-symbol-id");
-            this.diodeSymbol = document.getElementById("mm-diode-display-id");
+            this.diodeSymbol = document.getElementById("mm-diode-symbol-id");
+            this.acSymbol = document.getElementById("mm-ac-indicator-id");
+            this.dcSymbol = document.getElementById("mm-dc-indicator-id");
+            this.batterySymbol = document.getElementById("mm-battery-indicator-id");
+            //console.log("just finished setting this.batterySymbol = doc....");
 
             /*this.selRedButton = document.getElementById("mm-sel-red-label-id");
             this.selWhiteButton = document.getElementById("mm-sel-white-label-id");
@@ -471,6 +681,6 @@
             this.selButtonBckgrnd.addEventListener("click",function(){MultiMeterManager.changeSelect()});*/
 
             this.initiated = true;
-            console.log("finished MultiMeterManager.init()"); 
+           // console.log("finished MultiMeterManager.init()"); 
         }
     }
