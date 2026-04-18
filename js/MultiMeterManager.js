@@ -17,6 +17,8 @@
         //Properties
         initiated: false,
 
+        warningLabel: {},
+
 // BEGIN Plug ins 
         comPluginClick: {},
         lowAmpPluginClick: {},
@@ -117,9 +119,11 @@
         nanoSymbol: {},
         
         //Status of particular elements
+        lowAmpSelectors: ["temp","volts","hertz","ohms","capDiode"],
         lastKnobSelectorLabel: "",
         presentKnobSelectorLabel: "off",
         presentSELcolor: "orange",
+        presentAmpConnection: "",
         maxMinSelected: "max",
         screenColor: "gray",
         presentPrefix: "",
@@ -139,17 +143,17 @@
                 this.init();
                 this.initiated = true;
             }
-           // console.log("old Selector = " + this.presentKnobSelectorLabel);
-           // console.log("new Selector = " + newKnobSelectorLabel);
-           /* if(this.presentKnobSelectorLabel == "off"){
-                    this.onSymbol.classList.toggle('hidden-element');
-            }*/
-            this.KnobSelectorHandler(this.presentKnobSelectorLabel);
-            this.PrefixUnitHandler(this.presentKnobSelectorLabel, "hide");
             this.lastKnobSelectorLabel = this.presentKnobSelectorLabel;
-            this.KnobSelectorHandler(newKnobSelectorLabel);
-            this.PrefixUnitHandler(newKnobSelectorLabel, "show");
+            //console.log("this.lastKnobSelectorLabel = " + this.lastKnobSelectorLabel);
             this.presentKnobSelectorLabel = newKnobSelectorLabel;
+            //console.log("this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
+            this.KnobSelectorHandler(this.lastKnobSelectorLabel);
+            if(this.lastKnobSelectorLabel != "off"){
+                this.PrefixUnitHandler(this.lastKnobSelectorLabel, "hide");
+            }
+            //console.log("this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
+            this.KnobSelectorHandler(this.presentKnobSelectorLabel);
+            this.PrefixUnitHandler(this.presentKnobSelectorLabel, "show");
             //console.log("this.batteryTimerStarted = " + this.batteryTimerStarted);
             if(!this.batteryTimerStarted){
                // console.log("starting Battery Timer");
@@ -158,21 +162,24 @@
             }
         },
 
-        KnobSelectorHandler: function(clickedSelectorLabel){
+       // checkNewKnobSelectorValidity: function(newKnobSelectorLabel){
+//
+        //},
+
+        KnobSelectorHandler: function(selectorLabel){
             //console.log("in KnobSelectorHandler");
-           // console.log("clickedSelectorLabel = " + clickedSelectorLabel);
-            this.lastKnobSelectorLabel = this.presentKnobSelectorLabel;
-            this.presentKnobSelectorLabel = clickedSelectorLabel;
+            //console.log("this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
+            //console.log("selectorLabel = " + selectorLabel);
+           /* this.lastKnobSelectorLabel = this.presentKnobSelectorLabel;
+            this.presentKnobSelectorLabel = selectorLabel;*/
            // console.log("this.lastKnobSelectorLabel = " + this.lastKnobSelectorLabel + "   and this.presentKnobSelectorLabel = " +this.presentKnobSelectorLabel);          
             this.onSymbol.classList.remove('hidden-element');
             this.autoSymbol.classList.remove('hidden-element');
-            if(clickedSelectorLabel != "off"){
+            this.showHideWarning(selectorLabel);
 
-            }
-            /*this.startBatteryTimer();*/
-            switch (clickedSelectorLabel){
+            switch (selectorLabel){
                 case "temp":
-                    //console.log("toggling temp-knobSelector");
+                    //console.log("selectorLabel = " + selectorLabel);
                     this.tempSelectorKnob.classList.toggle("hidden-selector");
                     break;
                 case "microAmp":
@@ -185,9 +192,10 @@
                     this.tenAmpSelectorKnob.classList.toggle("hidden-selector");
                     break;
                 case "off":
-                    //console.log("toggling off-knobSelector");
+                    //console.log("selectorLabel = " + selectorLabel);
                     this.offSelectorKnob.classList.toggle("hidden-selector");
-                    this.onSymbol.classList.add('hidden-element');
+                    /*this.onSymbol.classList.remove('hidden-element');
+                    this.autoSymbol.classList.remove('hidden-element');*/
                     break;
                 case "volts":
                     this.voltSelectorKnob.classList.toggle("hidden-selector");
@@ -203,34 +211,44 @@
                     break;
                 default: console.log("Not an allowable KnobSelector");
             }
+            //console.log("this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
+        },
+        
+        showHideWarning: function(selector){
+            //console.log("in showHideWarning & Selector = " + selector);
+            if(selector == "tenAmp"){
+                //console.log("in showHideWarning & 'tenAmp'");
+                //console.log("this.presentAmpConnection = "+ this.presentAmpConnection);
+                if(this.presentAmpConnection == "low"){
+                    this.warningLabel.classList.remove("hidden-element");
+                }else{
+                    this.warningLabel.classList.add("hidden-element");
+                }
+            }else{
+                //console.log("in showHideWarning & 'NOT tenAmp'");
+                //console.log("this.presentAmpConnection = "+ this.presentAmpConnection);
+                if(this.presentAmpConnection == "high"){
+                    this.warningLabel.classList.remove("hidden-element");
+                }else{
+                    this.warningLabel.classList.add("hidden-element");
+                }
+            }
         },
 
+
         ButtonHandler: function(buttonLabel){
-            //console.log("in ButtonHandler: buttonLabel = " + buttonLabel);
             switch (buttonLabel){
                 case "sel":
                         if(this.presentKnobSelectorLabel == "off"){return;}
                         this.selButtonBckgrnd.classList.toggle("red-bckgrnd");
                         this.selButtonBckgrnd.classList.toggle("orange-bckgrnd");
-                       // this.soundSymbol.classList.toggle("hidden-element");
-                        //console.log("toggling 'red-bckgrnd' and 'orange-bckgrnd' on SEL Label");
-                        //console.log("this.presentSELcolor =  " + this.presentSELcolor);
                         if(this.presentSELcolor == "orange"){
-                            //console.log("setting this.presentSELcolor to 'red'");
-                            /*this.acSymbol.classList.remove("hidden-element");
-                            this.dcSymbol.classList.add("hidden-element");*/
                             this.presentSELcolor = "red";
                         }else{
-                            //console.log("setting this.presentSELcolor to 'orange'");
-                            /*this.acSymbol.classList.add("hidden-element");
-                            this.dcSymbol.classList.remove("hidden-element");*/
                             this.presentSELcolor = "orange";
                         }
-                        //console.log("SEL to PrefixUnitHandler w/this.presentKnobSelectorLabel");
                         this.PrefixUnitHandler(this.presentKnobSelectorLabel, "hide"); 
                         this.PrefixUnitHandler(this.presentKnobSelectorLabel, "show"); 
-                        /*this.selWhiteBckgrnd.classList.toggle("hidden-element");
-                        console.log("toggling 'hidden-element' on White Label");*/
                     break;
                 case "hold":
                         if(this.presentKnobSelectorLabel == "off"){return;}
@@ -302,29 +320,49 @@
                         }
                     break;
                 case "comPlugin":
-                    console.log("in case: 'comPlugin'");
+                    if(this.presentKnobSelectorLabel == "off"){return;}
+                    //console.log("in case: 'comPlugin'");
                     this.blackPlugin.classList.add("hidden-element");
                     this.blackPluginConnected.classList.remove("hidden-element");
                     this.blackPluginConnection = true;
                     break;
                 case "lowAmpPlugin":
-                    if(this.redTenAmpPluginConnection){return}
-                    console.log("in case: 'lowAmpPlugin'");
-                    this.redPlugin.classList.add("hidden-element");
+                    if(this.presentKnobSelectorLabel == "off"){return;}
+                    this.presentAmpConnection = "low";
+                    this.showHideWarning(this.presentKnobSelectorLabel);
+                   /* if(this.presentKnobSelectorLabel == ("tenAmp")){
+                        console.log("in 'lowAmpPlugin' & presentKnowSlectorLabel == 'tenAmp'");
+                        this.warningLabel.classList.remove("hidden-element");
+                    }else{
+                        console.log("in 'lowAmpPlugin' & presentKnowSlectorLabel != 'tenAmp'");
+                        this.warningLabel.classList.add("hidden-element");
+                    }*/
+                    this.redTenAmpPluginConnected.classList.add("hidden-element");
+                    this.redTenAmpPluginConnection = false;
                     this.redPluginConnected.classList.remove("hidden-element");
                     this.redPluginConnection = true;
+                    this.redPlugin.classList.add("hidden-element");
                     break;
                 case "highAmpPlugin":
-                    if(this.redPluginConnection){return}
-                    console.log("in case: 'highAmpPlugin'");
-                    this.redPlugin.classList.add("hidden-element");
+                    if(this.presentKnobSelectorLabel == "off"){return;}
+                    this.presentAmpConnection = "high";
+                    this.showHideWarning(this.presentKnobSelectorLabel);
+                    /*if(this.presentKnobSelectorLabel != ("tenAmp")){
+                        console.log("in 'highAmpPlugin' & presentKnowSlectorLabel != 'tenAmp'");
+                        this.warningLabel.classList.remove("hidden-element");
+                    }else{
+                        console.log("in 'highAmpPlugin' & presentKnowSlectorLabel = 'tenAmp'");
+                        this.warningLabel.classList.add("hidden-element");
+                    }*/
+                    this.redPluginConnected.classList.add("hidden-element");
+                    this.redPluginConnection = false;
                     this.redTenAmpPluginConnected.classList.remove("hidden-element");
                     this.redTenAmpPluginConnection = true;
+                    this.redPlugin.classList.add("hidden-element");
                     break;
-                default: console.log("Not an allowable Setting");
+                default: console.log("Not an allowable Button or PlugIn");
             }
         },
-
         UpdateScreenHandler: function(callHandler, hideShow) {
                 switch (callHandler){
                     case "off":
@@ -383,6 +421,7 @@
         PrefixUnitHandler:function(selectedKnob, showHide) {
             //console.log("in PrefixUnitHandler");
             //console.log("selectedKnob = " + selectedKnob);
+           // console.log("at BEGINNING of PrefixUnitHandler & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
            // console.log("this.lastKnobSelectorLabel ="+this.lastKnobSelectorLabel+"  and this.presentKnobSelectorLabel = "+this.presentKnobSelectorLabel);
             //if(this.lastKnobSelectorLabel == this.presentKnobSelectorLabel){return}
             if((selectedKnob=="microAmp") || (selectedKnob=="milliAmp")||(selectedKnob=="tenAmp") || (selectedKnob=="volts")){
@@ -432,7 +471,7 @@
                     this.ampSymbol.classList.toggle("hidden-element");
                     break;
                 case "off":
-                    //console.log("reseting all screen elements");
+                    //console.log("in PrefixUnitHandler.off: reseting all screen elements");
                     this.reset();
                     break;
                 case "volts":
@@ -459,11 +498,11 @@
                         if(this.presentSELcolor == "orange"){
                             //console.log("showing ohms and souund");
                             this.soundSymbol.classList.remove("hidden-element");
-                            this.autoSymbol.classList.remove("hidden-element");
+                            this.autoSymbol.classList.add("hidden-element");
                         }else{
                             //console.log("hiding sound and showing ohms");
                             this.soundSymbol.classList.add("hidden-element");
-                            this.autoSymbol.classList.add("hidden-element");
+                            this.autoSymbol.classList.remove("hidden-element");
                         }
                     }else{
                         this.ohmsSymbol.classList.add("hidden-element");
@@ -497,13 +536,16 @@
                     break;
                 default: console.log(selectedKnob + " is not an allowable selector Knob");
             }
+            //console.log("at END of PrefixUnitHandler & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
         },
 
         reset: function(){
+            //console.log("in reset() & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
             this.valueLabel.classList.add("hidden-element");
             this.onSymbol.classList.add("hidden-element");
             this.displayScreen.classList.add("gray-bckgrnd");
             this.displayScreen.classList.remove("white-bckgrnd");
+            this.warningLabel.classList.add("hidden-element");
             // Button Symbols
             this.selButtonBckgrnd.classList.add("orange-bckgrnd");
             this.autoSymbol.classList.add("hidden-element");
@@ -556,6 +598,8 @@
            // console.log("beginning MultiMeterManager.init()");
            /* this.selectorKnob = document.getElementById("mm-selector-id");
            this.selectorKnob.style.transformOrigin = '50% -20%';*/
+
+            this.warningLabel = document.getElementById("warning-label-id");
 
            // Selectors
             this.offSelectorKnob = document.getElementById("selector-knob-off-id")

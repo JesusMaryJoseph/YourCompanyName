@@ -30,7 +30,7 @@
 
 
 	<script src="js/EduHtmlManager.js"></script>
-	<!--<script src="js/EduNavManager.js"></script>-->
+	<script src="js/EduNavManager.js"></script>
     <script src="js/LS74__TableData.js"></script>
     <script src="js/ASCII__TableData.js"></script>
 	<script src="js/ModuleBlockManager.js"></script>
@@ -212,9 +212,11 @@
     	function eduInit(){
 			//console.log("In onload='eduInit()' education.html");
     		NavHandler.init();
-			//EduNavManager.init();
-			//alert("after EduNavManager.init()");
-			//EduHtmlManager.init();
+			//console.log("after NavHandler.init()");
+			EduNavManager.init();
+			//console.log("after EduNavManager.init()");
+			EduHtmlManager.init();
+			//console.log("after EduHtmlManager.init()");
 		
 			// add "click" and "mouseleave" to labels, dropdowns and containers
 			//TrainingNavEventHandler.init();

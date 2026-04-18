@@ -155,10 +155,10 @@
             },
 
             init: function(){
-            console.log(" in EduNavManager.init()");
-                /*this.eduNavLabelEle = document.getElementById('edu-nav-label-id');
+                //console.log(" in EduNavManager.init()");
+                this.eduNavLabelEle = document.getElementById('edu-nav-label-id');
                 this.eduNavDropdownEle = document.getElementById("edu-nav-dropdown-id");
-                this.trainingLabelEle = document.getElementById('training-menu-label-id');
+                /*this.trainingLabelEle = document.getElementById('training-menu-label-id');
                 this.trainingDropdownEle = document.getElementById('training-menu-dd-id'); 
                 this.introductionlabelEle = document.getElementById('training-menu-intro-label-id');
                 this.introductionDropdownEle= document.getElementById('training-menu-intro-dd-id');
@@ -175,8 +175,8 @@
                 this.testingLabelEle = document.getElementById('testing-menu-label-id');
                 this.testingDropdownEle = document.getElementById('testing-menu-dd-id');
                 this.packetsLabelEle = document.getElementById('packets-menu-label-id');
-                this.packetsDropdownEle = document.getElementById("packets-menu-dd-id");
-                this.testingCodesLabelEle = document.getElementById('testing-menu-codes-label-id');
+                this.packetsDropdownEle = document.getElementById("packets-menu-dd-id");*/
+                /*this.testingCodesLabelEle = document.getElementById('testing-menu-codes-label-id');
                 this.testingCodesDropdownEle = document.getElementById('testing-menu-codes-dd-id');
                 this.testingLogicGatesLabelEle = document.getElementById('testing-menu-logic-gates-label-id');
                 this.testingLogicGatesDropdownEle = document.getElementById('testing-menu-logic-gates-dd-id');

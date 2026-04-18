@@ -230,17 +230,17 @@
             }*/
         },
 
-        init: function(contentId) {
+        init: function() {
         //console.log("in EduHtmlManager.init()");
         //console.log("contentId = " + contentId);
          //alert("this.eduNavOneContentsEle.classList = " + this.eduNavOneContentsEle.classList);
-            if(contentId.slice(0,3) == "ceo"){
+            /*if(contentId.slice(0,3) == "ceo"){
                 this.ceoEle = document.getElementById("ceo-contents-id");
                 this.ceoEle.addEventListener("transitionend", this.ceoFinishTransition, false);
-            }else{
-                this.eduEle = document.getElementById("edu-contents-id");
-                this.icDataEle = document.getElementById("ic-data-contents-id");
-            }
+            }else{*/
+            this.eduEle = document.getElementById("edu-contents-id");
+            this.icDataEle = document.getElementById("ic-data-contents-id");
+           /* } */
         // alert("this.eduContentsEle.classList = " + this.eduContentsEle.classList);
           //  this.eduContentsEle.addEventListener("transitionend", this.show().bind, false);
             //this.contentsEle.style.opacity = 1;   /*eduTransitionHasEnded*/
