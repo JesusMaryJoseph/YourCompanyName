@@ -57,7 +57,9 @@
                     if(this.requestedFile == "html/Education/Training/TestEquipment/MultiMeter.html"){
                         //console.log("in this.requestedFile == ----- MultiMeter.html");
                         console.log("Going to MultiMeterManager.init()");
-                        MultiMeterManager.init();
+                        ScreenManager.init();
+                        ButtonManager.init();
+                        KnobSelectorManager.init();
                     }
                     if (this.requestedFile ==  "html/Education/Training/Codes/ASCII.html") {
                         console.log("in this.requestedFile = html/Education/Training/Codes/ASCII.html");
@@ -234,9 +236,9 @@
         //console.log("in EduHtmlManager.init()");
         //console.log("contentId = " + contentId);
          //alert("this.eduNavOneContentsEle.classList = " + this.eduNavOneContentsEle.classList);
-            /*if(contentId.slice(0,3) == "ceo"){
+            /*if(contentId.slice(0,3) == "ceo"){*/
                 this.ceoEle = document.getElementById("ceo-contents-id");
-                this.ceoEle.addEventListener("transitionend", this.ceoFinishTransition, false);
+                /*this.ceoEle.addEventListener("transitionend", this.ceoFinishTransition, false);
             }else{*/
             this.eduEle = document.getElementById("edu-contents-id");
             this.icDataEle = document.getElementById("ic-data-contents-id");

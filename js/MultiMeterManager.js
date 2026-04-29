@@ -17,27 +17,27 @@
         //Properties
         initiated: false,
 
-        warningLabel: {},
+       /* warningLabel: {},*/
 
 // BEGIN Plug ins 
-        comPluginClick: {},
+       /*comPluginClick: {},
         lowAmpPluginClick: {},
-        highAmpPluginClick:{},
+        highAmpPluginClick:{},*/
 // END Plug ins
 
 //BEGIN Buttons
         //PlugIn 'Click' Areas
-        selClick:{},
+       /* selClick:{},
         lightClick:{},
         rangeClick:{},
         maxMinClick:{},
-        holdClick:{},
+        holdClick:{},*/
         //Plug In's
-        blackPlugin:{},
+       /* blackPlugin:{},
         redPlugin:{},
         blackPluginConnected:{},
         redPluginConnected:{},
-        redTenAmpPluginConnected:{},
+        redTenAmpPluginConnected:{},*/
 
         //Button Backgrounds
         selButtonBckgrnd: {},
@@ -88,7 +88,21 @@
         hertzClick:{},
         ohmsClick:{},
         capDiodeClick:{},
-//END Selectors
+    //END Selectors
+    //BEGIN Testing Options
+        ampAcOption: {},
+        ampDcOption: {},
+        voltsAcOption: {},
+        voltsDcOption: {},
+        hertzOption: {},
+        dutyCycleOption: {},
+        continuityOption: {},
+        ohmsOption: {},
+        capacitorOption: {},
+        diodeOption: {},
+        
+        presentTestingOption: {},
+    //END Testing Options
 
         displayScreen: {},
         //Auxiliary elements visible on the "Display Screen"
@@ -123,7 +137,7 @@
         lastKnobSelectorLabel: "",
         presentKnobSelectorLabel: "off",
         presentSELcolor: "orange",
-        presentAmpConnection: "",
+        //presentAmpConnection: "",
         maxMinSelected: "max",
         screenColor: "gray",
         presentPrefix: "",
@@ -167,7 +181,7 @@
         //},
 
         KnobSelectorHandler: function(selectorLabel){
-            //console.log("in KnobSelectorHandler");
+            console.log("in KnobSelectorHandler");
             //console.log("this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
             //console.log("selectorLabel = " + selectorLabel);
            /* this.lastKnobSelectorLabel = this.presentKnobSelectorLabel;
@@ -175,21 +189,39 @@
            // console.log("this.lastKnobSelectorLabel = " + this.lastKnobSelectorLabel + "   and this.presentKnobSelectorLabel = " +this.presentKnobSelectorLabel);          
             this.onSymbol.classList.remove('hidden-element');
             this.autoSymbol.classList.remove('hidden-element');
-            this.showHideWarning(selectorLabel);
-
+           /* this.showHideWarning(selectorLabel);*/
+            
+            console.log("in KnobSelectorHandler and selector label = " + selectorLabel);
             switch (selectorLabel){
                 case "temp":
                     //console.log("selectorLabel = " + selectorLabel);
                     this.tempSelectorKnob.classList.toggle("hidden-selector");
+                    this.presentTestingOption.classList.add("hidden-element");
                     break;
                 case "microAmp":
                     this.microAmpSelectorKnob.classList.toggle("hidden-selector");
+                    if(this.presentSELcolor == "orange"){
+                        this.showHideTestingOption(this.ampAcOption);
+                    }else{
+                        this.showHideTestingOption(this.ampDcOption);
+                    }
                     break;
                 case "milliAmp":
                     this.milliAmpSelectorKnob.classList.toggle("hidden-selector");
+                    if(this.presentSELcolor == "orange"){
+                        this.showHideTestingOption(this.ampAcOption);
+                    }else{
+                        this.showHideTestingOption(this.ampDcOption);
+                    }
                     break;
                 case "tenAmp":
+                    console.log("toggling MultiMeterManager tenAmp hidden-selector");
                     this.tenAmpSelectorKnob.classList.toggle("hidden-selector");
+                    if(this.presentSELcolor == "orange"){
+                        this.showHideTestingOption(this.ampAcOption);
+                    }else{
+                        this.showHideTestingOption(this.ampDcOption);
+                    }
                     break;
                 case "off":
                     //console.log("selectorLabel = " + selectorLabel);
@@ -199,22 +231,42 @@
                     break;
                 case "volts":
                     this.voltSelectorKnob.classList.toggle("hidden-selector");
+                    if(this.presentSELcolor == "orange"){
+                        this.showHideTestingOption(this.voltsAcOption);
+                    }else{
+                        this.showHideTestingOption(this.voltsDcOption);
+                    }
                     break;
                 case "hertz":
                     this.hertzSelectorKnob.classList.toggle("hidden-selector");
+                    if(this.presentSELcolor == "orange"){
+                        this.showHideTestingOption(this.hertzOption);
+                    }else{
+                        this.showHideTestingOption(this.dutyCycleOption);
+                    }
                     break;
                 case "ohms":
                     this.ohmsSelectorKnob.classList.toggle("hidden-selector");
+                    if(this.presentSELcolor == "orange"){
+                        this.showHideTestingOption(this.continuityOption);
+                    }else{
+                        this.showHideTestingOption(this.ohmsOption);
+                    }
                     break;
                 case "capDiode":
                     this.capDiodeSelectorKnob.classList.toggle("hidden-selector");
+                    if(this.presentSELcolor == "orange"){
+                        this.showHideTestingOption(this.capacitorOption);
+                    }else{
+                        this.showHideTestingOption(this.diodeOption);
+                    }
                     break;
                 default: console.log("Not an allowable KnobSelector");
             }
             //console.log("this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
         },
         
-        showHideWarning: function(selector){
+       /* showHideWarning: function(selector){
             //console.log("in showHideWarning & Selector = " + selector);
             if(selector == "tenAmp"){
                 //console.log("in showHideWarning & 'tenAmp'");
@@ -228,15 +280,23 @@
                 //console.log("in showHideWarning & 'NOT tenAmp'");
                 //console.log("this.presentAmpConnection = "+ this.presentAmpConnection);
                 if(this.presentAmpConnection == "high"){
-                    this.warningLabel.classList.remove("hidden-element");
+                    if(this.presentKnobSelectorLabel != "off"){
+                        this.warningLabel.classList.remove("hidden-element");
+                    }
                 }else{
                     this.warningLabel.classList.add("hidden-element");
                 }
             }
+        },*/
+        showHideTestingOption: function(selectorEle){
+            //console.log("");
+           /* this.presentTestingOption.classList.add("hidden-element");
+            selectorEle.classList.remove("hidden-element");
+            this.presentTestingOption = selectorEle;*/
         },
 
 
-        ButtonHandler: function(buttonLabel){
+        /*ButtonHandler: function(buttonLabel){
             switch (buttonLabel){
                 case "sel":
                         if(this.presentKnobSelectorLabel == "off"){return;}
@@ -248,7 +308,8 @@
                             this.presentSELcolor = "orange";
                         }
                         this.PrefixUnitHandler(this.presentKnobSelectorLabel, "hide"); 
-                        this.PrefixUnitHandler(this.presentKnobSelectorLabel, "show"); 
+                        this.PrefixUnitHandler(this.presentKnobSelectorLabel, "show");
+                        this.changeSetting(this.presentKnobSelectorLabel); 
                     break;
                 case "hold":
                         if(this.presentKnobSelectorLabel == "off"){return;}
@@ -327,16 +388,8 @@
                     this.blackPluginConnection = true;
                     break;
                 case "lowAmpPlugin":
-                    if(this.presentKnobSelectorLabel == "off"){return;}
+                    //if(this.presentKnobSelectorLabel == "off"){return;}
                     this.presentAmpConnection = "low";
-                    this.showHideWarning(this.presentKnobSelectorLabel);
-                   /* if(this.presentKnobSelectorLabel == ("tenAmp")){
-                        console.log("in 'lowAmpPlugin' & presentKnowSlectorLabel == 'tenAmp'");
-                        this.warningLabel.classList.remove("hidden-element");
-                    }else{
-                        console.log("in 'lowAmpPlugin' & presentKnowSlectorLabel != 'tenAmp'");
-                        this.warningLabel.classList.add("hidden-element");
-                    }*/
                     this.redTenAmpPluginConnected.classList.add("hidden-element");
                     this.redTenAmpPluginConnection = false;
                     this.redPluginConnected.classList.remove("hidden-element");
@@ -344,16 +397,9 @@
                     this.redPlugin.classList.add("hidden-element");
                     break;
                 case "highAmpPlugin":
-                    if(this.presentKnobSelectorLabel == "off"){return;}
+                    //if(this.presentKnobSelectorLabel == "off"){return;}
+                    console
                     this.presentAmpConnection = "high";
-                    this.showHideWarning(this.presentKnobSelectorLabel);
-                    /*if(this.presentKnobSelectorLabel != ("tenAmp")){
-                        console.log("in 'highAmpPlugin' & presentKnowSlectorLabel != 'tenAmp'");
-                        this.warningLabel.classList.remove("hidden-element");
-                    }else{
-                        console.log("in 'highAmpPlugin' & presentKnowSlectorLabel = 'tenAmp'");
-                        this.warningLabel.classList.add("hidden-element");
-                    }*/
                     this.redPluginConnected.classList.add("hidden-element");
                     this.redPluginConnection = false;
                     this.redTenAmpPluginConnected.classList.remove("hidden-element");
@@ -362,7 +408,7 @@
                     break;
                 default: console.log("Not an allowable Button or PlugIn");
             }
-        },
+        },*/
         UpdateScreenHandler: function(callHandler, hideShow) {
                 switch (callHandler){
                     case "off":
@@ -419,10 +465,10 @@
 
 
         PrefixUnitHandler:function(selectedKnob, showHide) {
-            //console.log("in PrefixUnitHandler");
-            //console.log("selectedKnob = " + selectedKnob);
-           // console.log("at BEGINNING of PrefixUnitHandler & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
-           // console.log("this.lastKnobSelectorLabel ="+this.lastKnobSelectorLabel+"  and this.presentKnobSelectorLabel = "+this.presentKnobSelectorLabel);
+            console.log("in PrefixUnitHandler");
+            console.log("selectedKnob = " + selectedKnob);
+            console.log("at BEGINNING of PrefixUnitHandler & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
+            console.log("this.lastKnobSelectorLabel ="+this.lastKnobSelectorLabel+"  and this.presentKnobSelectorLabel = "+this.presentKnobSelectorLabel);
             //if(this.lastKnobSelectorLabel == this.presentKnobSelectorLabel){return}
             if((selectedKnob=="microAmp") || (selectedKnob=="milliAmp")||(selectedKnob=="tenAmp") || (selectedKnob=="volts")){
                 //console.log("showing either acSymbol or dcSymbol");
@@ -461,14 +507,17 @@
                 case "microAmp":
                     this.microSymbol.classList.toggle("hidden-element");
                     this.ampSymbol.classList.toggle("hidden-element");
+                    this.autoSymbol.classList.remove("hidden-element");
                     break;
                 case "milliAmp":
                     this.milliSymbol.classList.toggle("hidden-element");
                     this.ampSymbol.classList.toggle("hidden-element");
+                    this.autoSymbol.classList.remove("hidden-element");
                     break;
                 case "tenAmp":
-                    //console.log("in case: 'tenAmp'");
+                    console.log("in case: 'tenAmp'");
                     this.ampSymbol.classList.toggle("hidden-element");
+                    this.autoSymbol.classList.remove("hidden-element");
                     break;
                 case "off":
                     //console.log("in PrefixUnitHandler.off: reseting all screen elements");
@@ -476,9 +525,11 @@
                     break;
                 case "volts":
                     this.voltSymbol.classList.toggle("hidden-element");
+                    this.autoSymbol.classList.remove("hidden-element");
                     break;
                 case "hertz":
                     if(showHide == "show"){
+                        this.autoSymbol.classList.remove("hidden-element");
                         if(this.presentSELcolor == "orange"){
                             this.hertzSymbol.classList.remove("hidden-element");
                             this.dutyCycleSymbol.classList.add("hidden-element");
@@ -572,9 +623,10 @@
             this.acSymbol.classList.add("hidden-element");
             this.dcSymbol.classList.add("hidden-element");
             this.batterySymbol.classList.add("hidden-element");
+            this.presentTestingOption.classList.add("hidden-element");
             this.clearBatteryTimer();
             // PlugIns
-            if(this.lastKnobSelectorLabel != "off"){
+           /* if(this.lastKnobSelectorLabel != "off"){
                 this.blackPlugin.classList.remove("hidden-element");
                 this.redPlugin.classList.remove("hidden-element");
                 this.redPluginConnected.classList.add("hidden-element");
@@ -583,7 +635,7 @@
                 this.redPluginConnection = false;
                 this.redTenAmpPluginConnection = false;
                 this.blackPluginConnection = false;
-            }   
+            } */  
 
             this.presentSELcolor = "orange";
             this.presentKnobSelectorLabel = "off";
@@ -599,7 +651,7 @@
            /* this.selectorKnob = document.getElementById("mm-selector-id");
            this.selectorKnob.style.transformOrigin = '50% -20%';*/
 
-            this.warningLabel = document.getElementById("warning-label-id");
+            /*this.warningLabel = document.getElementById("warning-label-id");*/
 
            // Selectors
             this.offSelectorKnob = document.getElementById("selector-knob-off-id")
@@ -634,12 +686,12 @@
            // console.log("ending 'selector click' elements");
 
             // Plugin Click Areas
-            this.comPluginClick = document.getElementById("mm-com-plugin-click-area-id");/* mm-com-plugin-click-area-id */
-            this.comPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("comPlugin")});
-            this.lowAmpPluginClick= document.getElementById("mm-mamp-plugin-click-area-id");
-            this.lowAmpPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("lowAmpPlugin")});
-            this.highAmpPluginClick = document.getElementById("mm-ten-amp-plugin-click-area-id");
-            this.highAmpPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("highAmpPlugin")});
+            //this.comPluginClick = document.getElementById("mm-com-plugin-click-area-id");/* mm-com-plugin-click-area-id */
+            //this.comPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("comPlugin")});
+            //this.lowAmpPluginClick= document.getElementById("mm-mamp-plugin-click-area-id");
+            //this.lowAmpPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("lowAmpPlugin")});
+            //this.highAmpPluginClick = document.getElementById("mm-ten-amp-plugin-click-area-id");
+           //this.highAmpPluginClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("highAmpPlugin")});
             this.blackPlugin = document.getElementById("black-plugin-id");
             this.redPlugin = document.getElementById("red-plugin-id");
             this.blackPluginConnected = document.getElementById("black-plugin-connected-id");
@@ -647,7 +699,7 @@
             this.redTenAmpPluginConnected = document.getElementById("red-ten-amp-plugin-connected-id");
 
             // Button Click Areas
-            this.selClick = document.getElementById("mm-select-button-click-area-id");
+           /* this.selClick = document.getElementById("mm-select-button-click-area-id");
             this.selClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("sel")});
             this.lightClick = document.getElementById("mm-light-button-click-area-id");
             this.lightClick.addEventListener("mouseup",function(){MultiMeterManager.ButtonHandler("light")});
@@ -659,7 +711,7 @@
             this.maxMinClick.addEventListener("mouseup",function(){MultiMeterManager.ButtonHandler("maxMin")});
             this.maxMinClick.addEventListener("mousedown",function(){MultiMeterManager.startMaxMinTime()});
             this.holdClick = document.getElementById("mm-hold-button-click-area-id");
-            this.holdClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("hold")});
+            this.holdClick.addEventListener("click",function(){MultiMeterManager.ButtonHandler("hold")});*/
            // console.log("ending 'button click' elements");
 
             // Selector Labels
@@ -709,6 +761,19 @@
             this.selWhiteButton = document.getElementById("mm-sel-white-label-id");
             this.selOrangeBckgrnd = document.getElementById("mm-sel-orange-bckgrnd-id");*/
             this.selButtonBckgrnd = document.getElementById("mm-sel-button-bckgrnd-id");
+           // console.log("starting testing option elements");
+            this.ampAcOption = document.getElementById("amp-ac-option-id");
+            this.presentTestingOption = this.ampAcOption;
+            this.ampDcOption = document.getElementById("amp-dc-option-id");
+            this.voltsAcOption = document.getElementById("volts-ac-option-id");
+            this.voltsDcOption = document.getElementById("volts-dc-option-id");
+            this.hertzOption = document.getElementById("hertz-option-id");
+            this.dutyCycleOption = document.getElementById("duty-cycle-option-id");
+            this.continuityOption = document.getElementById("continuity-option-id");
+            this.ohmsOption = document.getElementById("ohms-option-id");
+            this.capacitorOption = document.getElementById("capacitor-option-id");
+            this.diodeOption = document.getElementById("diode-option-id");
+           // console.log("endinging testing option elements");
          
             /*this.offSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("off")});
             this.tempSelector.addEventListener("click",function(){MultiMeterManager.changeSetting("temp")});

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home Page</title>
+
+	<link rel="stylesheet" type="text/css" href="css/mediaQuery_global_base.css">
+	<link rel="stylesheet" type="text/css" href="css/mediaQuery_global_600px-minus_to_1400px-plus.css">
+
+	<script src="js/NavHandler.js"></script>
+
+</head>
+
+<style>
+</style>
+
+<body>
+
+	<nav id="book-container-id" class="nav-container" onmouseleave = "NavHandler.mouseLeave()"> 
+    	<!--<div class="nav-label-container">-->
+		<!--</div>-->
+        <p id="nav-label-id" class="nav-label" onclick="NavHandler.showHide()">Nav</p>  
+        <ul id="nav-dropdown-id" class="nav-dropdown dbe-hide-dropdown">
+            <li><a href="ceo.html" class="ceo-a">CEO</a></li>
+		    <label class="dept-label"><u>Departments</u></label>
+			<li><a href="engineering.html">Engineering</a></li>
+			<li><a href="architect.html">Drafting</a></li>
+			<li><a href="technician.html">Technician</a></li>
+			<li><a href="computer.html">Computer</a></li>
+			<li><a href="education.html">Education</a></li>
+			<li><a href="mediaArts.html">Media Arts</a></li>
+        </ul>
+	</nav>
+
+
+</body>
+</html>
