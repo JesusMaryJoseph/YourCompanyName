@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <link rel="stylesheet" type="text/css" href="css/Education/training/TrainingMultimeterCSS.css">
-
     <script src="js/KnobSelectorManager.js"></script>
     <script src="js/MultiMeterManager.js"></script>
     <script src="js/ButtonManager.js"></script>
@@ -16,15 +14,10 @@
     </script>
     
     <style>
-        .project-container{
-            display: none;
-        }
     </style>
 </head>
-<body onload="console.log('onload body of Multimeter')";>
+<body>
     <section class="project-container">
-        <!--<section id="multi-meter-container-id" class="multi-meter-container">-->
-
         <section id="about-multimeter-id" class="about-multimeter">
             <div id="warning-label-id" class="hidden-element">
                 <h1 class="danger-label">DANGER!!!DANGER</h1>
@@ -91,14 +84,14 @@
                 <defs id="defs1">
                     <linearGradient id="linearGradient32">
                         <stop
-                            style="stop-color:#ffffff;stop-opacity:0;"
+                            style="stop-color:#000000;stop-opacity:0;"
                             offset="0.2090909"
                             id="stop33" /><stop
                             style="stop-color:#787878;stop-opacity:1;"
-                            offset="1"
-                            id="stop32" />
-                    </linearGradient>
-                    <linearGradient
+                            offset="0.1"
+                            id="stop32" /><!--offset="0.2090909"  offset="1"-->
+                    </linearGradient><!--Selector Knob white border and 'black to gray gradient bckgrnd color'-->
+                    <!--<linearGradient       
                         id="linearGradient29"><stop
                         style="stop-color:#ff6400;stop-opacity:1;"
                         offset="0.56623375"
@@ -106,15 +99,15 @@
                         style="stop-color:#ffffff;stop-opacity:1;"
                         offset="1"
                         id="stop30" />
-                    </linearGradient>
-                    <filter
+                    </linearGradient>--> <!--Unknown-->
+                    <!--<filter
                         style="color-interpolation-filters:sRGB"
                         id="filter4639"
                         x="-0.044293784"
                         y="-0.12562333"
                         width="1.0885875"
-                        height="1.2512469">
-                        <feGaussianBlur
+                        height="1.2512469">--><!--width="1.0885875"  height="1.2512469"-->
+                        <!--<feGaussianBlur
                             stdDeviation="1"
                             result="result1"
                             id="feGaussianBlur4613" />
@@ -191,7 +184,7 @@
                             mode="multiply"
                             in2="result91"
                             id="feBlend4637" />
-                    </filter>
+                    </filter>--><!--Selector Knob gradient white color at Pointer'-->
                     <filter
                         style="color-interpolation-filters:sRGB"
                         id="filter4667"
@@ -237,7 +230,7 @@
                             in="fbSourceGraphic"
                             stdDeviation="2.5"
                             id="feGaussianBlur4653" />
-                                                <feSpecularLighting
+                        <feSpecularLighting
                             specularExponent="45"
                             specularConstant="1.5"
                             surfaceScale="1"
@@ -245,124 +238,124 @@
                             result="result1"
                             in="result0"
                             id="feSpecularLighting4657">
-                                                    <fePointLight
+                        <fePointLight
                             z="21000"
                             y="-9000"
                             x="-6000"
                             id="fePointLight4655" />
+                        </feSpecularLighting>
+                        <feComposite
+                            operator="in"
+                            result="result2"
+                            in="result1"
+                            in2="fbSourceGraphic"
+                            id="feComposite4659" />
+                        <feComposite
+                            k3="1"
+                            k2="1"
+                            operator="arithmetic"
+                            result="result4"
+                            in="fbSourceGraphic"
+                            in2="result2"
+                            id="feComposite4661"
+                            k1="0"
+                            k4="0" />
+                        <feComposite
+                            operator="in"
+                            in2="result4"
+                            result="result91"
+                            id="feComposite4663" />
+                        <feBlend
+                            mode="multiply"
+                            in2="result91"
+                            id="feBlend4665" />
+                        </filter><!--id="filter4667"-->
+                        <filter
+                            style="color-interpolation-filters:sRGB"
+                            id="filter6"
+                            x="-0.039132878"
+                            y="-0.1091553"
+                            width="1.0782658"
+                            height="1.2183106">
+                                                <feGaussianBlur
+                            stdDeviation="1"
+                            result="result1"
+                            id="feGaussianBlur1" />
+                                                <feComposite
+                            in="result1"
+                            in2="result1"
+                            result="result4"
+                            operator="in"
+                            id="feComposite1" />
+                                                <feBlend
+                            in="result1"
+                            mode="screen"
+                            result="result5"
+                            in2="result4"
+                            id="feBlend1" />
+                                                <feGaussianBlur
+                            stdDeviation="8"
+                            result="result6"
+                            in="result5"
+                            id="feGaussianBlur2" />
+                                                <feComposite
+                            operator="atop"
+                            in="result6"
+                            in2="result5"
+                            result="result8"
+                            id="feComposite2" />
+                                                <feComposite
+                            operator="in"
+                            result="fbSourceGraphic"
+                            in="result6"
+                            in2="result8"
+                            id="feComposite3" />
+                                                <feGaussianBlur
+                            result="result0"
+                            in="fbSourceGraphic"
+                            stdDeviation="2.5"
+                            id="feGaussianBlur3" />
+                                                <feSpecularLighting
+                            specularExponent="45"
+                            specularConstant="1.5"
+                            surfaceScale="1"
+                            lighting-color="#ffffff"
+                            result="result1"
+                            in="result0"
+                            id="feSpecularLighting3">
+                                                    <fePointLight
+                            z="21000"
+                            y="-9000"
+                            x="-6000"
+                            id="fePointLight3" />
                                                 </feSpecularLighting>
                                                 <feComposite
                             operator="in"
                             result="result2"
                             in="result1"
-            in2="fbSourceGraphic"
-            id="feComposite4659" />
-                                <feComposite
-            k3="1"
-            k2="1"
-            operator="arithmetic"
-            result="result4"
-            in="fbSourceGraphic"
-            in2="result2"
-            id="feComposite4661"
-            k1="0"
-            k4="0" />
-                                <feComposite
-            operator="in"
-            in2="result4"
-            result="result91"
-            id="feComposite4663" />
-                                <feBlend
-            mode="multiply"
-            in2="result91"
-            id="feBlend4665" />
-                            </filter>
-                            <filter
-            style="color-interpolation-filters:sRGB"
-            id="filter6"
-            x="-0.039132878"
-            y="-0.1091553"
-            width="1.0782658"
-            height="1.2183106">
-                                <feGaussianBlur
-            stdDeviation="1"
-            result="result1"
-            id="feGaussianBlur1" />
-                                <feComposite
-            in="result1"
-            in2="result1"
-            result="result4"
-            operator="in"
-            id="feComposite1" />
-                                <feBlend
-            in="result1"
-            mode="screen"
-            result="result5"
-            in2="result4"
-            id="feBlend1" />
-                                <feGaussianBlur
-            stdDeviation="8"
-            result="result6"
-            in="result5"
-            id="feGaussianBlur2" />
-                                <feComposite
-            operator="atop"
-            in="result6"
-            in2="result5"
-            result="result8"
-            id="feComposite2" />
-                                <feComposite
-            operator="in"
-            result="fbSourceGraphic"
-            in="result6"
-            in2="result8"
-            id="feComposite3" />
-                                <feGaussianBlur
-            result="result0"
-            in="fbSourceGraphic"
-            stdDeviation="2.5"
-            id="feGaussianBlur3" />
-                                <feSpecularLighting
-            specularExponent="45"
-            specularConstant="1.5"
-            surfaceScale="1"
-            lighting-color="#ffffff"
-            result="result1"
-            in="result0"
-            id="feSpecularLighting3">
-                                    <fePointLight
-            z="21000"
-            y="-9000"
-            x="-6000"
-            id="fePointLight3" />
-                                </feSpecularLighting>
-                                <feComposite
-            operator="in"
-            result="result2"
-            in="result1"
-            in2="fbSourceGraphic"
-            id="feComposite4" />
-                                <feComposite
-            k3="1"
-            k2="1"
-            operator="arithmetic"
-            result="result4"
-            in="fbSourceGraphic"
-            in2="result2"
-            id="feComposite5"
-            k1="0"
-            k4="0" />
-                                <feComposite
-            operator="in"
-            in2="result4"
-            result="result91"
-            id="feComposite6" />
-                                <feBlend
-            mode="multiply"
-            in2="result91"
-            id="feBlend6" />
-                            </filter>
-                            <filter
+                            in2="fbSourceGraphic"
+                            id="feComposite4" />
+                                                <feComposite
+                            k3="1"
+                            k2="1"
+                            operator="arithmetic"
+                            result="result4"
+                            in="fbSourceGraphic"
+                            in2="result2"
+                            id="feComposite5"
+                            k1="0"
+                            k4="0" />
+                                                <feComposite
+                            operator="in"
+                            in2="result4"
+                            result="result91"
+                            id="feComposite6" />
+                                                <feBlend
+                            mode="multiply"
+                            in2="result91"
+                            id="feBlend6" />
+                        </filter><!---->
+        <!--<filter
             style="color-interpolation-filters:sRGB"
             id="filter12"
             x="-0.26248628"
@@ -446,8 +439,8 @@
             mode="multiply"
             in2="result91"
             id="feBlend12" />
-                            </filter>
-                            <filter
+        </filter>-->
+        <!--<filter
             style="color-interpolation-filters:sRGB"
             id="filter18"
             x="-0.039132878"
@@ -1635,7 +1628,7 @@
             mode="multiply"
             in2="result91"
             id="feBlend96" />
-                            </filter>
+                    </filter>
                     <linearGradient
                         xlink:href="#linearGradient29"
                         id="linearGradient30"
@@ -1643,14 +1636,14 @@
                         y1="736.34277"
                         x2="1376.0452"
                         y2="896.69116"
-                        gradientUnits="userSpaceOnUse" />
+                        gradientUnits="userSpaceOnUse" />-->
                     <linearGradient xlink:href="#linearGradient32" id="linearGradient33"
                         x1="1085.8899"
                         y1="419.47388"
                         x2="1085.8899"
                         y2="1214.2922"
                         gradientUnits="userSpaceOnUse" />
-                    <filter
+                    <!--<filter
                         style="color-interpolation-filters:sRGB;"
                         id="filter112"
                         x="-0.0009752654"
@@ -1683,7 +1676,7 @@
                             in="result10"
                             in2="SourceAlpha"
                             id="feComposite112" />
-                    </filter>
+                    </filter>-->
                 </defs>
             <g id="layer1" class="mm-container" transform= "rotate(-90,648.61605,387.68417)">
                 <g id="mm-body-component-id" style="display:inline" transform="translate(-0.40371305,0.17302452)"><!--Begin Body Component-->
@@ -2085,14 +2078,14 @@
                         </g>
                         <g id="selector-knob-off-id" style="display:inline" transform="rotate(-22.736714,1080.4217,816.88307)">
                             <path
-                                style="display:inline;fill:url(#linearGradient33);fill-opacity:1;stroke:#ffffff;stroke-width:9.4811;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
+                                style="display:inline;fill:url(#linearGradient32);fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4639)"
                                 d="m 1411.065,688.1639 c 0,0 -88.5142,61.9184 -97.2409,66.9051 -8.7268,4.9867 -27.8425,6.6489 -37.4004,6.2334 -9.5578,-0.4156 -555.60254,0 -555.60254,0 V 881.399 c 0,0 548.95364,0 560.58934,0 11.6356,0 20.7599,1.459 34.0231,9.1165 13.2631,7.6574 95.413,55.0867 95.413,55.0867 l 40.112,-119.4726 z"
                                 id="path3"
-                                transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" />
+                                transform="matrix(0.98615031,0,0,1.0002513,9.5710346,-0.20529852)" /><!--fill:url(#linearGradient32) #787878  stroke-width:9.4811;-->
                             <path
-                                style="display:inline;fill:url(#linearGradient30);fill-opacity:1;stroke:#ff6400;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
+                                style="display:inline;fill: #ff6400;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4667)"
                                 d="m 1428.6174,827.07719 c 0.1216,-3.3648 -5.5249,-65.8762 -8.7011,-74.32188 -2.8992,-7.70926 6.5797,11.27443 -10.196,17.41189 -24.0952,8.81531 -68.025,23.06681 -74.3426,25.12373 -6.3177,2.05691 -11.0192,5.58305 -11.46,11.60686 -0.4408,6.02382 -0.5877,15.27993 -0.2938,20.71606 0.2938,5.43613 0.8815,13.36994 8.2276,16.01454 7.3461,2.64461 68.4658,22.33221 73.1674,23.50759 4.7015,1.17538 14.7661,3.30792 14.2514,13.95763 -0.4046,8.37322 8.7759,-38.21012 9.3471,-54.01642"
-                                id="path4" />
+                                id="path4" /><!--fill:url(#linearGradient30)  stroke:#ff6400;-->
                         </g>
                         <g id="selector-knob-volts-id" style="display:inline" class="hidden-selector">
                             <path
@@ -3341,12 +3334,6 @@
                 </svg> 
             </div>
         </section><!--END testing-container-->
-        <!--</section>END Multimeter-container-->
-    </section><!--END project-container-->
-    <script>
-        function init(){
-            console.log("in Multimeter.html init()");
-        }
-    </script>
+    </section>
 </body>
 </html>

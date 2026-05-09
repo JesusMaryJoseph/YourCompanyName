@@ -75,6 +75,30 @@
     .show-answer{
         opacity: 1;
     }
+        /*.project-container{
+            display: grid;
+            grid-template-columns: 70vw 21vw 0;
+            grid-template-columns: 0 21vw 70vw;
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 1rem;
+            width: 97vw;
+            height: 90vh;
+            overflow: hidden;
+        }
+            #about-multimeter-id{
+                grid-area: 1 / 1 / 6 / 2;
+                background-color: whitesmoke;
+                display: none;
+            }
+            #multimeter-svg-id{
+                grid-area: 1 / 2 / 6 / 3;
+                background-color: blue;
+            }
+            #testing-container-id{
+                grid-area: 1 / 3 / 6 / 7;
+                background-color: lightsalmon;
+            }*/
 	
 	</style>
 	
@@ -117,7 +141,7 @@
                                                                                 <!-- onmouseout="EduNavManager.openCloseDropdown('menu-dd-lev-1', 'close')"-->
         <nav id="training-menu-container-id" class="menu-container training-menu-container">
             <label id="training-menu-label-id" class="menu-label-lev-1" 
-                    onclick="EduHtmlManager.request('html/Education/Training/TrainingDropDown.html', 'edu-contents-id')" >Training
+                    onclick="EduHtmlManager.request('html/Education/Training/TrainingDropDown.html', 'edu-contents-id','')" >Training
             </label>
             <!--<label id="training-menu-label-id" class="menu-label-lev-1"
                     onclick="EduNavManager.openCloseDropdown('menu-dd-lev-1', 'open')"> 

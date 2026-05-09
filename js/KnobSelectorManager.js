@@ -37,11 +37,24 @@
         ohmsClick:{},
         capDiodeClick:{},
     //END Selectors
+        multimeterHead: {},
         
     //Status of particular elements
         lowAmpSelectors: ["temp","volts","hertz","ohms","capDiode"],
         lastKnobSelectorLabel: "",
         presentKnobSelectorLabel: "off",
+
+        addLink: function(htmlFile){
+            console.log("inside KnobSelectorManager.addLink()");
+            console.log("htmlFile = " + htmlFile);
+            this.init();
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = "css/Education/Training/TrainingMultimeterCSS.css";
+           // this.multimeterHead.appendChild("link");
+            console.log("after adding link to multimeter.html head");
+        },
 
         changeSetting: function(newKnobSelectorLabel){
             if(!this.initiated){
@@ -221,7 +234,7 @@
             this.hertzSelectorKnob = document.getElementById("selector-knob-hertz-id");
             this.ohmsSelectorKnob = document.getElementById("selector-knob-ohms-id");
             // Selector Click Areas
-            console.log("beginning 'click' elements");
+           // console.log("beginning 'click' elements");
             this.offClick = document.getElementById("mm-off-click-area-id");
             this.offClick.addEventListener("click",function(){KnobSelectorManager.changeSetting("off")});
             this.tenAmpClick = document.getElementById("mm-ten-amp-click-area-id");
@@ -240,7 +253,7 @@
             this.ohmsClick.addEventListener("click",function(){KnobSelectorManager.changeSetting("ohms")});
             this.capDiodeClick = document.getElementById("mm-cap-diode-click-area-id");
             this.capDiodeClick.addEventListener("click",function(){KnobSelectorManager.changeSetting("capDiode")});
-            console.log("ending 'selector click' elements");
+           // console.log("ending 'selector click' elements");
 
             // Selector Labels
             this.offSelector = document.getElementById("mm-off-id");
@@ -252,8 +265,9 @@
             this.hertzSelector = document.getElementById("mm-hertz-id");
             this.ohmsSelector = document.getElementById("mm-ohms-id");
             this.capDiodeSelector = document.getElementById("mm-cap-diode-id");
-
+console.log("just before this.multimeterHead = doc....");
+            this.multimeterHead = document.getElementById("multimeter-head-id");
             this.initiated = true;
-           // console.log("finished KnobSelectorManager.init()"); 
+            console.log("finished KnobSelectorManager.init()"); 
         }
     }
