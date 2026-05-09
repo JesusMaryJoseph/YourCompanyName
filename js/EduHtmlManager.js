@@ -69,7 +69,6 @@
                                         console.log("removing 'exercises-css-id'");
                                         document.getElementById("exercises-css-id").remove();
                                     }
-                                    this.eduEle.setAttribute("display", 'block');
                                 }
                                 if(this.type == "exercises"){
                                     const link = document.createElement("link");
@@ -83,8 +82,8 @@
                                         console.log("removing 'training-css-id'");
                                         document.getElementById("training-css-id").remove();
                                     }
-                                    this.eduEle.setAttribute("display", 'block');
                                 }
+                                this.eduEle.setAttribute("display", "block");
                                 /*console.log("in this.requestedFile == html/Education/Training/TestEquipment/MultiMeterTraining.html");
                                 EduHtmlManager.request("html/Education/Training/TestEquipment/MultiMeter.html", "training-multimeter-container-id" );
                                 const multimeterHtml = document.getElementById("multimeter-html-id");
