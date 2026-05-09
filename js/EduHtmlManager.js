@@ -62,7 +62,7 @@
                                     link.id = "training-css-link-id";
                                     link.rel = "stylesheet";
                                     link.type = "text/css";
-                                    link.href = "css/Education/training/TrainingMultimeterCSS.css";
+                                    link.href = "css/Education/Multimeter/TrainingMultimeterCSS.css";
                                     /*this.eduEle.setAttribute("display", 'block');*/
                                     this.eduEle.append(link);
                                     if(document.getElementById("exercises-css-link-id")){
@@ -75,7 +75,7 @@
                                     link.id = "exercises-css-link-id";
                                     link.rel = "stylesheet";
                                     link.type = "text/css";
-                                    link.href = "css/Education/Exercises/ExercisesMultimeterCSS.css";
+                                    link.href = "css/Education/Multimeter/ExercisesMultimeterCSS.css";
                                     this.eduEle.setAttribute("display", "none");
                                     this.eduEle.append(link);
                                     if(document.getElementById("training-css-link-id")){
@@ -83,6 +83,7 @@
                                         document.getElementById("training-css-id").remove();
                                     }
                                 }
+                                console.log("displaying this.eduEle");
                                 this.eduEle.setAttribute("display", "block");
                                 /*console.log("in this.requestedFile == html/Education/Training/TestEquipment/MultiMeterTraining.html");
                                 EduHtmlManager.request("html/Education/Training/TestEquipment/MultiMeter.html", "training-multimeter-container-id" );
