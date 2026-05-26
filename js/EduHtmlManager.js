@@ -12,8 +12,8 @@
         //Methods
         request:    function(HTMLsourceFile, contentId, type){ // type: "training" or "exercises"
                         this.type = type;
-                        console.log("requested contentId = " + contentId);
-                        console.log("HTMLsourceFile = " + HTMLsourceFile);
+                        //console.log("requested contentId = " + contentId);
+                        //console.log("HTMLsourceFile = " + HTMLsourceFile);
                         if (!this.initialized){this.init(contentId); this.initialized = true;};
                             //console.log("in EduHtmlManager.request() HTMLsourceFile =  " + HTMLsourceFile);
                             //alert("in request HTMLsourceFile =  " + HTMLsourceFile);
@@ -26,7 +26,7 @@
                         },
 
         load:   function(contentId) {
-                    console.log("in EduHtmlManager.load ");
+                    //console.log("in EduHtmlManager.load ");
                     fetch(this.requestedFile)
                         .then(result => {
                             if (result.ok) {
@@ -55,7 +55,9 @@
                                 //PracticeTruthTableManager.create("circuit","NotXor");
                             }
                             if(this.requestedFile == "html/Education/Training/TestEquipment/MultiMeter.html"){
-                                console.log("type = " + this.type);
+                                console.log("calling KnowSelectorManager.init()");
+                                KnobSelectorManager.init();
+                               // console.log("after KnobSelectorManager.init() called");
                                 //const multimeterHTML = document.getElementById("multimeter-html-id");
                                 if(this.type == "training"){
                                     const link = document.createElement("link");
@@ -83,7 +85,7 @@
                                         document.getElementById("training-css-id").remove();
                                     }
                                 }
-                                console.log("displaying this.eduEle");
+                               // console.log("displaying this.eduEle");
                                 this.eduEle.setAttribute("display", "block");
                                 /*console.log("in this.requestedFile == html/Education/Training/TestEquipment/MultiMeterTraining.html");
                                 EduHtmlManager.request("html/Education/Training/TestEquipment/MultiMeter.html", "training-multimeter-container-id" );
@@ -112,16 +114,16 @@
                                 EduHtmlManager.request("html/Education/Training/TestEquipment/MultiMeter.html", "training-multimeter-container-id" );
                             }*/
                             if (this.requestedFile ==  "html/Education/Training/Codes/ASCII.html") {
-                                console.log("in this.requestedFile = html/Education/Training/Codes/ASCII.html");
+                               // console.log("in this.requestedFile = html/Education/Training/Codes/ASCII.html");
                                 TableGenerator.createTable('ascii-table-id',JsonTableDataASCII);
                             }
                             if(this.requestedFile == "html/Education/Exercises/LogicGatesICs/GatesPractice.html"){
-                                console.log("in this.requestedFile = html/Education/Training/Introduction/GatesIcs.html");
+                               // console.log("in this.requestedFile = html/Education/Training/Introduction/GatesIcs.html");
                                 TableGenerator.createTable('basic-practice-table-id',JsonTableDataPractice74LS08);
                                 TableGenerator.createTable('circuit-practice-table-id',JsonTableDataPracticeNotXor);
                             }
                             if(this.requestedFile == "html/Education/Training/TruthTables/TruthTables.html"){ // contentId == "truth-table-contents-id"
-                                console.log("in html/Education/Training/TruthTables/TruthTables.html");
+                               // console.log("in html/Education/Training/TruthTables/TruthTables.html");
                                 TableGenerator.createTable("morse-1-bit-word-id",JsonTableDataMorseCodeOneBit);
                                 TableGenerator.createTable("morse-2-bit-word-id",JsonTableDataMorseCodeTwoBit);
                                 TableGenerator.createTable("morse-3-bit-word-id",JsonTableDataMorseCodeThreeBit);
@@ -132,8 +134,8 @@
                             //console.log("this.requestedFile = " + resultHTML);
                             //console.log("this.requestedFile.slice(0,25) = " + this.requestedFile.slice(0,25));
                             if(this.requestedFile.slice(0,25) == ("html/Education/IC_Data/LS") ){
-                                console.log("in JsonTableData selection switch");
-                                console.log("this.requestedFile.slice(23, this.requestedFile.length - 5) = " + this.requestedFile.slice(23, this.requestedFile.length - 5));
+                               // console.log("in JsonTableData selection switch");
+                               // console.log("this.requestedFile.slice(23, this.requestedFile.length - 5) = " + this.requestedFile.slice(23, this.requestedFile.length - 5));
                                 let JsonTableData = {};
                                 let tableId = "";
                                 // find the 4th occurrence of '/'
@@ -144,7 +146,7 @@
                                 //console.log("this.requestedFile.slice(23, this.requestedFile.length - 5) =  " + this.requestedFile.slice(23, this.requestedFile.length - 5));
                                 switch(requestedDataSheet){
                                     case "LS00_Data_Sheet":
-                                        console.log("in LS00_Data_Sheet");
+                                       // console.log("in LS00_Data_Sheet");
                                         JsonTableData = JsonTableData74LS00;
                                         tableId = "id-table-7400";
                                     break;

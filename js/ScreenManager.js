@@ -13,12 +13,13 @@ let ScreenManager = {
         dutyCycleSymbol: {},
         faradSymbol: {},
         diodeSymbol: {},
+        capSymbol: {},
         // Prefix Symbols
         milliSymbol: {},
         microSymbol: {},
         nanoSymbol: {},
         
-        displayScreen: {},
+       // displayScreen: {},
         //Auxiliary elements visible on the "Display Screen"
         valueLabel: {},
         onSymbol: {},
@@ -37,50 +38,47 @@ let ScreenManager = {
         presentUnit: "",
 
         //Methods
-
-        UpdateScreenHandler: function(callHandler, hideShow) {
-                switch (callHandler){
-                    case "off":
-                        this.onSymbol.classList.toggle("hidden-element");
-                        break;
-                default: console.log("Not an allowable Setting");
-            /*let changeKnobSelector = function(callHandler, hideShow){
-                console.log("in UpdateScreenHandler called by " + callHandler + "   & hideShow = " + hideShow);
-                if(callHandler == "off"){
-                    console.log("removing class='hidden-element'");
-                    this.onSymbol.classList.remove("hidden-element");
-                    this.acSymbol.classList.remove("hidden-element");
-                }*/
-            }
-        },
-
-        PrefixUnitHandler:function(selectedKnob, showHide) {
-            //console.log("in PrefixUnitHandler");
-            //console.log("selectedKnob = " + selectedKnob);
-           // console.log("at BEGINNING of PrefixUnitHandler & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
-           // console.log("this.lastKnobSelectorLabel ="+this.lastKnobSelectorLabel+"  and this.presentKnobSelectorLabel = "+this.presentKnobSelectorLabel);
-            //if(this.lastKnobSelectorLabel == this.presentKnobSelectorLabel){return}
-            if((selectedKnob=="microAmp") || (selectedKnob=="milliAmp")||(selectedKnob=="tenAmp") || (selectedKnob=="volts")){
-                //console.log("showing either acSymbol or dcSymbol");
-                if((showHide == "show") && (ButtonManager.presentSELcolor == "orange")){
-               // if((selectedKnob != "off") && (ButtonManager.presentSELcolor == "orange")){
+        AuxillarySymbolsManager: function(){ 
+            console.log("in AuxillarySymbolsManager");
+            console.log("KnobSelectorManager.presentKnobSelectorLabel = " + KnobSelectorManager.presentKnobSelectorLabel);
+            if(KnobSelectorManager.highAmpSelectors.includes(KnobSelectorManager.presentKnobSelectorLabel)){
+                console.log("showing either acSymbol or dcSymbol");
+                //if(KnobSelectorManager.presentSELcolor == "orange"){
+                if(KnobSelectorManager.presentSELcolor == "orange"){ // (presentKnobSelectorLabel != "off") && (KnobSelectorManager.presentSELcolor == "orange")
+                    console.log("showing acSymbol & hiding dcSymbol");
                     this.acSymbol.classList.remove("hidden-element");
                     this.dcSymbol.classList.add("hidden-element");
                 }else{
+                    console.log("showing dcSymbol & hiding acSymbol");
                     this.acSymbol.classList.add("hidden-element");
                     this.dcSymbol.classList.remove("hidden-element");
                 }
             }
-            if((selectedKnob=="temp") || (selectedKnob=="hertz")||(selectedKnob=="ohms") || (selectedKnob=="capDiode")){
+            if(KnobSelectorManager.lowAmpSelectors.includes(KnobSelectorManager.presentKnobSelectorLabel)){
+                console.log("hiding both ac and dcSymbols");
                 this.acSymbol.classList.add("hidden-element");
                 this.dcSymbol.classList.add("hidden-element");
             }
+        },
+
+        PrefixUnitManager:function(selectedKnob, showHide) {
+            if(!TimingManager.batteryTimerStarted){
+                TimingManager.startBatteryTimer();
+                TimingManager.batteryTimerStarted = true;
+            }
+            //console.log("in PrefixUnitManager");
+            //console.log("selectedKnob = " + selectedKnob);
+           // console.log("at BEGINNING of PrefixUnitManager & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
+           // console.log("this.lastKnobSelectorLabel ="+this.lastKnobSelectorLabel+"  and this.presentKnobSelectorLabel = "+this.presentKnobSelectorLabel);
+            //if(this.lastKnobSelectorLabel == this.presentKnobSelectorLabel){return}
 
             switch (selectedKnob){
                 case "temp":
                     if(showHide == "show"){
                         this.autoSymbol.classList.add("hidden-element");
-                        if(ButtonManager.presentSELcolor == "orange"){
+                        this.acSymbol.classList.add("hidden-element");
+                        this.dcSymbol.classList.add("hidden-element");
+                        if(KnobSelectorManager.presentSELcolor == "orange"){
                         //console.log("showing degF & hiding degC");
                             this.degFahrenheitSymbol.classList.remove("hidden-element");
                             this.degCelsiusSymbol.classList.add("hidden-element");
@@ -96,32 +94,80 @@ let ScreenManager = {
                     }
                     break;
                 case "microAmp":
-                    this.microSymbol.classList.toggle("hidden-element");
-                    this.ampSymbol.classList.toggle("hidden-element");
+                    if(showHide == "show"){
+                        this.microSymbol.classList.remove("hidden-element");
+                        this.ampSymbol.classList.remove("hidden-element");
+                    }else{
+                        this.microSymbol.classList.add("hidden-element");
+                        this.ampSymbol.classList.add("hidden-element");
+                    }
                     this.autoSymbol.classList.remove("hidden-element");
+                    if(KnobSelectorManager.presentSELcolor == "orange"){
+                        this.acSymbol.classList.remove("hidden-element");
+                        this.dcSymbol.classList.add("hidden-element");
+                    }else{
+                        this.acSymbol.classList.add("hidden-element");
+                        this.dcSymbol.classList.remove("hidden-element");
+                    }
                     break;
                 case "milliAmp":
-                    this.milliSymbol.classList.toggle("hidden-element");
-                    this.ampSymbol.classList.toggle("hidden-element");
+                    if(showHide == "show"){
+                        this.milliSymbol.classList.remove("hidden-element");
+                        this.ampSymbol.classList.remove("hidden-element");
+                    }else{
+                        this.milliSymbol.classList.add("hidden-element");
+                        this.ampSymbol.classList.add("hidden-element");
+                    }
                     this.autoSymbol.classList.remove("hidden-element");
+                    if(KnobSelectorManager.presentSELcolor == "orange"){
+                        this.acSymbol.classList.remove("hidden-element");
+                        this.dcSymbol.classList.add("hidden-element");
+                    }else{
+                        this.acSymbol.classList.add("hidden-element");
+                        this.dcSymbol.classList.remove("hidden-element");
+                    }
                     break;
                 case "tenAmp":
-                    console.log("toggling ScreenManager.prefixUnitHandler 'tenAmp' 'hidden-element'");
-                    this.ampSymbol.classList.toggle("hidden-element");
+                    if(showHide == "show"){
+                        this.ampSymbol.classList.remove("hidden-element");
+                    }else{
+                        this.ampSymbol.classList.add("hidden-element");
+                    }
                     this.autoSymbol.classList.remove("hidden-element");
+                    //console.log("KnobSelectorManager.presentSELcolor = " + KnobSelectorManager.presentSELcolor);
+                    if(KnobSelectorManager.presentSELcolor == "orange"){
+                        this.acSymbol.classList.remove("hidden-element");
+                        this.dcSymbol.classList.add("hidden-element");
+                    }else{
+                        this.acSymbol.classList.add("hidden-element");
+                        this.dcSymbol.classList.remove("hidden-element");
+                    }
                     break;
                 case "off":
-                    //console.log("in PrefixUnitHandler.off: reseting all screen elements");
+                    //console.log("in PrefixUnitManager.off: reseting all screen elements");
                     this.reset();
                     break;
                 case "volts":
-                    this.voltSymbol.classList.toggle("hidden-element");
+                    if(showHide == "show"){
+                        this.voltSymbol.classList.remove("hidden-element");
+                    }else{
+                        this.voltSymbol.classList.add("hidden-element");
+                    }
                     this.autoSymbol.classList.remove("hidden-element");
+                    if(KnobSelectorManager.presentSELcolor == "orange"){
+                        this.acSymbol.classList.remove("hidden-element");
+                        this.dcSymbol.classList.add("hidden-element");
+                    }else{
+                        this.acSymbol.classList.add("hidden-element");
+                        this.dcSymbol.classList.remove("hidden-element");
+                    }
                     break;
                 case "hertz":
                     this.autoSymbol.classList.remove("hidden-element");
+                    this.acSymbol.classList.add("hidden-element");
+                    this.dcSymbol.classList.add("hidden-element");
                     if(showHide == "show"){
-                        if(ButtonManager.presentSELcolor == "orange"){
+                        if(KnobSelectorManager.presentSELcolor == "orange"){
                             this.hertzSymbol.classList.remove("hidden-element");
                             this.dutyCycleSymbol.classList.add("hidden-element");
                         }else{
@@ -135,9 +181,11 @@ let ScreenManager = {
                     }
                     break;
                 case "ohms":
+                    this.acSymbol.classList.add("hidden-element");
+                    this.dcSymbol.classList.add("hidden-element");
                     if(showHide == "show"){
                         this.ohmsSymbol.classList.remove("hidden-element");
-                        if(ButtonManager.presentSELcolor == "orange"){
+                        if(KnobSelectorManager.presentSELcolor == "orange"){
                             //console.log("showing ohms and souund");
                             this.soundSymbol.classList.remove("hidden-element");
                             this.autoSymbol.classList.add("hidden-element");
@@ -152,20 +200,24 @@ let ScreenManager = {
                     }
                     break;
                 case "capDiode":
+                    this.acSymbol.classList.add("hidden-element");
+                    this.dcSymbol.classList.add("hidden-element");
                     if(showHide == "show"){
-                        if(ButtonManager.presentSELcolor == "orange"){
+                        if(KnobSelectorManager.presentSELcolor == "orange"){
                             //console.log("hiding V & diode");
                             this.faradSymbol.classList.remove("hidden-element");
                             this.nanoSymbol.classList.remove("hidden-element");
+                            this.autoSymbol.classList.remove("hidden-element");
+                            this.capSymbol.classList.remove("hidden-element");
                             this.voltSymbol.classList.add("hidden-element");
                             this.diodeSymbol.classList.add("hidden-element");
-                            this.autoSymbol.classList.remove("hidden-element");
                         }else{
                             //console.log("hiding nF");
                             this.faradSymbol.classList.add("hidden-element");
                             this.nanoSymbol.classList.add("hidden-element");
                             this.voltSymbol.classList.remove("hidden-element");
                             this.diodeSymbol.classList.remove("hidden-element");
+                            this.capSymbol.classList.add("hidden-element");
                             this.autoSymbol.classList.add("hidden-element");
                         }
                     }else{
@@ -178,66 +230,52 @@ let ScreenManager = {
                     break;
                 default: console.log(selectedKnob + " is not an allowable selector Knob");
             }
-            //console.log("at END of PrefixUnitHandler & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
-        },
-        
-        startMaxMinTime: function(){
-            //console.log("setting Range start time in milliSeconds");
-            this.maxMinStartMilliSeconds = Date.now();
-        },
-        startRangeTime: function(){
-            this.rangeStartMilliSeconds = Date.now();
-            this.rangeClockStarted = true;
-        },
-        startLightTime: function(){
-           // console.log("in startLightTime");
-            this.lightStartMilliSeconds = Date.now();
-            //console.log("lightStartMilliSeconds = " + this.lightStartMilliSeconds);
-            this.lightClockStarted = true;
-            this.startThreeMinLightTime();
-           // console.log("leaving startLightTime");
-        },
-        startThreeMinLightTime: function(){
-            //console.log("in startThreeMinLightTime");
-           // this.threeMinLightStartMilliSeconds = Date.now();
-           // console.log("lightStartMilliSeconds = " + this.lightStartMilliSeconds);
-           // this.lightClockStarted = true;
-            clearTimeout(this.lightThreeMinTimer);
-            this.lightThreeMinTimer = setTimeout(shutOffLight, 180000);
-            //console.log("leaving startLightTime");
+            //console.log("at END of PrefixUnitManager & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
         },
 
-        startBatteryTimer: function(){
-            //console.log("batteryTimer started");
-            this.batteryTimer = setTimeout(showBattery, 600000);/* 300000 milli secs = 5 mins  */
-            //console.log("batteryTimer running");
+        stopMaxMinFunction: function(){
+            this.maxSymbol.classList.add("hidden-element");
+            this.minSymbol.classList.add("hidden-element");
+            this.autoSymbol.classList.remove("hidden-element");
         },
-    
-        clearBatteryTimer: function(){
-            clearTimeout(this.batteryTimer);
-            //console.log("batteryTimer has been cleared");
+
+        stopRangeFunction: function(){
+            this.autoSymbol.classList.remove("hidden-element");
+        },
+
+        changeScreenColor: function(){
+            console.log("this.screenColor = " + this.screenColor);
+            if(this.screenColor == "gray"){
+                this.displayScreen.classList.remove("gray-bckgrnd");
+                this.displayScreen.classList.add("white-bckgrnd");
+                this.screenColor = "white";
+            }else{
+                this.displayScreen.classList.remove("white-bckgrnd");
+                this.displayScreen.classList.add("gray-bckgrnd");
+                this.screenColor = "gray";
+            }
         },
 
 
         reset: function(){
-            console.log("in ScreenManager.reset()");
+            //console.log("in ScreenManager.reset()");
             //console.log("in reset() & this.presentKnobSelectorLabel = " + this.presentKnobSelectorLabel);
             this.valueLabel.classList.add("hidden-element");
             this.onSymbol.classList.add("hidden-element");
-            this.displayScreen.classList.add("gray-bckgrnd");
-            this.displayScreen.classList.remove("white-bckgrnd");
+           // this.displayScreen.classList.add("gray-bckgrnd");
+            //this.displayScreen.classList.remove("white-bckgrnd");
            // this.warningLabel.classList.add("hidden-element");
             this.autoSymbol.classList.add("hidden-element");
             this.holdSymbol.classList.add("hidden-element");
             this.maxSymbol.classList.add("hidden-element");
             this.minSymbol.classList.add("hidden-element");
             // Prefix Symbols
-            console.log("resetting Prefix symbols");
+            //console.log("resetting Prefix symbols");
             this.milliSymbol.classList.add("hidden-element");
             this.microSymbol.classList.add("hidden-element");
             this.nanoSymbol.classList.add("hidden-element");
             // Unit Symbols
-            console.log("resetting Unit symbols");
+            //console.log("resetting Unit symbols");
             this.degFahrenheitSymbol.classList.add("hidden-element");
             this.degCelsiusSymbol.classList.add("hidden-element");
             this.ampSymbol.classList.add("hidden-element");
@@ -249,19 +287,21 @@ let ScreenManager = {
           //  this.hertzSymbol.classList.add("hidden-element");
             this.faradSymbol.classList.add("hidden-element");
             this.diodeSymbol.classList.add("hidden-element");
+            this.capSymbol.classList.add("hidden-element");
             // Output Symbols
-            console.log("resetting Output symbols");
+            console.log("resetting ac,dc & battery symbols");
             this.acSymbol.classList.add("hidden-element");
             this.dcSymbol.classList.add("hidden-element");
             this.batterySymbol.classList.add("hidden-element");
 
-            console.log("resetting maxMin & screenColor");
+            //console.log("resetting maxMin & screenColor");
             this.maxMinSelected = "max";
             this.screenColor = "gray";
 
         },
 
         init: function(){
+            //console.log("Beginning ScreenManager.init()"); 
 
             //Output elements
             this.displayScreen = document.getElementById("mm-display-screen-id");
@@ -283,19 +323,24 @@ let ScreenManager = {
             this.hertzSymbol = document.getElementById("mm-hertz-unit-id");
             this.dutyCycleSymbol = document.getElementById("mm-duty-cycle-unit-id");
             //Auxillary Screen Symbols
-            this.onSymbol = document.getElementById("mm-on-indicator-id");
+            this.onSymbol = document.getElementById("mm-on-symbol-id");
            // this.onSymbol.classList.remove("hidden-element");
-            this.holdSymbol = document.getElementById("mm-hold-indicator-id");
-            this.maxSymbol = document.getElementById("mm-max-indicator-id");
-            this.minSymbol = document.getElementById("mm-min-indicator-id");
-            this.autoSymbol = document.getElementById("mm-auto-indicator-id");
+            this.holdSymbol = document.getElementById("mm-hold-symbol-id");
+            this.maxSymbol = document.getElementById("mm-max-symbol-id");
+            this.minSymbol = document.getElementById("mm-min-symbol-id");
+            this.autoSymbol = document.getElementById("mm-auto-symbol-id");
             this.diodeSymbol = document.getElementById("mm-diode-symbol-id");
-            this.acSymbol = document.getElementById("mm-ac-indicator-id");
-            this.dcSymbol = document.getElementById("mm-dc-indicator-id");
-            this.batterySymbol = document.getElementById("mm-battery-indicator-id");
+            this.capSymbol = document.getElementById("mm-capacitor-symbol-id");
+            this.acSymbol = document.getElementById("mm-ac-symbol-id");
+            //this.acSymbol = document.getElementById("mm-ac-indicator-id");
+            this.dcSymbol = document.getElementById("mm-dc-symbol-id");
+            //this.dcSymbol = document.getElementById("mm-dc-indicator-id");
+            this.acSymbol.classList.remove("hidden");
+            this.dcSymbol.classList.remove("hidden");
+            //this.batterySymbol = document.getElementById("mm-battery-symbol-id");
+            this.batterySymbol = document.getElementById("mm-battery-symbol-id");
             //console.log("just finished setting this.batterySymbol = doc....");
 
-            this.initiated = true;
-           // console.log("finished ScreenManager.init()"); 
+            console.log("Finished ScreenManager.init()"); 
         }
     }
