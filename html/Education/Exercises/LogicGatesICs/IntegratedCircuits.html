@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+
     <script>
-    </script>
+		function addListenerToInputs(){
+			const inputTags = querySelectorAll("input");
+            //alert("# of Inputs = " + inputTags.length);
+            console.log("# of Inputs = " + inputTags.length);
+			inputTags.forEach( item => {
+				item.addEventListener("keydown", PracticeTruthTableManager.checkInput());
+			})
+		}
+	</script>
     
     <style>
         .edu-contents{
@@ -20,17 +30,17 @@
 			/*border: 3px solid green;*/ 
         }
         
-            
+        
     </style>
 </head>
 <body>
     <div class="main-container">
         <div class="body-container">
-            <div id="binary-code-2s-complement-contents-id"  class="binary-code-2s-complement-container">
+            <div id="gates-contents-id"  class="gates-contents-id">
                 <label>Exercise Page for</label><br>
-                <label>Binary Code for Integers (2's Complement)</label>
+                <label>Basic Integrated Circuits</label>
             </div>
         </div>
     </div>
 </body>
-</html>  
+</html>
